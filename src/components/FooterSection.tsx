@@ -10,53 +10,68 @@ const links = [
 export default function FooterSection() {
   return (
     <section id="contact" style={{ background: '#0C0C0C' }}>
+      <div className="px-5 sm:px-10 md:px-16 pt-20 sm:pt-32 pb-0">
 
-      {/* Top: label + subtext */}
-      <div className="px-5 sm:px-10 md:px-16 pt-20 sm:pt-32">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        {/* Label */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-[11px] uppercase tracking-[0.35em] mb-6"
-          style={{ color: '#D7E2EA', opacity: 0.35 }}
+          className="flex items-center gap-3 mb-12 sm:mb-16"
         >
-          · Contact
-        </motion.p>
+          <span className="w-1.5 h-1.5 rounded-full" style={{ background: '#D7E2EA', opacity: 0.4 }} />
+          <span style={{ color: '#D7E2EA', opacity: 0.35, fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase' }}>
+            Contact
+          </span>
+        </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-light mb-10 sm:mb-14 max-w-sm"
-          style={{ color: '#D7E2EA', opacity: 0.45, fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)', lineHeight: 1.7 }}
-        >
-          Lad os tage en snak.<br />Skriv til mig — jeg svarer hurtigt.
-        </motion.p>
+        {/* Heading + email side by side on desktop, stacked on mobile */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8 sm:gap-12 mb-16 sm:mb-20">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            style={{
+              color: '#D7E2EA',
+              fontSize: 'clamp(2rem, 5vw, 4.5rem)',
+              fontWeight: 800,
+              lineHeight: 1.1,
+              letterSpacing: '-0.03em',
+            }}
+          >
+            Lad os tage<br />en snak.
+          </motion.h2>
 
-        {/* Giant email */}
-        <div className="overflow-hidden mb-16 sm:mb-24">
           <motion.a
             href="mailto:alirezadk2016@gmail.com"
-            initial={{ y: 80 }}
-            whileInView={{ y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
-            className="group relative inline-block"
-            style={{ fontSize: 'clamp(2.2rem, 6.5vw, 90px)', color: '#D7E2EA', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1, textTransform: 'uppercase' }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="group relative inline-block flex-shrink-0"
+            style={{
+              color: '#D7E2EA',
+              fontSize: 'clamp(1rem, 2.2vw, 1.6rem)',
+              fontWeight: 500,
+              letterSpacing: '-0.01em',
+              opacity: 0.6,
+            }}
           >
-            alirezadk2016
-            <br className="sm:hidden" />
-            @gmail.com
-            <span className="hidden sm:block absolute left-0 -bottom-1 h-[3px] w-0 group-hover:w-full transition-all duration-500" style={{ background: '#D7E2EA' }} />
+            alirezadk2016@gmail.com
+            <span
+              className="absolute left-0 -bottom-0.5 h-px w-0 group-hover:w-full transition-all duration-500"
+              style={{ background: '#D7E2EA' }}
+            />
           </motion.a>
         </div>
-      </div>
 
-      {/* Links row */}
-      <div className="border-t border-[#D7E2EA]/10">
-        <div className="px-5 sm:px-10 md:px-16 py-10 grid grid-cols-2 sm:grid-cols-4 gap-8">
+        {/* Divider */}
+        <div className="border-t border-[#D7E2EA]/10" />
+
+        {/* Links */}
+        <div className="py-10 grid grid-cols-2 sm:grid-cols-4 gap-8">
           {links.map(({ label, value, href }, i) => (
             <motion.a
               key={label}
@@ -72,24 +87,28 @@ export default function FooterSection() {
               <span style={{ color: '#D7E2EA', opacity: 0.3, fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
                 {label}
               </span>
-              <span style={{ color: '#D7E2EA', fontSize: '0.95rem', fontWeight: 500 }}>
+              <span style={{ color: '#D7E2EA', fontSize: '0.9rem', fontWeight: 500 }}>
                 {value}
               </span>
             </motion.a>
           ))}
         </div>
+
       </div>
 
-      {/* Bottom bar */}
+      {/* Bottom */}
       <div className="border-t border-[#D7E2EA]/8">
         <div className="px-5 sm:px-10 md:px-16 py-6 flex items-center gap-4">
-          <div className="flex-1 h-px" style={{ background: 'rgba(215,226,234,0.07)' }} />
-          <div className="flex items-center gap-2 px-5 py-2 rounded-full border flex-shrink-0" style={{ borderColor: 'rgba(215,226,234,0.1)' }}>
+          <div className="flex-1 h-px" style={{ background: 'rgba(215,226,234,0.06)' }} />
+          <div
+            className="flex items-center gap-2 px-5 py-2 rounded-full border flex-shrink-0"
+            style={{ borderColor: 'rgba(215,226,234,0.1)' }}
+          >
             <span style={{ color: '#D7E2EA', opacity: 0.25, fontSize: '10px' }}>&lt;&gt;</span>
             <span style={{ color: '#D7E2EA', opacity: 0.2, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Crafted by</span>
             <span style={{ color: '#D7E2EA', opacity: 0.45, fontSize: '10px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' }}>MAK</span>
           </div>
-          <div className="flex-1 h-px" style={{ background: 'rgba(215,226,234,0.07)' }} />
+          <div className="flex-1 h-px" style={{ background: 'rgba(215,226,234,0.06)' }} />
         </div>
       </div>
 
