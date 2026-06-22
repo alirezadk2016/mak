@@ -2,120 +2,89 @@ import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Instagram, Linkedin } from 'lucide-react'
 import FadeIn from './FadeIn'
 
+const links = [
+  { icon: Phone,     label: 'Telefon',   value: '+45 91 48 88 43',           href: 'tel:+4591488843' },
+  { icon: Mail,      label: 'E-mail',    value: 'alirezadk2016@gmail.com',   href: 'mailto:alirezadk2016@gmail.com' },
+  { icon: Linkedin,  label: 'LinkedIn',  value: 'Alireza Makvandi',          href: 'https://dk.linkedin.com/in/alireza-makvandi-446704301' },
+  { icon: Instagram, label: 'Instagram', value: '@alireza__tak',             href: 'https://www.instagram.com/alireza__tak/' },
+  { icon: MapPin,    label: 'Adresse',   value: 'Aarhus N 8200 · Danmark',   href: 'https://maps.google.com/?q=Aarhus+N+8200+Danmark' },
+]
+
 export default function FooterSection() {
   return (
     <section id="contact" style={{ background: '#0C0C0C' }} className="overflow-hidden">
 
-      {/* CTA Block */}
-      <div className="px-5 sm:px-8 md:px-10 pt-24 sm:pt-32 pb-16 sm:pb-24 border-b border-[#D7E2EA]/10">
+      {/* — Top CTA — */}
+      <div className="px-5 sm:px-8 md:px-10 pt-28 sm:pt-36 pb-20 sm:pb-28">
         <FadeIn delay={0} y={0}>
-          <p className="text-xs uppercase tracking-[0.3em] mb-8" style={{ color: '#D7E2EA', opacity: 0.35 }}>
-            Åben for nye muligheder
+          <p className="text-[11px] uppercase tracking-[0.3em] mb-10" style={{ color: '#D7E2EA', opacity: 0.3 }}>
+            Åben for nye muligheder · Aarhus, Danmark
           </p>
         </FadeIn>
 
-        {/* Huge headline */}
-        <div className="overflow-hidden mb-4">
+        <div className="overflow-hidden mb-3">
           <motion.h2
-            initial={{ y: 120, opacity: 0 }}
+            initial={{ y: 110, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
             className="hero-heading font-black uppercase leading-none tracking-tight"
-            style={{ fontSize: 'clamp(3rem, 13vw, 170px)', color: '#D7E2EA' }}
+            style={{ fontSize: 'clamp(3.5rem, 13vw, 170px)', color: '#D7E2EA' }}
           >
             Lad os
           </motion.h2>
         </div>
-        <div className="overflow-hidden mb-12">
+        <div className="overflow-hidden mb-16">
           <motion.h2
-            initial={{ y: 120, opacity: 0 }}
+            initial={{ y: 110, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.07 }}
             className="hero-heading font-black uppercase leading-none tracking-tight"
-            style={{ fontSize: 'clamp(3rem, 13vw, 170px)', color: '#D7E2EA', opacity: 0.2 }}
+            style={{ fontSize: 'clamp(3.5rem, 13vw, 170px)', color: '#D7E2EA', opacity: 0.15 }}
           >
             samarbejde
           </motion.h2>
         </div>
 
-        {/* Email CTA */}
-        <FadeIn delay={0.3} y={20}>
-          <a
-            href="mailto:alirezadk2016@gmail.com"
-            className="group inline-flex items-center gap-4 border border-[#D7E2EA]/20 rounded-full px-7 py-4 hover:border-[#D7E2EA]/50 hover:bg-[#D7E2EA]/5 transition-all duration-300"
-          >
-            <Mail size={16} style={{ color: '#D7E2EA', opacity: 0.5 }} />
-            <span className="font-medium" style={{ color: '#D7E2EA', fontSize: 'clamp(0.85rem, 1.5vw, 1.1rem)' }}>
-              alirezadk2016@gmail.com
-            </span>
-            <span className="opacity-0 group-hover:opacity-50 transition-opacity" style={{ color: '#D7E2EA' }}>→</span>
-          </a>
-        </FadeIn>
-      </div>
-
-      {/* Bottom info bar */}
-      <div className="px-5 sm:px-8 md:px-10 py-8 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 items-center">
-
-        {/* Left — name + location */}
-        <FadeIn delay={0.1} y={10}>
-          <div>
-            <p className="font-bold uppercase tracking-wider mb-1" style={{ color: '#D7E2EA', fontSize: 'clamp(0.85rem, 1.2vw, 1rem)' }}>
-              Alireza Makvandi
-            </p>
-            <div className="flex items-center gap-1.5">
-              <MapPin size={11} style={{ color: '#D7E2EA', opacity: 0.3 }} />
-              <p className="text-xs uppercase tracking-widest" style={{ color: '#D7E2EA', opacity: 0.3 }}>
-                Aarhus N 8200 · Danmark
-              </p>
-            </div>
-          </div>
-        </FadeIn>
-
-        {/* Center — phone */}
-        <FadeIn delay={0.15} y={10}>
-          <a
-            href="tel:+4591488843"
-            className="group flex items-center gap-2 sm:justify-center hover:opacity-70 transition-opacity"
-          >
-            <Phone size={13} style={{ color: '#D7E2EA', opacity: 0.4 }} />
-            <span className="text-sm font-medium" style={{ color: '#D7E2EA', opacity: 0.6 }}>+45 91 48 88 43</span>
-          </a>
-        </FadeIn>
-
-        {/* Right — social icons */}
-        <FadeIn delay={0.2} y={10}>
-          <div className="flex items-center gap-4 sm:justify-end">
-            {[
-              { icon: Linkedin, href: 'https://dk.linkedin.com/in/alireza-makvandi-446704301', label: 'LinkedIn' },
-              { icon: Instagram, href: 'https://www.instagram.com/alireza__tak/', label: 'Instagram' },
-            ].map(({ icon: Icon, href, label }) => (
+        {/* Contact rows */}
+        <div className="max-w-2xl">
+          {links.map(({ icon: Icon, label, value, href }, i) => (
+            <FadeIn key={label} delay={0.05 * i} y={0}>
               <a
-                key={label}
                 href={href}
-                target="_blank"
+                target={href.startsWith('http') ? '_blank' : undefined}
                 rel="noopener noreferrer"
-                aria-label={label}
-                className="w-10 h-10 rounded-full border border-[#D7E2EA]/20 flex items-center justify-center hover:border-[#D7E2EA]/50 hover:bg-[#D7E2EA]/5 transition-all duration-300"
+                className="group flex items-center justify-between py-5 border-b transition-colors duration-200 hover:opacity-60"
+                style={{ borderColor: 'rgba(215,226,234,0.1)' }}
               >
-                <Icon size={15} style={{ color: '#D7E2EA', opacity: 0.6 }} />
+                <div className="flex items-center gap-4">
+                  <Icon size={14} style={{ color: '#D7E2EA', opacity: 0.35 }} />
+                  <span className="text-[11px] uppercase tracking-[0.2em]" style={{ color: '#D7E2EA', opacity: 0.35 }}>{label}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="font-medium" style={{ color: '#D7E2EA', fontSize: 'clamp(0.8rem, 1.3vw, 1rem)' }}>{value}</span>
+                  <span className="opacity-0 group-hover:opacity-40 transition-opacity text-sm" style={{ color: '#D7E2EA' }}>↗</span>
+                </div>
               </a>
-            ))}
-          </div>
-        </FadeIn>
-      </div>
-
-      {/* Copyright line */}
-      <div className="px-5 sm:px-8 md:px-10 pb-8 border-t border-[#D7E2EA]/10 pt-5 flex items-center justify-between">
-        <p className="text-xs uppercase tracking-widest" style={{ color: '#D7E2EA', opacity: 0.15 }}>
-          © 2026 Alireza Makvandi
-        </p>
-        <div className="flex flex-col items-end">
-          <span className="text-[10px] uppercase tracking-[0.25em]" style={{ color: '#D7E2EA', opacity: 0.2 }}>crafted by</span>
-          <span className="font-black uppercase tracking-widest text-sm" style={{ color: '#D7E2EA', opacity: 0.25 }}>MAK</span>
+            </FadeIn>
+          ))}
         </div>
       </div>
+
+      {/* — Signature — */}
+      <div className="border-t border-[#D7E2EA]/10 py-10 flex flex-col items-center gap-1">
+        <span className="text-[10px] uppercase tracking-[0.35em]" style={{ color: '#D7E2EA', opacity: 0.2 }}>
+          crafted by
+        </span>
+        <span
+          className="hero-heading font-black uppercase leading-none tracking-tight"
+          style={{ color: '#D7E2EA', opacity: 0.12, fontSize: 'clamp(3rem, 8vw, 7rem)' }}
+        >
+          MAK
+        </span>
+      </div>
+
     </section>
   )
 }
