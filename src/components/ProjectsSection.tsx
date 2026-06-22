@@ -29,6 +29,16 @@ const projects = [
   },
   {
     num: '03',
+    category: { da: 'Personligt projekt', en: 'Personal Project' },
+    name: 'Gaming PC Build',
+    href: null,
+    external: false,
+    col1img1: '/gaming-pc.jpeg',
+    col1img2: '/gaming-pc.jpeg',
+    col2img: '/gaming-pc.jpeg',
+  },
+  {
+    num: '04',
     category: { da: 'Kommer snart', en: 'Coming Soon' },
     name: '———',
     href: null,
