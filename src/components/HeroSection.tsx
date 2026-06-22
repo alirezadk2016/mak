@@ -211,6 +211,54 @@ export default function HeroSection() {
           <ContactButton label={tx.hero.cta} />
         </FadeIn>
 
+        {/* Available for work — mobile only */}
+        <FadeIn delay={0.95} y={20}>
+          <div
+            className="w-full rounded-[20px] overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)',
+              border: '1px solid rgba(215,226,234,0.09)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+            }}
+          >
+            {/* Top row */}
+            <div className="flex items-center justify-between px-5 pt-4 pb-3">
+              <div className="flex items-center gap-2.5">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+                </span>
+                <span style={{ color: '#6ee7b7', fontSize: '9px', letterSpacing: '0.35em', textTransform: 'uppercase', fontWeight: 700 }}>
+                  {lang === 'da' ? 'Åben for muligheder' : 'Open to opportunities'}
+                </span>
+              </div>
+              <span style={{ color: '#D7E2EA', opacity: 0.18, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>2026</span>
+            </div>
+
+            {/* Divider */}
+            <div className="mx-5 h-px" style={{ background: 'rgba(215,226,234,0.06)' }} />
+
+            {/* Headline */}
+            <div className="px-5 pt-3 pb-4">
+              <p
+                style={{
+                  color: '#D7E2EA',
+                  fontSize: 'clamp(1.05rem, 5.5vw, 1.3rem)',
+                  fontWeight: 800,
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.2,
+                }}
+              >
+                {lang === 'da' ? 'Klar til samtale\nog nye udfordringer.' : 'Ready for interview\nand new challenges.'}
+              </p>
+              <p style={{ color: '#D7E2EA', opacity: 0.3, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', marginTop: '8px' }}>
+                Aarhus · IT Support & Web Design
+              </p>
+            </div>
+          </div>
+        </FadeIn>
+
       </div>
 
       {/* ── DESKTOP layout ── */}
