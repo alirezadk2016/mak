@@ -1,10 +1,53 @@
 import { Globe } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import FadeIn from './FadeIn'
 import Magnet from './Magnet'
 import ContactButton from './ContactButton'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
+
+const IMG_FRONT = '/f1145949-0bb9-49ee-984f-8586244456a5.png'
+const IMG_BACK  = '/6F4611AC-9D3C-47F1-8BA0-49E69A35BCDE.jpeg'
+
+function FlipAvatar({ className }: { className?: string }) {
+  const [flipped, setFlipped] = useState(false)
+  const touchStartX = { current: 0 }
+
+  return (
+    <div
+      className={className}
+      style={{ perspective: '800px' }}
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
+      onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
+      onTouchEnd={(e) => {
+        if (Math.abs(touchStartX.current - e.changedTouches[0].clientX) > 40)
+          setFlipped(f => !f)
+      }}
+    >
+      <motion.div
+        animate={{ rotateY: flipped ? 180 : 0 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        style={{ transformStyle: 'preserve-3d', position: 'relative' }}
+        className="w-full h-full"
+      >
+        <img
+          src={IMG_FRONT}
+          alt="Alireza Makvandi"
+          className="w-full h-full rounded-full object-cover border-2"
+          style={{ borderColor: 'rgba(215,226,234,0.2)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+        />
+        <img
+          src={IMG_BACK}
+          alt="Alireza Makvandi"
+          className="absolute inset-0 w-full h-full rounded-full object-cover border-2"
+          style={{ borderColor: 'rgba(215,226,234,0.2)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+        />
+      </motion.div>
+    </div>
+  )
+}
 
 function AnimatedHeading({ text }: { text: string }) {
   const words = text.split(' ')
@@ -145,12 +188,7 @@ export default function HeroSection() {
       <div className="flex flex-col items-center px-5 pt-4 pb-10 gap-5 sm:hidden flex-1 justify-start mt-6 relative z-10">
 
         <FadeIn delay={0.2} y={20}>
-          <img
-            src="/f1145949-0bb9-49ee-984f-8586244456a5.png"
-            alt="Alireza Makvandi"
-            className="w-52 h-52 rounded-full object-cover border-2"
-            style={{ borderColor: 'rgba(215,226,234,0.2)' }}
-          />
+          <FlipAvatar className="w-52 h-52" />
         </FadeIn>
 
         <h1
@@ -195,12 +233,7 @@ export default function HeroSection() {
           className="absolute left-1/2 -translate-x-1/2 z-10 bottom-0 w-[280px] md:w-[340px] lg:w-[400px]"
         >
           <FadeIn delay={0.6} y={30}>
-            <img
-              src="/f1145949-0bb9-49ee-984f-8586244456a5.png"
-              alt="Alireza Makvandi"
-              className="w-full rounded-full object-cover aspect-square border-2"
-              style={{ borderColor: 'rgba(215,226,234,0.2)' }}
-            />
+            <FlipAvatar className="w-full aspect-square" />
           </FadeIn>
         </Magnet>
 
