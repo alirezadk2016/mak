@@ -46,14 +46,14 @@ function TiltCard({ exp, viewDetails }: { exp: { slug: string; company: string; 
 
   return (
     <Link to={'/experience/' + exp.slug} className="block" style={{ perspective: '800px' }}>
+      {/* Desktop: tilt card */}
       <motion.div
         ref={ref}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
-        className="relative rounded-[24px] border-2 border-[#D7E2EA]/15 overflow-hidden cursor-pointer"
+        className="hidden sm:block relative rounded-[24px] border-2 border-[#D7E2EA]/15 overflow-hidden cursor-pointer"
       >
-        {/* Glow highlight that follows cursor */}
         <motion.div
           className="absolute inset-0 pointer-events-none z-10"
           style={{
@@ -63,8 +63,6 @@ function TiltCard({ exp, viewDetails }: { exp: { slug: string; company: string; 
             ),
           }}
         />
-
-        {/* Screenshot */}
         <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
           <motion.img
             src={screenshots[exp.slug]}
@@ -74,7 +72,6 @@ function TiltCard({ exp, viewDetails }: { exp: { slug: string; company: string; 
             whileHover={{ scale: 1.06 }}
             transition={{ duration: 0.4 }}
           />
-          {/* Overlay */}
           <motion.div
             className="absolute inset-0 flex items-center justify-center"
             initial={{ opacity: 0 }}
@@ -86,8 +83,6 @@ function TiltCard({ exp, viewDetails }: { exp: { slug: string; company: string; 
               {viewDetails}
             </span>
           </motion.div>
-
-          {/* Accent bar at top */}
           <motion.div
             className="absolute top-0 left-0 right-0 h-0.5"
             initial={{ scaleX: 0 }}
@@ -96,8 +91,6 @@ function TiltCard({ exp, viewDetails }: { exp: { slug: string; company: string; 
             style={{ background: accent, transformOrigin: 'left' }}
           />
         </div>
-
-        {/* Info */}
         <div className="p-5 relative" style={{ transform: 'translateZ(10px)' }}>
           <div className="flex items-center justify-between mb-2">
             <p className="text-[#D7E2EA]/40 uppercase tracking-widest text-xs">{exp.period}</p>
@@ -105,6 +98,39 @@ function TiltCard({ exp, viewDetails }: { exp: { slug: string; company: string; 
           </div>
           <h3 className="text-[#D7E2EA] font-bold text-base uppercase mb-0.5">{exp.company}</h3>
           <p className="text-[#D7E2EA]/55 text-sm">{exp.role}</p>
+        </div>
+      </motion.div>
+
+      {/* Mobile: horizontal card with accent bar + tap animation */}
+      <motion.div
+        whileTap={{ scale: 0.97 }}
+        className="sm:hidden relative rounded-[20px] overflow-hidden border border-[#D7E2EA]/12 flex"
+        style={{ background: '#111' }}
+      >
+        {/* Accent left bar */}
+        <div className="w-1 flex-shrink-0" style={{ background: accent }} />
+
+        {/* Screenshot thumbnail */}
+        <div className="relative flex-shrink-0 overflow-hidden" style={{ width: '42%', aspectRatio: '4/3' }}>
+          <img
+            src={screenshots[exp.slug]}
+            alt={exp.company}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, transparent 60%, #111 100%)' }} />
+        </div>
+
+        {/* Info */}
+        <div className="flex flex-col justify-center px-4 py-4 flex-1 min-w-0">
+          <span className="text-[10px] uppercase tracking-widest mb-1" style={{ color: accent, opacity: 0.85 }}>
+            {exp.period}
+          </span>
+          <h3 className="text-[#D7E2EA] font-bold text-sm uppercase leading-tight mb-1">{exp.company}</h3>
+          <p className="text-[#D7E2EA]/45 text-xs leading-snug truncate">{exp.role}</p>
+          <div className="flex items-center gap-1 mt-3">
+            <span className="text-[9px] uppercase tracking-widest" style={{ color: accent, opacity: 0.7 }}>{viewDetails}</span>
+            <span style={{ color: accent, opacity: 0.7, fontSize: '10px' }}>→</span>
+          </div>
         </div>
       </motion.div>
     </Link>
