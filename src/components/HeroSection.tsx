@@ -52,7 +52,7 @@ export default function HeroSection() {
       >
         <FadeIn delay={0.6} y={30}>
           <img
-            src="https://drive.google.com/uc?export=view&id=1TeDDbJ8aaDxTaabXlnibTLu3vbQrScSU"
+            src="/makiller206_httpss.mj.runDAG4jtFgmFg_futuristic-cyberpunk-hacke_c19c548b-71f0-436f-bd58-a9eb2dbeb7cd.png"
             alt="Alireza Makvandi"
             className="w-full rounded-full object-cover aspect-square border-2 border-[#D7E2EA]/20"
           />
