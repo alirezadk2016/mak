@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 import FadeIn from './FadeIn'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
@@ -8,6 +9,104 @@ const screenshots: Record<string, string> = {
   yousee: 'https://image.thum.io/get/width/1280/crop/720/https://yousee.dk/',
   fourcom: 'https://image.thum.io/get/width/1280/crop/720/https://en.fourcom.dk/',
   folkehuse: 'https://image.thum.io/get/width/1280/crop/720/https://folkehuse.aarhus.dk/',
+}
+
+const accentColors: Record<string, string> = {
+  yousee: '#E4002B',
+  fourcom: '#0057B8',
+  folkehuse: '#2E7D32',
+}
+
+function TiltCard({ exp, viewDetails }: { exp: { slug: string; company: string; role: string; period: string }; viewDetails: string }) {
+  const ref = useRef<HTMLDivElement>(null)
+
+  const x = useMotionValue(0)
+  const y = useMotionValue(0)
+
+  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [8, -8]), { stiffness: 200, damping: 20 })
+  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-8, 8]), { stiffness: 200, damping: 20 })
+  const glowX = useTransform(x, [-0.5, 0.5], [0, 100])
+  const glowY = useTransform(y, [-0.5, 0.5], [0, 100])
+
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    if (!ref.current) return
+    const rect = ref.current.getBoundingClientRect()
+    x.set((e.clientX - rect.left) / rect.width - 0.5)
+    y.set((e.clientY - rect.top) / rect.height - 0.5)
+  }
+
+  function handleMouseLeave() {
+    x.set(0)
+    y.set(0)
+  }
+
+  const accent = accentColors[exp.slug]
+
+  return (
+    <Link to={'/experience/' + exp.slug} className="block" style={{ perspective: '800px' }}>
+      <motion.div
+        ref={ref}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+        className="relative rounded-[24px] border-2 border-[#D7E2EA]/15 overflow-hidden cursor-pointer"
+      >
+        {/* Glow highlight that follows cursor */}
+        <motion.div
+          className="absolute inset-0 pointer-events-none z-10"
+          style={{
+            background: useTransform(
+              [glowX, glowY],
+              ([gx, gy]) => `radial-gradient(circle at ${gx}% ${gy}%, rgba(215,226,234,0.08) 0%, transparent 60%)`
+            ),
+          }}
+        />
+
+        {/* Screenshot */}
+        <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
+          <motion.img
+            src={screenshots[exp.slug]}
+            alt={exp.company}
+            className="w-full h-full object-cover"
+            style={{ scale: useSpring(useTransform(x, [-0.5, 0.5], [1.04, 1.04]), { stiffness: 150, damping: 20 }) }}
+            whileHover={{ scale: 1.06 }}
+            transition={{ duration: 0.4 }}
+          />
+          {/* Overlay */}
+          <motion.div
+            className="absolute inset-0 flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            style={{ background: 'rgba(0,0,0,0.55)' }}
+          >
+            <span className="text-white text-sm font-medium uppercase tracking-widest border border-white/60 rounded-full px-5 py-2">
+              {viewDetails}
+            </span>
+          </motion.div>
+
+          {/* Accent bar at top */}
+          <motion.div
+            className="absolute top-0 left-0 right-0 h-0.5"
+            initial={{ scaleX: 0 }}
+            whileHover={{ scaleX: 1 }}
+            transition={{ duration: 0.4 }}
+            style={{ background: accent, transformOrigin: 'left' }}
+          />
+        </div>
+
+        {/* Info */}
+        <div className="p-5 relative" style={{ transform: 'translateZ(10px)' }}>
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-[#D7E2EA]/40 uppercase tracking-widest text-xs">{exp.period}</p>
+            <span className="w-2 h-2 rounded-full" style={{ background: accent }} />
+          </div>
+          <h3 className="text-[#D7E2EA] font-bold text-base uppercase mb-0.5">{exp.company}</h3>
+          <p className="text-[#D7E2EA]/55 text-sm">{exp.role}</p>
+        </div>
+      </motion.div>
+    </Link>
+  )
 }
 
 export default function ExperienceSection() {
@@ -31,32 +130,8 @@ export default function ExperienceSection() {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-6xl mx-auto">
         {tx.items.map((exp, i) => (
-          <FadeIn key={i} delay={i * 0.1} y={30}>
-            <Link to={'/experience/' + exp.slug} className="group block">
-              <motion.div
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-[24px] border-2 border-[#D7E2EA]/20 group-hover:border-[#D7E2EA]/50 overflow-hidden transition-colors duration-300"
-              >
-                <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                  <img
-                    src={screenshots[exp.slug]}
-                    alt={exp.company}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                    <span className="text-white text-sm font-medium uppercase tracking-widest border border-white rounded-full px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {tx.viewDetails}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <p className="text-[#D7E2EA]/40 uppercase tracking-widest text-xs mb-1">{exp.period}</p>
-                  <h3 className="text-[#D7E2EA] font-bold text-base uppercase mb-0.5">{exp.company}</h3>
-                  <p className="text-[#D7E2EA]/60 text-sm">{exp.role}</p>
-                </div>
-              </motion.div>
-            </Link>
+          <FadeIn key={i} delay={i * 0.12} y={40}>
+            <TiltCard exp={exp} viewDetails={tx.viewDetails} />
           </FadeIn>
         ))}
       </div>
