@@ -1,32 +1,27 @@
 import { useEffect, useRef, useState } from 'react'
 
-const images = [
-  'https://image.thum.io/get/width/420/crop/270/https://www.elite-vask.dk/',
-  'https://image.thum.io/get/width/420/crop/270/https://yousee.dk/',
-  'https://image.thum.io/get/width/420/crop/270/https://en.fourcom.dk/',
-  'https://image.thum.io/get/width/420/crop/270/https://folkehuse.aarhus.dk/',
-  'https://image.thum.io/get/width/420/crop/270/https://www.aarhustech.dk/',
-  'https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-v2-preview-DjvxjG3C.gif',
-  'https://motionsites.ai/assets/hero-transform-data-preview-Cx5OU29N.gif',
-  'https://motionsites.ai/assets/hero-vitara-preview-Cjz2QYyU.gif',
-  'https://motionsites.ai/assets/hero-skyelite-preview-DHaZIgUv.gif',
-  'https://motionsites.ai/assets/hero-designpro-preview-D8c5_een.gif',
+const row1 = [
+  'Windows Server', 'Active Directory', 'DNS & DHCP', 'GPO',
+  'VMware', 'Linux Server', 'IT-sikkerhed', 'Backup & Recovery',
+  'Netværk I · II · III', 'Cloudteknologi', 'Serverautomatisering',
 ]
 
-const row1 = images.slice(0, 6)
-const row2 = images.slice(5)
+const row2 = [
+  'Hardware Support', 'Fejlfinding', 'Brugersupport', 'Helpdesk',
+  'React', 'TypeScript', 'Tailwind CSS', 'Web Design',
+  'Windows 10/11', 'VPN', 'LAN · WLAN', 'IT-service Management',
+]
 
 export default function MarqueeSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
-  const [offset, setOffset] = useState(200)
+  const [offset, setOffset] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
       const el = sectionRef.current
       if (!el) return
       const sectionTop = el.getBoundingClientRect().top + window.scrollY
-      const raw = (window.scrollY - sectionTop + window.innerHeight) * 0.3
+      const raw = (window.scrollY - sectionTop + window.innerHeight) * 0.15
       setOffset(raw)
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -34,6 +29,15 @@ export default function MarqueeSection() {
   }, [])
 
   const tripled = (arr: string[]) => [...arr, ...arr, ...arr]
+
+  const Tag = ({ text }: { text: string }) => (
+    <span
+      className="flex-shrink-0 px-5 py-2.5 rounded-full border border-[#D7E2EA]/25 text-[#D7E2EA]/60 uppercase tracking-widest whitespace-nowrap"
+      style={{ fontSize: 'clamp(0.7rem, 1.2vw, 0.95rem)' }}
+    >
+      {text}
+    </span>
+  )
 
   return (
     <section
@@ -43,34 +47,21 @@ export default function MarqueeSection() {
     >
       {/* Row 1 — moves right */}
       <div
-        className="flex gap-3 mb-3"
-        style={{ transform: `translateX(${offset - 200}px)`, willChange: 'transform' }}
+        className="flex gap-3 mb-4"
+        style={{ transform: `translateX(${offset - 100}px)`, willChange: 'transform' }}
       >
-        {tripled(row1).map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt=""
-            loading="lazy"
-            className="rounded-2xl object-cover flex-shrink-0"
-            style={{ width: 420, height: 270 }}
-          />
+        {tripled(row1).map((text, i) => (
+          <Tag key={i} text={text} />
         ))}
       </div>
+
       {/* Row 2 — moves left */}
       <div
         className="flex gap-3"
-        style={{ transform: `translateX(${-(offset - 200)}px)`, willChange: 'transform' }}
+        style={{ transform: `translateX(${-(offset - 100)}px)`, willChange: 'transform' }}
       >
-        {tripled(row2).map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt=""
-            loading="lazy"
-            className="rounded-2xl object-cover flex-shrink-0"
-            style={{ width: 420, height: 270 }}
-          />
+        {tripled(row2).map((text, i) => (
+          <Tag key={i} text={text} />
         ))}
       </div>
     </section>
