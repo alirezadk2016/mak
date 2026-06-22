@@ -3,6 +3,7 @@ import MarqueeSection from './components/MarqueeSection'
 import AboutSection from './components/AboutSection'
 import ServicesSection from './components/ServicesSection'
 import ProjectsSection from './components/ProjectsSection'
+import ExperienceSection from './components/ExperienceSection'
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <MarqueeSection />
       <AboutSection />
       <ServicesSection />
+      <ExperienceSection />
       <ProjectsSection />
     </main>
   )
