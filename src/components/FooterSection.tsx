@@ -46,14 +46,28 @@ const contactItems: ContactItem[] = [
 function CardBack({ type }: { type: ContactItem['backType'] }) {
   if (type === 'instagram') {
     return (
-      <div className="w-full h-full rounded-[20px] overflow-hidden relative">
-        <iframe
-          src="https://www.instagram.com/alireza__tak/embed"
-          className="absolute inset-0 w-full h-full border-0 scale-[0.85] origin-top"
-          scrolling="no"
-          allowTransparency
-        />
-        <div className="absolute inset-0 pointer-events-none rounded-[20px]" style={{ boxShadow: 'inset 0 0 0 1px rgba(215,226,234,0.12)' }} />
+      <div className="w-full h-full rounded-[20px] overflow-hidden relative flex flex-col items-center justify-center gap-3"
+        style={{ background: 'linear-gradient(135deg, #F58529 0%, #DD2A7B 40%, #8134AF 70%, #515BD4 100%)' }}>
+        {/* Decorative rings */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="rounded-full border border-white/10" style={{ width: 120, height: 120 }} />
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="rounded-full border border-white/5" style={{ width: 160, height: 160 }} />
+        </div>
+        {/* Profile pic */}
+        <div className="relative z-10 w-14 h-14 rounded-full overflow-hidden border-2 border-white/60 shadow-lg">
+          <img src="/f1145949-0bb9-49ee-984f-8586244456a5.png" alt="" className="w-full h-full object-cover" />
+        </div>
+        {/* Handle */}
+        <div className="relative z-10 flex flex-col items-center gap-0.5">
+          <span className="text-white font-bold text-sm tracking-wide">@alireza__tak</span>
+          <span className="text-white/60 text-[10px] uppercase tracking-widest">Instagram</span>
+        </div>
+        {/* Follow button */}
+        <div className="relative z-10 px-5 py-1.5 rounded-full bg-white/15 border border-white/30 backdrop-blur-sm">
+          <span className="text-white text-[10px] font-semibold uppercase tracking-widest">Følg →</span>
+        </div>
       </div>
     )
   }
