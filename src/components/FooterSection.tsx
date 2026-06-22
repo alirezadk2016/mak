@@ -1,90 +1,117 @@
-import { Mail, Phone, MapPin, Instagram, Linkedin } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Phone, Mail, MapPin, Instagram, Linkedin } from 'lucide-react'
 import FadeIn from './FadeIn'
 
 export default function FooterSection() {
   return (
-    <section
-      id="contact"
-      style={{ background: '#0C0C0C' }}
-      className="px-5 sm:px-8 md:px-10 pt-24 sm:pt-32 pb-10"
-    >
-      {/* Big heading */}
-      <FadeIn delay={0} y={40}>
-        <h2
-          className="hero-heading font-black uppercase leading-none tracking-tight mb-16 sm:mb-20"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)', color: '#D7E2EA' }}
-        >
-          Get in touch
-        </h2>
-      </FadeIn>
+    <section id="contact" style={{ background: '#0C0C0C' }} className="overflow-hidden">
 
-      {/* Main grid */}
-      <FadeIn delay={0.15} y={20}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px border border-[#D7E2EA]/10 rounded-[32px] overflow-hidden mb-px">
+      {/* CTA Block */}
+      <div className="px-5 sm:px-8 md:px-10 pt-24 sm:pt-32 pb-16 sm:pb-24 border-b border-[#D7E2EA]/10">
+        <FadeIn delay={0} y={0}>
+          <p className="text-xs uppercase tracking-[0.3em] mb-8" style={{ color: '#D7E2EA', opacity: 0.35 }}>
+            Åben for nye muligheder
+          </p>
+        </FadeIn>
 
-          {/* Left — name + tagline */}
-          <div className="p-8 sm:p-10 md:p-12 flex flex-col justify-between gap-10" style={{ background: '#111' }}>
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] mb-3" style={{ color: '#D7E2EA', opacity: 0.35 }}>
-                IT Support & Web Designer
+        {/* Huge headline */}
+        <div className="overflow-hidden mb-4">
+          <motion.h2
+            initial={{ y: 120, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            className="hero-heading font-black uppercase leading-none tracking-tight"
+            style={{ fontSize: 'clamp(3rem, 13vw, 170px)', color: '#D7E2EA' }}
+          >
+            Lad os
+          </motion.h2>
+        </div>
+        <div className="overflow-hidden mb-12">
+          <motion.h2
+            initial={{ y: 120, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
+            className="hero-heading font-black uppercase leading-none tracking-tight"
+            style={{ fontSize: 'clamp(3rem, 13vw, 170px)', color: '#D7E2EA', opacity: 0.2 }}
+          >
+            samarbejde
+          </motion.h2>
+        </div>
+
+        {/* Email CTA */}
+        <FadeIn delay={0.3} y={20}>
+          <a
+            href="mailto:alirezadk2016@gmail.com"
+            className="group inline-flex items-center gap-4 border border-[#D7E2EA]/20 rounded-full px-7 py-4 hover:border-[#D7E2EA]/50 hover:bg-[#D7E2EA]/5 transition-all duration-300"
+          >
+            <Mail size={16} style={{ color: '#D7E2EA', opacity: 0.5 }} />
+            <span className="font-medium" style={{ color: '#D7E2EA', fontSize: 'clamp(0.85rem, 1.5vw, 1.1rem)' }}>
+              alirezadk2016@gmail.com
+            </span>
+            <span className="opacity-0 group-hover:opacity-50 transition-opacity" style={{ color: '#D7E2EA' }}>→</span>
+          </a>
+        </FadeIn>
+      </div>
+
+      {/* Bottom info bar */}
+      <div className="px-5 sm:px-8 md:px-10 py-8 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 items-center">
+
+        {/* Left — name + location */}
+        <FadeIn delay={0.1} y={10}>
+          <div>
+            <p className="font-bold uppercase tracking-wider mb-1" style={{ color: '#D7E2EA', fontSize: 'clamp(0.85rem, 1.2vw, 1rem)' }}>
+              Alireza Makvandi
+            </p>
+            <div className="flex items-center gap-1.5">
+              <MapPin size={11} style={{ color: '#D7E2EA', opacity: 0.3 }} />
+              <p className="text-xs uppercase tracking-widest" style={{ color: '#D7E2EA', opacity: 0.3 }}>
+                Aarhus N 8200 · Danmark
               </p>
-              <h3
-                className="font-black uppercase leading-none"
-                style={{ color: '#D7E2EA', fontSize: 'clamp(1.8rem, 4vw, 3.5rem)' }}
-              >
-                Alireza<br />Makvandi
-              </h3>
-            </div>
-            <div className="flex items-center gap-3">
-              <span
-                className="w-2 h-2 rounded-full animate-pulse"
-                style={{ background: '#4ade80' }}
-              />
-              <span className="text-xs uppercase tracking-widest" style={{ color: '#D7E2EA', opacity: 0.5 }}>
-                Åben for nye muligheder
-              </span>
             </div>
           </div>
+        </FadeIn>
 
-          {/* Right — contact links */}
-          <div className="flex flex-col divide-y" style={{ background: '#0f0f0f', borderColor: 'rgba(215,226,234,0.08)' }}>
+        {/* Center — phone */}
+        <FadeIn delay={0.15} y={10}>
+          <a
+            href="tel:+4591488843"
+            className="group flex items-center gap-2 sm:justify-center hover:opacity-70 transition-opacity"
+          >
+            <Phone size={13} style={{ color: '#D7E2EA', opacity: 0.4 }} />
+            <span className="text-sm font-medium" style={{ color: '#D7E2EA', opacity: 0.6 }}>+45 91 48 88 43</span>
+          </a>
+        </FadeIn>
+
+        {/* Right — social icons */}
+        <FadeIn delay={0.2} y={10}>
+          <div className="flex items-center gap-4 sm:justify-end">
             {[
-              { icon: Phone, label: '+45 91 48 88 43', sub: 'Telefon', href: 'tel:+4591488843' },
-              { icon: Mail, label: 'alirezadk2016@gmail.com', sub: 'E-mail', href: 'mailto:alirezadk2016@gmail.com' },
-              { icon: Linkedin, label: 'Alireza Makvandi', sub: 'LinkedIn', href: 'https://dk.linkedin.com/in/alireza-makvandi-446704301' },
-              { icon: Instagram, label: '@alireza__tak', sub: 'Instagram', href: 'https://www.instagram.com/alireza__tak/' },
-            ].map(({ icon: Icon, label, sub, href }) => (
+              { icon: Linkedin, href: 'https://dk.linkedin.com/in/alireza-makvandi-446704301', label: 'LinkedIn' },
+              { icon: Instagram, href: 'https://www.instagram.com/alireza__tak/', label: 'Instagram' },
+            ].map(({ icon: Icon, href, label }) => (
               <a
-                key={sub}
+                key={label}
                 href={href}
-                target={href.startsWith('http') ? '_blank' : undefined}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-5 px-8 py-5 transition-colors duration-200 hover:bg-white/[0.03]"
+                aria-label={label}
+                className="w-10 h-10 rounded-full border border-[#D7E2EA]/20 flex items-center justify-center hover:border-[#D7E2EA]/50 hover:bg-[#D7E2EA]/5 transition-all duration-300"
               >
-                <Icon size={16} style={{ color: '#D7E2EA', opacity: 0.35 }} className="flex-shrink-0" />
-                <div className="flex flex-col min-w-0">
-                  <span className="text-xs uppercase tracking-widest mb-0.5" style={{ color: '#D7E2EA', opacity: 0.3 }}>{sub}</span>
-                  <span className="font-medium truncate" style={{ color: '#D7E2EA', fontSize: 'clamp(0.8rem, 1.3vw, 1rem)' }}>{label}</span>
-                </div>
-                <span className="ml-auto opacity-0 group-hover:opacity-30 transition-opacity text-lg" style={{ color: '#D7E2EA' }}>→</span>
+                <Icon size={15} style={{ color: '#D7E2EA', opacity: 0.6 }} />
               </a>
             ))}
           </div>
-        </div>
-      </FadeIn>
+        </FadeIn>
+      </div>
 
-      {/* Bottom bar */}
-      <FadeIn delay={0.25} y={10}>
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-8 border-t border-[#D7E2EA]/10">
-          <p className="text-xs uppercase tracking-widest" style={{ color: '#D7E2EA', opacity: 0.2 }}>
-            © 2026 Alireza Makvandi
-          </p>
-          <div className="flex items-center gap-2" style={{ color: '#D7E2EA', opacity: 0.2 }}>
-            <MapPin size={12} />
-            <p className="text-xs uppercase tracking-widest">Aarhus N 8200 · Danmark</p>
-          </div>
-        </div>
-      </FadeIn>
+      {/* Copyright line */}
+      <div className="px-5 sm:px-8 md:px-10 pb-8 border-t border-[#D7E2EA]/10 pt-5">
+        <p className="text-xs uppercase tracking-widest" style={{ color: '#D7E2EA', opacity: 0.15 }}>
+          © 2026 Alireza Makvandi — IT Support & Web Designer
+        </p>
+      </div>
     </section>
   )
 }
