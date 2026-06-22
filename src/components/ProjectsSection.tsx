@@ -77,7 +77,7 @@ function ProjectCard({
       style={{ height: project.col2img ? 'min(80vh, 680px)' : 'auto', paddingTop: index * 18 + 'px' }}
     >
       <motion.div
-        style={{ scale, top: 72 + index * 18 + 'px', position: 'sticky' }}
+        style={{ scale, top: 72 + index * 18 + 'px', position: 'sticky', cursor: project.href ? 'pointer' : 'default' }}
         className="w-full"
         onClick={handleClick}
       >
@@ -214,7 +214,7 @@ export default function ProjectsSection() {
             index={i}
             total={projects.length}
             lang={lang}
-            btnLabel={p.href === '/projects/svendeproeve' ? tx.viewProject : tx.liveProject}
+            btnLabel={p.external ? tx.liveProject : tx.viewProject}
           />
         ))}
       </div>
