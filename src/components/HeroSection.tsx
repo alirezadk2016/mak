@@ -28,7 +28,7 @@ export default function HeroSection() {
             className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center mt-6 sm:mt-4 md:-mt-5"
             style={{ fontSize: 'clamp(12vw, 17.5vw, 17.5vw)' }}
           >
-            Hi, i&apos;m jack
+            Hi, i&apos;m Mak
           </h1>
         </FadeIn>
       </div>
