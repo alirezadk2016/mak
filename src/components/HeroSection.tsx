@@ -51,17 +51,11 @@ export default function HeroSection() {
         className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 w-[220px] sm:w-[280px] md:w-[340px] lg:w-[400px]"
       >
         <FadeIn delay={0.6} y={30}>
-          <div
-            className="w-full aspect-square rounded-full flex items-center justify-center border-2 border-[#D7E2EA]/20"
-            style={{ background: 'linear-gradient(135deg, #18011F 0%, #7621B0 50%, #BE4C00 100%)' }}
-          >
-            <span
-              className="font-black uppercase tracking-tight select-none"
-              style={{ color: '#D7E2EA', fontSize: 'clamp(4rem, 12vw, 10rem)' }}
-            >
-              AM
-            </span>
-          </div>
+          <img
+            src="https://drive.google.com/uc?export=view&id=1TeDDbJ8aaDxTaabXlnibTLu3vbQrScSU"
+            alt="Alireza Makvandi"
+            className="w-full rounded-full object-cover aspect-square border-2 border-[#D7E2EA]/20"
+          />
         </FadeIn>
       </Magnet>
 
