@@ -87,23 +87,47 @@ function CardBack({ type }: { type: ContactItem['backType'] }) {
 
   if (type === 'email') {
     return (
-      <div className="w-full h-full rounded-[20px] flex flex-col items-center justify-center gap-3"
-        style={{ background: 'linear-gradient(145deg, #1a1a1a 0%, #111 100%)', border: '1px solid rgba(215,226,234,0.12)' }}>
-        <Mail size={48} strokeWidth={1.2} style={{ color: '#D7E2EA', opacity: 0.7 }} />
-        <span style={{ color: '#D7E2EA', opacity: 0.45, fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
-          Send besked
-        </span>
+      <div className="w-full h-full rounded-[20px] overflow-hidden relative flex flex-col items-center justify-center gap-3"
+        style={{ background: 'linear-gradient(135deg, #EA4335 0%, #FBBC05 40%, #34A853 70%, #4285F4 100%)' }}>
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="rounded-full border border-white/10" style={{ width: 120, height: 120 }} />
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="rounded-full border border-white/5" style={{ width: 160, height: 160 }} />
+        </div>
+        <div className="relative z-10 w-14 h-14 rounded-full bg-white/15 border-2 border-white/60 flex items-center justify-center shadow-lg backdrop-blur-sm">
+          <Mail size={26} strokeWidth={1.5} style={{ color: 'white' }} />
+        </div>
+        <div className="relative z-10 flex flex-col items-center gap-0.5">
+          <span className="text-white font-bold text-sm tracking-wide">Gmail</span>
+          <span className="text-white/60 text-[10px] uppercase tracking-widest">alirezadk2016</span>
+        </div>
+        <div className="relative z-10 px-5 py-1.5 rounded-full bg-white/15 border border-white/30 backdrop-blur-sm">
+          <span className="text-white text-[10px] font-semibold uppercase tracking-widest">Skriv →</span>
+        </div>
       </div>
     )
   }
 
   return (
-    <div className="w-full h-full rounded-[20px] flex flex-col items-center justify-center gap-3"
-      style={{ background: 'linear-gradient(145deg, #1a1a1a 0%, #111 100%)', border: '1px solid rgba(215,226,234,0.12)' }}>
-      <Phone size={48} strokeWidth={1.2} style={{ color: '#D7E2EA', opacity: 0.7 }} />
-      <span style={{ color: '#D7E2EA', opacity: 0.45, fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
-        Ring op
-      </span>
+    <div className="w-full h-full rounded-[20px] overflow-hidden relative flex flex-col items-center justify-center gap-3"
+      style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)' }}>
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="rounded-full border border-white/8" style={{ width: 120, height: 120 }} />
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="rounded-full border border-white/4" style={{ width: 160, height: 160 }} />
+      </div>
+      <div className="relative z-10 w-14 h-14 rounded-full bg-white/10 border-2 border-white/40 flex items-center justify-center shadow-lg backdrop-blur-sm">
+        <Phone size={26} strokeWidth={1.5} style={{ color: 'white' }} />
+      </div>
+      <div className="relative z-10 flex flex-col items-center gap-0.5">
+        <span className="text-white font-bold text-sm tracking-wide">+45 91 48 88 43</span>
+        <span className="text-white/50 text-[10px] uppercase tracking-widest">Telefon</span>
+      </div>
+      <div className="relative z-10 px-5 py-1.5 rounded-full bg-white/10 border border-white/25 backdrop-blur-sm">
+        <span className="text-white text-[10px] font-semibold uppercase tracking-widest">Ring op →</span>
+      </div>
     </div>
   )
 }
