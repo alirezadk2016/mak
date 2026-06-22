@@ -10,11 +10,13 @@ import ExperienceDetail from './pages/ExperienceDetail'
 import SvendeproevePage from './pages/SvendeproevePage'
 import EliteVaskPage from './pages/EliteVaskPage'
 import FooterSection from './components/FooterSection'
+import AvailableBanner from './components/AvailableBanner'
 
 function Home() {
   return (
     <main style={{ overflowX: 'clip', background: '#0C0C0C' }}>
       <HeroSection />
+      <AvailableBanner />
       <AboutSection />
       <ServicesSection />
       <ExperienceSection />
