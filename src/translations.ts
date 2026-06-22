@@ -64,12 +64,13 @@ export const t = {
     },
     experience: {
       heading: 'Erfaring',
+      subheading: 'En oversigt over de steder, jeg har arbejdet og bidraget — fra teknisk support og kundeservice til frivilligt IT-arbejde i uddannelsesmiljøer.',
       viewDetails: 'Se detaljer →',
       items: [
         { slug: 'yousee', company: 'YouSee', role: 'Kundeservice & Administration', period: 'IGU Program' },
         { slug: 'fourcom', company: 'Fourcom', role: 'IT Support Praktikant', period: '2 måneders praktik' },
         { slug: 'folkehuse', company: 'Folkehuse Aarhus', role: 'IT Support — Skolepraktik', period: 'Skolepraktik' },
-        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'Eksamensvagt — IT Support', period: 'Frivillig' },
+        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support — Eksamensvagt', period: 'Frivillig' },
       ],
     },
     projects: {
@@ -160,12 +161,13 @@ export const t = {
     },
     experience: {
       heading: 'Experience',
+      subheading: 'A collection of the places I have worked and contributed — from technical support and customer service to voluntary IT work in educational environments.',
       viewDetails: 'View Details →',
       items: [
         { slug: 'yousee', company: 'YouSee', role: 'Customer Service & Administration', period: 'IGU Program' },
         { slug: 'fourcom', company: 'Fourcom', role: 'IT Support Intern', period: '2 month internship' },
         { slug: 'folkehuse', company: 'Folkehuse Aarhus', role: 'IT Support — School Placement', period: 'School Placement' },
-        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'Exam Supervisor — IT Support', period: 'Volunteer' },
+        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support — Exam Supervisor', period: 'Volunteer' },
       ],
     },
     projects: {

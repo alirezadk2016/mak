@@ -80,20 +80,20 @@ const experiences: Record<string, ExpData> = {
     color: '#FF6B00',
     tasks: [
       {
-        title: { da: 'Printesupport', en: 'Printer Support' },
+        title: { da: 'Teknisk Support Under Eksamener', en: 'Technical Support During Exams' },
         items: [
-          { da: 'Hjælp til elever med printerproblemer under eksamener', en: 'Assisting students with printer issues during exams' },
-          { da: 'Fejlfinding og løsning af papirstop og forbindelsesfejl', en: 'Troubleshooting paper jams and connection errors' },
-          { da: 'Sikring af at alle elever kunne printe deres opgaver til tiden', en: 'Ensuring all students could print their assignments on time' },
+          { da: 'Ydede professionel IT-support til studerende under eksamensforhold', en: 'Provided professional IT support to students under exam conditions' },
+          { da: 'Diagnosticerede og løste hardware-, software- og netværksproblemer on-site', en: 'Diagnosed and resolved hardware, software and network issues on-site' },
+          { da: 'Håndterede systemfrysning, loginproblemer og softwarefejl hurtigt og effektivt', en: 'Handled system freezes, login issues and software errors quickly and efficiently' },
+          { da: 'Sikrede minimal forstyrrelse af eksamensforløbet gennem struktureret problemløsning', en: 'Ensured minimal disruption to the exam process through structured problem-solving' },
         ],
       },
       {
-        title: { da: 'Computer & Software Support', en: 'Computer & Software Support' },
+        title: { da: 'Infrastruktur & Koordinering', en: 'Infrastructure & Coordination' },
         items: [
-          { da: 'On-site IT-support til elever ved tekniske problemer under eksamen', en: 'On-site IT support for students with technical issues during exams' },
-          { da: 'Løsning af systemfrysning, softwarefejl og loginproblemer', en: 'Resolving system freezes, software errors and login issues' },
-          { da: 'Hurtig og rolig problemløsning for at minimere forstyrrelser', en: 'Fast and calm problem-solving to minimize disruptions' },
-          { da: 'Koordinering med skolens IT-afdeling ved større problemer', en: 'Coordination with the school IT department for major issues' },
+          { da: 'Konfigurering og fejlfinding af printere og netværkstilslutninger i eksamenslokalerne', en: 'Configuration and troubleshooting of printers and network connections in exam rooms' },
+          { da: 'Tæt samarbejde med skolens IT-afdeling om eskalering af komplekse sager', en: 'Close collaboration with the school IT department on escalating complex cases' },
+          { da: 'Opretholdt overblik over tekniske ressourcer og sikrede driftstabilitet', en: 'Maintained oversight of technical resources and ensured operational stability' },
         ],
       },
     ],
