@@ -14,21 +14,11 @@ const projects = [
     href: '/projects/elite-vask',
     external: false,
     col1img1: 'https://image.thum.io/get/width/640/crop/500/https://www.elite-vask.dk/',
-    col1img2: 'https://image.thum.io/get/width/640/crop/500/https://www.elite-vask.dk/eksempler',
+    col1img2: 'https://image.thum.io/get/width/640/crop/500/https://www.elite-vask.dk/booking',
     col2img: 'https://image.thum.io/get/width/1280/crop/900/https://www.elite-vask.dk/',
   },
   {
     num: '02',
-    category: { da: 'Kommer snart', en: 'Coming Soon' },
-    name: '———',
-    href: null,
-    external: false,
-    col1img1: '',
-    col1img2: '',
-    col2img: '',
-  },
-  {
-    num: '03',
     category: { da: 'Skole — Aarhus Tech', en: 'School — Aarhus Tech' },
     name: 'Svendeprøve',
     href: '/projects/svendeproeve',
@@ -36,6 +26,16 @@ const projects = [
     col1img1: '/photo_2026-05-08_09-04-19.jpg',
     col1img2: '/photo_2026-05-08_09-04-19.jpg',
     col2img: '/photo_2026-05-08_09-04-19.jpg',
+  },
+  {
+    num: '03',
+    category: { da: 'Kommer snart', en: 'Coming Soon' },
+    name: '———',
+    href: null,
+    external: false,
+    col1img1: '',
+    col1img2: '',
+    col2img: '',
   },
 ]
 
@@ -117,10 +117,12 @@ function ProjectCard({
 
           {/* Coming Soon placeholder */}
           {!project.col2img && (
-            <div className="px-5 sm:px-8 pb-8 sm:pb-10 flex items-center justify-center" style={{ minHeight: '120px' }}>
-              <span style={{ color: '#D7E2EA', opacity: 0.12, fontSize: 'clamp(0.75rem, 1.5vw, 1rem)', letterSpacing: '0.4em', textTransform: 'uppercase' }}>
-                {project.category[lang]}
+            <div className="flex flex-col items-center justify-center gap-4 px-5 sm:px-8 py-16 sm:py-20">
+              <div className="w-10 h-px" style={{ background: 'rgba(215,226,234,0.15)' }} />
+              <span style={{ color: '#D7E2EA', opacity: 0.18, fontSize: 'clamp(0.65rem, 1.2vw, 0.85rem)', letterSpacing: '0.5em', textTransform: 'uppercase' }}>
+                {lang === 'da' ? 'Kommer snart' : 'Coming Soon'}
               </span>
+              <div className="w-10 h-px" style={{ background: 'rgba(215,226,234,0.15)' }} />
             </div>
           )}
 
