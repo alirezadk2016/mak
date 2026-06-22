@@ -19,6 +19,16 @@ const projects = [
   },
   {
     num: '02',
+    category: { da: 'Kommer snart', en: 'Coming Soon' },
+    name: '———',
+    href: null,
+    external: false,
+    col1img1: '',
+    col1img2: '',
+    col2img: '',
+  },
+  {
+    num: '03',
     category: { da: 'Skole — Aarhus Tech', en: 'School — Aarhus Tech' },
     name: 'Svendeprøve',
     href: '/projects/svendeproeve',
