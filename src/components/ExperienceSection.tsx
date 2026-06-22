@@ -49,8 +49,24 @@ function TiltCard({ exp, viewDetails, index, total }: { exp: { slug: string; com
   const accent = accentColors[exp.slug]
 
   return (
-    <div ref={cardRef} style={{ height: 'min(70vh, 520px)', paddingTop: index * 16 + 'px' }} className="flex items-start justify-center">
-    <motion.div style={{ scale, top: 80 + index * 16 + 'px', position: 'sticky', width: '100%' }}>
+    <div ref={cardRef} style={{ height: 'min(62vh, 460px)', paddingTop: index * 16 + 'px' }} className="flex items-start justify-center relative">
+
+      {/* Glass spacer — fills the gap between cards */}
+      {index < total - 1 && (
+        <div
+          className="absolute left-0 right-0 pointer-events-none"
+          style={{
+            top: 'calc(min(62vh, 460px) * 0.55)',
+            bottom: 0,
+            background: 'linear-gradient(to bottom, transparent 0%, rgba(12,12,12,0.4) 30%, rgba(12,12,12,0.7) 60%, rgba(12,12,12,0.95) 100%)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            zIndex: 1,
+          }}
+        />
+      )}
+
+      <motion.div style={{ scale, top: 80 + index * 16 + 'px', position: 'sticky', width: '100%', zIndex: 2 }}>
     <Link to={'/experience/' + exp.slug} className="block" style={{ perspective: '800px' }}>
       {/* Desktop: tilt card */}
       <motion.div
