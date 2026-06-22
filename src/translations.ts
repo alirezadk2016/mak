@@ -7,7 +7,7 @@ export const t = {
       contact: 'Kontakt',
     },
     hero: {
-      heading: "Hej, jeg er Mak",
+      heading: "Alireza Makvandi",
       role: 'IT-supporter & Web Designer',
       cta: 'Kontakt mig',
     },
@@ -105,7 +105,7 @@ export const t = {
       contact: 'Contact',
     },
     hero: {
-      heading: "Hi, i'm Mak",
+      heading: "Alireza Makvandi",
       role: 'IT Support & Web Designer',
       cta: 'Contact Me',
     },
