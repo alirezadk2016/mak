@@ -19,16 +19,6 @@ const projects = [
   },
   {
     num: '02',
-    category: { da: 'Skole — Aarhus Tech', en: 'School — Aarhus Tech' },
-    name: 'Svendeprøve',
-    href: '/projects/svendeproeve',
-    external: false,
-    col1img1: '/photo_2026-05-08_09-04-19.jpg',
-    col1img2: '/photo_2026-05-08_09-04-19.jpg',
-    col2img: '/photo_2026-05-08_09-04-19.jpg',
-  },
-  {
-    num: '03',
     category: { da: 'Kommer snart', en: 'Coming Soon' },
     name: '———',
     href: null,
@@ -36,6 +26,16 @@ const projects = [
     col1img1: '',
     col1img2: '',
     col2img: '',
+  },
+  {
+    num: '03',
+    category: { da: 'Skole — Aarhus Tech', en: 'School — Aarhus Tech' },
+    name: 'Svendeprøve',
+    href: '/projects/svendeproeve',
+    external: false,
+    col1img1: '/photo_2026-05-08_09-04-19.jpg',
+    col1img2: '/photo_2026-05-08_09-04-19.jpg',
+    col2img: '/photo_2026-05-08_09-04-19.jpg',
   },
 ]
 
@@ -64,10 +64,10 @@ function ProjectCard({
     <div
       ref={cardRef}
       className="flex items-start justify-center"
-      style={{ height: project.col2img ? '88vh' : 'auto', paddingTop: index * 18 + 'px' }}
+      style={{ height: project.col2img ? 'min(88vh, 700px)' : 'auto', paddingTop: index * 18 + 'px' }}
     >
       <motion.div
-        style={{ scale, top: 72 + index * 18 + 'px', position: 'sticky' }}
+        style={{ scale, top: 72 + index * 18 + 'px', position: 'sticky', maxHeight: 'calc(100vh - 100px)' }}
         className="w-full overflow-hidden"
         onClick={handleClick}
       >
