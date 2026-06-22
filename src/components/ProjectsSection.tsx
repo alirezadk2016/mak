@@ -181,11 +181,19 @@ export default function ProjectsSection() {
     >
       <FadeIn delay={0} y={40}>
         <h2
-          className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-16 sm:mb-20 md:mb-28"
+          className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-6"
           style={{ fontSize: 'clamp(3rem, 12vw, 160px)', color: '#D7E2EA' }}
         >
           {tx.heading}
         </h2>
+      </FadeIn>
+      <FadeIn delay={0.15} y={20}>
+        <p
+          className="text-center max-w-xl mx-auto mb-16 sm:mb-20 md:mb-28 font-light leading-relaxed"
+          style={{ color: '#D7E2EA', opacity: 0.4, fontSize: 'clamp(0.85rem, 1.4vw, 1.05rem)' }}
+        >
+          {tx.subheading}
+        </p>
       </FadeIn>
 
       <div className="flex flex-col max-w-5xl mx-auto">

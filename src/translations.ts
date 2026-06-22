@@ -75,6 +75,7 @@ export const t = {
     },
     projects: {
       heading: 'Projekter',
+      subheading: 'Et udvalg af projekter drevet af passion for teknologi og design — fra kundeløsninger til selvstændige eksperimenter, der udfordrer og udvikler mine færdigheder.',
       liveProject: 'Se projekt',
       viewPdf: 'Se PDF',
       viewProject: 'Se projekt',
@@ -172,6 +173,7 @@ export const t = {
     },
     projects: {
       heading: 'Projects',
+      subheading: 'A selection of projects driven by a passion for technology and design — from client solutions to independent experiments that challenge and develop my skills.',
       liveProject: 'Live Project',
       viewPdf: 'View PDF',
       viewProject: 'View Project',
