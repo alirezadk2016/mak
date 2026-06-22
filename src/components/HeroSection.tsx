@@ -212,52 +212,95 @@ export default function HeroSection() {
         </FadeIn>
 
         {/* Available for work — mobile only */}
-        <FadeIn delay={0.95} y={20}>
-          <div
-            className="w-full rounded-[20px] overflow-hidden"
-            style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)',
-              border: '1px solid rgba(215,226,234,0.09)',
-              backdropFilter: 'blur(12px)',
-              WebkitBackdropFilter: 'blur(12px)',
-            }}
-          >
-            {/* Top row */}
-            <div className="flex items-center justify-between px-5 pt-4 pb-3">
-              <div className="flex items-center gap-2.5">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
-                </span>
-                <span style={{ color: '#6ee7b7', fontSize: '9px', letterSpacing: '0.35em', textTransform: 'uppercase', fontWeight: 700 }}>
-                  {lang === 'da' ? 'Åben for muligheder' : 'Open to opportunities'}
-                </span>
-              </div>
-              <span style={{ color: '#D7E2EA', opacity: 0.18, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>2026</span>
-            </div>
+        <motion.div
+          className="w-full relative overflow-hidden rounded-[22px]"
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          style={{
+            background: 'linear-gradient(135deg, #111111 0%, #0e0e0e 100%)',
+            border: '1px solid rgba(215,226,234,0.1)',
+            boxShadow: '0 0 0 1px rgba(215,226,234,0.03), inset 0 1px 0 rgba(255,255,255,0.04)',
+          }}
+        >
+          {/* Soft glow */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none"
+            style={{ width: '80%', height: '1px', background: 'linear-gradient(to right, transparent, rgba(215,226,234,0.18), transparent)' }} />
 
-            {/* Divider */}
-            <div className="mx-5 h-px" style={{ background: 'rgba(215,226,234,0.06)' }} />
-
-            {/* Headline */}
-            <div className="px-5 pt-3 pb-4">
-              <p
-                style={{
-                  color: '#D7E2EA',
-                  fontSize: 'clamp(1.05rem, 5.5vw, 1.3rem)',
-                  fontWeight: 800,
-                  letterSpacing: '-0.02em',
-                  lineHeight: 1.2,
-                }}
+          {/* Top label row */}
+          <div className="flex items-center justify-between px-5 pt-4 pb-0">
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400" />
+              </span>
+              <motion.span
+                initial={{ opacity: 0, x: -8 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1.25, duration: 0.5 }}
+                style={{ color: '#6ee7b7', fontSize: '8.5px', letterSpacing: '0.38em', textTransform: 'uppercase', fontWeight: 700 }}
               >
-                {lang === 'da' ? 'Klar til samtale\nog nye udfordringer.' : 'Ready for interview\nand new challenges.'}
-              </p>
-              <p style={{ color: '#D7E2EA', opacity: 0.3, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', marginTop: '8px' }}>
-                Aarhus · IT Support & Web Design
-              </p>
+                {lang === 'da' ? 'Tilgængelig nu' : 'Available now'}
+              </motion.span>
             </div>
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.4, duration: 0.5 }}
+              style={{ color: '#D7E2EA', opacity: 0.15, fontSize: '8px', letterSpacing: '0.3em', fontFamily: 'Kanit, sans-serif' }}
+            >
+              AARHUS · DK
+            </motion.span>
           </div>
-        </FadeIn>
+
+          {/* Big italic headline */}
+          <div className="px-5 pt-3 pb-1">
+            {(lang === 'da'
+              ? ['Klar til samtale', '& nye udfordringer.']
+              : ['Ready for interview', '& new challenges.']
+            ).map((line, i) => (
+              <div key={i} style={{ overflow: 'hidden' }}>
+                <motion.p
+                  initial={{ y: '100%' }}
+                  animate={{ y: 0 }}
+                  transition={{ delay: 1.15 + i * 0.12, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontStyle: 'italic',
+                    fontWeight: 700,
+                    color: '#D7E2EA',
+                    fontSize: 'clamp(1.3rem, 6.5vw, 1.6rem)',
+                    lineHeight: 1.15,
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  {line}
+                </motion.p>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom strip */}
+          <div className="mx-5 mt-3 mb-0 h-px" style={{ background: 'rgba(215,226,234,0.06)' }} />
+          <div className="flex items-center justify-between px-5 py-3">
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5, duration: 0.6 }}
+              style={{ color: '#D7E2EA', opacity: 0.22, fontSize: '8px', letterSpacing: '0.35em', textTransform: 'uppercase' }}
+            >
+              IT Support · Web Design
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: 8 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.55, duration: 0.5 }}
+              style={{ color: '#6ee7b7', opacity: 0.6, fontSize: '10px' }}
+            >
+              ✦
+            </motion.span>
+          </div>
+        </motion.div>
 
       </div>
 
