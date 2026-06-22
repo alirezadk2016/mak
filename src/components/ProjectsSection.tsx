@@ -7,13 +7,22 @@ const projects = [
   {
     num: '01',
     category: 'Client',
+    name: 'Elite Vask',
+    href: 'https://www.elite-vask.dk/',
+    col1img1: 'https://api.screenshotone.com/animate?url=https%3A%2F%2Fwww.elite-vask.dk%2F&viewport_width=1280&viewport_height=900&format=jpg&block_ads=true&block_cookie_banners=true',
+    col1img2: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.elite-vask.dk%2F?w=640&h=480',
+    col2img: 'https://image.thum.io/get/width/1280/https://www.elite-vask.dk/',
+  },
+  {
+    num: '03',
+    category: 'Client',
     name: 'Nextlevel Studio',
     col1img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
     col1img2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85',
     col2img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85',
   },
   {
-    num: '02',
+    num: '04',
     category: 'Personal',
     name: 'Aura Brand Identity',
     col1img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
@@ -21,7 +30,7 @@ const projects = [
     col2img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85',
   },
   {
-    num: '03',
+    num: '05',
     category: 'Client',
     name: 'Solaris Digital',
     col1img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85',
@@ -57,7 +66,7 @@ function ProjectCard({ project, index, total }: { project: typeof projects[0]; i
                 <span className="text-[#D7E2EA] font-medium uppercase text-base sm:text-xl md:text-2xl">{project.name}</span>
               </div>
             </div>
-            <LiveProjectButton />
+            <LiveProjectButton href={project.href} />
           </div>
 
           {/* Images */}
