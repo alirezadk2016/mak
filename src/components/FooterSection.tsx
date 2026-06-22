@@ -65,14 +65,17 @@ export default function FooterSection() {
       </div>
 
       {/* Signature */}
-      <div className="px-5 sm:px-8 md:px-10 py-6 flex items-center justify-between">
-        <p className="text-[10px] uppercase tracking-[0.25em]" style={{ color: '#D7E2EA', opacity: 0.15 }}>
-          © 2026 Alireza Makvandi
-        </p>
-        <div className="text-right">
-          <p className="text-[9px] uppercase tracking-[0.3em]" style={{ color: '#D7E2EA', opacity: 0.15 }}>crafted by</p>
-          <p className="font-black uppercase tracking-widest text-sm" style={{ color: '#D7E2EA', opacity: 0.15 }}>MAK</p>
+      <div className="py-8 flex items-center gap-4 px-5 sm:px-8 md:px-10">
+        <div className="flex-1 h-px" style={{ background: 'rgba(215,226,234,0.1)' }} />
+        <div
+          className="flex items-center gap-2 px-5 py-2.5 rounded-full border text-[11px] uppercase tracking-[0.2em] flex-shrink-0"
+          style={{ borderColor: 'rgba(215,226,234,0.15)', color: '#D7E2EA' }}
+        >
+          <span style={{ color: '#4ade80', opacity: 0.8 }}>&lt;&gt;</span>
+          <span style={{ opacity: 0.35 }}>Crafted by</span>
+          <span className="font-bold tracking-widest" style={{ color: '#4ade80' }}>MAK</span>
         </div>
+        <div className="flex-1 h-px" style={{ background: 'rgba(215,226,234,0.1)' }} />
       </div>
 
     </section>
