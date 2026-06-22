@@ -1,12 +1,7 @@
+import React from 'react'
 import FadeIn from './FadeIn'
 import ContactButton from './ContactButton'
 import AnimatedText from './AnimatedText'
-
-const skills = [
-  'Windows Server', 'Active Directory', 'DNS & DHCP', 'GPO',
-  'VMware', 'Linux', 'Netværk', 'IT-sikkerhed',
-  'Hardware Support', 'React', 'TypeScript', 'Web Design',
-]
 
 export default function AboutSection() {
   return (

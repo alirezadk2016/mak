@@ -48,14 +48,20 @@ export default function HeroSection() {
         strength={3}
         activeTransition="transform 0.3s ease-out"
         inactiveTransition="transform 0.6s ease-in-out"
-        className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px]"
+        className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 w-[220px] sm:w-[280px] md:w-[340px] lg:w-[400px]"
       >
         <FadeIn delay={0.6} y={30}>
-          <img
-            src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
-            alt="Jack portrait"
-            className="w-full"
-          />
+          <div
+            className="w-full aspect-square rounded-full flex items-center justify-center border-2 border-[#D7E2EA]/20"
+            style={{ background: 'linear-gradient(135deg, #18011F 0%, #7621B0 50%, #BE4C00 100%)' }}
+          >
+            <span
+              className="font-black uppercase tracking-tight select-none"
+              style={{ color: '#D7E2EA', fontSize: 'clamp(4rem, 12vw, 10rem)' }}
+            >
+              AM
+            </span>
+          </div>
         </FadeIn>
       </Magnet>
 
