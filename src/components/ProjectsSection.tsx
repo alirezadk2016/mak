@@ -19,16 +19,6 @@ const projects = [
   },
   {
     num: '02',
-    category: { da: 'Kommer snart', en: 'Coming Soon' },
-    name: '———',
-    href: null,
-    external: false,
-    col1img1: '',
-    col1img2: '',
-    col2img: '',
-  },
-  {
-    num: '03',
     category: { da: 'Skole — Aarhus Tech', en: 'School — Aarhus Tech' },
     name: 'Svendeprøve',
     href: '/projects/svendeproeve',
@@ -36,6 +26,16 @@ const projects = [
     col1img1: '/photo_2026-05-08_09-04-19.jpg',
     col1img2: '/photo_2026-05-08_09-04-19.jpg',
     col2img: '/photo_2026-05-08_09-04-19.jpg',
+  },
+  {
+    num: '03',
+    category: { da: 'Kommer snart', en: 'Coming Soon' },
+    name: '———',
+    href: null,
+    external: false,
+    col1img1: null,
+    col1img2: null,
+    col2img: null,
   },
 ]
 
@@ -113,7 +113,7 @@ function ProjectCard({
           </div>
 
           {/* Thin divider */}
-          {(project.col1img1 || project.col2img) && <div className="mx-5 sm:mx-8 mb-4 sm:mb-5 h-px" style={{ background: 'rgba(215,226,234,0.06)' }} />}
+          {project.col2img && <div className="mx-5 sm:mx-8 mb-4 sm:mb-5 h-px" style={{ background: 'rgba(215,226,234,0.06)' }} />}
 
           {/* Coming Soon placeholder */}
           {!project.col2img && (
@@ -127,7 +127,7 @@ function ProjectCard({
           )}
 
           {/* Images */}
-          {(project.col1img1 || project.col2img) && <div className="px-3 sm:px-5 pb-3 sm:pb-5">
+          {project.col2img && <div className="px-3 sm:px-5 pb-3 sm:pb-5">
             {/* Desktop: two-column */}
             <div className="hidden sm:flex gap-3" style={{ height: 'clamp(260px, 36vw, 460px)' }}>
               <div className="flex flex-col gap-3" style={{ width: '38%' }}>
