@@ -42,7 +42,7 @@ export default function ExperienceSection() {
         </h2>
       </FadeIn>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-6xl mx-auto">
         {experiences.map((exp, i) => (
           <FadeIn key={i} delay={i * 0.1} y={30}>
             <Link to={`/experience/${exp.slug}`} className="group block">

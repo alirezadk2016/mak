@@ -58,13 +58,13 @@ export default function HeroSection() {
       </Magnet>
 
       {/* Bottom bar */}
-      <div className="mt-auto flex justify-between items-end px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 relative z-20">
+      <div className="mt-auto flex justify-between items-end px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 relative z-20 gap-4">
         <FadeIn delay={0.35} y={20}>
           <p
-            className="font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
-            style={{ color: '#D7E2EA', fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
+            className="font-light uppercase tracking-wide leading-snug max-w-[140px] sm:max-w-[220px] md:max-w-[280px]"
+            style={{ color: '#D7E2EA', fontSize: 'clamp(0.6rem, 1.2vw, 1.1rem)' }}
           >
-            IT Support & Web Designer — turning complex problems into clean, powerful digital experiences
+            IT Support & Web Designer
           </p>
         </FadeIn>
         <FadeIn delay={0.5} y={20}>

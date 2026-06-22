@@ -72,7 +72,7 @@ export default function ServicesSection() {
             >
               <span
                 className="font-black leading-none flex-shrink-0"
-                style={{ color: '#0C0C0C', fontSize: 'clamp(3rem, 10vw, 140px)' }}
+                style={{ color: '#0C0C0C', fontSize: 'clamp(2rem, 8vw, 140px)' }}
               >
                 {s.num}
               </span>

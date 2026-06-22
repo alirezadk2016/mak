@@ -47,7 +47,7 @@ export default function FooterSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.04 }}
             className="hero-heading font-black uppercase leading-none tracking-tight inline-block relative group"
-            style={{ fontSize: 'clamp(2.2rem, 5.8vw, 76px)', color: '#D7E2EA' }}
+            style={{ fontSize: 'clamp(1.4rem, 5.2vw, 76px)', color: '#D7E2EA', wordBreak: 'break-all' }}
           >
             alirezadk2016@gmail.com
             <span
@@ -58,7 +58,7 @@ export default function FooterSection() {
         </div>
 
         {/* Meta grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 border-t border-b border-[#D7E2EA]/10">
+        <div className="grid grid-cols-2 md:grid-cols-4 border-t border-b border-[#D7E2EA]/10 divide-x divide-y md:divide-y-0" style={{ borderColor: 'rgba(215,226,234,0.1)', '--tw-divide-opacity': '0.1' } as React.CSSProperties}>
           {meta.map(({ label, value, href }, i) => (
             <FadeIn key={label} delay={0.05 * i} y={0}>
               <a

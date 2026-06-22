@@ -56,39 +56,43 @@ function ProjectCard({ project, index, total }: { project: typeof projects[0]; i
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale])
 
   return (
-    <div ref={cardRef} className="h-[85vh] flex items-start justify-center" style={{ paddingTop: `${index * 28}px` }}>
+    <div ref={cardRef} className="h-[80vh] sm:h-[85vh] flex items-start justify-center" style={{ paddingTop: `${index * 20}px` }}>
       <motion.div
-        style={{ scale, top: `${96 + index * 28}px`, position: 'sticky', background: '#0C0C0C' }}
-        className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] p-4 sm:p-6 md:p-8"
+        style={{ scale, top: `${80 + index * 20}px`, position: 'sticky', background: '#0C0C0C' }}
+        className="w-full rounded-[24px] sm:rounded-[40px] md:rounded-[60px] border-2 border-[#D7E2EA] p-3 sm:p-6 md:p-8"
       >
-        <div>
-          {/* Top row */}
-          <div className="flex items-center justify-between mb-4 sm:mb-6">
-            <div className="flex items-end gap-4">
-              <span
-                className="font-black leading-none"
-                style={{ color: '#D7E2EA', fontSize: 'clamp(3rem, 8vw, 100px)' }}
-              >
-                {project.num}
-              </span>
-              <div className="flex flex-col pb-1">
-                <span className="text-[#D7E2EA] opacity-50 uppercase tracking-widest text-xs sm:text-sm">{project.category}</span>
-                <span className="text-[#D7E2EA] font-medium uppercase text-base sm:text-xl md:text-2xl">{project.name}</span>
-              </div>
+        {/* Top row */}
+        <div className="flex items-center justify-between mb-3 sm:mb-6">
+          <div className="flex items-end gap-2 sm:gap-4 min-w-0">
+            <span
+              className="font-black leading-none flex-shrink-0"
+              style={{ color: '#D7E2EA', fontSize: 'clamp(2rem, 6vw, 100px)' }}
+            >
+              {project.num}
+            </span>
+            <div className="flex flex-col pb-1 min-w-0">
+              <span className="text-[#D7E2EA] opacity-50 uppercase tracking-widest text-[10px] sm:text-sm truncate">{project.category}</span>
+              <span className="text-[#D7E2EA] font-medium uppercase text-sm sm:text-xl md:text-2xl truncate">{project.name}</span>
             </div>
+          </div>
+          <div className="flex-shrink-0 ml-2">
             <LiveProjectButton href={project.href} label={project.label} />
           </div>
+        </div>
 
-          {/* Images */}
-          <div className="flex gap-3 sm:gap-4">
-            <div className="flex flex-col gap-3 sm:gap-4" style={{ width: '40%' }}>
-              <img src={project.col1img1} alt="" className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]" style={{ height: 'clamp(130px, 16vw, 230px)' }} />
-              <img src={project.col1img2} alt="" className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]" style={{ height: 'clamp(160px, 22vw, 340px)' }} />
-            </div>
-            <div style={{ width: '60%' }}>
-              <img src={project.col2img} alt="" className="w-full h-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]" />
-            </div>
+        {/* Images — mobile: single image, desktop: two-column */}
+        <div className="hidden sm:flex gap-3 sm:gap-4">
+          <div className="flex flex-col gap-3 sm:gap-4" style={{ width: '40%' }}>
+            <img src={project.col1img1} alt="" className="w-full object-cover rounded-[20px] sm:rounded-[40px] md:rounded-[50px]" style={{ height: 'clamp(100px, 16vw, 230px)' }} />
+            <img src={project.col1img2} alt="" className="w-full object-cover rounded-[20px] sm:rounded-[40px] md:rounded-[50px]" style={{ height: 'clamp(120px, 22vw, 340px)' }} />
           </div>
+          <div style={{ width: '60%' }}>
+            <img src={project.col2img} alt="" className="w-full h-full object-cover rounded-[20px] sm:rounded-[40px] md:rounded-[50px]" />
+          </div>
+        </div>
+        {/* Mobile: single image */}
+        <div className="sm:hidden">
+          <img src={project.col2img} alt="" className="w-full object-cover rounded-[16px]" style={{ height: '45vw' }} />
         </div>
       </motion.div>
     </div>
