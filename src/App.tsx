@@ -10,6 +10,7 @@ import ExperienceDetail from './pages/ExperienceDetail'
 import SvendeproevePage from './pages/SvendeproevePage'
 import EliteVaskPage from './pages/EliteVaskPage'
 import GamingPCPage from './pages/GamingPCPage'
+import MakPaintingPage from './pages/MakPaintingPage'
 import FooterSection from './components/FooterSection'
 function Home() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/projects/svendeproeve" element={<SvendeproevePage />} />
         <Route path="/projects/elite-vask" element={<EliteVaskPage />} />
         <Route path="/projects/gaming-pc" element={<GamingPCPage />} />
+        <Route path="/projects/mak-painting" element={<MakPaintingPage />} />
       </Routes>
     </LanguageProvider>
   )

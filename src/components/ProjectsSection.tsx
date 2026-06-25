@@ -29,6 +29,16 @@ const projects = [
   },
   {
     num: '03',
+    category: { da: 'Kunde — Australien', en: 'Client — Australia' },
+    name: 'MAK Painting',
+    href: '/projects/mak-painting',
+    external: false,
+    col1img1: 'https://image.thum.io/get/width/640/crop/500/https://www.makvandi.info/en',
+    col1img2: 'https://image.thum.io/get/width/640/crop/500/https://www.makvandi.info/en/gallery',
+    col2img: 'https://image.thum.io/get/width/1280/crop/900/https://www.makvandi.info/en',
+  },
+  {
+    num: '04',
     category: { da: 'Personligt projekt', en: 'Personal Project' },
     name: 'Gaming PC Build',
     href: '/projects/gaming-pc',
@@ -38,7 +48,7 @@ const projects = [
     col2img: '/gaming-pc.jpeg',
   },
   {
-    num: '04',
+    num: '05',
     category: { da: 'Kommer snart', en: 'Coming Soon' },
     name: '———',
     href: null,
