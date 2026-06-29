@@ -44,89 +44,50 @@ const contactItems: ContactItem[] = [
 ]
 
 function CardBack({ type }: { type: ContactItem['backType'] }) {
-  if (type === 'instagram') {
-    return (
-      <div className="w-full h-full rounded-[20px] overflow-hidden relative flex flex-col items-center justify-center gap-3"
-        style={{ background: 'linear-gradient(135deg, #F58529 0%, #DD2A7B 40%, #8134AF 70%, #515BD4 100%)' }}>
-        {/* Decorative rings */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="rounded-full border border-white/10" style={{ width: 120, height: 120 }} />
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="rounded-full border border-white/5" style={{ width: 160, height: 160 }} />
-        </div>
-        {/* Profile pic */}
-        <div className="relative z-10 w-14 h-14 rounded-full overflow-hidden border-2 border-white/60 shadow-lg">
-          <img src="/f1145949-0bb9-49ee-984f-8586244456a5.png" alt="" className="w-full h-full object-cover" />
-        </div>
-        {/* Handle */}
-        <div className="relative z-10 flex flex-col items-center gap-0.5">
-          <span className="text-white font-bold text-sm tracking-wide">@alireza__tak</span>
-          <span className="text-white/60 text-[10px] uppercase tracking-widest">Instagram</span>
-        </div>
-        {/* Follow button */}
-        <div className="relative z-10 px-5 py-1.5 rounded-full bg-white/15 border border-white/30 backdrop-blur-sm">
-          <span className="text-white text-[10px] font-semibold uppercase tracking-widest">Følg →</span>
-        </div>
-      </div>
-    )
+  const base = {
+    background: 'linear-gradient(145deg, #141210 0%, #0f0d0b 100%)',
+    border: '1px solid rgba(232,224,213,0.1)',
   }
 
-  if (type === 'linkedin') {
-    return (
-      <div className="w-full h-full rounded-[20px] overflow-hidden relative flex flex-col items-center justify-center gap-3"
-        style={{ background: 'linear-gradient(145deg, #0A66C2 0%, #004182 100%)' }}>
-        <Linkedin size={48} strokeWidth={1.2} style={{ color: 'white', opacity: 0.9 }} />
-        <span style={{ color: 'white', opacity: 0.8, fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
-          Alireza Makvandi
-        </span>
-        <div className="absolute inset-0 pointer-events-none rounded-[20px]" style={{ boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.12)' }} />
-      </div>
-    )
+  const icons: Record<ContactItem['backType'], React.ReactNode> = {
+    instagram: <Instagram size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
+    linkedin: <Linkedin size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
+    email: <Mail size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
+    phone: <Phone size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
   }
 
-  if (type === 'email') {
-    return (
-      <div className="w-full h-full rounded-[20px] overflow-hidden relative flex flex-col items-center justify-center gap-3"
-        style={{ background: 'linear-gradient(135deg, #EA4335 0%, #FBBC05 40%, #34A853 70%, #4285F4 100%)' }}>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="rounded-full border border-white/10" style={{ width: 120, height: 120 }} />
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="rounded-full border border-white/5" style={{ width: 160, height: 160 }} />
-        </div>
-        <div className="relative z-10 w-14 h-14 rounded-full bg-white/15 border-2 border-white/60 flex items-center justify-center shadow-lg backdrop-blur-sm">
-          <Mail size={26} strokeWidth={1.5} style={{ color: 'white' }} />
-        </div>
-        <div className="relative z-10 flex flex-col items-center gap-0.5">
-          <span className="text-white font-bold text-sm tracking-wide">Gmail</span>
-          <span className="text-white/60 text-[10px] uppercase tracking-widest">alirezadk2016</span>
-        </div>
-        <div className="relative z-10 px-5 py-1.5 rounded-full bg-white/15 border border-white/30 backdrop-blur-sm">
-          <span className="text-white text-[10px] font-semibold uppercase tracking-widest">Skriv →</span>
-        </div>
-      </div>
-    )
+  const labels: Record<ContactItem['backType'], string> = {
+    instagram: '@alireza__tak',
+    linkedin: 'Alireza Makvandi',
+    email: 'alirezadk2016@gmail.com',
+    phone: '+45 91 48 88 43',
+  }
+
+  const hints: Record<ContactItem['backType'], string> = {
+    instagram: 'Instagram →',
+    linkedin: 'LinkedIn →',
+    email: 'Send email →',
+    phone: 'Ring op →',
   }
 
   return (
-    <div className="w-full h-full rounded-[20px] overflow-hidden relative flex flex-col items-center justify-center gap-3"
-      style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)' }}>
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="rounded-full border border-white/8" style={{ width: 120, height: 120 }} />
+    <div
+      className="w-full h-full rounded-[20px] flex flex-col items-center justify-center gap-3"
+      style={base}
+    >
+      <div
+        className="w-10 h-10 rounded-full flex items-center justify-center"
+        style={{ background: 'rgba(232,224,213,0.06)', border: '1px solid rgba(232,224,213,0.1)' }}
+      >
+        {icons[type]}
       </div>
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="rounded-full border border-white/4" style={{ width: 160, height: 160 }} />
-      </div>
-      <div className="relative z-10 w-14 h-14 rounded-full bg-white/10 border-2 border-white/40 flex items-center justify-center shadow-lg backdrop-blur-sm">
-        <Phone size={26} strokeWidth={1.5} style={{ color: 'white' }} />
-      </div>
-      <div className="relative z-10 flex flex-col items-center gap-0.5">
-        <span className="text-white font-bold text-sm tracking-wide">+45 91 48 88 43</span>
-        <span className="text-white/50 text-[10px] uppercase tracking-widest">Telefon</span>
-      </div>
-      <div className="relative z-10 px-5 py-1.5 rounded-full bg-white/10 border border-white/25 backdrop-blur-sm">
-        <span className="text-white text-[10px] font-semibold uppercase tracking-widest">Ring op →</span>
+      <div className="flex flex-col items-center gap-1">
+        <span style={{ color: '#E8DDD0', opacity: 0.7, fontSize: '12px', fontWeight: 500, letterSpacing: '0.01em' }}>
+          {labels[type]}
+        </span>
+        <span style={{ color: '#E8DDD0', opacity: 0.22, fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
+          {hints[type]}
+        </span>
       </div>
     </div>
   )
@@ -263,8 +224,8 @@ export default function FooterSection() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-8 sm:mb-10"
         >
-          <span className="w-1.5 h-1.5 rounded-full" style={{ background: '#D7E2EA', opacity: 0.4 }} />
-          <span style={{ color: '#D7E2EA', opacity: 0.35, fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase' }}>
+          <div className="w-6 h-px" style={{ background: 'rgba(232,224,213,0.25)' }} />
+          <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.38em', textTransform: 'uppercase', fontWeight: 500 }}>
             {tx.label}
           </span>
         </motion.div>
@@ -276,14 +237,15 @@ export default function FooterSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           style={{
-            color: '#D7E2EA',
+            color: '#E8DDD0',
             fontSize: 'clamp(2.2rem, 6vw, 5.5rem)',
             fontWeight: 800,
             lineHeight: 1.05,
             letterSpacing: '-0.03em',
             whiteSpace: 'pre-line',
+            fontFamily: 'Kanit, sans-serif',
           }}
-          className="mb-16 sm:mb-20"
+          className="mb-14 sm:mb-18"
         >
           {tx.heading}
         </motion.h2>

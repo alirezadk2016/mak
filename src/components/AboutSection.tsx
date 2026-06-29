@@ -34,12 +34,10 @@ function CountUp({ target }: { target: string }) {
     return () => clearInterval(timer)
   }, [inView, value])
 
-  return (
-    <span ref={ref}>
-      {prefix}{count}{suffix}
-    </span>
-  )
+  return <span ref={ref}>{prefix}{count}{suffix}</span>
 }
+
+const skills = ['Windows Server', 'Active Directory', 'Linux', 'VMware', 'React', 'TypeScript', 'DNS & DHCP', 'GPO', 'IT-sikkerhed', 'Hardware', 'Netværk', 'Web Design']
 
 export default function AboutSection() {
   const { lang } = useLang()
@@ -48,89 +46,154 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-20 overflow-hidden"
-      style={{ background: '#0C0C0C' }}
+      className="relative px-5 sm:px-10 md:px-14 lg:px-20 py-24 sm:py-32 md:py-40 overflow-hidden"
+      style={{ background: '#0A0908' }}
     >
-      {/* Noise texture */}
-      <div
-        className="absolute inset-0 pointer-events-none z-[1]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")`,
-          backgroundSize: '200px 200px',
-          opacity: 0.03,
-          mixBlendMode: 'overlay',
-        }}
-      />
+      {/* Subtle top border */}
+      <div className="absolute top-0 inset-x-0 h-px" style={{ background: 'rgba(232,224,213,0.07)' }} />
 
-      <FadeIn delay={0.1} x={-60} y={0} duration={1} className="absolute top-[8%] left-[2%] md:left-[4%] hidden sm:block z-10">
-        <div className="flex flex-col gap-2">
-          {['Windows Server', 'Active Directory', 'VMware'].map(s => (
-            <span key={s} className="text-xs uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#D7E2EA]/20 text-[#D7E2EA]/40 whitespace-nowrap">{s}</span>
-          ))}
-        </div>
-      </FadeIn>
-      <FadeIn delay={0.2} x={-60} y={0} duration={1} className="absolute bottom-[10%] left-[2%] md:left-[6%] hidden sm:block z-10">
-        <div className="flex flex-col gap-2">
-          {['Linux', 'DNS & DHCP', 'GPO'].map(s => (
-            <span key={s} className="text-xs uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#D7E2EA]/20 text-[#D7E2EA]/40 whitespace-nowrap">{s}</span>
-          ))}
-        </div>
-      </FadeIn>
-      <FadeIn delay={0.15} x={60} y={0} duration={1} className="absolute top-[8%] right-[2%] md:right-[4%] hidden sm:block z-10">
-        <div className="flex flex-col gap-2 items-end">
-          {['React', 'TypeScript', 'Web Design'].map(s => (
-            <span key={s} className="text-xs uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#D7E2EA]/20 text-[#D7E2EA]/40 whitespace-nowrap">{s}</span>
-          ))}
-        </div>
-      </FadeIn>
-      <FadeIn delay={0.3} x={60} y={0} duration={1} className="absolute bottom-[10%] right-[2%] md:right-[6%] hidden sm:block z-10">
-        <div className="flex flex-col gap-2 items-end">
-          {['IT-sikkerhed', 'Hardware', 'Netværk'].map(s => (
-            <span key={s} className="text-xs uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#D7E2EA]/20 text-[#D7E2EA]/40 whitespace-nowrap">{s}</span>
-          ))}
-        </div>
-      </FadeIn>
+      {/* ── DESKTOP: editorial 2-column ── */}
+      <div className="hidden sm:grid sm:grid-cols-[1fr_2.2fr] gap-16 md:gap-24 lg:gap-32 max-w-6xl mx-auto">
 
-      <div className="flex flex-col items-center gap-10 sm:gap-14 md:gap-16 z-10 max-w-3xl text-center">
-        <FadeIn delay={0} y={40}>
+        {/* Left — sticky label */}
+        <div className="relative">
+          <FadeIn delay={0} y={30}>
+            <div className="sticky top-28 flex flex-col gap-6">
+              <div>
+                <p style={{ color: '#E8DDD0', opacity: 0.22, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '16px' }}>
+                  {lang === 'da' ? 'Om mig' : 'About me'}
+                </p>
+                <h2
+                  className="hero-heading font-black uppercase leading-none"
+                  style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5.5rem)', letterSpacing: '-0.03em' }}
+                >
+                  {tx.heading}
+                </h2>
+              </div>
+
+              {/* Stats */}
+              <div className="flex flex-col gap-6 pt-4 border-t" style={{ borderColor: 'rgba(232,224,213,0.07)' }}>
+                {tx.stats.map((stat) => (
+                  <div key={stat.label} className="flex flex-col gap-1">
+                    <motion.span
+                      className="font-black leading-none"
+                      style={{ color: '#E8DDD0', fontSize: 'clamp(1.8rem, 3.2vw, 3.2rem)', fontFamily: 'Kanit, sans-serif' }}
+                    >
+                      <CountUp target={stat.num} />
+                    </motion.span>
+                    <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '9px', letterSpacing: '0.3em', textTransform: 'uppercase' }}>
+                      {stat.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+
+        {/* Right — bio + skills + CTA */}
+        <div className="flex flex-col gap-12">
+          <AnimatedText
+            key={tx.bio}
+            text={tx.bio}
+            className="leading-relaxed"
+            style={{ color: '#E8DDD0', opacity: 0.65, fontSize: 'clamp(1rem, 1.5vw, 1.2rem)', fontWeight: 300, lineHeight: 1.9 } as React.CSSProperties}
+          />
+
+          {/* Skills */}
+          <FadeIn delay={0.3} y={16}>
+            <div className="flex flex-wrap gap-2">
+              {skills.map((skill) => (
+                <span
+                  key={skill}
+                  style={{
+                    color: '#E8DDD0',
+                    opacity: 0.45,
+                    fontSize: '10px',
+                    letterSpacing: '0.2em',
+                    textTransform: 'uppercase',
+                    padding: '6px 14px',
+                    border: '1px solid rgba(232,224,213,0.1)',
+                    borderRadius: '100px',
+                    fontWeight: 400,
+                  }}
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.4} y={16}>
+            <ContactButton label={t[lang].hero.cta} />
+          </FadeIn>
+        </div>
+      </div>
+
+      {/* ── MOBILE: stacked ── */}
+      <div className="flex flex-col gap-10 sm:hidden">
+        <FadeIn delay={0} y={30}>
+          <p style={{ color: '#E8DDD0', opacity: 0.22, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px' }}>
+            {lang === 'da' ? 'Om mig' : 'About me'}
+          </p>
           <h2
-            className="hero-heading font-black uppercase leading-none tracking-tight"
-            style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+            className="hero-heading font-black uppercase leading-none"
+            style={{ fontSize: 'clamp(2.5rem, 11vw, 5rem)', letterSpacing: '-0.03em' }}
           >
             {tx.heading}
           </h2>
         </FadeIn>
 
-        <div className="flex flex-col items-center gap-10 sm:gap-12">
-          <AnimatedText
-            key={tx.bio}
-            text={tx.bio}
-            className="font-medium text-center leading-relaxed"
-            style={{ color: '#D7E2EA', fontSize: 'clamp(1rem, 2vw, 1.35rem)' } as React.CSSProperties}
-          />
+        <AnimatedText
+          key={tx.bio}
+          text={tx.bio}
+          className="leading-relaxed"
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: 'clamp(0.9rem, 4vw, 1.1rem)', fontWeight: 300, lineHeight: 1.85 } as React.CSSProperties}
+        />
 
-          <FadeIn delay={0.3} y={20}>
-            <div className="grid grid-cols-3 gap-8 sm:gap-16 mt-2">
-              {tx.stats.map((stat) => (
-                <div key={stat.label} className="flex flex-col items-center gap-1">
-                  <motion.span
-                    className="font-black leading-none"
-                    style={{ color: '#D7E2EA', fontSize: 'clamp(2rem, 5vw, 4rem)' }}
-                  >
-                    <CountUp target={stat.num} />
-                  </motion.span>
-                  <span className="uppercase tracking-widest text-xs" style={{ color: '#D7E2EA', opacity: 0.4 }}>
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
+        <FadeIn delay={0.2} y={16}>
+          <div className="grid grid-cols-3 gap-4 py-6 border-t border-b" style={{ borderColor: 'rgba(232,224,213,0.07)' }}>
+            {tx.stats.map((stat) => (
+              <div key={stat.label} className="flex flex-col gap-1">
+                <motion.span
+                  className="font-black leading-none"
+                  style={{ color: '#E8DDD0', fontSize: 'clamp(1.6rem, 7vw, 2.5rem)', fontFamily: 'Kanit, sans-serif' }}
+                >
+                  <CountUp target={stat.num} />
+                </motion.span>
+                <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
 
-          <FadeIn delay={0.4} y={20}>
-            <ContactButton label={t[lang].hero.cta} />
-          </FadeIn>
-        </div>
+        <FadeIn delay={0.3} y={16}>
+          <div className="flex flex-wrap gap-2">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                style={{
+                  color: '#E8DDD0',
+                  opacity: 0.4,
+                  fontSize: '9px',
+                  letterSpacing: '0.18em',
+                  textTransform: 'uppercase',
+                  padding: '5px 12px',
+                  border: '1px solid rgba(232,224,213,0.1)',
+                  borderRadius: '100px',
+                }}
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.35} y={16}>
+          <ContactButton label={t[lang].hero.cta} />
+        </FadeIn>
       </div>
     </section>
   )

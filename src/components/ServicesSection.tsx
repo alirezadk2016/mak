@@ -38,7 +38,7 @@ export default function ServicesSection() {
               {/* Left border highlight */}
               <motion.div
                 className="absolute left-0 top-0 w-[3px] rounded-full"
-                style={{ background: 'linear-gradient(180deg, #7c3aed, #2563eb)', originY: 0 }}
+                style={{ background: 'linear-gradient(180deg, #C9A96E, #8A7250)', originY: 0 }}
                 initial={{ scaleY: 0, opacity: 0 }}
                 animate={hoveredIdx === i ? { scaleY: 1, opacity: 1 } : { scaleY: 0, opacity: 0 }}
                 transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}

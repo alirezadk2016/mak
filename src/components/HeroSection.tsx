@@ -35,14 +35,14 @@ function FlipAvatar({ className }: { className?: string }) {
         <img
           src={IMG_FRONT}
           alt="Alireza Makvandi"
-          className="w-full h-full rounded-full object-cover border-2"
-          style={{ borderColor: 'rgba(215,226,234,0.2)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+          className="w-full h-full rounded-full object-cover"
+          style={{ border: '1px solid rgba(232,224,213,0.15)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
         />
         <img
           src={IMG_BACK}
           alt="Alireza Makvandi"
-          className="absolute inset-0 w-full h-full rounded-full object-cover border-2"
-          style={{ borderColor: 'rgba(215,226,234,0.2)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+          className="absolute inset-0 w-full h-full rounded-full object-cover"
+          style={{ border: '1px solid rgba(232,224,213,0.15)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         />
       </motion.div>
     </div>
@@ -52,13 +52,13 @@ function FlipAvatar({ className }: { className?: string }) {
 function AnimatedHeading({ text }: { text: string }) {
   const words = text.split(' ')
   return (
-    <span className="inline-flex flex-wrap justify-center gap-x-[0.25em]">
+    <span className="inline-flex flex-wrap justify-center gap-x-[0.22em]">
       {words.map((word, i) => (
         <motion.span
           key={i}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15 + i * 0.12, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ delay: 0.1 + i * 0.1, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           className="inline-block"
         >
           {word}
@@ -71,7 +71,7 @@ function AnimatedHeading({ text }: { text: string }) {
 function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (!el) return
-  const top = el.getBoundingClientRect().top + window.scrollY - 80
+  const top = el.getBoundingClientRect().top + window.scrollY - 64
   window.scrollTo({ top, behavior: 'smooth' })
 }
 
@@ -80,256 +80,193 @@ export default function HeroSection() {
   const tx = t[lang]
 
   return (
-    <section className="min-h-screen flex flex-col overflow-x-clip relative" style={{ background: '#0C0C0C' }}>
-
-      {/* Glowing orbs */}
-      <motion.div
-        className="absolute pointer-events-none rounded-full"
-        style={{
-          width: '60vw',
-          height: '60vw',
-          top: '-15%',
-          left: '-10%',
-          background: 'radial-gradient(circle, #3d0066 0%, transparent 70%)',
-          opacity: 0.18,
-          filter: 'blur(40px)',
-        }}
-        animate={{ x: [0, 30, 0], y: [0, 20, 0] }}
-        transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      <motion.div
-        className="absolute pointer-events-none rounded-full"
-        style={{
-          width: '50vw',
-          height: '50vw',
-          top: '20%',
-          right: '-10%',
-          background: 'radial-gradient(circle, #001a4d 0%, transparent 70%)',
-          opacity: 0.22,
-          filter: 'blur(50px)',
-        }}
-        animate={{ x: [0, -25, 0], y: [0, 30, 0] }}
-        transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
-      />
-      <motion.div
-        className="absolute pointer-events-none rounded-full"
-        style={{
-          width: '35vw',
-          height: '35vw',
-          bottom: '-5%',
-          left: '30%',
-          background: 'radial-gradient(circle, #0a0040 0%, transparent 70%)',
-          opacity: 0.15,
-          filter: 'blur(60px)',
-        }}
-        animate={{ x: [0, 20, 0], y: [0, -20, 0] }}
-        transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut', delay: 6 }}
-      />
-
-      {/* Noise texture overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none z-[1]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")`,
-          backgroundSize: '200px 200px',
-          opacity: 0.03,
-          mixBlendMode: 'overlay',
-        }}
-      />
-
-      {/* Navbar */}
-      <FadeIn delay={0} y={-20}>
-        <nav className="flex justify-between items-center px-5 sm:px-8 md:px-10 pt-5 sm:pt-6 md:pt-8 relative z-30">
-          <div className="flex gap-4 sm:gap-8 md:gap-10">
-            {[
-              { key: 'about', label: tx.nav.about },
-              { key: 'experience', label: tx.nav.experience },
-              { key: 'projects', label: tx.nav.projects },
-            ].map(({ key, label }) => (
-              <a
-                key={key}
-                href={`#${key}`}
-                onClick={(e) => { e.preventDefault(); scrollTo(key) }}
-                className="text-xs sm:text-lg lg:text-[1.4rem] font-medium uppercase tracking-wider transition-opacity duration-200 hover:opacity-70"
-                style={{ color: '#D7E2EA' }}
-              >
-                {label}
-              </a>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3 sm:gap-6">
+    <>
+      {/* Fixed Nav */}
+      <nav className="site-nav">
+        <div className="flex gap-6 sm:gap-10">
+          {[
+            { key: 'about', label: tx.nav.about },
+            { key: 'experience', label: tx.nav.experience },
+            { key: 'projects', label: tx.nav.projects },
+          ].map(({ key, label }) => (
             <a
-              href="#contact"
-              onClick={(e) => { e.preventDefault(); scrollTo('contact') }}
-              className="text-xs sm:text-lg lg:text-[1.4rem] font-medium uppercase tracking-wider transition-opacity duration-200 hover:opacity-70"
-              style={{ color: '#D7E2EA' }}
+              key={key}
+              href={`#${key}`}
+              onClick={(e) => { e.preventDefault(); scrollTo(key) }}
+              className="transition-opacity duration-200 hover:opacity-50"
+              style={{ color: '#E8DDD0', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 500 }}
             >
-              {tx.nav.contact}
+              {label}
             </a>
+          ))}
+        </div>
 
-            {/* Language switcher */}
-            <button
-              onClick={toggle}
-              className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full border transition-all duration-200 hover:opacity-70 flex-shrink-0"
-              style={{ borderColor: 'rgba(215,226,234,0.25)', color: '#D7E2EA' }}
-              title={lang === 'da' ? 'Switch to English' : 'Skift til dansk'}
-            >
-              <Globe size={13} strokeWidth={1.5} />
-              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest">
-                {lang === 'da' ? 'EN' : 'DA'}
-              </span>
-            </button>
-          </div>
-        </nav>
-      </FadeIn>
-
-      {/* ── MOBILE layout ── */}
-      <div className="flex flex-col items-center px-5 pt-4 pb-10 gap-5 sm:hidden flex-1 justify-start mt-6 relative z-10">
-
-        <FadeIn delay={0.2} y={20}>
-          <FlipAvatar className="w-52 h-52" />
-        </FadeIn>
-
-        <h1
-          className="hero-heading font-black uppercase tracking-tight leading-none text-center"
-          style={{ fontSize: '14vw', color: '#D7E2EA' }}
-        >
-          <AnimatedHeading key={tx.hero.heading} text={tx.hero.heading} />
-        </h1>
-
-        <FadeIn delay={0.6} y={20}>
-          <p
-            className="text-center font-light uppercase tracking-widest text-xs leading-relaxed max-w-[260px]"
-            style={{ color: '#D7E2EA', opacity: 0.5 }}
+        <div className="flex items-center gap-5 sm:gap-7">
+          <a
+            href="#contact"
+            onClick={(e) => { e.preventDefault(); scrollTo('contact') }}
+            className="transition-opacity duration-200 hover:opacity-50"
+            style={{ color: '#E8DDD0', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 500 }}
           >
-            {tx.hero.role}
-          </p>
-        </FadeIn>
+            {tx.nav.contact}
+          </a>
+          <button
+            onClick={toggle}
+            className="flex items-center gap-1.5 transition-opacity duration-200 hover:opacity-50"
+            style={{ color: '#E8DDD0', fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
+            title={lang === 'da' ? 'Switch to English' : 'Skift til dansk'}
+          >
+            <Globe size={11} strokeWidth={1.5} />
+            {lang === 'da' ? 'EN' : 'DA'}
+          </button>
+        </div>
+      </nav>
 
-        <FadeIn delay={0.75} y={20}>
-          <ContactButton label={tx.hero.cta} />
-        </FadeIn>
+      <section className="min-h-screen flex flex-col overflow-x-clip relative" style={{ background: '#0A0908', paddingTop: '56px' }}>
 
-        {/* Available for work — mobile only */}
-        <motion.div
-          className="w-full relative overflow-hidden rounded-[18px]"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          style={{ padding: '1px', background: 'linear-gradient(135deg, rgba(215,226,234,0.12) 0%, rgba(215,226,234,0.04) 50%, rgba(215,226,234,0.1) 100%)' }}
-        >
-          {/* Animated shimmer border */}
-          <motion.div
-            className="absolute inset-0 rounded-[18px] pointer-events-none"
-            animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-            style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(215,226,234,0.18) 40%, rgba(215,226,234,0.32) 50%, rgba(215,226,234,0.18) 60%, transparent 100%)',
-              backgroundSize: '200% 100%',
-            }}
-          />
+        {/* Subtle warm vignette — no orbs */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse 70% 60% at 65% 10%, rgba(160,130,80,0.05) 0%, transparent 60%)' }}
+        />
+        {/* Dot grid texture */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: 'radial-gradient(rgba(232,224,213,0.04) 1px, transparent 1px)',
+            backgroundSize: '28px 28px',
+          }}
+        />
+        {/* Noise texture overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none z-[1]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")`,
+            backgroundSize: '200px 200px',
+            opacity: 0.025,
+            mixBlendMode: 'overlay',
+          }}
+        />
 
-          <div className="relative rounded-[17px] overflow-hidden" style={{ background: '#0f0f0f' }}>
-            {/* Inner glow top */}
-            <div className="absolute top-0 inset-x-0 h-px pointer-events-none"
-              style={{ background: 'linear-gradient(to right, transparent 10%, rgba(215,226,234,0.15) 50%, transparent 90%)' }} />
+        {/* ── MOBILE layout ── */}
+        <div className="flex flex-col items-center px-5 pt-6 pb-10 gap-5 sm:hidden flex-1 justify-start relative z-10">
 
-            <div className="px-5 py-4 flex flex-col gap-2">
-              {/* Pulse + label */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="relative flex h-1.5 w-1.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-70" />
-                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400" />
-                  </span>
-                  <motion.span
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.2, duration: 0.5 }}
-                    style={{ color: '#6ee7b7', fontSize: '8px', letterSpacing: '0.38em', textTransform: 'uppercase', fontWeight: 600 }}
-                  >
-                    {lang === 'da' ? 'Klar til nye muligheder' : 'Ready for new opportunities'}
-                  </motion.span>
-                </div>
-              </div>
+          <FadeIn delay={0.15} y={20}>
+            <FlipAvatar className="w-44 h-44" />
+          </FadeIn>
 
-              {/* Italic headline */}
-              <div style={{ overflow: 'hidden' }}>
-                <motion.p
-                  initial={{ y: '110%' }}
-                  animate={{ y: 0 }}
-                  transition={{ delay: 1.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  style={{
-                    fontFamily: 'Kanit, sans-serif',
-                    fontStyle: 'normal',
-                    fontWeight: 600,
-                    color: 'rgba(215,226,234,0.55)',
-                    fontSize: 'clamp(0.95rem, 4.8vw, 1.15rem)',
-                    lineHeight: 1.25,
-                    letterSpacing: '0.01em',
-                  }}
-                >
-                  {lang === 'da' ? 'Klar til nye udfordringer.' : 'Ready for new challenges.'}
-                </motion.p>
-              </div>
-
-              {/* Bottom meta */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.4, duration: 0.5 }}
-                className="flex items-center gap-2 pt-0.5"
-              >
-                <span style={{ color: '#D7E2EA', opacity: 0.2, fontSize: '8px', letterSpacing: '0.3em', textTransform: 'uppercase' }}>
-                  Aarhus · IT Support
-                </span>
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
-
-      </div>
-
-      {/* ── DESKTOP layout ── */}
-      <div className="hidden sm:flex sm:flex-col sm:flex-1 relative z-10">
-
-        <div className="overflow-hidden">
           <h1
-            className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center mt-4 md:-mt-5"
-            style={{ fontSize: 'clamp(12vw, 17.5vw, 17.5vw)', color: '#D7E2EA' }}
+            className="hero-heading font-black uppercase tracking-tight leading-none text-center"
+            style={{ fontSize: '13.5vw' }}
           >
             <AnimatedHeading key={tx.hero.heading} text={tx.hero.heading} />
           </h1>
-        </div>
 
-        <Magnet
-          padding={150}
-          strength={3}
-          activeTransition="transform 0.3s ease-out"
-          inactiveTransition="transform 0.6s ease-in-out"
-          className="absolute left-1/2 -translate-x-1/2 z-10 bottom-0 w-[280px] md:w-[340px] lg:w-[400px]"
-        >
-          <FadeIn delay={0.6} y={30}>
-            <FlipAvatar className="w-full aspect-square" />
-          </FadeIn>
-        </Magnet>
-
-        <div className="mt-auto flex justify-between items-end px-8 md:px-10 pb-8 md:pb-10 relative z-20 gap-4">
-          <FadeIn delay={0.55} y={20}>
+          <FadeIn delay={0.5} y={20}>
             <p
-              className="font-light uppercase tracking-wide leading-snug max-w-[200px] md:max-w-[280px]"
-              style={{ color: '#D7E2EA', fontSize: 'clamp(0.7rem, 1.2vw, 1.1rem)' }}
+              className="text-center font-light uppercase text-center"
+              style={{ color: '#E8DDD0', opacity: 0.38, fontSize: '10px', letterSpacing: '0.32em', lineHeight: 1.8 }}
             >
               {tx.hero.role}
             </p>
           </FadeIn>
-          <FadeIn delay={0.7} y={20}>
+
+          <FadeIn delay={0.65} y={20}>
             <ContactButton label={tx.hero.cta} />
           </FadeIn>
-        </div>
-      </div>
 
-    </section>
+          {/* Available for work — mobile */}
+          <motion.div
+            className="w-full"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div
+              className="rounded-[14px] px-5 py-4 flex items-center justify-between"
+              style={{ background: 'rgba(232,224,213,0.04)', border: '1px solid rgba(232,224,213,0.08)' }}
+            >
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400" />
+                  </span>
+                  <span style={{ color: '#6ee7b7', fontSize: '9px', letterSpacing: '0.3em', textTransform: 'uppercase', fontWeight: 600 }}>
+                    {lang === 'da' ? 'Klar til nye muligheder' : 'Open to opportunities'}
+                  </span>
+                </div>
+                <p style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em' }}>
+                  {lang === 'da' ? 'IT Support · Aarhus, DK' : 'IT Support · Aarhus, DK'}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
+
+        {/* ── DESKTOP layout ── */}
+        <div className="hidden sm:flex sm:flex-col sm:flex-1 relative z-10">
+
+          <div className="overflow-hidden">
+            <h1
+              className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center mt-2 md:-mt-4"
+              style={{ fontSize: 'clamp(12vw, 17.5vw, 17.5vw)' }}
+            >
+              <AnimatedHeading key={tx.hero.heading} text={tx.hero.heading} />
+            </h1>
+          </div>
+
+          {/* Thin divider under name */}
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ delay: 0.7, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className="mx-8 md:mx-12 h-px"
+            style={{ background: 'rgba(232,224,213,0.08)', transformOrigin: 'left' }}
+          />
+
+          <Magnet
+            padding={150}
+            strength={3}
+            activeTransition="transform 0.3s ease-out"
+            inactiveTransition="transform 0.6s ease-in-out"
+            className="absolute left-1/2 -translate-x-1/2 z-10 bottom-0 w-[260px] md:w-[320px] lg:w-[380px]"
+          >
+            <FadeIn delay={0.5} y={30}>
+              <FlipAvatar className="w-full aspect-square" />
+            </FadeIn>
+          </Magnet>
+
+          <div className="mt-auto flex justify-between items-end px-8 md:px-12 pb-8 md:pb-10 relative z-20 gap-4">
+            <div className="flex flex-col gap-2">
+              <FadeIn delay={0.5} y={20}>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400" />
+                  </span>
+                  <span style={{ color: '#6ee7b7', fontSize: '9px', letterSpacing: '0.3em', textTransform: 'uppercase', fontWeight: 600 }}>
+                    {lang === 'da' ? 'Klar til nye muligheder' : 'Open to opportunities'}
+                  </span>
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.55} y={20}>
+                <p
+                  className="font-light uppercase leading-snug"
+                  style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '10px', letterSpacing: '0.28em' }}
+                >
+                  {tx.hero.role}
+                </p>
+              </FadeIn>
+            </div>
+            <FadeIn delay={0.7} y={20}>
+              <ContactButton label={tx.hero.cta} />
+            </FadeIn>
+          </div>
+        </div>
+
+      </section>
+    </>
   )
 }
