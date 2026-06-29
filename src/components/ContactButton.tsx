@@ -1,6 +1,10 @@
 function scrollToContact() {
   const el = document.getElementById('contact')
-  if (!el) return
+  if (!el) {
+    // Not on the home page — navigate home and jump to contact
+    window.location.href = '/#contact'
+    return
+  }
   const top = el.getBoundingClientRect().top + window.scrollY - 80
   window.scrollTo({ top, behavior: 'smooth' })
 }

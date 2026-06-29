@@ -87,7 +87,7 @@ export default function HeroSection() {
       <nav className="site-nav">
         <div className="flex gap-5 sm:gap-9">
           {[
-            { key: 'about', label: tx.nav.about, mobile: true, route: '' },
+            { key: 'about', label: tx.nav.about, mobile: true, route: '/about' },
             { key: 'experience', label: tx.nav.experience, mobile: true, route: '' },
             { key: 'projects', label: tx.nav.projects, mobile: true, route: '' },
             { key: 'recommendations', label: tx.recommendations.navLabel, mobile: false, route: '/recommendations' },
