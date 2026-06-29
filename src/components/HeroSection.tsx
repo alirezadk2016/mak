@@ -1,6 +1,7 @@
 import { Globe } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import FadeIn from './FadeIn'
 import Magnet from './Magnet'
 import ContactButton from './ContactButton'
@@ -77,6 +78,7 @@ function scrollTo(id: string) {
 
 export default function HeroSection() {
   const { lang, toggle } = useLang()
+  const navigate = useNavigate()
   const tx = t[lang]
 
   return (
@@ -85,15 +87,15 @@ export default function HeroSection() {
       <nav className="site-nav">
         <div className="flex gap-5 sm:gap-9">
           {[
-            { key: 'about', label: tx.nav.about, mobile: true },
-            { key: 'experience', label: tx.nav.experience, mobile: true },
-            { key: 'projects', label: tx.nav.projects, mobile: true },
-            { key: 'recommendations', label: tx.recommendations.navLabel, mobile: false },
-          ].map(({ key, label, mobile }) => (
+            { key: 'about', label: tx.nav.about, mobile: true, route: '' },
+            { key: 'experience', label: tx.nav.experience, mobile: true, route: '' },
+            { key: 'projects', label: tx.nav.projects, mobile: true, route: '' },
+            { key: 'recommendations', label: tx.recommendations.navLabel, mobile: false, route: '/recommendations' },
+          ].map(({ key, label, mobile, route }) => (
             <a
               key={key}
-              href={`#${key}`}
-              onClick={(e) => { e.preventDefault(); scrollTo(key) }}
+              href={route || `#${key}`}
+              onClick={(e) => { e.preventDefault(); route ? navigate(route) : scrollTo(key) }}
               className={`transition-opacity duration-200 hover:opacity-50 ${mobile ? '' : 'hidden sm:inline'}`}
               style={{ color: '#E8DDD0', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 500 }}
             >
