@@ -12,7 +12,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
+      className="bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-16 sm:py-24 md:py-32"
     >
       <FadeIn delay={0} y={40}>
         <p className="text-center uppercase tracking-widest text-sm mb-3 font-medium" style={{ color: '#0C0C0C', opacity: 0.4 }}>

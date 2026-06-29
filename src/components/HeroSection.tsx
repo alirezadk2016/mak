@@ -1,5 +1,5 @@
-import { Globe } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { Globe, Menu, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import FadeIn from './FadeIn'
@@ -80,23 +80,43 @@ export default function HeroSection() {
   const { lang, toggle } = useLang()
   const navigate = useNavigate()
   const tx = t[lang]
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const navItems = [
+    { key: 'about', label: tx.nav.about, route: '' },
+    { key: 'experience', label: tx.nav.experience, route: '' },
+    { key: 'projects', label: tx.nav.projects, route: '' },
+    { key: 'recommendations', label: tx.recommendations.navLabel, route: '/recommendations' },
+    { key: 'contact', label: tx.nav.contact, route: '' },
+  ]
+
+  function handleNav(key: string, route: string) {
+    setMenuOpen(false)
+    if (route) navigate(route)
+    else scrollTo(key)
+  }
 
   return (
     <>
       {/* Fixed Nav */}
       <nav className="site-nav">
-        <div className="flex gap-5 sm:gap-9">
-          {[
-            { key: 'about', label: tx.nav.about, mobile: true, route: '' },
-            { key: 'experience', label: tx.nav.experience, mobile: true, route: '' },
-            { key: 'projects', label: tx.nav.projects, mobile: true, route: '' },
-            { key: 'recommendations', label: tx.recommendations.navLabel, mobile: false, route: '/recommendations' },
-          ].map(({ key, label, mobile, route }) => (
+        {/* Brand (mobile) */}
+        <button
+          onClick={() => { setMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+          className="sm:hidden"
+          style={{ color: '#E8DDD0', fontSize: '12px', letterSpacing: '0.22em', textTransform: 'uppercase', fontWeight: 700 }}
+        >
+          Alireza M.
+        </button>
+
+        {/* Desktop links */}
+        <div className="hidden sm:flex gap-9">
+          {navItems.slice(0, 4).map(({ key, label, route }) => (
             <a
               key={key}
               href={route || `#${key}`}
-              onClick={(e) => { e.preventDefault(); route ? navigate(route) : scrollTo(key) }}
-              className={`transition-opacity duration-200 hover:opacity-50 ${mobile ? '' : 'hidden sm:inline'}`}
+              onClick={(e) => { e.preventDefault(); handleNav(key, route) }}
+              className="transition-opacity duration-200 hover:opacity-50"
               style={{ color: '#E8DDD0', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 500 }}
             >
               {label}
@@ -105,10 +125,11 @@ export default function HeroSection() {
         </div>
 
         <div className="flex items-center gap-5 sm:gap-7">
+          {/* Desktop contact */}
           <a
             href="#contact"
-            onClick={(e) => { e.preventDefault(); scrollTo('contact') }}
-            className="transition-opacity duration-200 hover:opacity-50"
+            onClick={(e) => { e.preventDefault(); handleNav('contact', '') }}
+            className="hidden sm:inline transition-opacity duration-200 hover:opacity-50"
             style={{ color: '#E8DDD0', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 500 }}
           >
             {tx.nav.contact}
@@ -122,8 +143,45 @@ export default function HeroSection() {
             <Globe size={11} strokeWidth={1.5} />
             {lang === 'da' ? 'EN' : 'DA'}
           </button>
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setMenuOpen(o => !o)}
+            className="sm:hidden flex items-center justify-center"
+            style={{ color: '#E8DDD0' }}
+            aria-label="Menu"
+          >
+            {menuOpen ? <X size={20} strokeWidth={1.6} /> : <Menu size={20} strokeWidth={1.6} />}
+          </button>
         </div>
       </nav>
+
+      {/* Mobile menu overlay */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="sm:hidden fixed inset-0 z-[99] flex flex-col items-center justify-center gap-7"
+            style={{ background: 'rgba(10,9,8,0.97)', backdropFilter: 'blur(8px)' }}
+          >
+            {navItems.map(({ key, label, route }, i) => (
+              <motion.a
+                key={key}
+                href={route || `#${key}`}
+                onClick={(e) => { e.preventDefault(); handleNav(key, route) }}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.06 + i * 0.05 }}
+                style={{ color: '#E8DDD0', fontSize: '22px', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600 }}
+              >
+                {label}
+              </motion.a>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <section className="min-h-screen flex flex-col overflow-x-clip relative" style={{ background: '#0A0908', paddingTop: '56px' }}>
 
@@ -152,10 +210,17 @@ export default function HeroSection() {
         />
 
         {/* ── MOBILE layout ── */}
-        <div className="flex flex-col items-center px-5 pt-6 pb-10 gap-5 sm:hidden flex-1 justify-start relative z-10">
+        <div className="flex flex-col items-center px-5 pt-8 pb-12 gap-6 sm:hidden flex-1 justify-center relative z-10">
 
           <FadeIn delay={0.15} y={20}>
-            <FlipAvatar className="w-44 h-44" />
+            <div
+              className="rounded-full p-[2px]"
+              style={{ background: 'linear-gradient(155deg, rgba(201,169,110,0.5) 0%, rgba(232,224,213,0.08) 50%, rgba(201,169,110,0.25) 100%)' }}
+            >
+              <div className="rounded-full p-1.5" style={{ background: '#0A0908' }}>
+                <FlipAvatar className="w-40 h-40" />
+              </div>
+            </div>
           </FadeIn>
 
           <h1

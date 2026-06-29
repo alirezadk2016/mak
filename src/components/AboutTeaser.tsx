@@ -37,7 +37,7 @@ export default function AboutTeaser() {
   return (
     <section
       id="about"
-      className="relative px-5 sm:px-10 md:px-16 py-24 sm:py-32 md:py-40 overflow-hidden"
+      className="relative px-5 sm:px-10 md:px-16 py-16 sm:py-28 md:py-36 overflow-hidden"
       style={{ background: '#0A0908' }}
     >
       <div className="absolute top-0 inset-x-0 h-px" style={{ background: 'rgba(232,224,213,0.07)' }} />

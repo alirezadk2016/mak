@@ -196,7 +196,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 z-10 relative px-3 sm:px-5 md:px-8 py-20 sm:py-24 md:py-32"
+      className="rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 z-10 relative px-3 sm:px-5 md:px-8 py-16 sm:py-24 md:py-32"
       style={{ background: '#0C0C0C' }}
     >
       <FadeIn delay={0} y={40}>
