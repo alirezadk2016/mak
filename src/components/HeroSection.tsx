@@ -208,64 +208,69 @@ export default function HeroSection() {
 
         </div>
 
-        {/* ── DESKTOP layout ── */}
-        <div className="hidden sm:flex sm:flex-col sm:flex-1 relative z-10">
+        {/* ── DESKTOP layout — refined split ── */}
+        <div className="hidden sm:flex sm:flex-1 items-center px-10 md:px-16 lg:px-20 relative z-10">
+          <div className="w-full grid grid-cols-[1.4fr_1fr] gap-10 lg:gap-16 items-center">
 
-          <div className="overflow-hidden">
-            <h1
-              className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center mt-2 md:-mt-4"
-              style={{ fontSize: 'clamp(12vw, 17.5vw, 17.5vw)' }}
-            >
-              <AnimatedHeading key={tx.hero.heading} text={tx.hero.heading} />
-            </h1>
-          </div>
-
-          {/* Thin divider under name */}
-          <motion.div
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: 1 }}
-            transition={{ delay: 0.7, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-8 md:mx-12 h-px"
-            style={{ background: 'rgba(232,224,213,0.08)', transformOrigin: 'left' }}
-          />
-
-          <Magnet
-            padding={150}
-            strength={3}
-            activeTransition="transform 0.3s ease-out"
-            inactiveTransition="transform 0.6s ease-in-out"
-            className="absolute left-1/2 -translate-x-1/2 z-10 bottom-0 w-[260px] md:w-[320px] lg:w-[380px]"
-          >
-            <FadeIn delay={0.5} y={30}>
-              <FlipAvatar className="w-full aspect-square" />
-            </FadeIn>
-          </Magnet>
-
-          <div className="mt-auto flex justify-between items-end px-8 md:px-12 pb-8 md:pb-10 relative z-20 gap-4">
-            <div className="flex flex-col gap-2">
-              <FadeIn delay={0.5} y={20}>
-                <div className="flex items-center gap-2 mb-1">
+            {/* Left — identity */}
+            <div className="flex flex-col">
+              <FadeIn delay={0.2} y={16}>
+                <div className="flex items-center gap-2.5 mb-7">
                   <span className="relative flex h-1.5 w-1.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400" />
                   </span>
-                  <span style={{ color: '#6ee7b7', fontSize: '9px', letterSpacing: '0.3em', textTransform: 'uppercase', fontWeight: 600 }}>
+                  <span style={{ color: '#6ee7b7', fontSize: '10px', letterSpacing: '0.32em', textTransform: 'uppercase', fontWeight: 600 }}>
                     {lang === 'da' ? 'Klar til nye muligheder' : 'Open to opportunities'}
                   </span>
                 </div>
               </FadeIn>
-              <FadeIn delay={0.55} y={20}>
-                <p
-                  className="font-light uppercase leading-snug"
-                  style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '10px', letterSpacing: '0.28em' }}
+
+              <div className="overflow-hidden">
+                <h1
+                  className="hero-heading font-black uppercase tracking-tight leading-[0.92]"
+                  style={{ fontSize: 'clamp(2.8rem, 6.5vw, 6.5rem)', letterSpacing: '-0.02em' }}
                 >
-                  {tx.hero.role}
-                </p>
+                  <span className="block"><AnimatedHeading text="Alireza" /></span>
+                  <span className="block"><AnimatedHeading text="Makvandi" /></span>
+                </h1>
+              </div>
+
+              <FadeIn delay={0.55} y={16}>
+                <div className="mt-6 mb-9 flex items-center gap-4">
+                  <div className="w-10 h-px" style={{ background: 'rgba(201,169,110,0.5)' }} />
+                  <p
+                    className="font-light uppercase"
+                    style={{ color: '#E8DDD0', opacity: 0.5, fontSize: 'clamp(0.7rem, 1vw, 0.95rem)', letterSpacing: '0.28em' }}
+                  >
+                    {tx.hero.role}
+                  </p>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={0.7} y={16}>
+                <div className="flex items-center gap-8">
+                  <ContactButton label={tx.hero.cta} />
+                  <span className="flex-shrink-0" style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '11px', letterSpacing: '0.12em' }}>
+                    Aarhus · DK
+                  </span>
+                </div>
               </FadeIn>
             </div>
-            <FadeIn delay={0.7} y={20}>
-              <ContactButton label={tx.hero.cta} />
-            </FadeIn>
+
+            {/* Right — portrait */}
+            <Magnet
+              padding={120}
+              strength={2}
+              activeTransition="transform 0.3s ease-out"
+              inactiveTransition="transform 0.6s ease-in-out"
+              className="justify-self-end w-[280px] md:w-[340px] lg:w-[400px]"
+            >
+              <FadeIn delay={0.45} y={30}>
+                <FlipAvatar className="w-full aspect-square" />
+              </FadeIn>
+            </Magnet>
+
           </div>
         </div>
 
