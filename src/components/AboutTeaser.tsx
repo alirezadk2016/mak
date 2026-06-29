@@ -9,7 +9,7 @@ const IMG = '/f1145949-0bb9-49ee-984f-8586244456a5.png'
 const content = {
   da: {
     label: 'Om mig',
-    summary: 'Nyuddannet IT-supporter fra Aarhus Tech med 10 års erfaring fra det danske arbejdsmarked — bl.a. fra YouSee. Stærk inden for netværk, servere, hardware og brugersupport, suppleret med erfaring i web design og AutoCAD. Målrettet, hurtig til at lære og altid klar til at tage ansvar.',
+    summary: 'Nyuddannet IT-supporter fra Aarhus Tech med 10 års erfaring fra det danske arbejdsmarked — bl.a. fra YouSee og en praktik hos Fourcom. Erfaring med Windows, hardware, fejlfinding og brugersupport. Mødestabil, ansvarlig og hurtig til at lære — klar til at bidrage fra dag ét.',
     cta: 'Læs hele min historie',
     stats: [
       { num: '10', label: 'År i Danmark' },
@@ -19,7 +19,7 @@ const content = {
   },
   en: {
     label: 'About me',
-    summary: 'Newly qualified IT supporter from Aarhus Tech with 10 years of experience in the Danish job market — including at YouSee. Strong in networking, servers, hardware and user support, complemented by experience in web design and AutoCAD. Driven, a fast learner, and always ready to take responsibility.',
+    summary: 'Newly qualified IT supporter from Aarhus Tech with 10 years of experience in the Danish job market — including at YouSee and an internship at Fourcom. Experienced with Windows, hardware, troubleshooting and user support. Reliable, responsible and a fast learner — ready to contribute from day one.',
     cta: 'Read my full story',
     stats: [
       { num: '10', label: 'Years in Denmark' },

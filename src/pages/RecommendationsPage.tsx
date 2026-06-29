@@ -119,12 +119,40 @@ export default function RecommendationsPage() {
           })}
         </div>
 
+        {/* Reference contact */}
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="mt-6 rounded-[18px] p-6 sm:p-7 flex flex-wrap items-center justify-between gap-4"
+          style={{ background: 'rgba(232,224,213,0.035)', border: '1px solid rgba(232,224,213,0.08)' }}
+        >
+          <div>
+            <p style={{ color: '#E8DDD0', opacity: 0.28, fontSize: '9px', letterSpacing: '0.28em', textTransform: 'uppercase', marginBottom: '8px' }}>
+              {tx.referenceLabel}
+            </p>
+            <p style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '13px', marginBottom: '6px', fontWeight: 300 }}>
+              {tx.referenceText}
+            </p>
+            <p style={{ color: '#E8DDD0', opacity: 0.9, fontSize: '14px', fontWeight: 600 }}>
+              {tx.referenceName} <span style={{ opacity: 0.4, fontWeight: 400 }}>· {tx.referenceRole}</span>
+            </p>
+          </div>
+          <a
+            href={`mailto:${tx.referenceEmail}`}
+            className="inline-flex items-center gap-2 rounded-full transition-opacity hover:opacity-70"
+            style={{ color: '#C9A96E', padding: '9px 18px', fontSize: '12px', fontWeight: 500, border: '1px solid rgba(201,169,110,0.4)', background: 'rgba(201,169,110,0.08)' }}
+          >
+            {tx.referenceEmail}
+          </a>
+        </motion.div>
+
         {/* Note */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex items-center gap-3 mt-10 sm:mt-14"
+          transition={{ duration: 0.5, delay: 0.45 }}
+          className="flex items-center gap-3 mt-8"
         >
           <span className="relative flex h-1.5 w-1.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-300 opacity-50" />

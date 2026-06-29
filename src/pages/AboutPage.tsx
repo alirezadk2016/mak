@@ -33,11 +33,13 @@ const content = {
     ],
     expertiseLabel: 'Mine kompetencer',
     expertise: [
-      { icon: Server, title: 'IT & Netværk', desc: 'Windows Server, Active Directory, DNS/DHCP, Linux, VMware og netværksopsætning.' },
-      { icon: Cpu, title: 'Hardware', desc: 'PC-byg, fejlfinding, komponenter og klargøring af arbejdsstationer.' },
-      { icon: PenTool, title: 'AutoCAD', desc: 'Erfaring med teknisk tegning i AutoCAD — med officielt certifikat.' },
+      { icon: Server, title: 'IT & Netværk', desc: 'Windows Server, Active Directory, DNS/DHCP, Linux og netværksopsætning.' },
+      { icon: Cpu, title: 'Hardware', desc: 'PC-opsætning, fejlfinding, reparation af komponenter og klargøring af arbejdsstationer.' },
+      { icon: PenTool, title: 'Software & OS', desc: 'Installation og opsætning af Windows, software og fejlfinding på systemer.' },
       { icon: Users, title: 'Brugersupport', desc: 'Tålmodig og professionel support til brugere på alle tekniske niveauer.' },
     ],
+    extraLabel: 'Øvrige kvalifikationer',
+    extra: ['Excel & regneark', 'Web Design', 'Dokumentation', 'Bogføring', 'SEO', 'AutoCAD (tidligere)'],
     beyondLabel: 'Ud over IT',
     beyondText: 'I min tid i Danmark har jeg prøvet kræfter med mange forskellige felter — som hjælpetræner i bokseklubben Champs Camp, som frisørassistent hos Frisør Katalina, og som lagermedarbejder gennem vikarbureauet Moment (bl.a. Salling Group og Søstrene Grene). Det har lært mig at tilpasse mig, samarbejde med alle slags mennesker og tage ansvar i forskellige miljøer.',
     interestsLabel: 'Interesser & fritid',
@@ -78,11 +80,13 @@ const content = {
     ],
     expertiseLabel: 'My expertise',
     expertise: [
-      { icon: Server, title: 'IT & Networking', desc: 'Windows Server, Active Directory, DNS/DHCP, Linux, VMware and network setup.' },
-      { icon: Cpu, title: 'Hardware', desc: 'PC building, troubleshooting, components and workstation setup.' },
-      { icon: PenTool, title: 'AutoCAD', desc: 'Experience with technical drawing in AutoCAD — with an official certificate.' },
+      { icon: Server, title: 'IT & Networking', desc: 'Windows Server, Active Directory, DNS/DHCP, Linux and network setup.' },
+      { icon: Cpu, title: 'Hardware', desc: 'PC setup, troubleshooting, component repair and workstation preparation.' },
+      { icon: PenTool, title: 'Software & OS', desc: 'Installation and setup of Windows, software and system troubleshooting.' },
       { icon: Users, title: 'User Support', desc: 'Patient, professional support for users at every technical level.' },
     ],
+    extraLabel: 'Other qualifications',
+    extra: ['Excel & spreadsheets', 'Web Design', 'Documentation', 'Bookkeeping', 'SEO', 'AutoCAD (past)'],
     beyondLabel: 'Beyond IT',
     beyondText: 'During my time in Denmark I have worked across many different fields — as an assistant coach at the boxing club Champs Camp, as a hairdresser assistant at Frisør Katalina, and as a warehouse worker through the Moment agency (including Salling Group and Søstrene Grene). It taught me to adapt, work with all kinds of people and take responsibility in different environments.',
     interestsLabel: 'Interests & hobbies',
@@ -249,6 +253,23 @@ export default function AboutPage() {
                 </motion.div>
               )
             })}
+          </div>
+
+          {/* Other qualifications */}
+          <div className="mt-6">
+            <p style={{ color: '#E8DDD0', opacity: 0.28, fontSize: '9px', letterSpacing: '0.28em', textTransform: 'uppercase', marginBottom: '12px' }}>
+              {c.extraLabel}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {c.extra.map((x) => (
+                <span
+                  key={x}
+                  style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '10px', letterSpacing: '0.16em', textTransform: 'uppercase', padding: '5px 12px', border: '1px solid rgba(232,224,213,0.1)', borderRadius: '100px' }}
+                >
+                  {x}
+                </span>
+              ))}
+            </div>
           </div>
         </Section>
 

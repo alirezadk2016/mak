@@ -13,7 +13,7 @@ export const t = {
     },
     about: {
       heading: 'Om mig',
-      bio: 'Inden jeg kom til Danmark, arbejdede jeg i næsten to år med webudvikling, SEO og digital markedsføring i Iran. Da jeg ankom til Danmark, lærte jeg sproget og kom ind hos YouSee via en IGU-ordning, hvor jeg opbyggede solid erfaring inden for kundeservice og IT-administration — og siden blev fastansat. For at udvikle mig fagligt tog jeg de nødvendige uddannelsesmæssige skridt: først på Aarhus HF & VUC for at opfylde adgangskravene, og derefter på Aarhus Tech, hvor jeg gennemførte IT-supporteruddannelsen. Den vej gav mig mulighed for at arbejde og lære på tværs af forskellige miljøer og sammenhænge. I dag er jeg nyuddannet og klar til næste skridt. Jeg holder mig altid opdateret, arbejder godt i teams og trives med at finde løsninger — uanset om det er til en ung kollega eller en ældre bruger. Jeg er målrettet, tilpasningsdygtig og klar til at bidrage fra dag ét.',
+      bio: 'Jeg er nyuddannet IT-supporter fra Aarhus Tech og søger en læreplads, hvor jeg kan omsætte min uddannelse til praksis. Gennem de seneste ti år i Danmark har jeg opbygget erfaring fra bl.a. YouSee og en praktik hos Fourcom, hvor jeg har arbejdet med Windows, hardware, fejlfinding og brugersupport. Jeg er mødestabil, ansvarlig og nysgerrig, lærer hurtigt og gør altid mit bedste for at levere rolig og professionel support. Jeg trives med at hjælpe mennesker — uanset deres tekniske niveau — og er klar til at bidrage fra dag ét.',
       stats: [
         { num: '3+', label: 'Virksomheder' },
         { num: '2026', label: 'Aarhus Tech' },
@@ -96,6 +96,11 @@ export const t = {
         },
       ],
       note: 'Flere anbefalinger tilføjes løbende.',
+      referenceLabel: 'Reference',
+      referenceText: 'Kan kontaktes for en faglig reference:',
+      referenceName: 'Jonas Krabbe',
+      referenceRole: 'Aarhus Tech',
+      referenceEmail: 'JRK@aarhustech.dk',
     },
     footer: {
       label: 'Kontakt',
@@ -128,7 +133,7 @@ export const t = {
     },
     about: {
       heading: 'About me',
-      bio: 'Before coming to Denmark, I spent nearly two years working in web development, SEO and digital marketing in Iran. When I arrived in Denmark, I learned the language and joined YouSee through an IGU programme, where I built solid experience in customer service and IT administration — and was later permanently employed. To develop myself professionally, I took the necessary educational steps: first at Aarhus HF & VUC to meet the entry requirements, and then at Aarhus Tech where I completed my IT Support education. That path gave me the opportunity to work and learn across different environments and settings. Today I am newly qualified and ready for the next step. I always stay up to date, work well in teams and enjoy finding solutions — whether for a young colleague or an elderly user. I am driven, adaptable and ready to contribute from day one.',
+      bio: 'I am a newly qualified IT supporter from Aarhus Tech, looking for an apprenticeship where I can put my education into practice. Over the past ten years in Denmark I have built experience from YouSee and an internship at Fourcom, working with Windows, hardware, troubleshooting and user support. I am reliable, responsible and curious, I learn quickly and always do my best to deliver calm, professional support. I enjoy helping people — regardless of their technical level — and I am ready to contribute from day one.',
       stats: [
         { num: '3+', label: 'Companies' },
         { num: '2026', label: 'Aarhus Tech' },
@@ -211,6 +216,11 @@ export const t = {
         },
       ],
       note: 'More references are being added continuously.',
+      referenceLabel: 'Reference',
+      referenceText: 'Available to contact for a professional reference:',
+      referenceName: 'Jonas Krabbe',
+      referenceRole: 'Aarhus Tech',
+      referenceEmail: 'JRK@aarhustech.dk',
     },
     footer: {
       label: 'Contact',
