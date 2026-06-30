@@ -83,7 +83,7 @@ export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const navItems = [
-    { key: 'about', label: tx.nav.about, route: '' },
+    { key: 'about', label: tx.nav.about, route: '/about' },
     { key: 'experience', label: tx.nav.experience, route: '' },
     { key: 'projects', label: tx.nav.projects, route: '' },
     { key: 'recommendations', label: tx.recommendations.navLabel, route: '/recommendations' },
