@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import FadeIn from './FadeIn'
+import SmartImage from './SmartImage'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
 import { useNavigate } from 'react-router-dom'
@@ -151,33 +152,37 @@ function ProjectCard({
             {/* Desktop: two-column */}
             <div className="hidden sm:flex gap-3" style={{ height: 'clamp(260px, 36vw, 460px)' }}>
               <div className="flex flex-col gap-3" style={{ width: '38%' }}>
-                <img
-                  src={project.col1img1}
-                  alt=""
-                  className="w-full object-cover rounded-[16px] sm:rounded-[24px]"
+                <SmartImage
+                  src={project.col1img1!}
+                  label={project.name}
+                  className="w-full rounded-[16px] sm:rounded-[24px]"
+                  imgClassName="w-full h-full object-cover"
                   style={{ flex: '0 0 38%' }}
                 />
-                <img
-                  src={project.col1img2}
-                  alt=""
-                  className="w-full object-cover rounded-[16px] sm:rounded-[24px]"
+                <SmartImage
+                  src={project.col1img2!}
+                  label={project.name}
+                  className="w-full rounded-[16px] sm:rounded-[24px]"
+                  imgClassName="w-full h-full object-cover"
                   style={{ flex: '1 1 0' }}
                 />
               </div>
               <div style={{ width: '62%' }}>
-                <img
+                <SmartImage
                   src={project.col2img}
-                  alt=""
-                  className="w-full h-full object-cover rounded-[16px] sm:rounded-[24px]"
+                  label={project.name}
+                  className="w-full h-full rounded-[16px] sm:rounded-[24px]"
+                  imgClassName="w-full h-full object-cover"
                 />
               </div>
             </div>
             {/* Mobile: single image */}
             <div className="sm:hidden">
-              <img
+              <SmartImage
                 src={project.col2img}
-                alt=""
-                className="w-full object-cover rounded-[14px]"
+                label={project.name}
+                className="w-full rounded-[14px]"
+                imgClassName="w-full h-full object-cover"
                 style={{ height: '48vw' }}
               />
             </div>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
+import SmartImage from '../components/SmartImage'
 
 type ExpData = {
   company: string
@@ -182,7 +183,7 @@ export default function ExperienceDetail() {
           className="block overflow-hidden rounded-[24px] border-2 border-[#D7E2EA]/20 hover:border-[#D7E2EA]/50 transition-all duration-300 group mb-16"
         >
           <div className="relative" style={{ aspectRatio: '16/7' }}>
-            <img src={exp.screenshot} alt={exp.company} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <SmartImage src={exp.screenshot} alt={exp.company} label={exp.company} className="w-full h-full" imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
               <span className="text-white font-medium uppercase tracking-widest border border-white rounded-full px-6 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {tx.viewSite}

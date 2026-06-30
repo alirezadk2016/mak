@@ -17,6 +17,11 @@ section[id] {
   scroll-margin-top: 64px;
 }
 
+@keyframes smartShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 .hero-heading {
   font-family: 'Kanit', sans-serif;
   background: linear-gradient(170deg, #EDE8DF 0%, #7A7168 100%);

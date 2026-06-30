@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
+import SmartImage from '../components/SmartImage'
 
 const features = [
   {
@@ -109,20 +110,22 @@ export default function MakPaintingPage() {
         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
         className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-12 sm:mb-16"
       >
-        <div className="rounded-[20px] sm:rounded-[28px] overflow-hidden border border-[#D7E2EA]/06" style={{ aspectRatio: '16/10' }}>
-          <img
-            src="https://image.thum.io/get/width/1280/crop/800/https://www.makvandi.info/en"
-            alt="MAK Painting — Public site"
-            className="w-full h-full object-cover object-top"
-          />
-        </div>
-        <div className="rounded-[20px] sm:rounded-[28px] overflow-hidden border border-[#D7E2EA]/06" style={{ aspectRatio: '16/10' }}>
-          <img
-            src="https://image.thum.io/get/width/1280/crop/800/https://www.makvandi.info/en/gallery"
-            alt="MAK Painting — Gallery"
-            className="w-full h-full object-cover object-top"
-          />
-        </div>
+        <SmartImage
+          src="https://image.thum.io/get/width/1280/crop/800/https://www.makvandi.info/en"
+          alt="MAK Painting — Public site"
+          label="MAK Painting"
+          className="rounded-[20px] sm:rounded-[28px] border border-[#D7E2EA]/06"
+          imgClassName="w-full h-full object-cover object-top"
+          style={{ aspectRatio: '16/10' }}
+        />
+        <SmartImage
+          src="https://image.thum.io/get/width/1280/crop/800/https://www.makvandi.info/en/gallery"
+          alt="MAK Painting — Gallery"
+          label="Gallery"
+          className="rounded-[20px] sm:rounded-[28px] border border-[#D7E2EA]/06"
+          imgClassName="w-full h-full object-cover object-top"
+          style={{ aspectRatio: '16/10' }}
+        />
       </motion.div>
 
       {/* Features grid */}

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import FadeIn from './FadeIn'
+import SmartImage from './SmartImage'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
 
@@ -71,13 +72,13 @@ function TiltCard({ exp, viewDetails, index, total }: { exp: { slug: string; com
                 }}
               />
               <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                <motion.img
+                <SmartImage
                   src={screenshots[exp.slug]}
                   alt={exp.company}
-                  className="w-full h-full object-cover"
-                  style={{ scale: useSpring(useTransform(x, [-0.5, 0.5], [1.04, 1.04]), { stiffness: 150, damping: 20 }) }}
-                  whileHover={{ scale: 1.06 }}
-                  transition={{ duration: 0.4 }}
+                  label={exp.company}
+                  accent={accent}
+                  className="w-full h-full"
+                  imgClassName="w-full h-full object-cover"
                 />
                 <motion.div
                   className="absolute inset-0 flex items-center justify-center"
@@ -120,7 +121,7 @@ function TiltCard({ exp, viewDetails, index, total }: { exp: { slug: string; com
         >
           <div className="w-1 flex-shrink-0" style={{ background: accent }} />
           <div className="relative flex-shrink-0 overflow-hidden" style={{ width: '48%', aspectRatio: '4/3' }}>
-            <img src={screenshots[exp.slug]} alt={exp.company} className="w-full h-full object-cover" />
+            <SmartImage src={screenshots[exp.slug]} alt={exp.company} label={exp.company} accent={accent} className="w-full h-full" imgClassName="w-full h-full object-cover" />
             <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, transparent 60%, #111 100%)' }} />
           </div>
           <div className="flex flex-col justify-center px-4 py-4 flex-1 min-w-0">
