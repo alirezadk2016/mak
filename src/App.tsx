@@ -17,7 +17,7 @@ import MakPaintingPage from './pages/MakPaintingPage'
 import FooterSection from './components/FooterSection'
 function Home() {
   return (
-    <main style={{ overflowX: 'clip', background: '#0C0C0C' }}>
+    <main style={{ overflowX: 'clip', background: '#0A0908' }}>
       <HeroSection />
       <AboutTeaser />
       <ServicesSection />

@@ -35,12 +35,12 @@ export default function SvendeproevePage() {
   const { lang } = useLang()
 
   return (
-    <div className="min-h-screen" style={{ background: '#0C0C0C' }}>
+    <div className="min-h-screen" style={{ background: '#0A0908' }}>
       {/* Header */}
-      <div className="px-6 sm:px-10 py-6 flex items-center justify-between border-b border-[#D7E2EA]/10">
+      <div className="px-6 sm:px-10 py-6 flex items-center justify-between border-b border-[#E8DDD0]/10">
         <Link
           to="/"
-          className="flex items-center gap-2 text-[#D7E2EA]/60 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-widest"
+          className="flex items-center gap-2 text-[#E8DDD0]/60 hover:text-[#E8DDD0] transition-colors text-sm uppercase tracking-widest"
         >
           <ArrowLeft size={16} />
           {lang === 'da' ? 'Tilbage' : 'Back'}
@@ -49,7 +49,7 @@ export default function SvendeproevePage() {
           href="/Svendepr%C3%B8ve-Projekt.docx%20(2).pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#D7E2EA]/40 hover:text-[#D7E2EA]/70 transition-colors text-xs uppercase tracking-widest"
+          className="text-[#E8DDD0]/40 hover:text-[#E8DDD0]/70 transition-colors text-xs uppercase tracking-widest"
         >
           {lang === 'da' ? 'Se PDF' : 'View PDF'} ↗
         </a>
@@ -58,16 +58,16 @@ export default function SvendeproevePage() {
       <div className="px-6 sm:px-10 pt-16 pb-20 max-w-5xl mx-auto">
         {/* Hero */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <p className="text-[#D7E2EA]/40 uppercase tracking-widest text-xs mb-3">
+          <p className="text-[#E8DDD0]/40 uppercase tracking-widest text-xs mb-3">
             {lang === 'da' ? 'Skole — Aarhus Tech · 2026' : 'School — Aarhus Tech · 2026'}
           </p>
           <h1
             className="font-black uppercase leading-none tracking-tight mb-6"
-            style={{ fontSize: 'clamp(2.5rem, 8vw, 100px)', color: '#D7E2EA' }}
+            style={{ fontSize: 'clamp(2.5rem, 8vw, 100px)', color: '#E8DDD0' }}
           >
             {lang === 'da' ? 'Svendeprøve' : 'Final Exam'}
           </h1>
-          <p className="text-[#D7E2EA]/60 text-lg mb-4 max-w-2xl leading-relaxed">
+          <p className="text-[#E8DDD0]/60 text-lg mb-4 max-w-2xl leading-relaxed">
             {lang === 'da'
               ? 'Afsluttende projekt for IT-supporter — Opgave 05. Opsætning af komplet netværksinfrastruktur for Cykelværkstedet CykelMyggen med 10 ansatte fordelt på 3 afdelinger.'
               : 'Final project for IT Support Technician — Task 05. Setup of complete network infrastructure for CykelMyggen bicycle workshop with 10 employees across 3 departments.'}
@@ -82,9 +82,9 @@ export default function SvendeproevePage() {
           className="grid grid-cols-4 gap-4 mb-16 mt-10"
         >
           {highlights.map((h) => (
-            <div key={h.num} className="rounded-[16px] border border-[#D7E2EA]/10 p-5 text-center">
-              <span className="block font-black text-3xl sm:text-4xl" style={{ color: '#D7E2EA' }}>{h.num}</span>
-              <span className="block text-[10px] uppercase tracking-widest mt-1" style={{ color: '#D7E2EA', opacity: 0.35 }}>{h.label[lang]}</span>
+            <div key={h.num} className="rounded-[16px] border border-[#E8DDD0]/10 p-5 text-center">
+              <span className="block font-black text-3xl sm:text-4xl" style={{ color: '#E8DDD0' }}>{h.num}</span>
+              <span className="block text-[10px] uppercase tracking-widest mt-1" style={{ color: '#E8DDD0', opacity: 0.35 }}>{h.label[lang]}</span>
             </div>
           ))}
         </motion.div>
@@ -94,7 +94,7 @@ export default function SvendeproevePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="rounded-[24px] overflow-hidden border border-[#D7E2EA]/15 mb-16"
+          className="rounded-[24px] overflow-hidden border border-[#E8DDD0]/15 mb-16"
           style={{ aspectRatio: '16/7' }}
         >
           <img
@@ -110,15 +110,15 @@ export default function SvendeproevePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="rounded-[20px] border border-[#D7E2EA]/10 p-6"
+            className="rounded-[20px] border border-[#E8DDD0]/10 p-6"
           >
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#D7E2EA', opacity: 0.5 }}>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.5 }}>
               {lang === 'da' ? 'Tekniske krav' : 'Technical Requirements'}
             </h3>
             <ul className="space-y-3">
               {requirements.map((r, i) => (
-                <li key={i} className="flex items-start gap-3 text-[#D7E2EA]/65 text-sm leading-relaxed">
-                  <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#D7E2EA', opacity: 0.4 }} />
+                <li key={i} className="flex items-start gap-3 text-[#E8DDD0]/65 text-sm leading-relaxed">
+                  <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#E8DDD0', opacity: 0.4 }} />
                   {r[lang]}
                 </li>
               ))}
@@ -132,27 +132,27 @@ export default function SvendeproevePage() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col gap-6"
           >
-            <div className="rounded-[20px] border border-[#D7E2EA]/10 p-6">
-              <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#D7E2EA', opacity: 0.5 }}>
+            <div className="rounded-[20px] border border-[#E8DDD0]/10 p-6">
+              <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.5 }}>
                 {lang === 'da' ? 'Dokumentation' : 'Documentation'}
               </h3>
               <ul className="space-y-3">
                 {deliverables.map((d, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[#D7E2EA]/65 text-sm leading-relaxed">
-                    <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#D7E2EA', opacity: 0.4 }} />
+                  <li key={i} className="flex items-start gap-3 text-[#E8DDD0]/65 text-sm leading-relaxed">
+                    <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#E8DDD0', opacity: 0.4 }} />
                     {d[lang]}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="rounded-[20px] border border-[#D7E2EA]/10 p-6">
-              <h3 className="font-bold uppercase tracking-widest text-xs mb-4" style={{ color: '#D7E2EA', opacity: 0.5 }}>
+            <div className="rounded-[20px] border border-[#E8DDD0]/10 p-6">
+              <h3 className="font-bold uppercase tracking-widest text-xs mb-4" style={{ color: '#E8DDD0', opacity: 0.5 }}>
                 {lang === 'da' ? 'Teknologier brugt' : 'Technologies Used'}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {['Windows Server', 'Active Directory', 'DNS & DHCP', 'pfSense', 'VLAN', 'GPO', 'PowerShell', 'VMware', 'Backup'].map(tag => (
-                  <span key={tag} className="text-xs uppercase tracking-wider px-3 py-1 rounded-full border" style={{ color: '#D7E2EA', borderColor: 'rgba(215,226,234,0.2)', opacity: 0.7 }}>
+                  <span key={tag} className="text-xs uppercase tracking-wider px-3 py-1 rounded-full border" style={{ color: '#E8DDD0', borderColor: 'rgba(232,224,213,0.2)', opacity: 0.7 }}>
                     {tag}
                   </span>
                 ))}

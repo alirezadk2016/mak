@@ -116,18 +116,18 @@ function FlipCard({ item, lang }: { item: ContactItem; lang: 'da' | 'en' }) {
       >
         {/* Front */}
         <div
-          className="absolute inset-0 flex flex-col gap-4 rounded-[20px] border border-[#D7E2EA]/10 p-5"
+          className="absolute inset-0 flex flex-col gap-4 rounded-[20px] border border-[#E8DDD0]/10 p-5"
           style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
         >
           <div className="flex items-center justify-between">
-            <span style={{ color: '#D7E2EA', opacity: 0.25, fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
+            <span style={{ color: '#E8DDD0', opacity: 0.25, fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
               {typeof item.label === 'object' ? item.label[lang] : item.label}
             </span>
-            <div className="w-8 h-8 rounded-full border border-[#D7E2EA]/15 flex items-center justify-center">
-              <Icon size={14} style={{ color: '#D7E2EA', opacity: 0.5 }} strokeWidth={1.5} />
+            <div className="w-8 h-8 rounded-full border border-[#E8DDD0]/15 flex items-center justify-center">
+              <Icon size={14} style={{ color: '#E8DDD0', opacity: 0.5 }} strokeWidth={1.5} />
             </div>
           </div>
-          <span style={{ color: '#D7E2EA', fontSize: '0.85rem', fontWeight: 500, opacity: 0.85 }} className="leading-snug mt-auto">
+          <span style={{ color: '#E8DDD0', fontSize: '0.85rem', fontWeight: 500, opacity: 0.85 }} className="leading-snug mt-auto">
             {item.value}
           </span>
         </div>
@@ -173,21 +173,21 @@ function MobileFlipCard({ item, lang }: { item: ContactItem; lang: 'da' | 'en' }
       <motion.div
         animate={{ rotateY: flipped ? -90 : 0, opacity: flipped ? 0 : 1 }}
         transition={{ duration: dur, ease }}
-        className="absolute inset-0 flex flex-col gap-4 rounded-[20px] border border-[#D7E2EA]/10 p-5"
+        className="absolute inset-0 flex flex-col gap-4 rounded-[20px] border border-[#E8DDD0]/10 p-5"
         style={{ pointerEvents: flipped ? 'none' : 'auto' }}
       >
         <div className="flex items-center justify-between">
-          <span style={{ color: '#D7E2EA', opacity: 0.25, fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
+          <span style={{ color: '#E8DDD0', opacity: 0.25, fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
             {typeof item.label === 'object' ? item.label[lang] : item.label}
           </span>
-          <div className="w-8 h-8 rounded-full border border-[#D7E2EA]/15 flex items-center justify-center">
-            <Icon size={14} style={{ color: '#D7E2EA', opacity: 0.5 }} strokeWidth={1.5} />
+          <div className="w-8 h-8 rounded-full border border-[#E8DDD0]/15 flex items-center justify-center">
+            <Icon size={14} style={{ color: '#E8DDD0', opacity: 0.5 }} strokeWidth={1.5} />
           </div>
         </div>
-        <span style={{ color: '#D7E2EA', fontSize: '0.85rem', fontWeight: 500, opacity: 0.85 }} className="leading-snug mt-auto">
+        <span style={{ color: '#E8DDD0', fontSize: '0.85rem', fontWeight: 500, opacity: 0.85 }} className="leading-snug mt-auto">
           {item.value}
         </span>
-        <span style={{ color: '#D7E2EA', opacity: 0.15, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+        <span style={{ color: '#E8DDD0', opacity: 0.15, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
           ← swipe →
         </span>
       </motion.div>
@@ -213,7 +213,7 @@ export default function FooterSection() {
   const tx = t[lang].footer
 
   return (
-    <section id="contact" style={{ background: '#0C0C0C', position: 'relative', zIndex: 20 }}>
+    <section id="contact" style={{ background: '#0A0908', position: 'relative', zIndex: 20 }}>
       <div className="px-5 sm:px-10 md:px-16 pt-20 sm:pt-32 pb-0">
 
         {/* Label */}
@@ -268,15 +268,15 @@ export default function FooterSection() {
       </div>
 
       {/* Bottom */}
-      <div className="mt-16 border-t border-[#D7E2EA]/8">
+      <div className="mt-16 border-t border-[#E8DDD0]/8">
         <div className="px-5 sm:px-10 md:px-16 py-6 flex items-center gap-4">
-          <div className="flex-1 h-px" style={{ background: 'rgba(215,226,234,0.06)' }} />
-          <div className="flex items-center gap-2 px-5 py-2 rounded-full border flex-shrink-0" style={{ borderColor: 'rgba(215,226,234,0.1)' }}>
-            <span style={{ color: '#D7E2EA', opacity: 0.25, fontSize: '10px' }}>&lt;&gt;</span>
-            <span style={{ color: '#D7E2EA', opacity: 0.2, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Crafted by</span>
-            <span style={{ color: '#D7E2EA', opacity: 0.45, fontSize: '10px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' }}>MAK</span>
+          <div className="flex-1 h-px" style={{ background: 'rgba(232,224,213,0.06)' }} />
+          <div className="flex items-center gap-2 px-5 py-2 rounded-full border flex-shrink-0" style={{ borderColor: 'rgba(232,224,213,0.1)' }}>
+            <span style={{ color: '#E8DDD0', opacity: 0.25, fontSize: '10px' }}>&lt;&gt;</span>
+            <span style={{ color: '#E8DDD0', opacity: 0.2, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Crafted by</span>
+            <span style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '10px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' }}>MAK</span>
           </div>
-          <div className="flex-1 h-px" style={{ background: 'rgba(215,226,234,0.06)' }} />
+          <div className="flex-1 h-px" style={{ background: 'rgba(232,224,213,0.06)' }} />
         </div>
       </div>
 

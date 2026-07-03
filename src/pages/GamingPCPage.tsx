@@ -50,14 +50,14 @@ export default function GamingPCPage() {
   const specList = lang === 'da' ? specs : specsEn
 
   return (
-    <main style={{ background: '#0C0C0C', minHeight: '100vh' }} className="px-5 sm:px-10 md:px-16 py-10 sm:py-16">
+    <main style={{ background: '#0A0908', minHeight: '100vh' }} className="px-5 sm:px-10 md:px-16 py-10 sm:py-16">
 
       {/* Back */}
       <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
         <Link
           to="/"
           className="inline-flex items-center gap-2 mb-10 sm:mb-14 transition-opacity hover:opacity-60"
-          style={{ color: '#D7E2EA', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {tx.back}
@@ -66,12 +66,12 @@ export default function GamingPCPage() {
 
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-10 sm:mb-14">
-        <p style={{ color: '#D7E2EA', opacity: 0.3, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px' }}>
+        <p style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px' }}>
           {tx.category}
         </p>
         <h1
           className="font-black uppercase leading-none"
-          style={{ color: '#D7E2EA', fontSize: 'clamp(2.2rem, 8vw, 6rem)', letterSpacing: '-0.03em' }}
+          style={{ color: '#E8DDD0', fontSize: 'clamp(2.2rem, 8vw, 6rem)', letterSpacing: '-0.03em' }}
         >
           {tx.title}
         </h1>
@@ -90,14 +90,14 @@ export default function GamingPCPage() {
 
         {/* Description */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-          <p style={{ color: '#D7E2EA', opacity: 0.6, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8, fontWeight: 300 }}>
+          <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8, fontWeight: 300 }}>
             {tx.desc}
           </p>
         </motion.div>
 
         {/* Specs */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
-          <p style={{ color: '#D7E2EA', opacity: 0.25, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '16px' }}>
+          <p style={{ color: '#E8DDD0', opacity: 0.25, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '16px' }}>
             {tx.specsLabel}
           </p>
           <div className="flex flex-col gap-0">
@@ -108,12 +108,12 @@ export default function GamingPCPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.35 + i * 0.04 }}
                 className="flex items-baseline justify-between py-3"
-                style={{ borderBottom: '1px solid rgba(215,226,234,0.07)' }}
+                style={{ borderBottom: '1px solid rgba(232,224,213,0.07)' }}
               >
-                <span style={{ color: '#D7E2EA', opacity: 0.3, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', flexShrink: 0, marginRight: '16px' }}>
+                <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', flexShrink: 0, marginRight: '16px' }}>
                   {s.label}
                 </span>
-                <span style={{ color: '#D7E2EA', opacity: 0.75, fontSize: '12px', textAlign: 'right', lineHeight: 1.4 }}>
+                <span style={{ color: '#E8DDD0', opacity: 0.75, fontSize: '12px', textAlign: 'right', lineHeight: 1.4 }}>
                   {s.value}
                 </span>
               </motion.div>

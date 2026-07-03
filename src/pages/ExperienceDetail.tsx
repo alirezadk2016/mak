@@ -137,18 +137,18 @@ export default function ExperienceDetail() {
 
   if (!exp) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ background: '#0C0C0C' }}>
+      <div className="min-h-screen flex items-center justify-center" style={{ background: '#0A0908' }}>
         <p className="text-white">Not found</p>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen" style={{ background: '#0C0C0C' }}>
-      <div className="px-6 sm:px-10 py-6 flex items-center justify-between border-b border-[#D7E2EA]/10">
+    <div className="min-h-screen" style={{ background: '#0A0908' }}>
+      <div className="px-6 sm:px-10 py-6 flex items-center justify-between border-b border-[#E8DDD0]/10">
         <Link
           to="/"
-          className="flex items-center gap-2 text-[#D7E2EA]/60 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-widest"
+          className="flex items-center gap-2 text-[#E8DDD0]/60 hover:text-[#E8DDD0] transition-colors text-sm uppercase tracking-widest"
         >
           <ArrowLeft size={16} />
           {tx.back}
@@ -157,7 +157,7 @@ export default function ExperienceDetail() {
           href={exp.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-[#D7E2EA]/60 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-widest"
+          className="flex items-center gap-2 text-[#E8DDD0]/60 hover:text-[#E8DDD0] transition-colors text-sm uppercase tracking-widest"
         >
           {tx.visitSite}
           <ExternalLink size={14} />
@@ -166,11 +166,11 @@ export default function ExperienceDetail() {
 
       <div className="px-6 sm:px-10 pt-16 pb-10 max-w-5xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <p className="text-[#D7E2EA]/40 uppercase tracking-widest text-sm mb-2">{exp.period[lang]}</p>
-          <h1 className="font-black uppercase leading-none tracking-tight mb-4" style={{ fontSize: 'clamp(3rem, 10vw, 120px)', color: '#D7E2EA' }}>
+          <p className="text-[#E8DDD0]/40 uppercase tracking-widest text-sm mb-2">{exp.period[lang]}</p>
+          <h1 className="font-black uppercase leading-none tracking-tight mb-4" style={{ fontSize: 'clamp(3rem, 10vw, 120px)', color: '#E8DDD0' }}>
             {exp.company}
           </h1>
-          <p className="text-[#D7E2EA]/60 text-lg mb-10">{exp.role[lang]}</p>
+          <p className="text-[#E8DDD0]/60 text-lg mb-10">{exp.role[lang]}</p>
         </motion.div>
 
         <motion.a
@@ -180,7 +180,7 @@ export default function ExperienceDetail() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="block overflow-hidden rounded-[24px] border-2 border-[#D7E2EA]/20 hover:border-[#D7E2EA]/50 transition-all duration-300 group mb-16"
+          className="block overflow-hidden rounded-[24px] border-2 border-[#E8DDD0]/20 hover:border-[#E8DDD0]/50 transition-all duration-300 group mb-16"
         >
           <div className="relative" style={{ aspectRatio: '16/7' }}>
             <SmartImage src={exp.screenshot} alt={exp.company} label={exp.company} className="w-full h-full" imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -199,14 +199,14 @@ export default function ExperienceDetail() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-              className="rounded-[20px] border border-[#D7E2EA]/15 p-6"
+              className="rounded-[20px] border border-[#E8DDD0]/15 p-6"
             >
               <h3 className="font-bold uppercase tracking-widest text-sm mb-4" style={{ color: exp.color }}>
                 {section.title[lang]}
               </h3>
               <ul className="space-y-3">
                 {section.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-3 text-[#D7E2EA]/70 text-sm leading-relaxed">
+                  <li key={j} className="flex items-start gap-3 text-[#E8DDD0]/70 text-sm leading-relaxed">
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: exp.color }} />
                     {item[lang]}
                   </li>

@@ -69,10 +69,10 @@ export default function CustomCursor() {
         <div
           className="w-full h-full rounded-full border"
           style={{
-            borderColor: 'rgba(215,226,234,0.5)',
+            borderColor: 'rgba(232,224,213,0.5)',
             boxShadow: hovered
               ? '0 0 18px 4px rgba(120,80,255,0.4)'
-              : '0 0 10px 2px rgba(215,226,234,0.15)',
+              : '0 0 10px 2px rgba(232,224,213,0.15)',
           }}
         />
       </motion.div>
@@ -85,8 +85,8 @@ export default function CustomCursor() {
           y: cursorY,
           translateX: '-50%',
           translateY: '-50%',
-          background: '#D7E2EA',
-          boxShadow: '0 0 6px 2px rgba(215,226,234,0.6)',
+          background: '#E8DDD0',
+          boxShadow: '0 0 6px 2px rgba(232,224,213,0.6)',
           opacity: visible ? 1 : 0,
         }}
       />

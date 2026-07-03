@@ -63,14 +63,14 @@ export default function MakPaintingPage() {
   const tx = content[lang]
 
   return (
-    <main style={{ background: '#0C0C0C', minHeight: '100vh' }} className="px-5 sm:px-10 md:px-16 py-10 sm:py-16">
+    <main style={{ background: '#0A0908', minHeight: '100vh' }} className="px-5 sm:px-10 md:px-16 py-10 sm:py-16">
 
       {/* Back */}
       <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
         <Link
           to="/"
           className="inline-flex items-center gap-2 mb-10 sm:mb-14 transition-opacity hover:opacity-60"
-          style={{ color: '#D7E2EA', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {tx.back}
@@ -79,13 +79,13 @@ export default function MakPaintingPage() {
 
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-10 sm:mb-14">
-        <p style={{ color: '#D7E2EA', opacity: 0.3, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px' }}>
+        <p style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px' }}>
           {tx.category}
         </p>
         <div className="flex flex-wrap items-end gap-4 sm:gap-6 mb-5">
           <h1
             className="font-black uppercase leading-none"
-            style={{ color: '#D7E2EA', fontSize: 'clamp(2.2rem, 8vw, 6rem)', letterSpacing: '-0.03em' }}
+            style={{ color: '#E8DDD0', fontSize: 'clamp(2.2rem, 8vw, 6rem)', letterSpacing: '-0.03em' }}
           >
             MAK Painting
           </h1>
@@ -93,14 +93,14 @@ export default function MakPaintingPage() {
             href="https://www.makvandi.info/en"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-[#D7E2EA]/20 hover:border-[#D7E2EA]/50 transition-colors duration-300 mb-1 sm:mb-3"
-            style={{ color: '#D7E2EA', opacity: 0.6, padding: '8px 18px', fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase' }}
+            className="inline-flex items-center gap-2 rounded-full border border-[#E8DDD0]/20 hover:border-[#E8DDD0]/50 transition-colors duration-300 mb-1 sm:mb-3"
+            style={{ color: '#E8DDD0', opacity: 0.6, padding: '8px 18px', fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase' }}
           >
             {tx.live}
             <ExternalLink size={12} strokeWidth={1.8} />
           </a>
         </div>
-        <p style={{ color: '#D7E2EA', opacity: 0.5, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8, fontWeight: 300, maxWidth: '680px' }}>
+        <p style={{ color: '#E8DDD0', opacity: 0.5, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8, fontWeight: 300, maxWidth: '680px' }}>
           {tx.desc}
         </p>
       </motion.div>
@@ -114,7 +114,7 @@ export default function MakPaintingPage() {
           src="https://image.thum.io/get/width/1280/crop/800/https://www.makvandi.info/en"
           alt="MAK Painting — Public site"
           label="MAK Painting"
-          className="rounded-[20px] sm:rounded-[28px] border border-[#D7E2EA]/06"
+          className="rounded-[20px] sm:rounded-[28px] border border-[#E8DDD0]/06"
           imgClassName="w-full h-full object-cover object-top"
           style={{ aspectRatio: '16/10' }}
         />
@@ -122,7 +122,7 @@ export default function MakPaintingPage() {
           src="https://image.thum.io/get/width/1280/crop/800/https://www.makvandi.info/en/gallery"
           alt="MAK Painting — Gallery"
           label="Gallery"
-          className="rounded-[20px] sm:rounded-[28px] border border-[#D7E2EA]/06"
+          className="rounded-[20px] sm:rounded-[28px] border border-[#E8DDD0]/06"
           imgClassName="w-full h-full object-cover object-top"
           style={{ aspectRatio: '16/10' }}
         />
@@ -136,17 +136,17 @@ export default function MakPaintingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 + i * 0.07 }}
-            className="rounded-[20px] p-5 sm:p-7 border border-[#D7E2EA]/07"
-            style={{ background: 'rgba(215,226,234,0.03)' }}
+            className="rounded-[20px] p-5 sm:p-7 border border-[#E8DDD0]/07"
+            style={{ background: 'rgba(232,224,213,0.03)' }}
           >
-            <p style={{ color: '#D7E2EA', opacity: 0.28, fontSize: '10px', letterSpacing: '0.32em', textTransform: 'uppercase', marginBottom: '14px' }}>
+            <p style={{ color: '#E8DDD0', opacity: 0.28, fontSize: '10px', letterSpacing: '0.32em', textTransform: 'uppercase', marginBottom: '14px' }}>
               {block.title[lang]}
             </p>
             <ul className="flex flex-col gap-2.5">
               {block.items.map((item, j) => (
                 <li key={j} className="flex items-start gap-2.5">
-                  <span style={{ color: '#D7E2EA', opacity: 0.2, marginTop: '5px', flexShrink: 0, fontSize: '8px' }}>◆</span>
-                  <span style={{ color: '#D7E2EA', opacity: 0.55, fontSize: '13px', lineHeight: 1.6 }}>{item[lang]}</span>
+                  <span style={{ color: '#E8DDD0', opacity: 0.2, marginTop: '5px', flexShrink: 0, fontSize: '8px' }}>◆</span>
+                  <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '13px', lineHeight: 1.6 }}>{item[lang]}</span>
                 </li>
               ))}
             </ul>

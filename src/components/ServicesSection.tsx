@@ -15,10 +15,10 @@ export default function ServicesSection() {
       className="bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-16 sm:py-24 md:py-32"
     >
       <FadeIn delay={0} y={40}>
-        <p className="text-center uppercase tracking-widest text-sm mb-3 font-medium" style={{ color: '#0C0C0C', opacity: 0.4 }}>
+        <p className="text-center uppercase tracking-widest text-sm mb-3 font-medium" style={{ color: '#0A0908', opacity: 0.4 }}>
           {tx.sectionLabel}
         </p>
-        <h2 className="font-black uppercase text-center mb-16 sm:mb-20 md:mb-28" style={{ color: '#0C0C0C', fontSize: 'clamp(3rem, 12vw, 160px)' }}>
+        <h2 className="font-black uppercase text-center mb-16 sm:mb-20 md:mb-28" style={{ color: '#0A0908', fontSize: 'clamp(3rem, 12vw, 160px)' }}>
           {tx.heading}
         </h2>
       </FadeIn>
@@ -46,7 +46,7 @@ export default function ServicesSection() {
 
               <motion.span
                 className="font-black leading-none flex-shrink-0"
-                style={{ color: '#0C0C0C', fontSize: 'clamp(1.8rem, 6vw, 110px)' }}
+                style={{ color: '#0A0908', fontSize: 'clamp(1.8rem, 6vw, 110px)' }}
                 animate={{ x: hoveredIdx === i ? 8 : 0 }}
                 transition={{ duration: 0.25, ease: 'easeOut' }}
               >
@@ -54,15 +54,15 @@ export default function ServicesSection() {
               </motion.span>
 
               <div className="flex flex-col gap-2 sm:gap-3 pt-1 sm:pt-2 w-full">
-                <span className="font-medium uppercase" style={{ color: '#0C0C0C', fontSize: 'clamp(0.9rem, 2vw, 2.1rem)' }}>
+                <span className="font-medium uppercase" style={{ color: '#0A0908', fontSize: 'clamp(0.9rem, 2vw, 2.1rem)' }}>
                   {s.name}
                 </span>
-                <span className="font-light leading-relaxed max-w-2xl" style={{ color: '#0C0C0C', opacity: 0.6, fontSize: 'clamp(0.8rem, 1.4vw, 1.1rem)' }}>
+                <span className="font-light leading-relaxed max-w-2xl" style={{ color: '#0A0908', opacity: 0.6, fontSize: 'clamp(0.8rem, 1.4vw, 1.1rem)' }}>
                   {s.desc}
                 </span>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {s.tags.map((tag) => (
-                    <span key={tag} className="text-xs uppercase tracking-wider px-3 py-1 rounded-full border" style={{ color: '#0C0C0C', borderColor: 'rgba(12,12,12,0.2)', opacity: 0.7 }}>
+                    <span key={tag} className="text-xs uppercase tracking-wider px-3 py-1 rounded-full border" style={{ color: '#0A0908', borderColor: 'rgba(12,12,12,0.2)', opacity: 0.7 }}>
                       {tag}
                     </span>
                   ))}
