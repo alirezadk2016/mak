@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react'
 import FadeIn from './FadeIn'
 import { useLang } from '../contexts/LanguageContext'
 
-const IMG = '/f1145949-0bb9-49ee-984f-8586244456a5.png'
+const IMG = '/6F4611AC-9D3C-47F1-8BA0-49E69A35BCDE.jpeg'
 
 const content = {
   da: {
