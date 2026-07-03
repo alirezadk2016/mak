@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { motion, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 import FadeIn from './FadeIn'
 import SmartImage from './SmartImage'
 import { useLang } from '../contexts/LanguageContext'
@@ -20,58 +20,43 @@ const accentColors: Record<string, string> = {
   aarhustech: '#FF6B00',
 }
 
-function TiltCard({ exp, viewDetails, index, total }: { exp: { slug: string; company: string; role: string; period: string }; viewDetails: string; index: number; total: number }) {
-  const ref = useRef<HTMLDivElement>(null)
-  const cardRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({ target: cardRef, offset: ['start end', 'end start'] })
-  const targetScale = 1 - (total - 1 - index) * 0.03
-  const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale])
-
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-
-  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [8, -8]), { stiffness: 200, damping: 20 })
-  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-8, 8]), { stiffness: 200, damping: 20 })
-  const glowX = useTransform(x, [-0.5, 0.5], [0, 100])
-  const glowY = useTransform(y, [-0.5, 0.5], [0, 100])
-
-  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
-    if (!ref.current) return
-    const rect = ref.current.getBoundingClientRect()
-    x.set((e.clientX - rect.left) / rect.width - 0.5)
-    y.set((e.clientY - rect.top) / rect.height - 0.5)
-  }
-
-  function handleMouseLeave() {
-    x.set(0)
-    y.set(0)
-  }
-
+function ExperienceCard({ exp, viewDetails, index }: {
+  exp: { slug: string; company: string; role: string; period: string }
+  viewDetails: string
+  index: number
+}) {
   const accent = accentColors[exp.slug]
 
   return (
     <>
-      {/* Desktop only — sticky stacking */}
-      <div ref={cardRef} style={{ height: 'min(62vh, 460px)', paddingTop: index * 16 + 'px' }} className="hidden sm:flex items-start justify-center relative">
-        <motion.div style={{ scale, top: 80 + index * 16 + 'px', position: 'sticky', width: '100%', zIndex: 2 }}>
-          <Link to={'/experience/' + exp.slug} className="block" style={{ perspective: '800px' }}>
-            <motion.div
-              ref={ref}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-              style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
-              className="relative rounded-[24px] border-2 border-[#D7E2EA]/15 overflow-hidden cursor-pointer"
-            >
-              <motion.div
-                className="absolute inset-0 pointer-events-none z-10"
-                style={{
-                  background: useTransform(
-                    [glowX, glowY],
-                    ([gx, gy]) => `radial-gradient(circle at ${gx}% ${gy}%, rgba(215,226,234,0.08) 0%, transparent 60%)`
-                  ),
-                }}
-              />
-              <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
+      {/* Desktop card */}
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.55, delay: (index % 2) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+        className="hidden sm:block group"
+      >
+        <Link to={'/experience/' + exp.slug} className="block">
+          <motion.div
+            whileHover={{ y: -8 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="relative rounded-[22px] overflow-hidden"
+            style={{
+              background: 'linear-gradient(160deg, rgba(232,224,213,0.045) 0%, rgba(232,224,213,0.015) 100%)',
+              border: '1px solid rgba(232,224,213,0.09)',
+              transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+            }}
+          >
+            {/* Accent top line — grows on hover */}
+            <div
+              className="absolute top-0 left-0 right-0 h-[2px] z-10 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+              style={{ background: `linear-gradient(to right, ${accent}, transparent 80%)` }}
+            />
+
+            {/* Image */}
+            <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
+              <div className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.05]">
                 <SmartImage
                   src={screenshots[exp.slug]}
                   alt={exp.company}
@@ -80,57 +65,53 @@ function TiltCard({ exp, viewDetails, index, total }: { exp: { slug: string; com
                   className="w-full h-full"
                   imgClassName="w-full h-full object-cover"
                 />
-                <motion.div
-                  className="absolute inset-0 flex items-center justify-center"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.2 }}
-                  style={{ background: 'rgba(0,0,0,0.55)' }}
-                >
-                  <span className="text-white text-sm font-medium uppercase tracking-widest border border-white/60 rounded-full px-5 py-2">
-                    {viewDetails}
-                  </span>
-                </motion.div>
-                <motion.div
-                  className="absolute top-0 left-0 right-0 h-0.5"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.4 }}
-                  style={{ background: accent, transformOrigin: 'left' }}
-                />
               </div>
-              <div className="p-5 relative" style={{ transform: 'translateZ(10px)' }}>
-                <div className="flex items-center justify-between mb-2">
-                  <p className="text-[#D7E2EA]/40 uppercase tracking-widest text-xs">{exp.period}</p>
-                  <span className="w-2 h-2 rounded-full" style={{ background: accent }} />
-                </div>
-                <h3 className="text-[#D7E2EA] font-bold text-base uppercase mb-0.5">{exp.company}</h3>
-                <p className="text-[#D7E2EA]/55 text-sm">{exp.role}</p>
-              </div>
-            </motion.div>
-          </Link>
-        </motion.div>
-      </div>
+              {/* Bottom fade into card */}
+              <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none"
+                style={{ background: 'linear-gradient(to top, rgba(13,12,10,0.85), transparent)' }} />
+            </div>
 
-      {/* Mobile only — simple list, no sticky, no gaps */}
+            {/* Text */}
+            <div className="p-5 sm:p-6">
+              <div className="flex items-center justify-between mb-2.5">
+                <span style={{ color: accent, fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.9 }}>
+                  {exp.period}
+                </span>
+                <span
+                  className="flex items-center gap-1.5 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
+                  style={{ color: '#E8DDD0', fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase' }}
+                >
+                  {viewDetails.replace(' →', '')}
+                  <ArrowUpRight size={12} strokeWidth={1.8} style={{ color: accent }} />
+                </span>
+              </div>
+              <h3 className="font-bold uppercase mb-1" style={{ color: '#E8DDD0', fontSize: '17px', letterSpacing: '0.01em' }}>
+                {exp.company}
+              </h3>
+              <p style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '13px', fontWeight: 300 }}>{exp.role}</p>
+            </div>
+          </motion.div>
+        </Link>
+      </motion.div>
+
+      {/* Mobile card — simple list */}
       <Link to={'/experience/' + exp.slug} className="sm:hidden block">
         <motion.div
           whileTap={{ scale: 0.97 }}
-          className="relative rounded-[20px] overflow-hidden border border-[#D7E2EA]/12 flex"
-          style={{ background: '#111' }}
+          className="relative rounded-[20px] overflow-hidden border border-[#E8DDD0]/10 flex"
+          style={{ background: '#121110' }}
         >
           <div className="w-1 flex-shrink-0" style={{ background: accent }} />
-          <div className="relative flex-shrink-0 overflow-hidden" style={{ width: '48%', aspectRatio: '4/3' }}>
+          <div className="relative flex-shrink-0 overflow-hidden" style={{ width: '44%', aspectRatio: '4/3' }}>
             <SmartImage src={screenshots[exp.slug]} alt={exp.company} label={exp.company} accent={accent} className="w-full h-full" imgClassName="w-full h-full object-cover" />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, transparent 60%, #111 100%)' }} />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, transparent 60%, #121110 100%)' }} />
           </div>
           <div className="flex flex-col justify-center px-4 py-4 flex-1 min-w-0">
             <span className="text-[10px] uppercase tracking-widest mb-1" style={{ color: accent, opacity: 0.85 }}>{exp.period}</span>
-            <h3 className="text-[#D7E2EA] font-bold text-sm uppercase leading-tight mb-1">{exp.company}</h3>
-            <p className="text-[#D7E2EA]/45 text-xs leading-snug truncate">{exp.role}</p>
+            <h3 className="font-bold text-sm uppercase leading-tight mb-1" style={{ color: '#E8DDD0' }}>{exp.company}</h3>
+            <p className="text-xs leading-snug truncate" style={{ color: '#E8DDD0', opacity: 0.45 }}>{exp.role}</p>
             <div className="flex items-center gap-1 mt-3">
               <span className="text-[9px] uppercase tracking-widest" style={{ color: accent, opacity: 0.7 }}>{viewDetails}</span>
-              <span style={{ color: accent, opacity: 0.7, fontSize: '10px' }}>→</span>
             </div>
           </div>
         </motion.div>
@@ -147,28 +128,28 @@ export default function ExperienceSection() {
     <section
       id="experience"
       className="px-5 sm:px-8 md:px-10 py-16 sm:py-24 md:py-32 relative z-10"
-      style={{ background: '#0C0C0C' }}
+      style={{ background: '#0A0908' }}
     >
       <FadeIn delay={0} y={40}>
         <h2
           className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-6"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)', color: '#D7E2EA' }}
+          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
         >
           {tx.heading}
         </h2>
       </FadeIn>
       <FadeIn delay={0.15} y={20}>
         <p
-          className="text-center max-w-xl mx-auto mb-16 sm:mb-20 md:mb-28 font-light leading-relaxed"
-          style={{ color: '#D7E2EA', opacity: 0.4, fontSize: 'clamp(0.85rem, 1.4vw, 1.05rem)' }}
+          className="text-center max-w-xl mx-auto mb-12 sm:mb-16 md:mb-20 font-light leading-relaxed"
+          style={{ color: '#E8DDD0', opacity: 0.4, fontSize: 'clamp(0.85rem, 1.4vw, 1.05rem)' }}
         >
           {tx.subheading}
         </p>
       </FadeIn>
 
-      <div className="flex flex-col max-w-4xl mx-auto gap-3 sm:gap-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 max-w-5xl mx-auto">
         {tx.items.map((exp, i) => (
-          <TiltCard key={i} exp={exp} viewDetails={tx.viewDetails} index={i} total={tx.items.length} />
+          <ExperienceCard key={exp.slug} exp={exp} viewDetails={tx.viewDetails} index={i} />
         ))}
       </div>
     </section>
