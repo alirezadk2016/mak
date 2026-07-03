@@ -1,6 +1,6 @@
 import { Globe, Menu, X, Download } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import FadeIn from './FadeIn'
 import Magnet from './Magnet'
@@ -81,6 +81,12 @@ export default function HeroSection() {
   const navigate = useNavigate()
   const tx = t[lang]
   const [menuOpen, setMenuOpen] = useState(false)
+
+  // Lock body scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
 
   const navItems = [
     { key: 'about', label: tx.nav.about, route: '/about' },
