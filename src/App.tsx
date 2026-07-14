@@ -14,6 +14,7 @@ import SvendeproevePage from './pages/SvendeproevePage'
 import EliteVaskPage from './pages/EliteVaskPage'
 import GamingPCPage from './pages/GamingPCPage'
 import MakPaintingPage from './pages/MakPaintingPage'
+import NotFound from './pages/NotFound'
 import FooterSection from './components/FooterSection'
 function Home() {
   return (
@@ -42,6 +43,7 @@ export default function App() {
         <Route path="/projects/mak-painting" element={<MakPaintingPage />} />
         <Route path="/recommendations" element={<RecommendationsPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </LanguageProvider>
   )

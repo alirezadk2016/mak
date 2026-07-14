@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Siden blev ikke fundet | Alireza Makvandi</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      background: #0A0908;
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      color: #E8DDD0;
+    }
+    .wrap {
+      min-height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 24px;
+      background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(201,169,110,0.06) 0%, transparent 60%);
+    }
+    .code {
+      font-weight: 900; line-height: 0.9; letter-spacing: -0.04em;
+      font-size: clamp(5rem, 20vw, 12rem);
+      background: linear-gradient(170deg, #EDE8DF 0%, #7A7168 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .rule { width: 40px; height: 1px; background: rgba(201,169,110,0.5); margin: 22px 0; }
+    h1 { font-size: clamp(1.3rem, 3vw, 2rem); font-weight: 600; letter-spacing: -0.01em; }
+    p { opacity: 0.45; font-weight: 300; max-width: 380px; line-height: 1.7; margin-top: 14px; font-size: clamp(0.9rem, 1.4vw, 1.05rem); }
+    a.home {
+      display: inline-flex; align-items: center; gap: 10px; margin-top: 30px;
+      padding: 13px 26px; border-radius: 100px; text-decoration: none;
+      color: #E8DDD0; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500;
+      border: 1px solid rgba(201,169,110,0.4); background: rgba(201,169,110,0.08);
+      transition: opacity 0.2s ease;
+    }
+    a.home:hover { opacity: 0.7; }
+    a.home span.arrow { color: #C9A96E; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404</div>
+    <div class="rule"></div>
+    <h1>Siden blev ikke fundet</h1>
+    <p>Siden, du leder efter, findes ikke eller er blevet flyttet.</p>
+    <a class="home" href="/"><span class="arrow">←</span> Tilbage til forsiden</a>
+  </div>
+</body>
+</html>
