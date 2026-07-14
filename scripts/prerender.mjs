@@ -132,9 +132,12 @@ const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g
 
 async function run() {
   const server = await startServer()
-  const browser = await chromium.launch({
-    executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH || '/opt/pw-browsers/chromium',
-  })
+  // Use an explicit path if given, else the pre-installed browser in this
+  // sandbox, else let Playwright pick its own (e.g. GitHub Actions / CI).
+  const preinstalled = '/opt/pw-browsers/chromium'
+  const executablePath =
+    process.env.PLAYWRIGHT_EXECUTABLE_PATH || (existsSync(preinstalled) ? preinstalled : undefined)
+  const browser = await chromium.launch({ executablePath })
   const context = await browser.newContext({ locale: 'da-DK', viewport: { width: 1440, height: 900 } })
 
   for (const route of routes) {
