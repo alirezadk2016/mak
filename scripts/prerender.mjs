@@ -42,7 +42,7 @@ const routes = [
   {
     path: '/',
     title: 'Alireza Makvandi — IT-supporter | Aarhus',
-    description: 'Uddannet IT-supporter fra Aarhus Tech. Erfaring med Windows, netværk og brugersupport fra YouSee og Fourcom. Baseret i Aarhus — klar til nyt job.',
+    description: 'Uddannet IT-supporter fra Aarhus Tech med erfaring fra YouSee og Fourcom. Baseret i Aarhus — klar til nyt job.',
   },
   {
     path: '/about',
