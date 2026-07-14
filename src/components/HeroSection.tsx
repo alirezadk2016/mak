@@ -335,8 +335,8 @@ export default function HeroSection() {
               <FadeIn delay={0.65} y={16}>
                 <div className="flex flex-wrap gap-2.5 mt-8">
                   {[
-                    lang === 'da' ? '10 års erfaring' : '10 yrs experience',
-                    'Aarhus Tech 2026',
+                    lang === 'da' ? 'Nyuddannet 2026' : 'Newly qualified 2026',
+                    'Aarhus Tech',
                     'YouSee · Fourcom',
                   ].map((chip) => (
                     <span
