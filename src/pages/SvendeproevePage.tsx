@@ -46,7 +46,7 @@ export default function SvendeproevePage() {
           {lang === 'da' ? 'Tilbage' : 'Back'}
         </Link>
         <a
-          href="/Svendepr%C3%B8ve-Projekt.docx%20(2).pdf"
+          href="/svendeproeve-projekt.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#E8DDD0]/40 hover:text-[#E8DDD0]/70 transition-colors text-xs uppercase tracking-widest"

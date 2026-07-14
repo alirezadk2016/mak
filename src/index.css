@@ -17,6 +17,24 @@ section[id] {
   scroll-margin-top: 64px;
 }
 
+/* Keyboard focus — visible ring for accessibility (mouse clicks stay clean) */
+:focus-visible {
+  outline: 2px solid rgba(201, 169, 110, 0.9);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Respect users who prefer reduced motion (vestibular safety) */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @keyframes smartShimmer {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }

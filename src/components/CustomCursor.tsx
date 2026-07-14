@@ -18,34 +18,23 @@ export default function CustomCursor() {
       cursorY.set(e.clientY)
       if (!visible) setVisible(true)
     }
-
-    const checkHover = () => {
-      const els = document.querySelectorAll('a, button, [role="button"]')
-      const handler = (e: Event) => {
-        if (e.type === 'mouseenter') setHovered(true)
-        else setHovered(false)
-      }
-      els.forEach(el => {
-        el.addEventListener('mouseenter', handler)
-        el.addEventListener('mouseleave', handler)
-      })
-      return () => els.forEach(el => {
-        el.removeEventListener('mouseenter', handler)
-        el.removeEventListener('mouseleave', handler)
-      })
-    }
+    // Event delegation — works for any element, including ones added later.
+    const isInteractive = (t: EventTarget | null) =>
+      t instanceof Element && !!t.closest('a, button, [role="button"], input, textarea, select')
+    const over = (e: MouseEvent) => { if (isInteractive(e.target)) setHovered(true) }
+    const out = (e: MouseEvent) => { if (isInteractive(e.target)) setHovered(false) }
+    const leaveWindow = () => setVisible(false)
 
     window.addEventListener('mousemove', move)
-    const cleanup = checkHover()
-
-    // Re-attach on DOM changes
-    const observer = new MutationObserver(() => cleanup())
-    observer.observe(document.body, { childList: true, subtree: true })
+    document.addEventListener('mouseover', over)
+    document.addEventListener('mouseout', out)
+    document.addEventListener('mouseleave', leaveWindow)
 
     return () => {
       window.removeEventListener('mousemove', move)
-      cleanup()
-      observer.disconnect()
+      document.removeEventListener('mouseover', over)
+      document.removeEventListener('mouseout', out)
+      document.removeEventListener('mouseleave', leaveWindow)
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
     }
   }, [visible, cursorX, cursorY])
@@ -71,7 +60,7 @@ export default function CustomCursor() {
           style={{
             borderColor: 'rgba(232,224,213,0.5)',
             boxShadow: hovered
-              ? '0 0 18px 4px rgba(120,80,255,0.4)'
+              ? '0 0 18px 4px rgba(201,169,110,0.4)'
               : '0 0 10px 2px rgba(232,224,213,0.15)',
           }}
         />

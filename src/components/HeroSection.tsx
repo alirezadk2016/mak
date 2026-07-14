@@ -145,6 +145,7 @@ export default function HeroSection() {
             className="flex items-center gap-1.5 transition-opacity duration-200 hover:opacity-50"
             style={{ color: '#E8DDD0', fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
             title={lang === 'da' ? 'Switch to English' : 'Skift til dansk'}
+            aria-label={lang === 'da' ? 'Switch to English' : 'Skift til dansk'}
           >
             <Globe size={11} strokeWidth={1.5} />
             {lang === 'da' ? 'EN' : 'DA'}
@@ -215,6 +216,9 @@ export default function HeroSection() {
           }}
         />
 
+        {/* Single semantic page heading (visual headings below are decorative) */}
+        <h1 className="sr-only">Alireza Makvandi — {tx.hero.role}</h1>
+
         {/* ── MOBILE layout ── */}
         <div className="flex flex-col items-center px-5 pt-8 pb-12 gap-6 sm:hidden flex-1 justify-center relative z-10">
 
@@ -229,12 +233,13 @@ export default function HeroSection() {
             </div>
           </FadeIn>
 
-          <h1
+          <div
+            aria-hidden="true"
             className="hero-heading font-black uppercase tracking-tight leading-none text-center"
             style={{ fontSize: '13.5vw' }}
           >
             <AnimatedHeading key={tx.hero.heading} text={tx.hero.heading} />
-          </h1>
+          </div>
 
           <FadeIn delay={0.5} y={20}>
             <p
@@ -310,13 +315,14 @@ export default function HeroSection() {
               </FadeIn>
 
               <div className="overflow-hidden">
-                <h1
+                <div
+                  aria-hidden="true"
                   className="hero-heading font-black uppercase tracking-tight leading-[0.9]"
                   style={{ fontSize: 'clamp(2.6rem, 6vw, 5.8rem)', letterSpacing: '-0.02em' }}
                 >
                   <span className="block"><AnimatedHeading text="Alireza" /></span>
                   <span className="block"><AnimatedHeading text="Makvandi" /></span>
-                </h1>
+                </div>
               </div>
 
               <FadeIn delay={0.55} y={16}>
