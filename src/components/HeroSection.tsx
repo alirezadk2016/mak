@@ -8,8 +8,8 @@ import ContactButton from './ContactButton'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
 
-const IMG_FRONT = '/f1145949-0bb9-49ee-984f-8586244456a5.png'
-const IMG_BACK  = '/6F4611AC-9D3C-47F1-8BA0-49E69A35BCDE.jpeg'
+const IMG_FRONT = '/6F4611AC-9D3C-47F1-8BA0-49E69A35BCDE.jpeg' // real photo (default)
+const IMG_BACK  = '/f1145949-0bb9-49ee-984f-8586244456a5.png'  // cartoon (on hover)
 
 function FlipAvatar({ className }: { className?: string }) {
   const [flipped, setFlipped] = useState(false)

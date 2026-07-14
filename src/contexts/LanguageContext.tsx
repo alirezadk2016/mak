@@ -9,8 +9,8 @@ function initialLang(): Lang {
     const saved = localStorage.getItem(STORAGE_KEY)
     if (saved === 'da' || saved === 'en') return saved
   } catch { /* storage unavailable (private mode etc.) */ }
-  // First visit: follow the browser language
-  return navigator.language?.toLowerCase().startsWith('da') ? 'da' : 'en'
+  // First visit: always default to Danish. English only on manual toggle.
+  return 'da'
 }
 
 const LanguageContext = createContext<{ lang: Lang; toggle: () => void }>({
