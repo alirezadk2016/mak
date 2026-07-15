@@ -41,57 +41,57 @@ const SITE = 'Alireza Makvandi'
 const routes = [
   {
     path: '/',
-    title: 'Alireza Makvandi — IT-supporter | Aarhus',
+    title: 'Alireza Makvandi — IT-supporter i Aarhus',
     description: 'Uddannet IT-supporter fra Aarhus Tech med erfaring fra YouSee og Fourcom. Baseret i Aarhus — klar til nyt job.',
   },
   {
     path: '/about',
-    title: 'Om mig — Alireza Makvandi | IT-supporter i Aarhus',
+    title: 'Om mig — Alireza Makvandi | IT-supporter',
     description: 'Lær Alireza Makvandi at kende: uddannet IT-supporter fra Aarhus Tech, 10 år i Danmark, erfaring fra YouSee og Fourcom. Kompetencer, rejse, sprog og interesser.',
   },
   {
     path: '/recommendations',
-    title: 'Anbefalinger — Alireza Makvandi',
+    title: 'Anbefalinger — Alireza Makvandi | IT-supporter',
     description: 'Officielle anbefalinger fra virksomheder, jeg har arbejdet for — bl.a. YouSee. Ord fra ledere, der har set min indsats på tæt hold.',
   },
   {
     path: '/projects/elite-vask',
-    title: 'Elite Vask — Projekt | Alireza Makvandi',
+    title: 'Elite Vask — Alireza Makvandi | IT-supporter',
     description: 'Webløsning for Elite Vask — moderne hjemmeside med online booking. Design og udvikling af Alireza Makvandi.',
   },
   {
     path: '/projects/svendeproeve',
-    title: 'Svendeprøve — Aarhus Tech | Alireza Makvandi',
+    title: 'Svendeprøve — Alireza Makvandi | IT-supporter',
     description: 'Afsluttende svendeprøve på IT-supporteruddannelsen: opsætning af komplet netværksinfrastruktur med servere, brugere og afdelinger.',
   },
   {
     path: '/projects/mak-painting',
-    title: 'MAK Painting — Projekt | Alireza Makvandi',
+    title: 'MAK Painting — Alireza Makvandi | IT-supporter',
     description: 'To-sproget hjemmeside og admin-panel til malervirksomheden MAK Painting i Melbourne: booking, galleri, priser og indhold.',
   },
   {
     path: '/projects/gaming-pc',
-    title: 'Gaming PC Build — Projekt | Alireza Makvandi',
+    title: 'Gaming PC Build — Alireza Makvandi | IT-supporter',
     description: 'Selvbygget gaming-PC fra bunden — research, kompatibilitet, samling og konfiguration. Et bevis på indgående hardwareforståelse.',
   },
   {
     path: '/experience/yousee',
-    title: 'YouSee — Erfaring | Alireza Makvandi',
+    title: 'YouSee — Alireza Makvandi | IT-supporter',
     description: 'Erfaring fra YouSee: kundeservice, drift og administration. Officiel anbefaling fra butikschefen.',
   },
   {
     path: '/experience/fourcom',
-    title: 'Fourcom — Erfaring | Alireza Makvandi',
+    title: 'Fourcom — Alireza Makvandi | IT-supporter',
     description: 'IT-support praktik hos Fourcom: opsætning af Windows, hardware, fejlfinding og brugersupport.',
   },
   {
     path: '/experience/folkehuse',
-    title: 'Folkehuse Aarhus — Erfaring | Alireza Makvandi',
+    title: 'Folkehuse Aarhus — Alireza Makvandi | IT-supporter',
     description: 'Frivilligt IT-arbejde i Folkehuse Aarhus — brugersupport, især for ældre borgere.',
   },
   {
     path: '/experience/aarhustech',
-    title: 'Aarhus Tech — Erfaring | Alireza Makvandi',
+    title: 'Aarhus Tech — Alireza Makvandi | IT-supporter',
     description: 'Skolepraktik og IT-supporteruddannelsen på Aarhus Tech — netværk, servere, sikkerhed og support.',
   },
 ]
