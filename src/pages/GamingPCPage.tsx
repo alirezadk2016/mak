@@ -32,7 +32,7 @@ const content = {
     back: 'Tilbage',
     category: 'Personligt projekt',
     title: 'Gaming PC Build',
-    desc: 'Med den viden og de praktiske kompetencer, jeg har opbygget gennem min IT-uddannelse og arbejdserfaring, valgte jeg at sætte det hele i spil — og bygge min egen gaming-PC fra bunden. Jeg researched komponenter, vurderede kompatibilitet, sammensatte systemet og konfigurerede det fra start til slut. Det er ikke blot et hobbyprojekt; det er et bevis på, at jeg forstår hardware indgående og kan omsætte teori til praksis.',
+    desc: 'Med den viden og de praktiske kompetencer, jeg har opbygget gennem min IT-uddannelse og arbejdserfaring, valgte jeg at sætte det hele i spil — og bygge min egen gaming-PC fra bunden. Jeg undersøgte komponenter, vurderede kompatibilitet, samlede systemet og konfigurerede det fra start til slut. Det er ikke blot et hobbyprojekt; det er et bevis på, at jeg forstår hardware indgående og kan omsætte teori til praksis.',
     specsLabel: 'Specifikationer',
   },
   en: {
