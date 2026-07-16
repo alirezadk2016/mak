@@ -1,9 +1,6 @@
 import base64
 photo = base64.b64encode(open('public/6F4611AC-9D3C-47F1-8BA0-49E69A35BCDE.jpeg','rb').read()).decode()
 img = f"data:image/jpeg;base64,{photo}"
-qr = open('scripts/_qr_b64.txt').read().strip()
-qrimg = f"data:image/svg+xml;base64,{qr}"
-
 # Inline stroke icons (currentColor = gold via .c-ic)
 _s = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'
 IC_PHONE = f'<svg viewBox="0 0 24 24" {_s}><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>'
@@ -95,19 +92,14 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="s-h">Sprog</div><div class="s-rule"></div>
       <div class="lang-row"><b>Persisk</b><span>Modersmål</span></div>
       <div class="lang-row"><b>Dansk</b><span>Flydende</span></div>
-      <div class="lang-row"><b>Engelsk</b><span>Mellem</span></div>
+      <div class="lang-row"><b>Engelsk</b><span>Flydende</span></div>
 
       <div class="s-h">Kompetencer</div><div class="s-rule"></div>
       <span class="chip">Windows Server</span><span class="chip">Active Directory</span>
-      <span class="chip">DNS / DHCP</span><span class="chip">Linux</span>
-      <span class="chip">Netværk</span><span class="chip">Hardware</span>
+      <span class="chip">DNS / DHCP</span><span class="chip">Netværk</span>
+      <span class="chip">Hardware</span>
       <span class="chip">Fejlfinding</span><span class="chip">Brugersupport</span>
       <span class="chip">Web Design</span><span class="chip">SEO</span>
-
-      <div class="qr-box">
-        <img class="qr" src="{qrimg}">
-        <div class="qr-txt">Scan for<br>portfolio</div>
-      </div>
     </div>
   </aside>
 
