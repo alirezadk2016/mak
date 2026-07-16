@@ -4,6 +4,15 @@ img = f"data:image/jpeg;base64,{photo}"
 qr = open('scripts/_qr_b64.txt').read().strip()
 qrimg = f"data:image/svg+xml;base64,{qr}"
 
+# Inline stroke icons (currentColor = gold via .c-ic)
+_s = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'
+IC_PHONE = f'<svg viewBox="0 0 24 24" {_s}><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>'
+IC_MAIL = f'<svg viewBox="0 0 24 24" {_s}><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>'
+IC_WEB = f'<svg viewBox="0 0 24 24" {_s}><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg>'
+IC_IN = f'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76V21h-4v-5c0-1.2-.02-2.74-1.9-2.74s-2.17 1.3-2.17 2.65V21H9z"/></svg>'
+IC_PIN = f'<svg viewBox="0 0 24 24" {_s}><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>'
+IC_CAR = f'<svg viewBox="0 0 24 24" {_s}><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13m-14 0h14m-14 0v4m14-4v4M6 17h1m10 0h1"/><circle cx="7.5" cy="17" r="1.2"/><circle cx="16.5" cy="17" r="1.2"/></svg>'
+
 html = f'''<!doctype html>
 <html lang="da"><head><meta charset="utf-8">
 <style>
@@ -21,6 +30,11 @@ html,body {{ font-family:'Helvetica Neue',Arial,sans-serif; color:#1c1c1c; -webk
 .s-rule {{ height:2px; width:14mm; background:#c9a96e; margin-bottom:3.5mm; }}
 .k {{ font-size:9.5pt; font-weight:700; color:#fff; margin-top:2mm; }}
 .v {{ font-size:8.5pt; color:#b9c4cd; line-height:1.5; word-break:break-word; }}
+.c-item {{ display:flex; align-items:flex-start; gap:2.5mm; margin-top:2.6mm; }}
+.c-ic {{ flex-shrink:0; width:3.6mm; height:3.6mm; margin-top:.4mm; color:#c9a96e; }}
+.c-ic svg {{ width:100%; height:100%; display:block; }}
+.c-k {{ font-size:8pt; font-weight:700; color:#fff; letter-spacing:.2px; }}
+.c-v {{ font-size:8pt; color:#b9c4cd; line-height:1.4; word-break:break-word; }}
 .edu-y {{ font-size:8pt; color:#c9a96e; font-weight:600; margin-top:2.3mm; }}
 .edu-t {{ font-size:9pt; font-weight:700; color:#fff; line-height:1.35; }}
 .edu-s {{ font-size:8pt; color:#b9c4cd; }}
@@ -35,7 +49,7 @@ html,body {{ font-family:'Helvetica Neue',Arial,sans-serif; color:#1c1c1c; -webk
 .main {{ flex:1; padding:11mm 11mm 10mm; }}
 .name {{ font-size:26pt; font-weight:800; letter-spacing:-.5px; color:#12212e; line-height:1; }}
 .role {{ font-size:10.5pt; color:#c9a96e; font-weight:600; margin-top:1.5mm; letter-spacing:.3px; }}
-.avail {{ font-size:8pt; color:#2f7d4f; font-weight:600; white-space:nowrap; }}
+.avail {{ font-size:7.5pt; color:#2f7d4f; font-weight:700; white-space:nowrap; background:#e8f3ec; border:1px solid #bfe0cc; border-radius:20px; padding:1mm 2.5mm; letter-spacing:.2px; }}
 .profile {{ font-size:9pt; line-height:1.6; color:#3a3a3a; margin-top:4mm; }}
 .m-h {{ font-size:14pt; font-weight:800; color:#12212e; margin:7mm 0 1mm; }}
 .m-rule {{ height:2px; width:100%; background:#e4e0d8; margin-bottom:4mm; position:relative; }}
@@ -57,12 +71,12 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
     <div class="photo-wrap"><img class="photo" src="{img}"></div>
     <div class="side-inner">
       <div class="s-h">Kontakt</div><div class="s-rule"></div>
-      <div class="k">Telefon</div><div class="v">+45 91 48 88 43</div>
-      <div class="k">Email</div><div class="v">alirezadk2016@gmail.com</div>
-      <div class="k">Web</div><div class="v">www.makvandi.dk</div>
-      <div class="k">LinkedIn</div><div class="v">linkedin.com/in/alireza-makvandi</div>
-      <div class="k">Adresse</div><div class="v">Aarhus, Danmark</div>
-      <div class="k">Kørekort</div><div class="v">Kat. B</div>
+      <div class="c-item"><span class="c-ic">{IC_PHONE}</span><div><div class="c-k">Telefon</div><div class="c-v">+45 91 48 88 43</div></div></div>
+      <div class="c-item"><span class="c-ic">{IC_MAIL}</span><div><div class="c-k">Email</div><div class="c-v">alirezadk2016@gmail.com</div></div></div>
+      <div class="c-item"><span class="c-ic">{IC_WEB}</span><div><div class="c-k">Web</div><div class="c-v">www.makvandi.dk</div></div></div>
+      <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><div class="c-v">linkedin.com/in/alireza-makvandi</div></div></div>
+      <div class="c-item"><span class="c-ic">{IC_PIN}</span><div><div class="c-k">Adresse</div><div class="c-v">Aarhus, Danmark</div></div></div>
+      <div class="c-item"><span class="c-ic">{IC_CAR}</span><div><div class="c-k">Kørekort</div><div class="c-v">Kat. B</div></div></div>
 
       <div class="s-h">Uddannelse</div><div class="s-rule"></div>
       <div class="edu-y">2024 – 2026</div>
@@ -99,7 +113,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
 
   <main class="main">
     <div class="name">Alireza Makvandi</div>
-    <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">● Ledig — kan tiltræde straks</span></div>
+    <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">LEDIG · KAN TILTRÆDE STRAKS</span></div>
     <p class="profile">Nyuddannet IT-supporter fra Aarhus Tech med praktisk erfaring i Windows, netværk, hardware og brugersupport. Jeg har næsten fire års erfaring med kundeservice og drift fra YouSee samt praktik hos Fourcom, hvor jeg arbejdede med opsætning, fejlfinding og reparation. Jeg lærer hurtigt, tager ansvar og trives med at hjælpe brugere på alle tekniske niveauer. Klar til at bidrage fra dag ét.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
