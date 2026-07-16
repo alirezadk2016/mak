@@ -1,5 +1,8 @@
-photo = open('scripts/_photo_b64.txt').read().strip()
+import base64
+photo = base64.b64encode(open('public/6F4611AC-9D3C-47F1-8BA0-49E69A35BCDE.jpeg','rb').read()).decode()
 img = f"data:image/jpeg;base64,{photo}"
+qr = open('scripts/_qr_b64.txt').read().strip()
+qrimg = f"data:image/svg+xml;base64,{qr}"
 
 html = f'''<!doctype html>
 <html lang="da"><head><meta charset="utf-8">
@@ -9,22 +12,25 @@ html = f'''<!doctype html>
 html,body {{ font-family:'Helvetica Neue',Arial,sans-serif; color:#1c1c1c; -webkit-print-color-adjust:exact; print-color-adjust:exact; }}
 .page {{ width:210mm; min-height:297mm; display:flex; }}
 /* Sidebar */
-.side {{ width:70mm; background:#12212e; color:#e8e2d8; padding:0 0 12mm; }}
-.photo-wrap {{ background:#0d1922; padding:8mm 0 6mm; text-align:center; }}
-.photo {{ width:38mm; height:38mm; border-radius:50%; object-fit:cover; border:2px solid #c9a96e; }}
+.side {{ width:70mm; background:#12212e; color:#e8e2d8; padding:0 0 5mm; }}
+.photo-wrap {{ background:#0d1922; padding:6mm 0 5mm; text-align:center; }}
+.photo {{ width:33mm; height:33mm; border-radius:50%; object-fit:cover; border:2px solid #c9a96e; }}
 .side-inner {{ padding:0 8mm; }}
-.s-h {{ font-size:12.5pt; font-weight:700; letter-spacing:.5px; margin:5mm 0 1.5mm; color:#fff; }}
-.s-h:first-of-type {{ margin-top:5mm; }}
+.s-h {{ font-size:12pt; font-weight:700; letter-spacing:.5px; margin:4mm 0 1.5mm; color:#fff; }}
+.s-h:first-of-type {{ margin-top:4mm; }}
 .s-rule {{ height:2px; width:14mm; background:#c9a96e; margin-bottom:3.5mm; }}
-.k {{ font-size:9.5pt; font-weight:700; color:#fff; margin-top:2.5mm; }}
+.k {{ font-size:9.5pt; font-weight:700; color:#fff; margin-top:2mm; }}
 .v {{ font-size:8.5pt; color:#b9c4cd; line-height:1.5; word-break:break-word; }}
-.edu-y {{ font-size:8pt; color:#c9a96e; font-weight:600; margin-top:2.8mm; }}
+.edu-y {{ font-size:8pt; color:#c9a96e; font-weight:600; margin-top:2.3mm; }}
 .edu-t {{ font-size:9pt; font-weight:700; color:#fff; line-height:1.35; }}
 .edu-s {{ font-size:8pt; color:#b9c4cd; }}
 .lang-row {{ display:flex; justify-content:space-between; font-size:8.5pt; margin-top:2.5mm; }}
 .lang-row b {{ color:#fff; font-weight:600; }}
 .lang-row span {{ color:#b9c4cd; }}
 .chip {{ display:inline-block; font-size:7.5pt; color:#d8cfc0; border:1px solid #3a4b58; border-radius:20px; padding:1.5mm 3mm; margin:0 1.5mm 1.5mm 0; }}
+.qr-box {{ display:flex; align-items:center; gap:3mm; margin-top:3.5mm; padding-top:3mm; border-top:1px solid #2a3a47; }}
+.qr {{ width:17mm; height:17mm; background:#fff; padding:1mm; border-radius:2mm; }}
+.qr-txt {{ font-size:8pt; color:#c9a96e; font-weight:600; line-height:1.4; }}
 /* Main */
 .main {{ flex:1; padding:11mm 11mm 10mm; }}
 .name {{ font-size:26pt; font-weight:800; letter-spacing:-.5px; color:#12212e; line-height:1; }}
@@ -53,7 +59,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="k">Telefon</div><div class="v">+45 91 48 88 43</div>
       <div class="k">Email</div><div class="v">alirezadk2016@gmail.com</div>
       <div class="k">Web</div><div class="v">www.makvandi.dk</div>
-      <div class="k">LinkedIn</div><div class="v">Alireza Makvandi</div>
+      <div class="k">LinkedIn</div><div class="v">linkedin.com/in/alireza-makvandi</div>
       <div class="k">Adresse</div><div class="v">Aarhus, Danmark</div>
 
       <div class="s-h">Uddannelse</div><div class="s-rule"></div>
@@ -81,6 +87,11 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <span class="chip">Netværk</span><span class="chip">Hardware</span>
       <span class="chip">Fejlfinding</span><span class="chip">Brugersupport</span>
       <span class="chip">Web Design</span><span class="chip">SEO</span>
+
+      <div class="qr-box">
+        <img class="qr" src="{qrimg}">
+        <div class="qr-txt">Scan for<br>portfolio</div>
+      </div>
     </div>
   </aside>
 
