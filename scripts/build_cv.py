@@ -31,7 +31,10 @@ html,body {{ font-family:'Helvetica Neue',Arial,sans-serif; color:#1c1c1c; -webk
 .c-ic {{ flex-shrink:0; width:3.6mm; height:3.6mm; margin-top:.4mm; color:#c9a96e; }}
 .c-ic svg {{ width:100%; height:100%; display:block; }}
 .c-k {{ font-size:8pt; font-weight:700; color:#fff; letter-spacing:.2px; }}
-.c-v {{ font-size:8pt; color:#b9c4cd; line-height:1.4; word-break:break-word; }}
+.c-v {{ font-size:8pt; color:#b9c4cd; line-height:1.4; word-break:break-word; display:block; text-decoration:none; }}
+a.c-v {{ color:#b9c4cd; }}
+.sk-g {{ font-size:7.5pt; font-weight:700; color:#c9a96e; letter-spacing:.4px; text-transform:uppercase; margin:3mm 0 1.5mm; }}
+.sk-g:first-of-type {{ margin-top:0; }}
 .edu-y {{ font-size:8pt; color:#c9a96e; font-weight:600; margin-top:2.3mm; }}
 .edu-t {{ font-size:9pt; font-weight:700; color:#fff; line-height:1.35; }}
 .edu-s {{ font-size:8pt; color:#b9c4cd; }}
@@ -47,11 +50,11 @@ html,body {{ font-family:'Helvetica Neue',Arial,sans-serif; color:#1c1c1c; -webk
 .name {{ font-size:26pt; font-weight:800; letter-spacing:-.5px; color:#12212e; line-height:1; }}
 .role {{ font-size:10.5pt; color:#c9a96e; font-weight:600; margin-top:1.5mm; letter-spacing:.3px; }}
 .avail {{ font-size:7.5pt; color:#2f7d4f; font-weight:700; white-space:nowrap; background:#e8f3ec; border:1px solid #bfe0cc; border-radius:20px; padding:1mm 2.5mm; letter-spacing:.2px; }}
-.profile {{ font-size:9pt; line-height:1.6; color:#3a3a3a; margin-top:4mm; }}
-.m-h {{ font-size:14pt; font-weight:800; color:#12212e; margin:7mm 0 1mm; }}
-.m-rule {{ height:2px; width:100%; background:#e4e0d8; margin-bottom:4mm; position:relative; }}
+.profile {{ font-size:9pt; line-height:1.55; color:#3a3a3a; margin-top:3mm; }}
+.m-h {{ font-size:13.5pt; font-weight:800; color:#12212e; margin:3.5mm 0 1mm; }}
+.m-rule {{ height:2px; width:100%; background:#e4e0d8; margin-bottom:3mm; position:relative; }}
 .m-rule:after {{ content:''; position:absolute; left:0; top:0; width:20mm; height:2px; background:#c9a96e; }}
-.job {{ position:relative; padding-left:6mm; margin-bottom:4.5mm; }}
+.job {{ position:relative; padding-left:6mm; margin-bottom:3.3mm; }}
 .job:before {{ content:''; position:absolute; left:0; top:1.5mm; width:2.5mm; height:2.5mm; border-radius:50%; background:#c9a96e; }}
 .job:after {{ content:''; position:absolute; left:1.1mm; top:4mm; bottom:-3mm; width:1px; background:#e0dcd3; }}
 .job:last-child:after {{ display:none; }}
@@ -68,10 +71,10 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
     <div class="photo-wrap"><img class="photo" src="{img}"></div>
     <div class="side-inner">
       <div class="s-h">Kontakt</div><div class="s-rule"></div>
-      <div class="c-item"><span class="c-ic">{IC_PHONE}</span><div><div class="c-k">Telefon</div><div class="c-v">+45 91 48 88 43</div></div></div>
-      <div class="c-item"><span class="c-ic">{IC_MAIL}</span><div><div class="c-k">Email</div><div class="c-v">alirezadk2016@gmail.com</div></div></div>
-      <div class="c-item"><span class="c-ic">{IC_WEB}</span><div><div class="c-k">Web</div><div class="c-v">www.makvandi.dk</div></div></div>
-      <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><div class="c-v">linkedin.com/in/alireza-makvandi</div></div></div>
+      <div class="c-item"><span class="c-ic">{IC_PHONE}</span><div><div class="c-k">Telefon</div><a class="c-v" href="tel:+4591488843">+45 91 48 88 43</a></div></div>
+      <div class="c-item"><span class="c-ic">{IC_MAIL}</span><div><div class="c-k">Email</div><a class="c-v" href="mailto:alirezadk2016@gmail.com">alirezadk2016@gmail.com</a></div></div>
+      <div class="c-item"><span class="c-ic">{IC_WEB}</span><div><div class="c-k">Web</div><a class="c-v" href="https://www.makvandi.dk">www.makvandi.dk</a></div></div>
+      <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" href="https://linkedin.com/in/alireza-makvandi">linkedin.com/in/alireza-makvandi</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_PIN}</span><div><div class="c-k">Adresse</div><div class="c-v">Aarhus, Danmark</div></div></div>
       <div class="c-item"><span class="c-ic">{IC_CAR}</span><div><div class="c-k">Kørekort</div><div class="c-v">Kat. B</div></div></div>
 
@@ -95,10 +98,13 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="lang-row"><b>Engelsk</b><span>Flydende</span></div>
 
       <div class="s-h">Kompetencer</div><div class="s-rule"></div>
+      <div class="sk-g">Systemer &amp; Netværk</div>
       <span class="chip">Windows Server</span><span class="chip">Active Directory</span>
       <span class="chip">DNS / DHCP</span><span class="chip">Netværk</span>
-      <span class="chip">Hardware</span>
-      <span class="chip">Fejlfinding</span><span class="chip">Brugersupport</span>
+      <div class="sk-g">Support &amp; Hardware</div>
+      <span class="chip">Brugersupport</span><span class="chip">Fejlfinding</span>
+      <span class="chip">Hardware</span><span class="chip">Windows</span>
+      <div class="sk-g">Web</div>
       <span class="chip">Web Design</span><span class="chip">SEO</span>
     </div>
   </aside>
@@ -106,9 +112,18 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
   <main class="main">
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">LEDIG · KAN TILTRÆDE STRAKS</span></div>
-    <p class="profile">Nyuddannet IT-supporter fra Aarhus Tech med praktisk erfaring i Windows, netværk, hardware og brugersupport. Jeg har næsten fire års erfaring med kundeservice og drift fra YouSee samt praktik hos Fourcom, hvor jeg arbejdede med opsætning, fejlfinding og reparation. Jeg lærer hurtigt, tager ansvar og trives med at hjælpe brugere på alle tekniske niveauer. Klar til at bidrage fra dag ét.</p>
+    <p class="profile">Nyuddannet IT-supporter fra Aarhus Tech med praktisk erfaring i opsætning, fejlfinding og brugersupport på tværs af Windows, netværk og hardware. Gennem min svendeprøve har jeg opbygget en komplet netværksinfrastruktur med server, Active Directory og brugerstyring. Jeg kombinerer teknisk forståelse med næsten fire års erfaring fra kundeservice — og en rolig, løsningsorienteret tilgang til brugere på alle niveauer.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
+
+    <div class="job">
+      <div class="j-y">2024 – 2026 <span class="j-org">· Aarhus Tech (del af uddannelsen)</span></div>
+      <div class="j-t">Skolepraktik · IT Support</div>
+      <ul>
+        <li>Brugersupport for ældre borgere én dag om ugen på et plejehjem.</li>
+        <li>Praktisk arbejde med netværk, servere, sikkerhed og fejlfinding.</li>
+      </ul>
+    </div>
 
     <div class="job">
       <div class="j-y">2024 <span class="j-org">· Fourcom ApS</span></div>
@@ -117,15 +132,6 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
         <li>Opsætning og installation af Windows samt klargøring af arbejdsstationer.</li>
         <li>Fejlfinding og reparation af hardware og komponenter.</li>
         <li>Brugersupport og teknisk dokumentation.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="j-y">2024 – 2026 <span class="j-org">· Aarhus Tech (del af uddannelsen)</span></div>
-      <div class="j-t">Skolepraktik · IT Support</div>
-      <ul>
-        <li>Praktisk IT-support — bl.a. én dag om ugen på et plejehjem.</li>
-        <li>Netværk, servere, sikkerhed og support i praksis.</li>
       </ul>
     </div>
 
@@ -149,11 +155,22 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       </ul>
     </div>
 
+    <div class="m-h">Projekter</div><div class="m-rule"></div>
+    <div class="job">
+      <div class="j-y">2026 <span class="j-org">· Svendeprøve</span></div>
+      <div class="j-t">Netværksinfrastruktur fra bunden</div>
+      <ul>
+        <li>Opsætning af komplet netværk med Windows Server, Active Directory, DNS/DHCP samt brugere og afdelinger.</li>
+        <li>Dokumentation og fejlfinding af hele opsætningen.</li>
+        <li>Egne webprojekter — se portfolio på www.makvandi.dk.</li>
+      </ul>
+    </div>
+
     <div class="m-h">Personlige kvaliteter</div><div class="m-rule"></div>
     <ul>
-      <li>Ansvarsfuld, hurtig til at lære og løsningsorienteret.</li>
-      <li>Struktureret og professionel i kontakten med brugere og kunder.</li>
-      <li>Tilpasningsdygtig — erfaring fra mange forskellige arbejdsmiljøer.</li>
+      <li>Rolig og struktureret — også når der er travlt og mange henvendelser.</li>
+      <li>Vant til at forklare teknik i et forståeligt sprog for alle brugere.</li>
+      <li>Nysgerrig på ny teknologi og motiveret af at løse problemer.</li>
     </ul>
 
     <div class="m-h">Referencer</div><div class="m-rule"></div>
