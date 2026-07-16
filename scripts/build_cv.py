@@ -150,9 +150,12 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <li>Tilpasningsdygtig — erfaring fra mange forskellige arbejdsmiljøer.</li>
     </ul>
 
-    <div class="m-h">Reference</div><div class="m-rule"></div>
+    <div class="m-h">Referencer</div><div class="m-rule"></div>
     <ul>
-      <li>Anbefaling fra butikschef, YouSee — kan fremvises på forespørgsel.</li>
+      <li>Skriftlig anbefaling fra <b>Aarhus Tech</b> (IT-supporteruddannelsen).</li>
+      <li>Skriftlig anbefaling fra <b>Fourcom ApS</b> (IT-support praktik).</li>
+      <li>Skriftlig anbefaling fra butikschef, <b>YouSee</b>.</li>
+      <li>Alle anbefalinger kan fremvises på forespørgsel.</li>
     </ul>
   </main>
 </div>
