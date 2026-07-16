@@ -35,6 +35,7 @@ html,body {{ font-family:'Helvetica Neue',Arial,sans-serif; color:#1c1c1c; -webk
 .main {{ flex:1; padding:11mm 11mm 10mm; }}
 .name {{ font-size:26pt; font-weight:800; letter-spacing:-.5px; color:#12212e; line-height:1; }}
 .role {{ font-size:10.5pt; color:#c9a96e; font-weight:600; margin-top:1.5mm; letter-spacing:.3px; }}
+.avail {{ font-size:8pt; color:#2f7d4f; font-weight:600; white-space:nowrap; }}
 .profile {{ font-size:9pt; line-height:1.6; color:#3a3a3a; margin-top:4mm; }}
 .m-h {{ font-size:14pt; font-weight:800; color:#12212e; margin:7mm 0 1mm; }}
 .m-rule {{ height:2px; width:100%; background:#e4e0d8; margin-bottom:4mm; position:relative; }}
@@ -61,6 +62,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="k">Web</div><div class="v">www.makvandi.dk</div>
       <div class="k">LinkedIn</div><div class="v">linkedin.com/in/alireza-makvandi</div>
       <div class="k">Adresse</div><div class="v">Aarhus, Danmark</div>
+      <div class="k">Kørekort</div><div class="v">Kat. B</div>
 
       <div class="s-h">Uddannelse</div><div class="s-rule"></div>
       <div class="edu-y">2024 – 2026</div>
@@ -97,7 +99,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
 
   <main class="main">
     <div class="name">Alireza Makvandi</div>
-    <div class="role">IT-supporter · Aarhus</div>
+    <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">● Ledig — kan tiltræde straks</span></div>
     <p class="profile">Nyuddannet IT-supporter fra Aarhus Tech med praktisk erfaring i Windows, netværk, hardware og brugersupport. Jeg har næsten fire års erfaring med kundeservice og drift fra YouSee samt praktik hos Fourcom, hvor jeg arbejdede med opsætning, fejlfinding og reparation. Jeg lærer hurtigt, tager ansvar og trives med at hjælpe brugere på alle tekniske niveauer. Klar til at bidrage fra dag ét.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
@@ -113,10 +115,10 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
     </div>
 
     <div class="job">
-      <div class="j-y">2024 – 2026 <span class="j-org">· Aarhus Tech</span></div>
+      <div class="j-y">2024 – 2026 <span class="j-org">· Aarhus Tech (del af uddannelsen)</span></div>
       <div class="j-t">Skolepraktik · IT Support</div>
       <ul>
-        <li>Praktisk IT-support som del af uddannelsen — bl.a. én dag om ugen på et plejehjem.</li>
+        <li>Praktisk IT-support — bl.a. én dag om ugen på et plejehjem.</li>
         <li>Netværk, servere, sikkerhed og support i praksis.</li>
       </ul>
     </div>
@@ -132,12 +134,12 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
     </div>
 
     <div class="job">
-      <div class="j-y">Sideløbende <span class="j-org">· Diverse</span></div>
-      <div class="j-t">Øvrig erfaring</div>
+      <div class="j-y">Sideløbende med studiet <span class="j-org">· Fritidsjob</span></div>
+      <div class="j-t">Fritidsjob &amp; frivilligt arbejde</div>
       <ul>
-        <li>Hjælpetræner i bokseklubben Champs Camp.</li>
-        <li>Frisørassistent hos Frisør Katalina.</li>
-        <li>Lagermedarbejder via Moment (Salling Group, Søstrene Grene).</li>
+        <li>Lagermedarbejder via vikarbureauet Moment (Salling Group, Søstrene Grene).</li>
+        <li>Hjælpetræner i bokseklubben Champs Camp &amp; frisørassistent hos Frisør Katalina.</li>
+        <li>Bred erfaring med ansvar, samarbejde og kundekontakt i danske arbejdsmiljøer.</li>
       </ul>
     </div>
 
