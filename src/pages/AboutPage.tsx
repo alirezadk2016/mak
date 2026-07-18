@@ -174,7 +174,7 @@ export default function AboutPage() {
               Alireza
             </h1>
             <p style={{ color: '#E8DDD0', opacity: 0.4, fontSize: '13px', letterSpacing: '0.06em' }}>
-              IT Support & Web Designer · Aarhus, DK
+              {lang === 'da' ? 'IT-supporter · Aarhus, DK' : 'IT Supporter · Aarhus, DK'}
             </p>
           </motion.div>
         </div>

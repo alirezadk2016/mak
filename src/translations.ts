@@ -8,7 +8,7 @@ export const t = {
     },
     hero: {
       heading: "Alireza Makvandi",
-      role: 'IT-supporter & Web Designer',
+      role: 'IT-supporter · Aarhus',
       cta: 'Kontakt mig',
       downloadCv: 'Download CV',
     },
@@ -129,7 +129,7 @@ export const t = {
     },
     hero: {
       heading: "Alireza Makvandi",
-      role: 'IT Support & Web Designer',
+      role: 'IT Supporter · Aarhus',
       cta: 'Contact Me',
       downloadCv: 'Download CV',
     },
