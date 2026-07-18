@@ -90,6 +90,11 @@ const routes = [
     description: 'Frivilligt IT-arbejde i Folkehuse Aarhus — brugersupport, især for ældre borgere.',
   },
   {
+    path: '/kolofon',
+    title: 'Om dette website — Alireza Makvandi',
+    description: 'Hvordan makvandi.dk er bygget: React, TypeScript og Vite — med fokus på SEO, sikkerhed og performance. Mit indhold, mine beslutninger.',
+  },
+  {
     path: '/viden',
     title: 'IT-ordbog — teknik forklaret enkelt | Alireza Makvandi',
     description: 'DHCP, DNS, Active Directory og flere IT-begreber forklaret enkelt og uden jargon — af Alireza Makvandi, IT-supporter i Aarhus.',

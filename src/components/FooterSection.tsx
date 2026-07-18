@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Linkedin, Instagram, Phone } from 'lucide-react'
@@ -280,9 +281,14 @@ export default function FooterSection() {
               ? 'Bygget med React, TypeScript & Vite — og en del kaffe.'
               : 'Built with React, TypeScript & Vite — and a fair amount of coffee.'}
           </p>
-          <span style={{ color: '#E8DDD0', opacity: 0.18, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
-            © {new Date().getFullYear()} Alireza Makvandi · Aarhus
-          </span>
+          <div className="flex items-center gap-4">
+            <span style={{ color: '#E8DDD0', opacity: 0.18, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+              © {new Date().getFullYear()} Alireza Makvandi · Aarhus
+            </span>
+            <Link to="/kolofon" className="transition-opacity hover:opacity-60" style={{ color: '#C9A96E', opacity: 0.55, fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase', textDecoration: 'none' }}>
+              {lang === 'da' ? 'Om dette website' : 'About this site'} →
+            </Link>
+          </div>
         </div>
       </div>
 
