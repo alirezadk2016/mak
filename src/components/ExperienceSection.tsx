@@ -113,7 +113,12 @@ export default function ExperienceSection() {
       className="px-5 sm:px-8 md:px-10 py-14 sm:py-20 md:py-24 relative z-10"
       style={{ background: '#0A0908' }}
     >
-      <FadeIn delay={0} y={40}>
+      <FadeIn delay={0} y={16}>
+        <p className="serif-accent text-center mb-2" style={{ color: '#C9A96E', fontSize: 'clamp(1.05rem, 1.6vw, 1.4rem)', opacity: 0.85 }}>
+          {lang === 'da' ? 'steder, der har formet mig' : 'places that shaped me'}
+        </p>
+      </FadeIn>
+      <FadeIn delay={0.05} y={40}>
         <h2
           className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-5"
           style={{ fontSize: 'clamp(2.6rem, 10vw, 120px)' }}

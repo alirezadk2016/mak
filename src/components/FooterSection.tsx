@@ -267,16 +267,24 @@ export default function FooterSection() {
 
       </div>
 
-      {/* Bottom */}
+      {/* Bottom — personal colophon */}
       <div className="mt-16 border-t border-[#E8DDD0]/8">
-        <div className="px-5 sm:px-10 md:px-16 py-6 flex items-center gap-4">
-          <div className="flex-1 h-px" style={{ background: 'rgba(232,224,213,0.06)' }} />
-          <div className="flex items-center gap-2 px-5 py-2 rounded-full border flex-shrink-0" style={{ borderColor: 'rgba(232,224,213,0.1)' }}>
-            <span style={{ color: '#E8DDD0', opacity: 0.25, fontSize: '10px' }}>&lt;&gt;</span>
-            <span style={{ color: '#E8DDD0', opacity: 0.2, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Crafted by</span>
-            <span style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '10px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' }}>MAK</span>
-          </div>
-          <div className="flex-1 h-px" style={{ background: 'rgba(232,224,213,0.06)' }} />
+        <div className="px-5 sm:px-10 md:px-16 py-10 flex flex-col items-center gap-3 text-center">
+          <span
+            className="serif-accent select-none"
+            style={{ color: '#C9A96E', fontSize: '34px', opacity: 0.9, transform: 'rotate(-3deg)', lineHeight: 1 }}
+            aria-hidden="true"
+          >
+            Alireza
+          </span>
+          <p style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em', maxWidth: '420px', lineHeight: 1.7 }}>
+            {lang === 'da'
+              ? 'Designet og kodet fra bunden af mig selv — React, TypeScript og en del kaffe. Ingen skabelon.'
+              : 'Designed and coded from scratch by me — React, TypeScript and a fair amount of coffee. No template.'}
+          </p>
+          <span style={{ color: '#E8DDD0', opacity: 0.18, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+            © {new Date().getFullYear()} Alireza Makvandi · Aarhus
+          </span>
         </div>
       </div>
 

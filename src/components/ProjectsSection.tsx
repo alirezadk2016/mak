@@ -146,7 +146,12 @@ export default function ProjectsSection() {
       className="px-5 sm:px-8 md:px-10 pt-6 sm:pt-8 md:pt-10 pb-14 sm:pb-20 md:pb-24 relative z-10"
       style={{ background: '#0A0908' }}
     >
-      <FadeIn delay={0} y={40}>
+      <FadeIn delay={0} y={16}>
+        <p className="serif-accent text-center mb-2" style={{ color: '#C9A96E', fontSize: 'clamp(1.05rem, 1.6vw, 1.4rem)', opacity: 0.85 }}>
+          {lang === 'da' ? 'ting, jeg har bygget' : 'things I have built'}
+        </p>
+      </FadeIn>
+      <FadeIn delay={0.05} y={40}>
         <h2
           className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-5"
           style={{ fontSize: 'clamp(2.6rem, 10vw, 120px)' }}

@@ -36,17 +36,34 @@ function FlipAvatar({ className }: { className?: string }) {
         <img
           src={IMG_FRONT}
           alt="Alireza Makvandi"
-          className="w-full h-full rounded-full object-cover"
-          style={{ border: '1px solid rgba(232,224,213,0.15)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+          className="w-full h-full object-cover"
+          style={{ borderRadius: '3px', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
         />
         <img
           src={IMG_BACK}
           alt="Alireza Makvandi"
-          className="absolute inset-0 w-full h-full rounded-full object-cover"
-          style={{ border: '1px solid rgba(232,224,213,0.15)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ borderRadius: '3px', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         />
       </motion.div>
     </div>
+  )
+}
+
+/** Polaroid-framed portrait with a handwritten-style caption. */
+function PolaroidPortrait({ caption, className = '' }: { caption: string; className?: string }) {
+  return (
+    <motion.div
+      initial={{ rotate: -2.5 }}
+      whileHover={{ rotate: 0, scale: 1.015 }}
+      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+      className={`polaroid ${className}`}
+    >
+      <div className="aspect-[4/5] overflow-hidden" style={{ borderRadius: '3px' }}>
+        <FlipAvatar className="w-full h-full" />
+      </div>
+      <div className="polaroid-caption">{caption}</div>
+    </motion.div>
   )
 }
 
@@ -223,22 +240,29 @@ export default function HeroSection() {
         <div className="flex flex-col items-center px-5 pt-8 pb-12 gap-6 sm:hidden flex-1 justify-center relative z-10">
 
           <FadeIn delay={0.15} y={20}>
-            <div
-              className="rounded-full p-[2px]"
-              style={{ background: 'linear-gradient(155deg, rgba(201,169,110,0.5) 0%, rgba(232,224,213,0.08) 50%, rgba(201,169,110,0.25) 100%)' }}
-            >
-              <div className="rounded-full p-1.5" style={{ background: '#0A0908' }}>
-                <FlipAvatar className="w-40 h-40" />
-              </div>
-            </div>
+            <PolaroidPortrait
+              caption={lang === 'da' ? 'Det er mig — Aarhus N' : "That's me — Aarhus N"}
+              className="w-44"
+            />
           </FadeIn>
 
-          <div
-            aria-hidden="true"
-            className="hero-heading font-black uppercase tracking-tight leading-none text-center"
-            style={{ fontSize: '13.5vw' }}
-          >
-            <AnimatedHeading key={tx.hero.heading} text={tx.hero.heading} />
+          <FadeIn delay={0.3} y={10}>
+            <p className="serif-accent text-center" style={{ color: '#C9A96E', fontSize: '1.15rem', opacity: 0.9 }}>
+              {lang === 'da' ? 'Hej — jeg hedder' : 'Hi — my name is'}
+            </p>
+          </FadeIn>
+
+          <div className="text-center -mt-2">
+            <div
+              aria-hidden="true"
+              className="hero-heading font-black uppercase tracking-tight leading-none"
+              style={{ fontSize: '13vw' }}
+            >
+              <AnimatedHeading key={lang} text="Alireza" />
+            </div>
+            <div aria-hidden="true" className="serif-accent leading-none" style={{ color: '#E8DDD0', fontSize: '14.5vw', marginTop: '-0.02em' }}>
+              Makvandi
+            </div>
           </div>
 
           <FadeIn delay={0.5} y={20}>
@@ -314,15 +338,33 @@ export default function HeroSection() {
                 </div>
               </FadeIn>
 
+              <FadeIn delay={0.28} y={12}>
+                <p
+                  className="serif-accent mb-3"
+                  style={{ color: '#C9A96E', fontSize: 'clamp(1.15rem, 1.7vw, 1.55rem)', opacity: 0.9 }}
+                >
+                  {lang === 'da' ? 'Hej — jeg hedder' : 'Hi — my name is'}
+                </p>
+              </FadeIn>
+
               <div className="overflow-hidden">
                 <div
                   aria-hidden="true"
-                  className="hero-heading font-black uppercase tracking-tight leading-[0.9]"
+                  className="hero-heading font-black uppercase tracking-tight leading-[0.92]"
                   style={{ fontSize: 'clamp(2.6rem, 6vw, 5.8rem)', letterSpacing: '-0.02em' }}
                 >
                   <span className="block"><AnimatedHeading text="Alireza" /></span>
-                  <span className="block"><AnimatedHeading text="Makvandi" /></span>
                 </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.32, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+                  aria-hidden="true"
+                  className="serif-accent leading-[1.05]"
+                  style={{ color: '#E8DDD0', fontSize: 'clamp(2.9rem, 6.6vw, 6.4rem)', marginTop: '-0.06em' }}
+                >
+                  Makvandi
+                </motion.div>
               </div>
 
               <FadeIn delay={0.55} y={16}>
@@ -372,24 +414,17 @@ export default function HeroSection() {
               </FadeIn>
             </div>
 
-            {/* Right — portrait with frame */}
+            {/* Right — polaroid portrait */}
             <div className="flex justify-center">
               <Magnet
                 padding={120}
                 strength={2}
                 activeTransition="transform 0.3s ease-out"
                 inactiveTransition="transform 0.6s ease-in-out"
-                className="w-[300px] md:w-[340px] lg:w-[380px]"
+                className="w-[260px] md:w-[300px] lg:w-[330px]"
               >
                 <FadeIn delay={0.45} y={30}>
-                  <div
-                    className="rounded-full p-[3px]"
-                    style={{ background: 'linear-gradient(155deg, rgba(201,169,110,0.5) 0%, rgba(232,224,213,0.08) 45%, rgba(201,169,110,0.25) 100%)' }}
-                  >
-                    <div className="rounded-full p-2" style={{ background: '#0A0908' }}>
-                      <FlipAvatar className="w-full aspect-square" />
-                    </div>
-                  </div>
+                  <PolaroidPortrait caption={lang === 'da' ? 'Det er mig — Aarhus N, 2026' : "That's me — Aarhus N, 2026"} />
                 </FadeIn>
               </Magnet>
             </div>
