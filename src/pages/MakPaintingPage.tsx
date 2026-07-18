@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
-import SmartImage from '../components/SmartImage'
+import BrandCover from '../components/BrandCover'
 
 const features = [
   {
@@ -110,22 +110,12 @@ export default function MakPaintingPage() {
         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
         className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-12 sm:mb-16"
       >
-        <SmartImage
-          src="https://image.thum.io/get/width/1280/crop/800/https://www.makvandi.info/en"
-          alt="MAK Painting — Public site"
-          label="MAK Painting"
-          className="rounded-[20px] sm:rounded-[28px] border border-[#E8DDD0]/06"
-          imgClassName="w-full h-full object-cover object-top"
-          style={{ aspectRatio: '16/10' }}
-        />
-        <SmartImage
-          src="https://image.thum.io/get/width/1280/crop/800/https://www.makvandi.info/en/gallery"
-          alt="MAK Painting — Gallery"
-          label="Gallery"
-          className="rounded-[20px] sm:rounded-[28px] border border-[#E8DDD0]/06"
-          imgClassName="w-full h-full object-cover object-top"
-          style={{ aspectRatio: '16/10' }}
-        />
+        <div className="rounded-[20px] sm:rounded-[28px] overflow-hidden border border-[#E8DDD0]/06" style={{ aspectRatio: '16/10' }}>
+          <BrandCover name="MAK Painting" sub="makvandi.info" accent="#C9A96E" className="w-full h-full" />
+        </div>
+        <div className="rounded-[20px] sm:rounded-[28px] overflow-hidden border border-[#E8DDD0]/06" style={{ aspectRatio: '16/10' }}>
+          <BrandCover name="Galleri & Admin" sub="Booking · Priser · Indhold" accent="#C9A96E" className="w-full h-full" />
+        </div>
       </motion.div>
 
       {/* Features grid */}

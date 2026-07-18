@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
-import SmartImage from '../components/SmartImage'
+import BrandCover from '../components/BrandCover'
 
 type ExpData = {
   company: string
@@ -11,7 +11,6 @@ type ExpData = {
   period: { da: string; en: string }
   url: string
   priceUrl: string
-  screenshot: string
   color: string
   tasks: { title: { da: string; en: string }; items: { da: string; en: string }[] }[]
 }
@@ -23,7 +22,6 @@ const experiences: Record<string, ExpData> = {
     period: { da: 'IGU Program', en: 'IGU Program' },
     url: 'https://yousee.dk/',
     priceUrl: 'https://yousee.dk/tv/pakker',
-    screenshot: 'https://image.thum.io/get/width/1280/crop/720/https://yousee.dk/',
     color: '#E4002B',
     tasks: [
       {
@@ -50,7 +48,6 @@ const experiences: Record<string, ExpData> = {
     period: { da: '2 måneders praktik', en: '2 month internship' },
     url: 'https://en.fourcom.dk/',
     priceUrl: 'https://en.fourcom.dk/services',
-    screenshot: 'https://image.thum.io/get/width/1280/crop/720/https://en.fourcom.dk/',
     color: '#0057B8',
     tasks: [
       {
@@ -77,7 +74,6 @@ const experiences: Record<string, ExpData> = {
     period: { da: 'Frivillig', en: 'Volunteer' },
     url: 'https://www.aarhustech.dk/',
     priceUrl: 'https://www.aarhustech.dk/',
-    screenshot: 'https://image.thum.io/get/width/1280/crop/720/https://www.aarhustech.dk/',
     color: '#FF6B00',
     tasks: [
       {
@@ -105,7 +101,6 @@ const experiences: Record<string, ExpData> = {
     period: { da: 'Skolepraktik — Aarhus Tech', en: 'School Placement — Aarhus Tech' },
     url: 'https://folkehuse.aarhus.dk/',
     priceUrl: 'https://folkehuse.aarhus.dk/',
-    screenshot: 'https://image.thum.io/get/width/1280/crop/720/https://folkehuse.aarhus.dk/',
     color: '#2E7D32',
     tasks: [
       {
@@ -183,7 +178,9 @@ export default function ExperienceDetail() {
           className="block overflow-hidden rounded-[24px] border-2 border-[#E8DDD0]/20 hover:border-[#E8DDD0]/50 transition-all duration-300 group mb-16"
         >
           <div className="relative" style={{ aspectRatio: '16/7' }}>
-            <SmartImage src={exp.screenshot} alt={exp.company} label={exp.company} className="w-full h-full" imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="w-full h-full group-hover:scale-105 transition-transform duration-500">
+              <BrandCover name={exp.company} sub={exp.role[lang]} accent={exp.color} className="w-full h-full" />
+            </div>
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
               <span className="text-white font-medium uppercase tracking-widest border border-white rounded-full px-6 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {tx.viewSite}

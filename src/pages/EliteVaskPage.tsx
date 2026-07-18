@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
-import SmartImage from '../components/SmartImage'
+import BrandCover from '../components/BrandCover'
 
 const packages = [
   {
@@ -124,13 +124,9 @@ export default function EliteVaskPage() {
           style={{ aspectRatio: '16/7' }}
         >
           <div className="relative w-full h-full">
-            <SmartImage
-              src="https://image.thum.io/get/width/1280/crop/720/https://www.elite-vask.dk/"
-              alt="Elite Vask"
-              label="Elite Vask"
-              className="w-full h-full"
-              imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
+            <div className="w-full h-full group-hover:scale-105 transition-transform duration-500">
+              <BrandCover name="Elite Vask" sub="elite-vask.dk" accent="#3E9BD6" className="w-full h-full" />
+            </div>
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/25 transition-all duration-300 flex items-center justify-center">
               <span className="text-white font-medium uppercase tracking-widest border border-white/60 rounded-full px-6 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {lang === 'da' ? 'Besøg site →' : 'Visit Site →'}

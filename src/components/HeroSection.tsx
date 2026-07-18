@@ -42,6 +42,7 @@ function FlipAvatar({ className }: { className?: string }) {
         <img
           src={IMG_BACK}
           alt="Alireza Makvandi"
+          loading="lazy"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ borderRadius: '3px', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         />
