@@ -4,9 +4,9 @@ import { ArrowLeft, FileText, BadgeCheck, Mail } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
 
-// Brand accent per company (visual only — content is untouched).
+// Brand accent per company (visual only, content is untouched).
 const accents: Record<string, string> = {
-  'YouSee — Nuuday A/S': '#E4002B',
+  'YouSee, Nuuday A/S': '#E4002B',
 }
 
 export default function RecommendationsPage() {
@@ -101,7 +101,7 @@ export default function RecommendationsPage() {
                     &ldquo;
                   </div>
 
-                  {/* Quote — content untouched */}
+                  {/* Quote, content untouched */}
                   <p
                     className="mb-9"
                     style={{ color: '#2b2b2b', fontSize: 'clamp(1rem, 1.7vw, 1.22rem)', lineHeight: 1.9, fontWeight: 400, fontStyle: 'italic' }}

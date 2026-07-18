@@ -12,8 +12,8 @@ export default function ColophonPage() {
       icon: Layers,
       title: da ? 'Teknologi' : 'Technology',
       text: da
-        ? 'React 18, TypeScript, Vite og Tailwind CSS. Hostet på Vercel — hver ændring deployes automatisk fra GitHub.'
-        : 'React 18, TypeScript, Vite and Tailwind CSS. Hosted on Vercel — every change deploys automatically from GitHub.',
+        ? 'React 18, TypeScript, Vite og Tailwind CSS. Hostet på Vercel, hver ændring deployes automatisk fra GitHub.'
+        : 'React 18, TypeScript, Vite and Tailwind CSS. Hosted on Vercel, every change deploys automatically from GitHub.',
     },
     {
       icon: Search,
@@ -26,15 +26,15 @@ export default function ColophonPage() {
       icon: ShieldCheck,
       title: da ? 'Sikkerhed & privatliv' : 'Security & privacy',
       text: da
-        ? 'HTTPS med HSTS, Content-Security-Policy og øvrige sikkerhedsheaders. Skrifttyper er self-hosted — ingen Google Fonts, ingen tracking, ingen cookies.'
-        : 'HTTPS with HSTS, Content-Security-Policy and other security headers. Fonts are self-hosted — no Google Fonts, no tracking, no cookies.',
+        ? 'HTTPS med HSTS, Content-Security-Policy og øvrige sikkerhedsheaders. Skrifttyper er self-hosted, ingen Google Fonts, ingen tracking, ingen cookies.'
+        : 'HTTPS with HSTS, Content-Security-Policy and other security headers. Fonts are self-hosted, no Google Fonts, no tracking, no cookies.',
     },
     {
       icon: Gauge,
       title: 'Performance',
       text: da
-        ? 'Optimerede billeder, lazy-loading og statisk HTML gør siden hurtig — også på mobil.'
-        : 'Optimized images, lazy-loading and static HTML keep the site fast — on mobile too.',
+        ? 'Optimerede billeder, lazy-loading og statisk HTML gør siden hurtig, også på mobil.'
+        : 'Optimized images, lazy-loading and static HTML keep the site fast, on mobile too.',
     },
   ]
 
@@ -75,13 +75,13 @@ export default function ColophonPage() {
         >
           <p className="font-light leading-relaxed mb-5" style={{ color: '#E8DDD0', opacity: 0.65, fontSize: 'clamp(1rem, 1.6vw, 1.15rem)', lineHeight: 1.9 }}>
             {da
-              ? 'Dette website er mit eget projekt. Jeg byggede det, fordi et CV på papir ikke kan vise, hvem man er — men det kan en side som denne. Alt indhold, alle billeder og alle beslutninger om design og struktur er mine egne.'
-              : 'This website is my own project. I built it because a paper CV cannot show who you are — but a page like this can. All content, all photos and every decision about design and structure are my own.'}
+              ? 'Dette website er mit eget projekt. Jeg byggede det, fordi et CV på papir ikke kan vise, hvem man er, men det kan en side som denne. Alt indhold, alle billeder og alle beslutninger om design og struktur er mine egne.'
+              : 'This website is my own project. I built it because a paper CV cannot show who you are, but a page like this can. All content, all photos and every decision about design and structure are my own.'}
           </p>
           <p className="font-light leading-relaxed" style={{ color: '#E8DDD0', opacity: 0.65, fontSize: 'clamp(1rem, 1.6vw, 1.15rem)', lineHeight: 1.9 }}>
             {da
-              ? 'I byggeprocessen brugte jeg moderne værktøjer — herunder AI — på samme måde, som en håndværker bruger sit værktøj: Det gør arbejdet hurtigere, men retningen, indholdet og ansvaret er mit.'
-              : 'In the building process I used modern tools — including AI — the same way a craftsman uses his toolbox: it makes the work faster, but the direction, the content and the responsibility are mine.'}
+              ? 'I byggeprocessen brugte jeg moderne værktøjer, herunder AI, på samme måde, som en håndværker bruger sit værktøj: Det gør arbejdet hurtigere, men retningen, indholdet og ansvaret er mit.'
+              : 'In the building process I used modern tools, including AI, the same way a craftsman uses his toolbox: it makes the work faster, but the direction, the content and the responsibility are mine.'}
           </p>
         </motion.div>
 
@@ -116,8 +116,8 @@ export default function ColophonPage() {
           <div>
             <p className="font-light leading-relaxed mb-3" style={{ color: '#E8DDD0', opacity: 0.75, fontSize: 'clamp(0.95rem, 1.5vw, 1.1rem)', lineHeight: 1.85 }}>
               {da
-                ? 'Siden her er også et løbende projekt: Jeg forbedrer den, når jeg lærer noget nyt. Finder du en fejl, eller har du en idé — så skriv endelig.'
-                : 'This site is also an ongoing project: I improve it as I learn. If you find a bug or have an idea — do write to me.'}
+                ? 'Siden her er også et løbende projekt: Jeg forbedrer den, når jeg lærer noget nyt. Finder du en fejl, eller har du en idé, så skriv endelig.'
+                : 'This site is also an ongoing project: I improve it as I learn. If you find a bug or have an idea, do write to me.'}
             </p>
             <span className="serif-accent" style={{ color: '#C9A96E', fontSize: '17px' }}>— Alireza</span>
           </div>

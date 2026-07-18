@@ -170,7 +170,7 @@ function MobileFlipCard({ item, lang }: { item: ContactItem; lang: 'da' | 'en' }
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
-      {/* Front — rotates out */}
+      {/* Front, rotates out */}
       <motion.div
         animate={{ rotateY: flipped ? -90 : 0, opacity: flipped ? 0 : 1 }}
         transition={{ duration: dur, ease }}
@@ -193,7 +193,7 @@ function MobileFlipCard({ item, lang }: { item: ContactItem; lang: 'da' | 'en' }
         </span>
       </motion.div>
 
-      {/* Back — rotates in */}
+      {/* Back, rotates in */}
       <motion.div
         animate={{ rotateY: flipped ? 0 : 90, opacity: flipped ? 1 : 0 }}
         transition={{ duration: dur, ease, delay: flipped ? dur * 0.5 : 0 }}
@@ -231,7 +231,7 @@ export default function FooterSection() {
           </span>
         </motion.div>
 
-        {/* Heading — first line bold sans, second line serif italic */}
+        {/* Heading, first line bold sans, second line serif italic */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -266,7 +266,7 @@ export default function FooterSection() {
 
       </div>
 
-      {/* Bottom — personal colophon */}
+      {/* Bottom, personal colophon */}
       <div className="mt-16 border-t border-[#E8DDD0]/8">
         <div className="px-5 sm:px-10 md:px-16 py-10 flex flex-col items-center gap-3 text-center">
           <span
@@ -278,8 +278,8 @@ export default function FooterSection() {
           </span>
           <p style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em', maxWidth: '420px', lineHeight: 1.7 }}>
             {lang === 'da'
-              ? 'Bygget med React, TypeScript & Vite — og en del kaffe.'
-              : 'Built with React, TypeScript & Vite — and a fair amount of coffee.'}
+              ? 'Bygget med React, TypeScript & Vite, og en del kaffe.'
+              : 'Built with React, TypeScript & Vite, and a fair amount of coffee.'}
           </p>
           <div className="flex items-center gap-4">
             <span style={{ color: '#E8DDD0', opacity: 0.18, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>

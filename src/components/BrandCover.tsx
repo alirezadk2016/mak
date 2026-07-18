@@ -8,7 +8,7 @@ type Props = {
 }
 
 /**
- * Deliberate, deterministic card cover — an editorial brand lockup instead
+ * Deliberate, deterministic card cover, an editorial brand lockup instead
  * of a flaky external screenshot. Renders instantly, works offline, and
  * matches the site's old-money aesthetic.
  */

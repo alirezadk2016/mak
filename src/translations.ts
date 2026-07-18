@@ -15,7 +15,7 @@ export const t = {
     },
     about: {
       heading: 'Om mig',
-      bio: 'Jeg er uddannet IT-supporter fra Aarhus Tech og søger nu et fast job, hvor jeg kan omsætte min uddannelse til praksis. Gennem de seneste ti år i Danmark har jeg opbygget erfaring fra bl.a. YouSee og en praktik hos Fourcom, hvor jeg har arbejdet med Windows, hardware, fejlfinding og brugersupport. Jeg er mødestabil, ansvarlig og nysgerrig, lærer hurtigt og gør altid mit bedste for at levere rolig og professionel support. Jeg trives med at hjælpe mennesker — uanset deres tekniske niveau — og er klar til at bidrage fra dag ét.',
+      bio: 'Jeg er uddannet IT-supporter fra Aarhus Tech og søger nu et fast job, hvor jeg kan omsætte min uddannelse til praksis. Gennem de seneste ti år i Danmark har jeg opbygget erfaring fra bl.a. YouSee og en praktik hos Fourcom, hvor jeg har arbejdet med Windows, hardware, fejlfinding og brugersupport. Jeg er mødestabil, ansvarlig og nysgerrig, lærer hurtigt og gør altid mit bedste for at levere rolig og professionel support. Jeg trives med at hjælpe mennesker, uanset deres tekniske niveau, og er klar til at bidrage fra dag ét.',
       stats: [
         { num: '3+', label: 'Virksomheder' },
         { num: '2026', label: 'Aarhus Tech' },
@@ -23,13 +23,13 @@ export const t = {
       ],
     },
     services: {
-      sectionLabel: 'IT-supporteruddannelsen — Aarhus Tech · Afsluttet 2026',
+      sectionLabel: 'IT-supporteruddannelsen · Aarhus Tech · Afsluttet 2026',
       heading: 'Kompetencer',
       items: [
         {
           num: '01',
           name: 'Hardware Support',
-          desc: 'Installation, opgradering og udskiftning af computerkomponenter. Fejlfinding på hardware — fra RAM og harddiske til printere og perifere enheder. Klargøring af nye arbejdsstationer til slutbrugere.',
+          desc: 'Installation, opgradering og udskiftning af computerkomponenter. Fejlfinding på hardware, fra RAM og harddiske til printere og perifere enheder. Klargøring af nye arbejdsstationer til slutbrugere.',
           tags: ['PC-teknik', 'Komponenter', 'Printere', 'Perifere enheder'],
         },
         {
@@ -53,31 +53,31 @@ export const t = {
         {
           num: '05',
           name: 'Brugersupport',
-          desc: 'Professionel og tålmodig support til slutbrugere — uanset teknisk niveau. Login, e-mail, printerproblemer og softwareinstallation. Erfaring med support til ældre borgere og under eksamener.',
+          desc: 'Professionel og tålmodig support til slutbrugere, uanset teknisk niveau. Login, e-mail, printerproblemer og softwareinstallation. Erfaring med support til ældre borgere og under eksamener.',
           tags: ['Helpdesk', 'IT-service', 'Kommunikation', 'Dokumentation'],
         },
         {
           num: '06',
           name: 'Web Design',
-          desc: 'Design og udvikling af moderne, responsive hjemmesider. Fra konceptet til et færdigt digitalt produkt — med fokus på brugeroplevelse, visuel identitet og performance.',
+          desc: 'Design og udvikling af moderne, responsive hjemmesider. Fra konceptet til et færdigt digitalt produkt, med fokus på brugeroplevelse, visuel identitet og performance.',
           tags: ['React', 'Tailwind CSS', 'TypeScript', 'Vite'],
         },
       ],
     },
     experience: {
       heading: 'Erfaring',
-      subheading: 'En oversigt over de steder, jeg har arbejdet og bidraget — fra teknisk support og kundeservice til frivilligt IT-arbejde i uddannelsesmiljøer.',
+      subheading: 'En oversigt over de steder, jeg har arbejdet og bidraget, fra teknisk support og kundeservice til frivilligt IT-arbejde i uddannelsesmiljøer.',
       viewDetails: 'Se detaljer →',
       items: [
-        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support — Skolepraktik', period: 'Skolepraktik' },
+        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support · Skolepraktik', period: 'Skolepraktik' },
         { slug: 'fourcom', company: 'Fourcom', role: 'IT Support Praktikant', period: 'Praktik' },
-        { slug: 'folkehuse', company: 'Folkehuse Aarhus', role: 'IT Support — Frivillig', period: 'Frivillig' },
-        { slug: 'yousee', company: 'YouSee', role: 'Kundeservice & Administration', period: 'IGU — Arbejde' },
+        { slug: 'folkehuse', company: 'Folkehuse Aarhus', role: 'IT Support · Frivillig', period: 'Frivillig' },
+        { slug: 'yousee', company: 'YouSee', role: 'Kundeservice & Administration', period: 'IGU · Arbejde' },
       ],
     },
     projects: {
       heading: 'Projekter',
-      subheading: 'Et udvalg af projekter drevet af passion for teknologi og design — fra kundeløsninger til selvstændige eksperimenter, der udfordrer og udvikler mine færdigheder.',
+      subheading: 'Et udvalg af projekter drevet af passion for teknologi og design, fra kundeløsninger til selvstændige eksperimenter, der udfordrer og udvikler mine færdigheder.',
       liveProject: 'Se projekt',
       viewPdf: 'Se PDF',
       viewProject: 'Se projekt',
@@ -85,14 +85,14 @@ export const t = {
     recommendations: {
       navLabel: 'Anbefalinger',
       heading: 'Anbefalinger',
-      subheading: 'Officielle anbefalinger fra de virksomheder, jeg har arbejdet for — ord fra ledere, der har set min indsats på tæt hold.',
+      subheading: 'Officielle anbefalinger fra de virksomheder, jeg har arbejdet for, ord fra ledere, der har set min indsats på tæt hold.',
       viewPdf: 'Se original (PDF)',
       items: [
         {
           quote: 'Alireza er en udadvendt, intelligent og meget energisk person, som altid har spredt godt humør på arbejdspladsen. Han er en meget pligtopfyldende, loyal og fleksibel medarbejder, som udviser stort engagement på både egne og andres vegne. Han er en stor teamplayer med gode overtagelsesevner, som han formår at bruge professionelt i sit arbejde. Han er en dygtig medarbejder og en god mentor for sine kollegaer. Med min varmeste anbefaling ønsker jeg Alireza alt muligt held og lykke i fremtiden.',
           name: 'Raul Khan Ahmadi',
           role: 'Butikschef',
-          company: 'YouSee — Nuuday A/S',
+          company: 'YouSee, Nuuday A/S',
           period: '2017 – 2021',
           pdf: '/anbefaling-yousee.pdf',
         },
@@ -137,7 +137,7 @@ export const t = {
     },
     about: {
       heading: 'About me',
-      bio: 'I am a qualified IT supporter from Aarhus Tech, now looking for a permanent job where I can put my education into practice. Over the past ten years in Denmark I have built experience from YouSee and an internship at Fourcom, working with Windows, hardware, troubleshooting and user support. I am reliable, responsible and curious, I learn quickly and always do my best to deliver calm, professional support. I enjoy helping people — regardless of their technical level — and I am ready to contribute from day one.',
+      bio: 'I am a qualified IT supporter from Aarhus Tech, now looking for a permanent job where I can put my education into practice. Over the past ten years in Denmark I have built experience from YouSee and an internship at Fourcom, working with Windows, hardware, troubleshooting and user support. I am reliable, responsible and curious, I learn quickly and always do my best to deliver calm, professional support. I enjoy helping people, regardless of their technical level, and I am ready to contribute from day one.',
       stats: [
         { num: '3+', label: 'Companies' },
         { num: '2026', label: 'Aarhus Tech' },
@@ -145,13 +145,13 @@ export const t = {
       ],
     },
     services: {
-      sectionLabel: 'IT Support Education — Aarhus Tech · Completed 2026',
+      sectionLabel: 'IT Support Education, Aarhus Tech · Completed 2026',
       heading: 'Services',
       items: [
         {
           num: '01',
           name: 'Hardware Support',
-          desc: 'Installation, upgrading and replacement of computer components. Hardware troubleshooting — from RAM and hard drives to printers and peripherals. Setup of new workstations for end users.',
+          desc: 'Installation, upgrading and replacement of computer components. Hardware troubleshooting, from RAM and hard drives to printers and peripherals. Setup of new workstations for end users.',
           tags: ['PC Repair', 'Components', 'Printers', 'Peripherals'],
         },
         {
@@ -175,31 +175,31 @@ export const t = {
         {
           num: '05',
           name: 'User Support',
-          desc: 'Professional and patient support for end users — regardless of technical level. Login, email, printer issues and software installation. Experience supporting elderly citizens and during exams.',
+          desc: 'Professional and patient support for end users, regardless of technical level. Login, email, printer issues and software installation. Experience supporting elderly citizens and during exams.',
           tags: ['Helpdesk', 'IT Service', 'Communication', 'Documentation'],
         },
         {
           num: '06',
           name: 'Web Design',
-          desc: 'Design and development of modern, responsive websites. From concept to a finished digital product — focused on user experience, visual identity and performance.',
+          desc: 'Design and development of modern, responsive websites. From concept to a finished digital product, focused on user experience, visual identity and performance.',
           tags: ['React', 'Tailwind CSS', 'TypeScript', 'Vite'],
         },
       ],
     },
     experience: {
       heading: 'Experience',
-      subheading: 'A collection of the places I have worked and contributed — from technical support and customer service to voluntary IT work in educational environments.',
+      subheading: 'A collection of the places I have worked and contributed, from technical support and customer service to voluntary IT work in educational environments.',
       viewDetails: 'View Details →',
       items: [
-        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support — School Placement', period: 'School Placement' },
+        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support · School Placement', period: 'School Placement' },
         { slug: 'fourcom', company: 'Fourcom', role: 'IT Support Intern', period: 'Internship' },
-        { slug: 'folkehuse', company: 'Folkehuse Aarhus', role: 'IT Support — Volunteer', period: 'Volunteer' },
-        { slug: 'yousee', company: 'YouSee', role: 'Customer Service & Administration', period: 'IGU — Work' },
+        { slug: 'folkehuse', company: 'Folkehuse Aarhus', role: 'IT Support · Volunteer', period: 'Volunteer' },
+        { slug: 'yousee', company: 'YouSee', role: 'Customer Service & Administration', period: 'IGU · Work' },
       ],
     },
     projects: {
       heading: 'Projects',
-      subheading: 'A selection of projects driven by a passion for technology and design — from client solutions to independent experiments that challenge and develop my skills.',
+      subheading: 'A selection of projects driven by a passion for technology and design, from client solutions to independent experiments that challenge and develop my skills.',
       liveProject: 'Live Project',
       viewPdf: 'View PDF',
       viewProject: 'View Project',
@@ -207,14 +207,14 @@ export const t = {
     recommendations: {
       navLabel: 'References',
       heading: 'References',
-      subheading: 'Official references from the companies I have worked for — words from managers who have seen my work up close.',
+      subheading: 'Official references from the companies I have worked for, words from managers who have seen my work up close.',
       viewPdf: 'View original (PDF)',
       items: [
         {
           quote: 'Alireza is an outgoing, intelligent and very energetic person who has always spread good spirits in the workplace. He is a highly conscientious, loyal and flexible employee who shows great commitment on behalf of both himself and others. He is a great team player with strong adaptability, which he manages to use professionally in his work. He is a skilled employee and a good mentor for his colleagues. With my warmest recommendation, I wish Alireza all the best for the future.',
           name: 'Raul Khan Ahmadi',
           role: 'Store Manager',
-          company: 'YouSee — Nuuday A/S',
+          company: 'YouSee, Nuuday A/S',
           period: '2017 – 2021',
           pdf: '/anbefaling-yousee.pdf',
         },

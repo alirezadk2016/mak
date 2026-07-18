@@ -111,7 +111,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
   <main class="main">
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">LEDIG · KAN TILTRÆDE STRAKS</span></div>
-    <p class="profile">Nyuddannet IT-supporter fra Aarhus Tech med praktisk erfaring i opsætning, fejlfinding og brugersupport på tværs af Windows, netværk og hardware. Gennem min svendeprøve har jeg opbygget en komplet netværksinfrastruktur med server, Active Directory og brugerstyring. Jeg kombinerer teknisk forståelse med næsten fire års erfaring fra kundeservice — og en rolig, løsningsorienteret tilgang til brugere på alle niveauer.</p>
+    <p class="profile">Nyuddannet IT-supporter fra Aarhus Tech med praktisk erfaring i opsætning, fejlfinding og brugersupport på tværs af Windows, netværk og hardware. Gennem min svendeprøve har jeg opbygget en komplet netværksinfrastruktur med server, Active Directory og brugerstyring. Jeg kombinerer teknisk forståelse med næsten fire års erfaring fra kundeservice, og en rolig, løsningsorienteret tilgang til brugere på alle niveauer.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
 
@@ -161,13 +161,13 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <ul>
         <li>Opsætning af komplet netværk med Windows Server, Active Directory, DNS/DHCP samt brugere og afdelinger.</li>
         <li>Dokumentation og fejlfinding af hele opsætningen.</li>
-        <li>Egne webprojekter — se portfolio på www.makvandi.dk.</li>
+        <li>Egne webprojekter, se portfolio på www.makvandi.dk.</li>
       </ul>
     </div>
 
     <div class="m-h">Personlige kvaliteter</div><div class="m-rule"></div>
     <ul>
-      <li>Rolig og struktureret — også når der er travlt og mange henvendelser.</li>
+      <li>Rolig og struktureret, også når der er travlt og mange henvendelser.</li>
       <li>Vant til at forklare teknik i et forståeligt sprog for alle brugere.</li>
       <li>Nysgerrig på ny teknologi og motiveret af at løse problemer.</li>
     </ul>

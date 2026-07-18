@@ -26,7 +26,7 @@ const features = [
     title: { da: 'Indhold & Priser', en: 'Content & Pricing' },
     items: [
       { da: 'Rediger prisliste og servicebeskrivelser direkte i admin', en: 'Edit pricing list and service descriptions directly in admin' },
-      { da: 'Opdater FAQ — spørgsmål og svar uden kode', en: 'Update FAQ — questions and answers without touching code' },
+      { da: 'Opdater FAQ, spørgsmål og svar uden kode', en: 'Update FAQ, questions and answers without touching code' },
       { da: 'Rediger "Om os"-siden med tekst og information', en: 'Edit the "About" page with text and company information' },
     ],
   },
@@ -34,7 +34,7 @@ const features = [
     title: { da: 'Hjemmeside', en: 'Website' },
     items: [
       { da: 'To-sproget: Engelsk og Persisk (Farsi)', en: 'Bilingual: English and Persian (Farsi)' },
-      { da: '"Get a free quote" — direkte bookingformular', en: '"Get a free quote" — direct booking form' },
+      { da: '"Get a free quote", direkte bookingformular', en: '"Get a free quote", direct booking form' },
       { da: '5.0 ★ Google-rating integreret og synlig', en: '5.0 ★ Google rating integrated and visible' },
       { da: 'Services, Galleri, Løfte og Kontakt-sektioner', en: 'Services, Gallery, Our Promise and Contact sections' },
     ],
@@ -44,16 +44,16 @@ const features = [
 const content = {
   da: {
     back: 'Tilbage',
-    category: 'Kunde — Australien',
+    category: 'Kunde · Australien',
     live: 'Se live site',
-    desc: 'MAK Painting er en professionel malervirksomhed baseret i Melbourne, Australien. Jeg designede og udviklede deres komplette digitale løsning — en moderne, to-sproget hjemmeside kombineret med et kraftfuldt admin-panel, så ejeren selv kan styre alt fra ét sted uden teknisk viden.',
+    desc: 'MAK Painting er en professionel malervirksomhed baseret i Melbourne, Australien. Jeg designede og udviklede deres komplette digitale løsning, en moderne, to-sproget hjemmeside kombineret med et kraftfuldt admin-panel, så ejeren selv kan styre alt fra ét sted uden teknisk viden.',
     featuresLabel: 'Funktioner',
   },
   en: {
     back: 'Back',
-    category: 'Client — Australia',
+    category: 'Client · Australia',
     live: 'View Live Site',
-    desc: 'MAK Painting is a professional painting company based in Melbourne, Australia. I designed and developed their complete digital solution — a modern, bilingual website combined with a powerful admin panel, so the owner can manage everything from one place without any technical knowledge.',
+    desc: 'MAK Painting is a professional painting company based in Melbourne, Australia. I designed and developed their complete digital solution, a modern, bilingual website combined with a powerful admin panel, so the owner can manage everything from one place without any technical knowledge.',
     featuresLabel: 'Features',
   },
 }

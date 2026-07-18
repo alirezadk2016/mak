@@ -32,14 +32,14 @@ const content = {
     back: 'Tilbage',
     category: 'Personligt projekt',
     title: 'Gaming PC Build',
-    desc: 'Med den viden og de praktiske kompetencer, jeg har opbygget gennem min IT-uddannelse og arbejdserfaring, valgte jeg at sætte det hele i spil — og bygge min egen gaming-PC fra bunden. Jeg undersøgte komponenter, vurderede kompatibilitet, samlede systemet og konfigurerede det fra start til slut. Det er ikke blot et hobbyprojekt; det er et bevis på, at jeg forstår hardware indgående og kan omsætte teori til praksis.',
+    desc: 'Med den viden og de praktiske kompetencer, jeg har opbygget gennem min IT-uddannelse og arbejdserfaring, valgte jeg at sætte det hele i spil og bygge min egen gaming-PC fra bunden. Jeg undersøgte komponenter, vurderede kompatibilitet, samlede systemet og konfigurerede det fra start til slut. Det er ikke blot et hobbyprojekt; det er et bevis på, at jeg forstår hardware indgående og kan omsætte teori til praksis.',
     specsLabel: 'Specifikationer',
   },
   en: {
     back: 'Back',
     category: 'Personal Project',
     title: 'Gaming PC Build',
-    desc: 'Using the knowledge and hands-on skills I built through my IT education and work experience, I decided to put it all into practice — and build my own gaming PC from scratch. I researched components, evaluated compatibility, assembled the system and configured it from start to finish. This is not just a hobby project; it is proof that I understand hardware at a deep level and can turn theory into practice.',
+    desc: 'Using the knowledge and hands-on skills I built through my IT education and work experience, I decided to put it all into practice and build my own gaming PC from scratch. I researched components, evaluated compatibility, assembled the system and configured it from start to finish. This is not just a hobby project; it is proof that I understand hardware at a deep level and can turn theory into practice.',
     specsLabel: 'Specifications',
   },
 }
@@ -76,7 +76,7 @@ export default function GamingPCPage() {
           {tx.title}
         </h1>
         <p className="serif-accent" style={{ color: '#C9A96E', fontSize: 'clamp(1.05rem, 1.7vw, 1.4rem)', opacity: 0.85 }}>
-          {lang === 'da' ? 'komponent for komponent — samlet af mig selv' : 'component by component — assembled by myself'}
+          {lang === 'da' ? 'komponent for komponent, samlet af mig selv' : 'component by component, assembled by myself'}
         </p>
       </motion.div>
 

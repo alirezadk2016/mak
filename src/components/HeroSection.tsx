@@ -211,7 +211,7 @@ export default function HeroSection() {
 
       <section className="min-h-screen flex flex-col overflow-x-clip relative" style={{ background: '#0A0908', paddingTop: '56px' }}>
 
-        {/* Subtle warm vignette — no orbs */}
+        {/* Subtle warm vignette, no orbs */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: 'radial-gradient(ellipse 70% 60% at 65% 10%, rgba(160,130,80,0.05) 0%, transparent 60%)' }}
@@ -236,21 +236,21 @@ export default function HeroSection() {
         />
 
         {/* Single semantic page heading (visual headings below are decorative) */}
-        <h1 className="sr-only">Alireza Makvandi — {tx.hero.role}</h1>
+        <h1 className="sr-only">Alireza Makvandi, {tx.hero.role}</h1>
 
         {/* ── MOBILE layout ── */}
         <div className="flex flex-col items-center px-5 pt-8 pb-12 gap-6 sm:hidden flex-1 justify-center relative z-10">
 
           <FadeIn delay={0.15} y={20}>
             <PolaroidPortrait
-              caption={lang === 'da' ? 'Det er mig — Aarhus N' : "That's me — Aarhus N"}
+              caption={lang === 'da' ? 'Det er mig, Aarhus N' : "That's me, Aarhus N"}
               className="w-44"
             />
           </FadeIn>
 
           <FadeIn delay={0.3} y={10}>
             <p className="serif-accent text-center" style={{ color: '#C9A96E', fontSize: '1.15rem', opacity: 0.9 }}>
-              {lang === 'da' ? 'Hej — jeg hedder' : 'Hi — my name is'}
+              {lang === 'da' ? 'Hej, jeg hedder' : 'Hi, my name is'}
             </p>
           </FadeIn>
 
@@ -292,7 +292,7 @@ export default function HeroSection() {
             </div>
           </FadeIn>
 
-          {/* Available for work — mobile */}
+          {/* Available for work, mobile */}
           <motion.div
             className="w-full"
             initial={{ opacity: 0, y: 20 }}
@@ -322,11 +322,11 @@ export default function HeroSection() {
 
         </div>
 
-        {/* ── DESKTOP layout — centered, balanced ── */}
+        {/* ── DESKTOP layout, centered, balanced ── */}
         <div className="hidden sm:flex sm:flex-1 items-center justify-center px-10 md:px-14 relative z-10">
           <div className="w-full max-w-5xl grid grid-cols-[1.25fr_1fr] gap-10 md:gap-14 items-center">
 
-            {/* Left — identity */}
+            {/* Left, identity */}
             <div className="flex flex-col">
               <FadeIn delay={0.2} y={16}>
                 <div className="flex items-center gap-2.5 mb-7">
@@ -345,7 +345,7 @@ export default function HeroSection() {
                   className="serif-accent mb-3"
                   style={{ color: '#C9A96E', fontSize: 'clamp(1.15rem, 1.7vw, 1.55rem)', opacity: 0.9 }}
                 >
-                  {lang === 'da' ? 'Hej — jeg hedder' : 'Hi — my name is'}
+                  {lang === 'da' ? 'Hej, jeg hedder' : 'Hi, my name is'}
                 </p>
               </FadeIn>
 
@@ -416,7 +416,7 @@ export default function HeroSection() {
               </FadeIn>
             </div>
 
-            {/* Right — polaroid portrait */}
+            {/* Right, polaroid portrait */}
             <div className="flex justify-center">
               <Magnet
                 padding={120}
@@ -426,7 +426,7 @@ export default function HeroSection() {
                 className="w-[260px] md:w-[300px] lg:w-[330px]"
               >
                 <FadeIn delay={0.45} y={30}>
-                  <PolaroidPortrait caption={lang === 'da' ? 'Det er mig — Aarhus N, 2026' : "That's me — Aarhus N, 2026"} />
+                  <PolaroidPortrait caption={lang === 'da' ? 'Det er mig, Aarhus N, 2026' : "That's me, Aarhus N, 2026"} />
                 </FadeIn>
               </Magnet>
             </div>

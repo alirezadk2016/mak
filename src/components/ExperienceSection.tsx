@@ -41,7 +41,7 @@ function ExperienceCard({ exp, viewDetails, index }: {
               transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
             }}
           >
-            {/* Accent top line — grows on hover */}
+            {/* Accent top line, grows on hover */}
             <div
               className="absolute top-0 left-0 right-0 h-[2px] z-10 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
               style={{ background: `linear-gradient(to right, ${accent}, transparent 80%)` }}
@@ -77,7 +77,7 @@ function ExperienceCard({ exp, viewDetails, index }: {
         </Link>
       </motion.div>
 
-      {/* Mobile card — simple list */}
+      {/* Mobile card, simple list */}
       <Link to={'/experience/' + exp.slug} className="sm:hidden block">
         <motion.div
           whileTap={{ scale: 0.97 }}

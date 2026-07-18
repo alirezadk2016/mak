@@ -26,7 +26,7 @@ export default function GlossaryIndexPage() {
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <p className="serif-accent mb-2" style={{ color: '#C9A96E', fontSize: 'clamp(1.05rem, 1.6vw, 1.4rem)', opacity: 0.85 }}>
-            {lang === 'da' ? 'teknik — forklaret enkelt' : 'tech — explained simply'}
+            {lang === 'da' ? 'teknik, forklaret enkelt' : 'tech, explained simply'}
           </p>
           <h1
             className="hero-heading font-black uppercase leading-none mb-6"
@@ -39,8 +39,8 @@ export default function GlossaryIndexPage() {
             style={{ color: '#E8DDD0', opacity: 0.45, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8 }}
           >
             {lang === 'da'
-              ? 'De vigtigste begreber fra min hverdag som IT-supporter — forklaret uden teknisk jargon, og med eksempler på, hvordan jeg selv har brugt dem i praksis.'
-              : 'The most important concepts from my everyday life as an IT supporter — explained without technical jargon, with examples of how I have used them in practice.'}
+              ? 'De vigtigste begreber fra min hverdag som IT-supporter, forklaret uden teknisk jargon, og med eksempler på, hvordan jeg selv har brugt dem i praksis.'
+              : 'The most important concepts from my everyday life as an IT supporter, explained without technical jargon, with examples of how I have used them in practice.'}
           </p>
         </motion.div>
 

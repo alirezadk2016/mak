@@ -10,7 +10,7 @@ import { t } from '../translations'
 const projects = [
   {
     num: '01',
-    category: { da: 'Skole — Aarhus Tech', en: 'School — Aarhus Tech' },
+    category: { da: 'Skole, Aarhus Tech', en: 'School, Aarhus Tech' },
     sub: null,
     name: 'Svendeprøve',
     href: '/projects/svendeproeve',
@@ -37,7 +37,7 @@ const projects = [
   },
   {
     num: '04',
-    category: { da: 'Kunde — Australien', en: 'Client — Australia' },
+    category: { da: 'Kunde · Australien', en: 'Client · Australia' },
     sub: { da: 'Hjemmeside · Admin-panel', en: 'Website · Admin panel' },
     name: 'MAK Painting',
     href: '/projects/mak-painting',
@@ -73,7 +73,7 @@ function ProjectCard({ project, index, lang, btnLabel }: {
           border: '1px solid rgba(232,224,213,0.09)',
         }}
       >
-        {/* Accent top line — grows on hover */}
+        {/* Accent top line, grows on hover */}
         <div
           className="absolute top-0 left-0 right-0 h-[2px] z-10 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
           style={{ background: `linear-gradient(to right, ${accent}, transparent 80%)` }}

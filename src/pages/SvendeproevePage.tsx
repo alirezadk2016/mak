@@ -4,8 +4,8 @@ import { ArrowLeft } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
 
 const requirements = [
-  { da: 'Domain Controller med AD/DS, DNS og DHCP — samt en dedikeret filserver', en: 'Domain Controller with AD/DS, DNS and DHCP — plus a dedicated file server' },
-  { da: 'Filserver med sikret adgangskontrol — brugere kan kun tilgå egne mapper', en: 'File server with secured access control — users can only access their own folders' },
+  { da: 'Domain Controller med AD/DS, DNS og DHCP, samt en dedikeret filserver', en: 'Domain Controller with AD/DS, DNS and DHCP, plus a dedicated file server' },
+  { da: 'Filserver med sikret adgangskontrol, brugere kan kun tilgå egne mapper', en: 'File server with secured access control, users can only access their own folders' },
   { da: 'Personligt drev pr. bruger, afdelingsdrev og fælles drev', en: 'Personal drive per user, department drive and shared drive' },
   { da: 'Gruppepolitikker (GPO) til klientkonfiguration på tværs af afdelinger', en: 'Group Policies (GPO) for client configuration across departments' },
   { da: 'pfSense firewall som sikkerhed til internetadgang', en: 'pfSense firewall for internet access security' },
@@ -59,7 +59,7 @@ export default function SvendeproevePage() {
         {/* Hero */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <p className="uppercase tracking-widest text-xs mb-3" style={{ color: '#FF6B00', opacity: 0.85, letterSpacing: '0.28em', fontWeight: 600 }}>
-            {lang === 'da' ? 'Skole — Aarhus Tech · 2026' : 'School — Aarhus Tech · 2026'}
+            {lang === 'da' ? 'Skole · Aarhus Tech · 2026' : 'School · Aarhus Tech · 2026'}
           </p>
           <h1
             className="font-black uppercase leading-none tracking-tight mb-3"
@@ -68,12 +68,12 @@ export default function SvendeproevePage() {
             {lang === 'da' ? 'Svendeprøve' : 'Final Exam'}
           </h1>
           <p className="serif-accent mb-6" style={{ color: '#C9A96E', fontSize: 'clamp(1.1rem, 1.8vw, 1.5rem)', opacity: 0.85 }}>
-            {lang === 'da' ? 'en hel virksomheds netværk — bygget fra bunden' : 'an entire company network — built from scratch'}
+            {lang === 'da' ? 'en hel virksomheds netværk, bygget fra bunden' : 'an entire company network, built from scratch'}
           </p>
           <p className="text-[#E8DDD0]/60 text-lg mb-4 max-w-2xl leading-relaxed">
             {lang === 'da'
-              ? 'Afsluttende projekt for IT-supporter — Opgave 05. Opsætning af komplet netværksinfrastruktur for Cykelværkstedet CykelMyggen med 10 ansatte fordelt på 3 afdelinger.'
-              : 'Final project for IT Support Technician — Task 05. Setup of complete network infrastructure for CykelMyggen bicycle workshop with 10 employees across 3 departments.'}
+              ? 'Afsluttende projekt for IT-supporter, Opgave 05. Opsætning af komplet netværksinfrastruktur for Cykelværkstedet CykelMyggen med 10 ansatte fordelt på 3 afdelinger.'
+              : 'Final project for IT Support Technician, Task 05. Setup of complete network infrastructure for CykelMyggen bicycle workshop with 10 employees across 3 departments.'}
           </p>
         </motion.div>
 

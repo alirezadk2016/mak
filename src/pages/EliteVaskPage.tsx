@@ -7,15 +7,15 @@ import BrandCover from '../components/BrandCover'
 const packages = [
   {
     name: { da: 'Udvendig', en: 'Exterior' },
-    desc: { da: 'Komplet udvendig dampvask — karrosseri, fælge og ruder.', en: 'Complete exterior steam wash — bodywork, rims and windows.' },
+    desc: { da: 'Komplet udvendig dampvask, karrosseri, fælge og ruder.', en: 'Complete exterior steam wash, bodywork, rims and windows.' },
   },
   {
     name: { da: 'Indvendig', en: 'Interior' },
-    desc: { da: 'Dybderengøring af kabinen — sæder, gulvmåtter, dashboard og alle overflader.', en: 'Deep cleaning of the cabin — seats, floor mats, dashboard and all surfaces.' },
+    desc: { da: 'Dybderengøring af kabinen, sæder, gulvmåtter, dashboard og alle overflader.', en: 'Deep cleaning of the cabin, seats, floor mats, dashboard and all surfaces.' },
   },
   {
     name: { da: 'Helvask', en: 'Full Wash' },
-    desc: { da: 'Den komplette pakke — udvendig + indvendig. Alt i én booking.', en: 'The complete package — exterior + interior. Everything in one booking.' },
+    desc: { da: 'Den komplette pakke, udvendig + indvendig. Alt i én booking.', en: 'The complete package, exterior + interior. Everything in one booking.' },
   },
   {
     name: { da: 'Gold', en: 'Gold' },
@@ -27,10 +27,10 @@ const features = [
   {
     title: { da: 'Online booking', en: 'Online Booking' },
     items: [
-      { da: 'Kunden vælger biltype og pakke — pris vises øjeblikkeligt', en: 'Customer selects car type and package — price shown instantly' },
+      { da: 'Kunden vælger biltype og pakke, pris vises øjeblikkeligt', en: 'Customer selects car type and package, price shown instantly' },
       { da: 'Valg af dato og ledig tidslot direkte i kalenderen', en: 'Selection of date and available time slot directly in calendar' },
       { da: 'Automatisk e-mailbekræftelse ved gennemført booking', en: 'Automatic email confirmation upon completed booking' },
-      { da: 'Betaling sker efter endt service — ikke online', en: 'Payment after service is completed — not online' },
+      { da: 'Betaling sker efter endt service, ikke online', en: 'Payment after service is completed, not online' },
     ],
   },
   {
@@ -39,7 +39,7 @@ const features = [
       { da: 'Ugentlig kalender med real-time visning af alle bookinger', en: 'Weekly calendar with real-time view of all bookings' },
       { da: 'Tidslinje pr. dag med klokkeslæt og kundeinfo', en: 'Timeline per day with times and customer info' },
       { da: 'Dansk tidszone (Europe/Copenhagen) korrekt håndteret', en: 'Danish timezone (Europe/Copenhagen) correctly handled' },
-      { da: 'Fuldt responsivt — fungerer på mobil og desktop', en: 'Fully responsive — works on mobile and desktop' },
+      { da: 'Fuldt responsivt, fungerer på mobil og desktop', en: 'Fully responsive, works on mobile and desktop' },
     ],
   },
 ]
@@ -82,7 +82,7 @@ export default function EliteVaskPage() {
         {/* Hero */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <p className="uppercase tracking-widest text-xs mb-3" style={{ color: '#3E9BD6', opacity: 0.85, letterSpacing: '0.28em', fontWeight: 600 }}>
-            {lang === 'da' ? 'Kunde — Web Design & Udvikling' : 'Client — Web Design & Development'}
+            {lang === 'da' ? 'Kunde · Web Design & Udvikling' : 'Client · Web Design & Development'}
           </p>
           <h1
             className="font-black uppercase leading-none tracking-tight mb-3"
@@ -91,12 +91,12 @@ export default function EliteVaskPage() {
             Elite Vask
           </h1>
           <p className="serif-accent mb-4" style={{ color: '#C9A96E', fontSize: 'clamp(1.1rem, 1.8vw, 1.5rem)', opacity: 0.85 }}>
-            {lang === 'da' ? 'fra idé til færdig løsning — for en rigtig kunde' : 'from idea to finished solution — for a real client'}
+            {lang === 'da' ? 'fra idé til færdig løsning, for en rigtig kunde' : 'from idea to finished solution, for a real client'}
           </p>
           <p className="text-[#E8DDD0]/60 text-lg mb-2 max-w-2xl leading-relaxed">
             {lang === 'da'
-              ? 'Komplet hjemmeside med online bookingsystem til mobil dampvask. Kunden booker, systemet håndterer resten — bekræftelse, kalender og admin.'
-              : 'Complete website with online booking system for mobile steam car wash. Customer books, system handles the rest — confirmation, calendar and admin.'}
+              ? 'Komplet hjemmeside med online bookingsystem til mobil dampvask. Kunden booker, systemet håndterer resten, bekræftelse, kalender og admin.'
+              : 'Complete website with online booking system for mobile steam car wash. Customer books, system handles the rest, confirmation, calendar and admin.'}
           </p>
         </motion.div>
 

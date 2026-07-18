@@ -79,7 +79,7 @@ const experiences: Record<string, ExpData> = {
   },
   aarhustech: {
     company: 'Aarhus Tech',
-    role: { da: 'Eksamensvagt — IT Support', en: 'Exam Supervisor — IT Support' },
+    role: { da: 'Eksamensvagt, IT Support', en: 'Exam Supervisor, IT Support' },
     period: { da: 'Frivillig', en: 'Volunteer' },
     url: 'https://www.aarhustech.dk/',
     priceUrl: 'https://www.aarhustech.dk/',
@@ -106,8 +106,8 @@ const experiences: Record<string, ExpData> = {
   },
   folkehuse: {
     company: 'Folkehuse Aarhus',
-    role: { da: 'IT Support — Skolepraktik', en: 'IT Support — School Placement' },
-    period: { da: 'Skolepraktik — Aarhus Tech', en: 'School Placement — Aarhus Tech' },
+    role: { da: 'IT Support, Skolepraktik', en: 'IT Support, School Placement' },
+    period: { da: 'Skolepraktik, Aarhus Tech', en: 'School Placement, Aarhus Tech' },
     url: 'https://folkehuse.aarhus.dk/',
     priceUrl: 'https://folkehuse.aarhus.dk/',
     color: '#2E7D32',
@@ -255,7 +255,7 @@ export default function ExperienceDetail() {
           ))}
         </div>
 
-        {/* Related knowledge — internal links to the IT glossary */}
+        {/* Related knowledge, internal links to the IT glossary */}
         {relatedViden[slug!] && (
           <motion.div
             initial={{ opacity: 0, y: 16 }}
