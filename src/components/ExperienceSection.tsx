@@ -2,16 +2,9 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import FadeIn from './FadeIn'
-import SmartImage from './SmartImage'
+import BrandCover from './BrandCover'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
-
-const screenshots: Record<string, string> = {
-  yousee: 'https://image.thum.io/get/width/1280/crop/720/https://yousee.dk/',
-  fourcom: 'https://image.thum.io/get/width/1280/crop/720/https://en.fourcom.dk/',
-  folkehuse: 'https://image.thum.io/get/width/1280/crop/720/https://folkehuse.aarhus.dk/',
-  aarhustech: 'https://image.thum.io/get/width/1280/crop/720/https://www.aarhustech.dk/',
-}
 
 const accentColors: Record<string, string> = {
   yousee: '#E4002B',
@@ -54,21 +47,11 @@ function ExperienceCard({ exp, viewDetails, index }: {
               style={{ background: `linear-gradient(to right, ${accent}, transparent 80%)` }}
             />
 
-            {/* Image */}
+            {/* Cover */}
             <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
-              <div className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.05]">
-                <SmartImage
-                  src={screenshots[exp.slug]}
-                  alt={exp.company}
-                  label={exp.company}
-                  accent={accent}
-                  className="w-full h-full"
-                  imgClassName="w-full h-full object-cover"
-                />
+              <div className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.04]">
+                <BrandCover name={exp.company} sub={exp.role} accent={accent} className="w-full h-full" />
               </div>
-              {/* Bottom fade into card */}
-              <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none"
-                style={{ background: 'linear-gradient(to top, rgba(13,12,10,0.85), transparent)' }} />
             </div>
 
             {/* Text */}
@@ -103,8 +86,8 @@ function ExperienceCard({ exp, viewDetails, index }: {
         >
           <div className="w-1 flex-shrink-0" style={{ background: accent }} />
           <div className="relative flex-shrink-0 overflow-hidden" style={{ width: '44%', aspectRatio: '4/3' }}>
-            <SmartImage src={screenshots[exp.slug]} alt={exp.company} label={exp.company} accent={accent} className="w-full h-full" imgClassName="w-full h-full object-cover" />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, transparent 60%, #121110 100%)' }} />
+            <BrandCover name={exp.company} accent={accent} compact className="w-full h-full" />
+            <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to right, transparent 60%, #121110 100%)' }} />
           </div>
           <div className="flex flex-col justify-center px-4 py-4 flex-1 min-w-0">
             <span className="text-[10px] uppercase tracking-widest mb-1" style={{ color: accent, opacity: 0.85 }}>{exp.period}</span>
@@ -127,20 +110,20 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="px-5 sm:px-8 md:px-10 py-16 sm:py-24 md:py-32 relative z-10"
+      className="px-5 sm:px-8 md:px-10 py-14 sm:py-20 md:py-24 relative z-10"
       style={{ background: '#0A0908' }}
     >
       <FadeIn delay={0} y={40}>
         <h2
-          className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-6"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+          className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-5"
+          style={{ fontSize: 'clamp(2.6rem, 10vw, 120px)' }}
         >
           {tx.heading}
         </h2>
       </FadeIn>
       <FadeIn delay={0.15} y={20}>
         <p
-          className="text-center max-w-xl mx-auto mb-12 sm:mb-16 md:mb-20 font-light leading-relaxed"
+          className="text-center max-w-xl mx-auto mb-10 sm:mb-12 md:mb-14 font-light leading-relaxed"
           style={{ color: '#E8DDD0', opacity: 0.4, fontSize: 'clamp(0.85rem, 1.4vw, 1.05rem)' }}
         >
           {tx.subheading}

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import FadeIn from './FadeIn'
 import SmartImage from './SmartImage'
+import BrandCover from './BrandCover'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
 
@@ -10,14 +11,16 @@ const projects = [
   {
     num: '01',
     category: { da: 'Kunde', en: 'Client' },
+    sub: { da: 'Webløsning · Booking', en: 'Web solution · Booking' },
     name: 'Elite Vask',
     href: '/projects/elite-vask',
     accent: '#3E9BD6',
-    img: 'https://image.thum.io/get/width/1280/crop/900/https://www.elite-vask.dk/',
+    img: null,
   },
   {
     num: '02',
     category: { da: 'Skole — Aarhus Tech', en: 'School — Aarhus Tech' },
+    sub: null,
     name: 'Svendeprøve',
     href: '/projects/svendeproeve',
     accent: '#FF6B00',
@@ -26,14 +29,16 @@ const projects = [
   {
     num: '03',
     category: { da: 'Kunde — Australien', en: 'Client — Australia' },
+    sub: { da: 'Hjemmeside · Admin-panel', en: 'Website · Admin panel' },
     name: 'MAK Painting',
     href: '/projects/mak-painting',
     accent: '#C9A96E',
-    img: 'https://image.thum.io/get/width/1280/crop/900/https://www.makvandi.info/en',
+    img: null,
   },
   {
     num: '04',
     category: { da: 'Personligt projekt', en: 'Personal Project' },
+    sub: null,
     name: 'Gaming PC Build',
     href: '/projects/gaming-pc',
     accent: '#7C5CBF',
@@ -74,20 +79,31 @@ function ProjectCard({ project, index, lang, btnLabel }: {
           style={{ background: `linear-gradient(to right, ${accent}, transparent 80%)` }}
         />
 
-        {/* Image */}
+        {/* Cover */}
         <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
-          <div className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.05]">
-            <SmartImage
-              src={project.img}
-              alt={project.name}
-              label={project.name}
-              accent={accent}
-              className="w-full h-full"
-              imgClassName="w-full h-full object-cover object-top"
-            />
+          <div className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.04]">
+            {project.img ? (
+              <SmartImage
+                src={project.img}
+                alt={project.name}
+                label={project.name}
+                accent={accent}
+                className="w-full h-full"
+                imgClassName="w-full h-full object-cover object-top"
+              />
+            ) : (
+              <BrandCover
+                name={project.name}
+                sub={project.sub ? project.sub[lang] : undefined}
+                accent={accent}
+                className="w-full h-full"
+              />
+            )}
           </div>
-          <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none"
-            style={{ background: 'linear-gradient(to top, rgba(13,12,10,0.85), transparent)' }} />
+          {project.img && (
+            <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none"
+              style={{ background: 'linear-gradient(to top, rgba(13,12,10,0.85), transparent)' }} />
+          )}
           {/* Number badge */}
           <span
             className="absolute top-4 left-5 font-black leading-none pointer-events-none"
@@ -127,20 +143,20 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="px-5 sm:px-8 md:px-10 py-16 sm:py-24 md:py-32 relative z-10"
+      className="px-5 sm:px-8 md:px-10 pt-6 sm:pt-8 md:pt-10 pb-14 sm:pb-20 md:pb-24 relative z-10"
       style={{ background: '#0A0908' }}
     >
       <FadeIn delay={0} y={40}>
         <h2
-          className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-6"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+          className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-5"
+          style={{ fontSize: 'clamp(2.6rem, 10vw, 120px)' }}
         >
           {tx.heading}
         </h2>
       </FadeIn>
       <FadeIn delay={0.15} y={20}>
         <p
-          className="text-center max-w-xl mx-auto mb-12 sm:mb-16 md:mb-20 font-light leading-relaxed"
+          className="text-center max-w-xl mx-auto mb-10 sm:mb-12 md:mb-14 font-light leading-relaxed"
           style={{ color: '#E8DDD0', opacity: 0.4, fontSize: 'clamp(0.85rem, 1.4vw, 1.05rem)' }}
         >
           {tx.subheading}

@@ -23,7 +23,7 @@ export const t = {
     },
     services: {
       sectionLabel: 'IT-supporteruddannelsen — Aarhus Tech · Afsluttet 2026',
-      heading: 'Services',
+      heading: 'Kompetencer',
       items: [
         {
           num: '01',
