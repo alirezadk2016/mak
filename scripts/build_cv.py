@@ -111,7 +111,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
   <main class="main">
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">LEDIG · KAN TILTRÆDE STRAKS</span></div>
-    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech og søger mit første faste job i IT. Gennem min skolepraktik har jeg hjulpet rigtige brugere mange steder i Aarhus: på plejehjem, på skoler under eksamener og med alt fra printere og login til installation af software. Til min svendeprøve byggede jeg desuden en komplet netværksinfrastruktur med Windows Server og Active Directory. Og fra næsten fire år hos YouSee ved jeg, hvordan man hjælper kunder, også når der er travlt.</p>
+    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg lavet support for rigtige brugere, fra plejehjem til skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Efter næsten fire år hos YouSee er jeg vant til at hjælpe kunder, også når der er travlt.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
 
@@ -161,7 +161,6 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <ul>
         <li>Opsætning af komplet netværk med Windows Server, Active Directory, DNS/DHCP samt brugere og afdelinger.</li>
         <li>Dokumentation og fejlfinding af hele opsætningen.</li>
-        <li>Mine webprojekter kan ses på www.makvandi.dk.</li>
       </ul>
     </div>
 
