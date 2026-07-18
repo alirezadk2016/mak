@@ -92,7 +92,7 @@ export default function GlossaryIndexPage() {
         >
           <BookOpen size={14} strokeWidth={1.5} style={{ color: '#C9A96E', opacity: 0.7 }} />
           <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '11px', fontWeight: 300 }}>
-            {lang === 'da' ? 'Skrevet af mig — baseret på min uddannelse og praktiske erfaring.' : 'Written by me — based on my education and hands-on experience.'}
+            {lang === 'da' ? 'Baseret på min uddannelse og praktiske erfaring.' : 'Based on my education and hands-on experience.'}
           </span>
         </motion.div>
       </div>

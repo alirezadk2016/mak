@@ -277,8 +277,8 @@ export default function FooterSection() {
           </span>
           <p style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em', maxWidth: '420px', lineHeight: 1.7 }}>
             {lang === 'da'
-              ? 'Designet og kodet fra bunden af mig selv — React, TypeScript og en del kaffe. Ingen skabelon.'
-              : 'Designed and coded from scratch by me — React, TypeScript and a fair amount of coffee. No template.'}
+              ? 'Bygget med React, TypeScript & Vite — og en del kaffe.'
+              : 'Built with React, TypeScript & Vite — and a fair amount of coffee.'}
           </p>
           <span style={{ color: '#E8DDD0', opacity: 0.18, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
             © {new Date().getFullYear()} Alireza Makvandi · Aarhus
