@@ -111,7 +111,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
   <main class="main">
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">LEDIG · KAN TILTRÆDE STRAKS</span></div>
-    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech og søger mit første faste job i IT. Jeg har arbejdet praktisk med Windows, netværk og hardware, og til min svendeprøve byggede jeg en komplet netværksinfrastruktur med Windows Server og Active Directory. Fra næsten fire år hos YouSee ved jeg, hvordan man hjælper kunder, også når der er travlt.</p>
+    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech og søger mit første faste job i IT. Gennem min skolepraktik har jeg hjulpet rigtige brugere mange steder i Aarhus: på plejehjem, på skoler under eksamener og med alt fra printere og login til installation af software. Til min svendeprøve byggede jeg desuden en komplet netværksinfrastruktur med Windows Server og Active Directory. Og fra næsten fire år hos YouSee ved jeg, hvordan man hjælper kunder, også når der er travlt.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
 
@@ -119,8 +119,9 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-y">2024 – 2026 <span class="j-org">· Aarhus Tech (del af uddannelsen)</span></div>
       <div class="j-t">Skolepraktik · IT Support</div>
       <ul>
-        <li>Brugersupport for ældre borgere én dag om ugen på et plejehjem.</li>
-        <li>Praktisk arbejde med netværk, servere, sikkerhed og fejlfinding.</li>
+        <li>IT-support på flere institutioner i Aarhus, bl.a. én dag om ugen på et plejehjem.</li>
+        <li>Teknisk support under eksamener samt hjælp med printere, login og installation af software.</li>
+        <li>Praktisk arbejde med netværk, servere og fejlfinding.</li>
       </ul>
     </div>
 
