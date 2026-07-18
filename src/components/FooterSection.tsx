@@ -230,24 +230,22 @@ export default function FooterSection() {
           </span>
         </motion.div>
 
-        {/* Heading */}
+        {/* Heading — first line bold sans, second line serif italic */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          style={{
-            color: '#E8DDD0',
-            fontSize: 'clamp(2.2rem, 6vw, 5.5rem)',
-            fontWeight: 800,
-            lineHeight: 1.05,
-            letterSpacing: '-0.03em',
-            whiteSpace: 'pre-line',
-            fontFamily: 'Kanit, sans-serif',
-          }}
+          style={{ color: '#E8DDD0', fontSize: 'clamp(2.2rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
           className="mb-14 sm:mb-18"
         >
-          {tx.heading}
+          {tx.heading.split('\n').map((line, i) => (
+            i === 0 ? (
+              <span key={i} className="block" style={{ fontWeight: 800, fontFamily: 'Kanit, sans-serif' }}>{line}</span>
+            ) : (
+              <span key={i} className="serif-accent block" style={{ color: '#C9A96E', fontSize: '1.08em' }}>{line}</span>
+            )
+          ))}
         </motion.h2>
 
         {/* Contact cards */}

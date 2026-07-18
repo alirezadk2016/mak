@@ -79,7 +79,7 @@ export default function MakPaintingPage() {
 
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-10 sm:mb-14">
-        <p style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px' }}>
+        <p style={{ color: '#C9A96E', opacity: 0.85, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px', fontWeight: 600 }}>
           {tx.category}
         </p>
         <div className="flex flex-wrap items-end gap-4 sm:gap-6 mb-5">

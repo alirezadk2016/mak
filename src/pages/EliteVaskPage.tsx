@@ -81,15 +81,18 @@ export default function EliteVaskPage() {
       <div className="px-6 sm:px-10 pt-16 pb-20 max-w-5xl mx-auto">
         {/* Hero */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <p className="text-[#E8DDD0]/40 uppercase tracking-widest text-xs mb-3">
+          <p className="uppercase tracking-widest text-xs mb-3" style={{ color: '#3E9BD6', opacity: 0.85, letterSpacing: '0.28em', fontWeight: 600 }}>
             {lang === 'da' ? 'Kunde — Web Design & Udvikling' : 'Client — Web Design & Development'}
           </p>
           <h1
-            className="font-black uppercase leading-none tracking-tight mb-4"
+            className="font-black uppercase leading-none tracking-tight mb-3"
             style={{ fontSize: 'clamp(2.5rem, 8vw, 100px)', color: '#E8DDD0' }}
           >
             Elite Vask
           </h1>
+          <p className="serif-accent mb-4" style={{ color: '#C9A96E', fontSize: 'clamp(1.1rem, 1.8vw, 1.5rem)', opacity: 0.85 }}>
+            {lang === 'da' ? 'fra idé til færdig løsning — for en rigtig kunde' : 'from idea to finished solution — for a real client'}
+          </p>
           <p className="text-[#E8DDD0]/60 text-lg mb-2 max-w-2xl leading-relaxed">
             {lang === 'da'
               ? 'Komplet hjemmeside med online bookingsystem til mobil dampvask. Kunden booker, systemet håndterer resten — bekræftelse, kalender og admin.'

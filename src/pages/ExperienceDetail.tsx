@@ -170,12 +170,45 @@ export default function ExperienceDetail() {
 
       <div className="px-6 sm:px-10 pt-16 pb-10 max-w-5xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <p className="text-[#E8DDD0]/40 uppercase tracking-widest text-sm mb-2">{exp.period[lang]}</p>
-          <h1 className="font-black uppercase leading-none tracking-tight mb-4" style={{ fontSize: 'clamp(3rem, 10vw, 120px)', color: '#E8DDD0' }}>
+          <p className="uppercase tracking-widest text-sm mb-2" style={{ color: exp.color, opacity: 0.85, fontSize: '11px', letterSpacing: '0.28em', fontWeight: 600 }}>
+            {exp.period[lang]}
+          </p>
+          <h1 className="font-black uppercase leading-none tracking-tight mb-3" style={{ fontSize: 'clamp(3rem, 10vw, 120px)', color: '#E8DDD0' }}>
             {exp.company}
           </h1>
-          <p className="text-[#E8DDD0]/60 text-lg mb-10">{exp.role[lang]}</p>
+          <p className="serif-accent mb-10" style={{ color: '#C9A96E', fontSize: 'clamp(1.1rem, 1.8vw, 1.5rem)', opacity: 0.85 }}>
+            {exp.role[lang]}
+          </p>
         </motion.div>
+
+        {/* Official recommendation cross-link (YouSee) */}
+        {slug === 'yousee' && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="mb-10"
+          >
+            <Link
+              to="/recommendations"
+              className="flex flex-wrap items-center justify-between gap-4 rounded-[18px] p-5 sm:p-6 group transition-transform duration-300 hover:-translate-y-0.5"
+              style={{ background: 'linear-gradient(160deg, rgba(228,0,43,0.09) 0%, rgba(232,224,213,0.02) 100%)', border: '1px solid rgba(228,0,43,0.3)', textDecoration: 'none' }}
+            >
+              <div>
+                <p className="uppercase" style={{ color: '#E4002B', fontSize: '9px', letterSpacing: '0.3em', fontWeight: 700, marginBottom: '6px' }}>
+                  {lang === 'da' ? 'Officiel anbefaling' : 'Official recommendation'}
+                </p>
+                <p style={{ color: '#E8DDD0', opacity: 0.85, fontSize: '14px', fontWeight: 500 }}>
+                  {lang === 'da'
+                    ? 'Min butikschef skrev en skriftlig anbefaling efter næsten fire år.'
+                    : 'My store manager wrote a written recommendation after almost four years.'}
+                </p>
+              </div>
+              <span className="serif-accent whitespace-nowrap" style={{ color: '#C9A96E', fontSize: '15px' }}>
+                {lang === 'da' ? 'Læs den her →' : 'Read it here →'}
+              </span>
+            </Link>
+          </motion.div>
+        )}
 
         <motion.a
           href={exp.priceUrl}

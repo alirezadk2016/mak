@@ -66,15 +66,18 @@ export default function GamingPCPage() {
 
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-10 sm:mb-14">
-        <p style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px' }}>
+        <p style={{ color: '#7C5CBF', opacity: 0.9, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px', fontWeight: 600 }}>
           {tx.category}
         </p>
         <h1
-          className="font-black uppercase leading-none"
+          className="font-black uppercase leading-none mb-3"
           style={{ color: '#E8DDD0', fontSize: 'clamp(2.2rem, 8vw, 6rem)', letterSpacing: '-0.03em' }}
         >
           {tx.title}
         </h1>
+        <p className="serif-accent" style={{ color: '#C9A96E', fontSize: 'clamp(1.05rem, 1.7vw, 1.4rem)', opacity: 0.85 }}>
+          {lang === 'da' ? 'komponent for komponent — samlet af mig selv' : 'component by component — assembled by myself'}
+        </p>
       </motion.div>
 
       {/* Image */}

@@ -46,7 +46,7 @@ export default function NotFound() {
 
         <div className="w-10 h-px" style={{ background: 'rgba(201,169,110,0.5)' }} />
 
-        <h1 style={{ color: '#E8DDD0', fontSize: 'clamp(1.3rem, 3vw, 2rem)', fontWeight: 600, letterSpacing: '-0.01em' }}>
+        <h1 className="serif-accent" style={{ color: '#E8DDD0', fontSize: 'clamp(1.5rem, 3.4vw, 2.3rem)' }}>
           {c.heading}
         </h1>
         <p style={{ color: '#E8DDD0', opacity: 0.45, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', fontWeight: 300, maxWidth: '380px', lineHeight: 1.7 }}>

@@ -58,15 +58,18 @@ export default function SvendeproevePage() {
       <div className="px-6 sm:px-10 pt-16 pb-20 max-w-5xl mx-auto">
         {/* Hero */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <p className="text-[#E8DDD0]/40 uppercase tracking-widest text-xs mb-3">
+          <p className="uppercase tracking-widest text-xs mb-3" style={{ color: '#FF6B00', opacity: 0.85, letterSpacing: '0.28em', fontWeight: 600 }}>
             {lang === 'da' ? 'Skole — Aarhus Tech · 2026' : 'School — Aarhus Tech · 2026'}
           </p>
           <h1
-            className="font-black uppercase leading-none tracking-tight mb-6"
+            className="font-black uppercase leading-none tracking-tight mb-3"
             style={{ fontSize: 'clamp(2.5rem, 8vw, 100px)', color: '#E8DDD0' }}
           >
             {lang === 'da' ? 'Svendeprøve' : 'Final Exam'}
           </h1>
+          <p className="serif-accent mb-6" style={{ color: '#C9A96E', fontSize: 'clamp(1.1rem, 1.8vw, 1.5rem)', opacity: 0.85 }}>
+            {lang === 'da' ? 'en hel virksomheds netværk — bygget fra bunden' : 'an entire company network — built from scratch'}
+          </p>
           <p className="text-[#E8DDD0]/60 text-lg mb-4 max-w-2xl leading-relaxed">
             {lang === 'da'
               ? 'Afsluttende projekt for IT-supporter — Opgave 05. Opsætning af komplet netværksinfrastruktur for Cykelværkstedet CykelMyggen med 10 ansatte fordelt på 3 afdelinger.'

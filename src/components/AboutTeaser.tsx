@@ -44,12 +44,15 @@ export default function AboutTeaser() {
 
       <div className="max-w-4xl mx-auto">
         <FadeIn delay={0} y={20}>
-          <div className="flex items-center gap-3 mb-10">
+          <div className="flex items-center gap-3 mb-3">
             <div className="w-6 h-px" style={{ background: 'rgba(232,224,213,0.25)' }} />
             <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.38em', textTransform: 'uppercase', fontWeight: 500 }}>
               {c.label}
             </span>
           </div>
+          <p className="serif-accent mb-10" style={{ color: '#C9A96E', fontSize: 'clamp(1.05rem, 1.6vw, 1.4rem)', opacity: 0.85 }}>
+            {lang === 'da' ? 'kort fortalt' : 'in short'}
+          </p>
         </FadeIn>
 
         <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 items-start">

@@ -175,12 +175,15 @@ export default function AboutPage() {
               {c.label}
             </p>
             <h1
-              className="hero-heading font-black uppercase leading-none mb-1"
+              className="hero-heading font-black uppercase leading-none"
               style={{ fontSize: 'clamp(2.6rem, 8vw, 5.5rem)', letterSpacing: '-0.03em' }}
             >
               Alireza
+              <span className="serif-accent block" style={{ color: '#E8DDD0', fontSize: '1.08em', marginTop: '-0.04em', letterSpacing: 0 }}>
+                Makvandi
+              </span>
             </h1>
-            <p style={{ color: '#E8DDD0', opacity: 0.4, fontSize: '13px', letterSpacing: '0.06em' }}>
+            <p className="mt-2" style={{ color: '#E8DDD0', opacity: 0.4, fontSize: '13px', letterSpacing: '0.06em' }}>
               {lang === 'da' ? 'IT-supporter · Aarhus, DK' : 'IT Supporter · Aarhus, DK'}
             </p>
           </motion.div>
