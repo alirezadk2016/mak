@@ -51,15 +51,15 @@ export const t = {
         },
         {
           num: '05',
-          name: 'Web Design',
-          desc: 'Design og udvikling af moderne, responsive hjemmesider. Fra konceptet til et færdigt digitalt produkt — med fokus på brugeroplevelse, visuel identitet og performance.',
-          tags: ['React', 'Tailwind CSS', 'TypeScript', 'Vite'],
-        },
-        {
-          num: '06',
           name: 'Brugersupport',
           desc: 'Professionel og tålmodig support til slutbrugere — uanset teknisk niveau. Login, e-mail, printerproblemer og softwareinstallation. Erfaring med support til ældre borgere og under eksamener.',
           tags: ['Helpdesk', 'IT-service', 'Kommunikation', 'Dokumentation'],
+        },
+        {
+          num: '06',
+          name: 'Web Design',
+          desc: 'Design og udvikling af moderne, responsive hjemmesider. Fra konceptet til et færdigt digitalt produkt — med fokus på brugeroplevelse, visuel identitet og performance.',
+          tags: ['React', 'Tailwind CSS', 'TypeScript', 'Vite'],
         },
       ],
     },
@@ -68,10 +68,10 @@ export const t = {
       subheading: 'En oversigt over de steder, jeg har arbejdet og bidraget — fra teknisk support og kundeservice til frivilligt IT-arbejde i uddannelsesmiljøer.',
       viewDetails: 'Se detaljer →',
       items: [
-        { slug: 'yousee', company: 'YouSee', role: 'Kundeservice & Administration', period: 'IGU — Arbejde' },
+        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support — Skolepraktik', period: 'Skolepraktik' },
         { slug: 'fourcom', company: 'Fourcom', role: 'IT Support Praktikant', period: 'Praktik' },
         { slug: 'folkehuse', company: 'Folkehuse Aarhus', role: 'IT Support — Frivillig', period: 'Frivillig' },
-        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support — Skolepraktik', period: 'Skolepraktik' },
+        { slug: 'yousee', company: 'YouSee', role: 'Kundeservice & Administration', period: 'IGU — Arbejde' },
       ],
     },
     projects: {
@@ -172,15 +172,15 @@ export const t = {
         },
         {
           num: '05',
-          name: 'Web Design',
-          desc: 'Design and development of modern, responsive websites. From concept to a finished digital product — focused on user experience, visual identity and performance.',
-          tags: ['React', 'Tailwind CSS', 'TypeScript', 'Vite'],
-        },
-        {
-          num: '06',
           name: 'User Support',
           desc: 'Professional and patient support for end users — regardless of technical level. Login, email, printer issues and software installation. Experience supporting elderly citizens and during exams.',
           tags: ['Helpdesk', 'IT Service', 'Communication', 'Documentation'],
+        },
+        {
+          num: '06',
+          name: 'Web Design',
+          desc: 'Design and development of modern, responsive websites. From concept to a finished digital product — focused on user experience, visual identity and performance.',
+          tags: ['React', 'Tailwind CSS', 'TypeScript', 'Vite'],
         },
       ],
     },
@@ -189,10 +189,10 @@ export const t = {
       subheading: 'A collection of the places I have worked and contributed — from technical support and customer service to voluntary IT work in educational environments.',
       viewDetails: 'View Details →',
       items: [
-        { slug: 'yousee', company: 'YouSee', role: 'Customer Service & Administration', period: 'IGU — Work' },
+        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support — School Placement', period: 'School Placement' },
         { slug: 'fourcom', company: 'Fourcom', role: 'IT Support Intern', period: 'Internship' },
         { slug: 'folkehuse', company: 'Folkehuse Aarhus', role: 'IT Support — Volunteer', period: 'Volunteer' },
-        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support — School Placement', period: 'School Placement' },
+        { slug: 'yousee', company: 'YouSee', role: 'Customer Service & Administration', period: 'IGU — Work' },
       ],
     },
     projects: {

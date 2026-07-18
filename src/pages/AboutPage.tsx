@@ -52,7 +52,7 @@ const content = {
     languages: [
       { name: 'Persisk', level: 'Modersmål', pct: 100 },
       { name: 'Dansk', level: 'Flydende', pct: 85 },
-      { name: 'Engelsk', level: 'Mellem — under udvikling', pct: 60 },
+      { name: 'Engelsk', level: 'Flydende', pct: 85 },
     ],
     valuesLabel: 'Hvad jeg står for',
     valuesText: 'Jeg vil gerne være kendt som en, der brænder for sit arbejde, lærer hurtigt og tager ansvar fuldt ud. Jeg stræber altid efter at udvikle mig og levere det bedst mulige resultat — og bygge tillid med dem, jeg arbejder for.',
@@ -99,7 +99,7 @@ const content = {
     languages: [
       { name: 'Persian', level: 'Native', pct: 100 },
       { name: 'Danish', level: 'Fluent', pct: 85 },
-      { name: 'English', level: 'Intermediate — improving', pct: 60 },
+      { name: 'English', level: 'Fluent', pct: 85 },
     ],
     valuesLabel: 'What I stand for',
     valuesText: 'I want to be known as someone who is passionate about their work, learns quickly and takes full responsibility. I always strive to grow and deliver the best possible result — and to build trust with the people I work for.',

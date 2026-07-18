@@ -10,15 +10,6 @@ import { t } from '../translations'
 const projects = [
   {
     num: '01',
-    category: { da: 'Kunde', en: 'Client' },
-    sub: { da: 'Webløsning · Booking', en: 'Web solution · Booking' },
-    name: 'Elite Vask',
-    href: '/projects/elite-vask',
-    accent: '#3E9BD6',
-    img: null,
-  },
-  {
-    num: '02',
     category: { da: 'Skole — Aarhus Tech', en: 'School — Aarhus Tech' },
     sub: null,
     name: 'Svendeprøve',
@@ -27,22 +18,31 @@ const projects = [
     img: '/photo_2026-05-08_09-04-19.jpg',
   },
   {
-    num: '03',
-    category: { da: 'Kunde — Australien', en: 'Client — Australia' },
-    sub: { da: 'Hjemmeside · Admin-panel', en: 'Website · Admin panel' },
-    name: 'MAK Painting',
-    href: '/projects/mak-painting',
-    accent: '#C9A96E',
-    img: null,
-  },
-  {
-    num: '04',
+    num: '02',
     category: { da: 'Personligt projekt', en: 'Personal Project' },
     sub: null,
     name: 'Gaming PC Build',
     href: '/projects/gaming-pc',
     accent: '#7C5CBF',
     img: '/gaming-pc.jpeg',
+  },
+  {
+    num: '03',
+    category: { da: 'Kunde', en: 'Client' },
+    sub: { da: 'Webløsning · Booking', en: 'Web solution · Booking' },
+    name: 'Elite Vask',
+    href: '/projects/elite-vask',
+    accent: '#3E9BD6',
+    img: null,
+  },
+  {
+    num: '04',
+    category: { da: 'Kunde — Australien', en: 'Client — Australia' },
+    sub: { da: 'Hjemmeside · Admin-panel', en: 'Website · Admin panel' },
+    name: 'MAK Painting',
+    href: '/projects/mak-painting',
+    accent: '#C9A96E',
+    img: null,
   },
 ]
 
