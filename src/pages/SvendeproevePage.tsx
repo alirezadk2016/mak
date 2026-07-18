@@ -151,11 +151,34 @@ export default function SvendeproevePage() {
                 {lang === 'da' ? 'Teknologier brugt' : 'Technologies Used'}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {['Windows Server', 'Active Directory', 'DNS & DHCP', 'pfSense', 'VLAN', 'GPO', 'PowerShell', 'VMware', 'Backup'].map(tag => (
-                  <span key={tag} className="text-xs uppercase tracking-wider px-3 py-1 rounded-full border" style={{ color: '#E8DDD0', borderColor: 'rgba(232,224,213,0.2)', opacity: 0.7 }}>
-                    {tag}
-                  </span>
-                ))}
+                {([
+                  ['Windows Server', 'windows-server'],
+                  ['Active Directory', 'active-directory'],
+                  ['DNS', 'dns'],
+                  ['DHCP', 'dhcp'],
+                  ['pfSense', 'firewall'],
+                  ['VLAN', 'vlan'],
+                  ['GPO', 'gpo'],
+                  ['PowerShell', null],
+                  ['VMware', 'virtualisering'],
+                  ['Backup', 'backup'],
+                ] as [string, string | null][]).map(([tag, slug]) =>
+                  slug ? (
+                    <Link
+                      key={tag}
+                      to={`/viden/${slug}`}
+                      className="text-xs uppercase tracking-wider px-3 py-1 rounded-full border transition-opacity hover:opacity-100"
+                      style={{ color: '#E8DDD0', borderColor: 'rgba(201,169,110,0.45)', opacity: 0.85, textDecoration: 'none' }}
+                      title={`Hvad er ${tag}?`}
+                    >
+                      {tag} <span aria-hidden="true" style={{ color: '#C9A96E' }}>↗</span>
+                    </Link>
+                  ) : (
+                    <span key={tag} className="text-xs uppercase tracking-wider px-3 py-1 rounded-full border" style={{ color: '#E8DDD0', borderColor: 'rgba(232,224,213,0.2)', opacity: 0.7 }}>
+                      {tag}
+                    </span>
+                  )
+                )}
               </div>
             </div>
           </motion.div>

@@ -1,8 +1,27 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import FadeIn from './FadeIn'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
+
+/** Tags that link to an explainer page in the IT glossary (/viden). */
+const tagLinks: Record<string, string> = {
+  'PC-teknik': 'pc-hardware',
+  'PC Technology': 'pc-hardware',
+  'Komponenter': 'pc-hardware',
+  'Components': 'pc-hardware',
+  'VMware': 'virtualisering',
+  'Active Directory': 'active-directory',
+  'DNS/DHCP': 'dhcp',
+  'GPO': 'gpo',
+  'VPN': 'vpn',
+  'Sikkerhed': 'firewall',
+  'Security': 'firewall',
+  'Backup': 'backup',
+  'Netværkssikkerhed': 'firewall',
+  'Network Security': 'firewall',
+}
 
 export default function ServicesSection() {
   const { lang } = useLang()
@@ -61,11 +80,24 @@ export default function ServicesSection() {
                   {s.desc}
                 </span>
                 <div className="flex flex-wrap gap-2 mt-1">
-                  {s.tags.map((tag) => (
-                    <span key={tag} className="text-xs uppercase tracking-wider px-3 py-1 rounded-full border" style={{ color: '#0A0908', borderColor: 'rgba(12,12,12,0.2)', opacity: 0.7 }}>
-                      {tag}
-                    </span>
-                  ))}
+                  {s.tags.map((tag) => {
+                    const slug = tagLinks[tag]
+                    return slug ? (
+                      <Link
+                        key={tag}
+                        to={`/viden/${slug}`}
+                        className="text-xs uppercase tracking-wider px-3 py-1 rounded-full border transition-colors duration-200 hover:border-[#8A7250]"
+                        style={{ color: '#0A0908', borderColor: 'rgba(138,114,80,0.55)', opacity: 0.8, textDecoration: 'none' }}
+                        title={`Hvad er ${tag}?`}
+                      >
+                        {tag} <span aria-hidden="true" style={{ color: '#8A7250' }}>↗</span>
+                      </Link>
+                    ) : (
+                      <span key={tag} className="text-xs uppercase tracking-wider px-3 py-1 rounded-full border" style={{ color: '#0A0908', borderColor: 'rgba(12,12,12,0.2)', opacity: 0.7 }}>
+                        {tag}
+                      </span>
+                    )
+                  })}
                 </div>
               </div>
             </div>

@@ -10,6 +10,13 @@ import ContactButton from '../components/ContactButton'
 
 const IMG = '/6F4611AC-9D3C-47F1-8BA0-49E69A35BCDE.jpeg'
 
+// Journey steps that have a dedicated page (index-aligned with `journey`)
+const journeyLinks: Record<number, string | null> = {
+  1: '/experience/yousee',
+  4: '/experience/fourcom',
+  5: '/experience/aarhustech',
+}
+
 const content = {
   da: {
     back: 'Tilbage',
@@ -226,7 +233,13 @@ export default function AboutPage() {
                 </div>
                 <div className="pb-2">
                   <span style={{ color: '#C9A96E', opacity: 0.8, fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>{step.year}</span>
-                  <h3 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: 'clamp(1rem, 2vw, 1.3rem)', fontWeight: 600, margin: '4px 0 8px' }}>{step.title}</h3>
+                  <h3 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: 'clamp(1rem, 2vw, 1.3rem)', fontWeight: 600, margin: '4px 0 8px' }}>
+                    {journeyLinks[i] ? (
+                      <Link to={journeyLinks[i]!} className="transition-opacity hover:opacity-70" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px dotted rgba(201,169,110,0.6)' }}>
+                        {step.title} <span aria-hidden="true" style={{ color: '#C9A96E', fontSize: '0.75em' }}>↗</span>
+                      </Link>
+                    ) : step.title}
+                  </h3>
                   <p style={{ color: '#E8DDD0', opacity: 0.5, fontSize: '14px', lineHeight: 1.7, fontWeight: 300 }}>{step.desc}</p>
                 </div>
               </motion.div>

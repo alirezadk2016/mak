@@ -90,6 +90,71 @@ const routes = [
     description: 'Frivilligt IT-arbejde i Folkehuse Aarhus — brugersupport, især for ældre borgere.',
   },
   {
+    path: '/viden',
+    title: 'IT-ordbog — teknik forklaret enkelt | Alireza Makvandi',
+    description: 'DHCP, DNS, Active Directory og flere IT-begreber forklaret enkelt og uden jargon — af Alireza Makvandi, IT-supporter i Aarhus.',
+  },
+  {
+    path: '/viden/dhcp',
+    title: 'Hvad er DHCP? — forklaret enkelt | Alireza Makvandi',
+    description: 'DHCP er den service, der automatisk giver hver enhed på et netværk en IP-adresse, så den kan kommunikere med andre.',
+  },
+  {
+    path: '/viden/dns',
+    title: 'Hvad er DNS? — forklaret enkelt | Alireza Makvandi',
+    description: 'DNS oversætter navne, mennesker kan huske (som yousee.dk), til IP-adresser, computere bruger.',
+  },
+  {
+    path: '/viden/active-directory',
+    title: 'Hvad er Active Directory? — forklaret enkelt | Alireza Makvandi',
+    description: 'Active Directory er Microsofts system til at styre brugere, computere og rettigheder centralt i en virksomhed.',
+  },
+  {
+    path: '/viden/windows-server',
+    title: 'Hvad er Windows Server? — forklaret enkelt | Alireza Makvandi',
+    description: 'Windows Server er Microsofts styresystem til servere — de maskiner, der leverer services som login, filer, print og netværksstyring til alle virksomhedens ...',
+  },
+  {
+    path: '/viden/gpo',
+    title: 'Hvad er GPO? — forklaret enkelt | Alireza Makvandi',
+    description: 'GPO’er er regler, man sætter centralt i Active Directory, som automatisk gælder for brugere og computere.',
+  },
+  {
+    path: '/viden/vlan',
+    title: 'Hvad er VLAN? — forklaret enkelt | Alireza Makvandi',
+    description: 'Et VLAN opdeler ét fysisk netværk i flere adskilte, logiske netværk.',
+  },
+  {
+    path: '/viden/vpn',
+    title: 'Hvad er VPN? — forklaret enkelt | Alireza Makvandi',
+    description: 'En VPN skaber en krypteret “tunnel” mellem din enhed og et andet netværk — fx virksomhedens.',
+  },
+  {
+    path: '/viden/firewall',
+    title: 'Hvad er Firewall? — forklaret enkelt | Alireza Makvandi',
+    description: 'En firewall er netværkets dørmand: Den kigger på al trafik, der vil ind eller ud, og tillader kun det, reglerne siger god for.',
+  },
+  {
+    path: '/viden/backup',
+    title: 'Hvad er Backup? — forklaret enkelt | Alireza Makvandi',
+    description: 'Backup er en ekstra kopi af data, gemt et andet sted, så intet går tabt, hvis en disk dør, en fil slettes ved en fejl — eller virksomheden rammes af ransom...',
+  },
+  {
+    path: '/viden/virtualisering',
+    title: 'Hvad er Virtualisering? — forklaret enkelt | Alireza Makvandi',
+    description: 'Virtualisering lader én fysisk server køre mange “virtuelle” maskiner på samme tid.',
+  },
+  {
+    path: '/viden/lan-wlan',
+    title: 'Hvad er LAN & WLAN? — forklaret enkelt | Alireza Makvandi',
+    description: 'LAN er det kablede netværk i en bygning — computere forbundet via netværkskabler og switches.',
+  },
+  {
+    path: '/viden/pc-hardware',
+    title: 'Hvad er PC-hardware? — forklaret enkelt | Alireza Makvandi',
+    description: 'PC-hardware er computerens fysiske dele: CPU (hjernen), RAM (korttidshukommelsen), SSD (lageret), bundkort, strømforsyning og grafikkort.',
+  },
+  {
     path: '/experience/aarhustech',
     title: 'Aarhus Tech — Alireza Makvandi | IT-supporter',
     description: 'Skolepraktik og IT-supporteruddannelsen på Aarhus Tech — netværk, servere, sikkerhed og support.',

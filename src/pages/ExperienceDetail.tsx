@@ -4,6 +4,15 @@ import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
 import BrandCover from '../components/BrandCover'
+import { glossaryBySlug } from '../data/glossary'
+
+// Related glossary terms per experience (internal linking / SEO)
+const relatedViden: Record<string, string[]> = {
+  yousee: ['pc-hardware', 'lan-wlan'],
+  fourcom: ['pc-hardware', 'windows-server', 'backup'],
+  aarhustech: ['active-directory', 'dns', 'dhcp', 'windows-server'],
+  folkehuse: ['lan-wlan', 'pc-hardware'],
+}
 
 type ExpData = {
   company: string
@@ -212,6 +221,36 @@ export default function ExperienceDetail() {
             </motion.div>
           ))}
         </div>
+
+        {/* Related knowledge — internal links to the IT glossary */}
+        {relatedViden[slug!] && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-10"
+          >
+            <p className="uppercase tracking-widest text-[10px] mb-3" style={{ color: '#E8DDD0', opacity: 0.35, letterSpacing: '0.3em' }}>
+              {lang === 'da' ? 'Relateret viden' : 'Related knowledge'}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {relatedViden[slug!].map((vSlug) => {
+                const term = glossaryBySlug[vSlug]
+                if (!term) return null
+                return (
+                  <Link
+                    key={vSlug}
+                    to={`/viden/${vSlug}`}
+                    className="text-xs uppercase tracking-wider px-4 py-2 rounded-full border transition-opacity hover:opacity-100"
+                    style={{ color: '#E8DDD0', borderColor: `${term.accent}50`, background: `${term.accent}10`, opacity: 0.85, textDecoration: 'none' }}
+                  >
+                    {term.name} <span aria-hidden="true" style={{ color: term.accent }}>↗</span>
+                  </Link>
+                )
+              })}
+            </div>
+          </motion.div>
+        )}
       </div>
     </div>
   )

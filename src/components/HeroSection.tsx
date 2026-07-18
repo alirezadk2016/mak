@@ -111,6 +111,7 @@ export default function HeroSection() {
     { key: 'experience', label: tx.nav.experience, route: '' },
     { key: 'projects', label: tx.nav.projects, route: '' },
     { key: 'recommendations', label: tx.recommendations.navLabel, route: '/recommendations' },
+    { key: 'viden', label: tx.nav.viden, route: '/viden' },
     { key: 'contact', label: tx.nav.contact, route: '' },
   ]
 
@@ -135,7 +136,7 @@ export default function HeroSection() {
 
         {/* Desktop links */}
         <div className="hidden sm:flex gap-9">
-          {navItems.slice(0, 4).map(({ key, label, route }) => (
+          {navItems.slice(0, 5).map(({ key, label, route }) => (
             <a
               key={key}
               href={route || `#${key}`}

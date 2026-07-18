@@ -4,6 +4,7 @@ export const t = {
       about: 'Om mig',
       experience: 'Erfaring',
       projects: 'Projekter',
+      viden: 'Viden',
       contact: 'Kontakt',
     },
     hero: {
@@ -125,6 +126,7 @@ export const t = {
       about: 'About',
       experience: 'Experience',
       projects: 'Projects',
+      viden: 'Knowledge',
       contact: 'Contact',
     },
     hero: {
