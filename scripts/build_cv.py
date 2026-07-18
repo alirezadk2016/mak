@@ -111,7 +111,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
   <main class="main">
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">LEDIG · KAN TILTRÆDE STRAKS</span></div>
-    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg lavet support for rigtige brugere, fra plejehjem til skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Efter næsten fire år hos YouSee er jeg vant til at hjælpe kunder, også når der er travlt.</p>
+    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe folk, også når der er travlt.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
 
