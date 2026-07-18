@@ -111,7 +111,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
   <main class="main">
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">LEDIG · KAN TILTRÆDE STRAKS</span></div>
-    <p class="profile">Nyuddannet IT-supporter fra Aarhus Tech med praktisk erfaring i opsætning, fejlfinding og brugersupport på tværs af Windows, netværk og hardware. Gennem min svendeprøve har jeg opbygget en komplet netværksinfrastruktur med server, Active Directory og brugerstyring. Jeg kombinerer teknisk forståelse med næsten fire års erfaring fra kundeservice, og en rolig, løsningsorienteret tilgang til brugere på alle niveauer.</p>
+    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech og søger mit første faste job i IT. Jeg har arbejdet praktisk med Windows, netværk og hardware, og til min svendeprøve byggede jeg en komplet netværksinfrastruktur med Windows Server og Active Directory. Fra næsten fire år hos YouSee ved jeg, hvordan man hjælper kunder, også når der er travlt.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
 
@@ -149,8 +149,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-t">Fritidsjob &amp; frivilligt arbejde</div>
       <ul>
         <li>Lagermedarbejder via vikarbureauet Moment (Salling Group, Søstrene Grene).</li>
-        <li>Hjælpetræner i bokseklubben Champs Camp &amp; frisørassistent hos Frisør Katalina.</li>
-        <li>Bred erfaring med ansvar, samarbejde og kundekontakt i danske arbejdsmiljøer.</li>
+        <li>Hjælpetræner i bokseklubben Champs Camp og frisørassistent hos Frisør Katalina.</li>
       </ul>
     </div>
 
@@ -161,7 +160,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <ul>
         <li>Opsætning af komplet netværk med Windows Server, Active Directory, DNS/DHCP samt brugere og afdelinger.</li>
         <li>Dokumentation og fejlfinding af hele opsætningen.</li>
-        <li>Egne webprojekter, se portfolio på www.makvandi.dk.</li>
+        <li>Mine webprojekter kan ses på www.makvandi.dk.</li>
       </ul>
     </div>
 
@@ -169,15 +168,13 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
     <ul>
       <li>Rolig og struktureret, også når der er travlt og mange henvendelser.</li>
       <li>Vant til at forklare teknik i et forståeligt sprog for alle brugere.</li>
-      <li>Nysgerrig på ny teknologi og motiveret af at løse problemer.</li>
+      <li>Jeg kan godt lide at finde ud af, hvorfor noget ikke virker.</li>
     </ul>
 
     <div class="m-h">Referencer</div><div class="m-rule"></div>
     <ul>
-      <li>Skriftlig anbefaling fra <b>Aarhus Tech</b> (IT-supporteruddannelsen).</li>
-      <li>Skriftlig anbefaling fra <b>Fourcom ApS</b> (IT-support praktik).</li>
-      <li>Skriftlig anbefaling fra butikschef, <b>YouSee</b>.</li>
-      <li>Alle anbefalinger kan fremvises på forespørgsel.</li>
+      <li>Jeg har skriftlige anbefalinger fra <b>Aarhus Tech</b>, <b>Fourcom ApS</b> og min butikschef hos <b>YouSee</b>.</li>
+      <li>De kan fremvises på forespørgsel.</li>
     </ul>
   </main>
 </div>
