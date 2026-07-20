@@ -119,9 +119,9 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-y">2024 – 2026 <span class="j-org">· Aarhus Tech (del af uddannelsen)</span></div>
       <div class="j-t">Skolepraktik · IT Support</div>
       <ul>
-        <li>Bemandede skolens Tech Desk: hjalp elever med adgangskoder, wi-fi, printere og Windows.</li>
-        <li>Skiftede defekte dele og udleverede udstyr til elevprojekter, fx kabler og switches.</li>
-        <li>IT-support på plejehjem én dag om ugen samt teknisk support under eksamener.</li>
+        <li>Førstelinjesupport ved skolens Tech Desk: fejlfinding af wi-fi, login, printere og Windows.</li>
+        <li>Reparation af skolens computere og klargøring af netværksudstyr til elevprojekter.</li>
+        <li>IT-support på plejehjem én dag om ugen og teknisk support under eksamener.</li>
       </ul>
     </div>
 
