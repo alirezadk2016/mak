@@ -79,12 +79,21 @@ const experiences: Record<string, ExpData> = {
   },
   aarhustech: {
     company: 'Aarhus Tech',
-    role: { da: 'Eksamensvagt, IT Support', en: 'Exam Supervisor, IT Support' },
-    period: { da: 'Frivillig', en: 'Volunteer' },
+    role: { da: 'IT Support, Skolepraktik', en: 'IT Support, School Placement' },
+    period: { da: 'Skolepraktik', en: 'School Placement' },
     url: 'https://www.aarhustech.dk/',
     priceUrl: 'https://www.aarhustech.dk/',
     color: '#FF6B00',
     tasks: [
+      {
+        title: { da: 'Tech Desk', en: 'Tech Desk' },
+        items: [
+          { da: 'Bemandede skolens Tech Desk, hvor elever kom forbi med deres IT-problemer', en: 'Staffed the school\'s Tech Desk, where students dropped by with their IT problems' },
+          { da: 'Hjalp med adgangskoder, wi-fi, Windows-installation, opdateringer og printeropsætning', en: 'Helped with passwords, wi-fi, Windows installation, updates and printer setup' },
+          { da: 'Skiftede defekte dele i skolens computere', en: 'Replaced faulty parts in school computers' },
+          { da: 'Udleverede udstyr til elevprojekter, fx netværkskabler, switches og routere', en: 'Handed out equipment for student projects, e.g. network cables, switches and routers' },
+        ],
+      },
       {
         title: { da: 'Teknisk Support Under Eksamener', en: 'Technical Support During Exams' },
         items: [
