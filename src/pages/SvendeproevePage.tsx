@@ -28,7 +28,7 @@ const highlights = [
   { num: '10', label: { da: 'Brugere', en: 'Users' } },
   { num: '3', label: { da: 'Afdelinger', en: 'Departments' } },
   { num: '2', label: { da: 'Servere', en: 'Servers' } },
-  { num: 'A', label: { da: 'Karakter', en: 'Grade' } },
+  { num: '7', label: { da: 'Karakter', en: 'Grade' } },
 ]
 
 export default function SvendeproevePage() {
