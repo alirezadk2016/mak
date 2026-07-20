@@ -1,25 +1,37 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, ArrowUpRight, BookOpen } from 'lucide-react'
+import { ArrowLeft, ArrowUpRight, BookOpen, Globe } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
 import { glossary } from '../data/glossary'
 
 export default function GlossaryIndexPage() {
-  const { lang } = useLang()
+  const { lang, toggle } = useLang()
 
   return (
     <main style={{ background: '#0A0908', minHeight: '100vh' }} className="px-5 sm:px-10 md:px-16 py-10 sm:py-16">
 
-      {/* Back */}
-      <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
+      {/* Top bar: back + language */}
+      <motion.div
+        initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
+        className="flex items-center justify-between mb-10 sm:mb-14"
+      >
         <Link
           to="/"
-          className="inline-flex items-center gap-2 mb-10 sm:mb-14 transition-opacity hover:opacity-60"
+          className="inline-flex items-center gap-2 transition-opacity hover:opacity-60"
           style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {lang === 'da' ? 'Tilbage' : 'Back'}
         </Link>
+        <button
+          onClick={toggle}
+          className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-60"
+          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
+          aria-label={lang === 'da' ? 'Switch to English' : 'Skift til dansk'}
+        >
+          <Globe size={12} strokeWidth={1.5} />
+          {lang === 'da' ? 'EN' : 'DA'}
+        </button>
       </motion.div>
 
       <div className="max-w-4xl mx-auto">

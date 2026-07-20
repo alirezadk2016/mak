@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './contexts/LanguageContext'
+import ErrorBoundary from './components/ErrorBoundary'
+import TitleSync from './components/TitleSync'
 import CustomCursor from './components/CustomCursor'
 import ScrollToTop from './components/ScrollToTop'
 import HeroSection from './components/HeroSection'
@@ -34,8 +36,10 @@ function Home() {
 
 export default function App() {
   return (
+    <ErrorBoundary>
     <LanguageProvider>
       <ScrollToTop />
+      <TitleSync />
       <CustomCursor />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -52,5 +56,6 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </LanguageProvider>
+    </ErrorBoundary>
   )
 }
