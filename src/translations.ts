@@ -36,7 +36,7 @@ export const t = {
           num: '02',
           name: 'Software & OS',
           desc: 'Installation og konfiguration af Windows og Linux-operativsystemer. Softwareinstallation, opdateringer og fejlfinding. Brugertilpasning og administration af klient-OS.',
-          tags: ['Windows', 'Linux', 'VMware', 'Fejlfinding'],
+          tags: ['Windows', 'Microsoft 365', 'VMware', 'Fejlfinding'],
         },
         {
           num: '03',
@@ -158,7 +158,7 @@ export const t = {
           num: '02',
           name: 'Software & OS',
           desc: 'Installation and configuration of Windows and Linux operating systems. Software installation, updates and troubleshooting. User customization and client OS administration.',
-          tags: ['Windows', 'Linux', 'VMware', 'Troubleshooting'],
+          tags: ['Windows', 'Microsoft 365', 'VMware', 'Troubleshooting'],
         },
         {
           num: '03',

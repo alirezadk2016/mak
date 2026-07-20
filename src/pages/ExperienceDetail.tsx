@@ -90,6 +90,7 @@ const experiences: Record<string, ExpData> = {
         items: [
           { da: 'Bemandede skolens Tech Desk, hvor elever kom forbi med deres IT-problemer', en: 'Staffed the school\'s Tech Desk, where students dropped by with their IT problems' },
           { da: 'Hjalp med adgangskoder, wi-fi, Windows-installation, opdateringer og printeropsætning', en: 'Helped with passwords, wi-fi, Windows installation, updates and printer setup' },
+          { da: 'Support af Microsoft 365, bl.a. Outlook og Teams', en: 'Microsoft 365 support, including Outlook and Teams' },
           { da: 'Skiftede defekte dele i skolens computere', en: 'Replaced faulty parts in school computers' },
           { da: 'Udleverede udstyr til elevprojekter, fx netværkskabler, switches og routere', en: 'Handed out equipment for student projects, e.g. network cables, switches and routers' },
         ],

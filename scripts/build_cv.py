@@ -103,6 +103,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="sk-g">Support &amp; Hardware</div>
       <span class="chip">Brugersupport</span><span class="chip">Fejlfinding</span>
       <span class="chip">Hardware</span><span class="chip">Windows</span>
+      <span class="chip">Microsoft 365</span>
       <div class="sk-g">Web</div>
       <span class="chip">Web Design</span><span class="chip">SEO</span>
     </div>
