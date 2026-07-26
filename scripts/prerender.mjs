@@ -245,6 +245,35 @@ async function run() {
       let link = document.head.querySelector('link[rel="canonical"]')
       if (!link) { link = document.createElement('link'); link.setAttribute('rel', 'canonical'); document.head.appendChild(link) }
       link.setAttribute('href', url)
+
+      // Structured data for glossary articles: TechArticle + BreadcrumbList
+      if (route.path.startsWith('/viden/')) {
+        const termName = route.title.replace(/^Hvad er /, '').replace(/\?.*$/, '')
+        const addLd = (obj) => {
+          const s = document.createElement('script')
+          s.type = 'application/ld+json'
+          s.textContent = JSON.stringify(obj)
+          document.head.appendChild(s)
+        }
+        addLd({
+          '@context': 'https://schema.org',
+          '@type': 'TechArticle',
+          headline: `Hvad er ${termName}?`,
+          description: route.description,
+          inLanguage: 'da',
+          url,
+          author: { '@type': 'Person', name: 'Alireza Makvandi', url: 'https://www.makvandi.dk', jobTitle: 'IT-supporter' },
+        })
+        addLd({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.makvandi.dk/' },
+            { '@type': 'ListItem', position: 2, name: 'IT-ordbog', item: 'https://www.makvandi.dk/viden' },
+            { '@type': 'ListItem', position: 3, name: termName, item: url },
+          ],
+        })
+      }
       void SITE
     }, { route, url, SITE })
 

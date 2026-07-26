@@ -38,9 +38,11 @@ export default function App() {
   return (
     <ErrorBoundary>
     <LanguageProvider>
+      <a href="#indhold" className="skip-link">Spring til indhold</a>
       <ScrollToTop />
       <TitleSync />
       <CustomCursor />
+      <div id="indhold" tabIndex={-1} style={{ outline: 'none' }}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/experience/:slug" element={<ExperienceDetail />} />
@@ -55,6 +57,7 @@ export default function App() {
         <Route path="/viden/:slug" element={<GlossaryTermPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </div>
     </LanguageProvider>
     </ErrorBoundary>
   )

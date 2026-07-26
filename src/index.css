@@ -100,3 +100,21 @@ section[id] {
   font-size: 15px;
   letter-spacing: 0.01em;
 }
+
+/* Accessibility: skip-to-content link (visible only on keyboard focus) */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 200;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #C9A96E;
+  color: #0A0908;
+  font-size: 13px;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 12px;
+}
