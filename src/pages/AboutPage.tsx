@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
   ArrowLeft, MapPin, Calendar, Languages, Dumbbell,
-  Gamepad2, Cpu, Server, PenTool, Users, Sparkles, Download,
+  Gamepad2, Cpu, Server, PenTool, Users, Sparkles, Download, Globe,
 } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
@@ -40,7 +40,7 @@ const content = {
     ],
     expertiseLabel: 'Mine kompetencer',
     expertise: [
-      { icon: Server, title: 'IT & Netværk', desc: 'Windows Server, Active Directory, DNS/DHCP, Linux og netværksopsætning.' },
+      { icon: Server, title: 'IT & Netværk', desc: 'Windows Server, Active Directory, DNS/DHCP og netværksopsætning.' },
       { icon: Cpu, title: 'Hardware', desc: 'PC-opsætning, fejlfinding, reparation af komponenter og klargøring af arbejdsstationer.' },
       { icon: PenTool, title: 'Software & OS', desc: 'Installation og opsætning af Windows, software og fejlfinding på systemer.' },
       { icon: Users, title: 'Brugersupport', desc: 'Tålmodig og professionel support til brugere på alle tekniske niveauer.' },
@@ -87,7 +87,7 @@ const content = {
     ],
     expertiseLabel: 'My expertise',
     expertise: [
-      { icon: Server, title: 'IT & Networking', desc: 'Windows Server, Active Directory, DNS/DHCP, Linux and network setup.' },
+      { icon: Server, title: 'IT & Networking', desc: 'Windows Server, Active Directory, DNS/DHCP and network setup.' },
       { icon: Cpu, title: 'Hardware', desc: 'PC setup, troubleshooting, component repair and workstation preparation.' },
       { icon: PenTool, title: 'Software & OS', desc: 'Installation and setup of Windows, software and system troubleshooting.' },
       { icon: Users, title: 'User Support', desc: 'Patient, professional support for users at every technical level.' },
@@ -135,23 +135,35 @@ function Section({ label, children }: { label: string; children: React.ReactNode
 }
 
 export default function AboutPage() {
-  const { lang } = useLang()
+  const { lang, toggle } = useLang()
   const c = content[lang]
   const bio = t[lang].about.bio
 
   return (
     <main style={{ background: '#0A0908', minHeight: '100vh' }} className="px-5 sm:px-10 md:px-16 py-10 sm:py-16">
 
-      {/* Back */}
-      <motion.div initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
+      {/* Top bar: back + language */}
+      <motion.div
+        initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
+        className="flex items-center justify-between mb-10 sm:mb-14"
+      >
         <Link
           to="/"
-          className="inline-flex items-center gap-2 mb-10 sm:mb-14 transition-opacity hover:opacity-60"
+          className="inline-flex items-center gap-2 transition-opacity hover:opacity-60"
           style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {c.back}
         </Link>
+        <button
+          onClick={toggle}
+          className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-60"
+          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
+          aria-label={lang === 'da' ? 'Switch to English' : 'Skift til dansk'}
+        >
+          <Globe size={12} strokeWidth={1.5} />
+          {lang === 'da' ? 'EN' : 'DA'}
+        </button>
       </motion.div>
 
       <div className="max-w-4xl mx-auto">

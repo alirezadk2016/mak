@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { MotionConfig } from 'framer-motion'
 import { LanguageProvider } from './contexts/LanguageContext'
 import ErrorBoundary from './components/ErrorBoundary'
 import TitleSync from './components/TitleSync'
@@ -37,6 +38,7 @@ function Home() {
 export default function App() {
   return (
     <ErrorBoundary>
+    <MotionConfig reducedMotion="user">
     <LanguageProvider>
       <a href="#indhold" className="skip-link">Spring til indhold</a>
       <ScrollToTop />
@@ -59,6 +61,7 @@ export default function App() {
       </Routes>
       </div>
     </LanguageProvider>
+    </MotionConfig>
     </ErrorBoundary>
   )
 }

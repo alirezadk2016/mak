@@ -15,7 +15,7 @@ export const t = {
     },
     about: {
       heading: 'Om mig',
-      bio: 'Jeg er uddannet IT-supporter fra Aarhus Tech og søger nu et fast job, hvor jeg kan omsætte min uddannelse til praksis. Gennem de seneste ti år i Danmark har jeg opbygget erfaring fra bl.a. YouSee og en praktik hos Fourcom, hvor jeg har arbejdet med Windows, hardware, fejlfinding og brugersupport. Jeg er mødestabil, ansvarlig og nysgerrig, lærer hurtigt og gør altid mit bedste for at levere rolig og professionel support. Jeg trives med at hjælpe mennesker, uanset deres tekniske niveau, og er klar til at bidrage fra dag ét.',
+      bio: 'Jeg er uddannet IT-supporter fra Aarhus Tech og søger nu et fast job, hvor jeg kan omsætte min uddannelse til praksis. Gennem de seneste ti år i Danmark har jeg opbygget erfaring fra bl.a. YouSee og en praktik hos Fourcom, hvor jeg har arbejdet med Windows, hardware, fejlfinding og brugersupport. Jeg er mødestabil, ansvarlig og nysgerrig, lærer hurtigt og gør altid mit bedste for at levere rolig og professionel support. Jeg trives med at hjælpe mennesker, uanset deres tekniske niveau.',
       stats: [
         { num: '3+', label: 'Virksomheder' },
         { num: '2026', label: 'Aarhus Tech' },
