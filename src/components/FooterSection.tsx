@@ -104,7 +104,7 @@ function FlipCard({ item, lang }: { item: ContactItem; lang: 'da' | 'en' }) {
       target={item.href.startsWith('http') ? '_blank' : undefined}
       rel="noopener noreferrer"
       className="block relative"
-      style={{ perspective: '1000px', height: '160px' }}
+      style={{ perspective: '1000px', height: '136px' }}
       onMouseEnter={() => setFlipped(true)}
       onMouseLeave={() => setFlipped(false)}
     >

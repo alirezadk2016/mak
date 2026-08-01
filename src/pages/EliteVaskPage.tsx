@@ -48,7 +48,7 @@ const stack = ['Next.js 15', 'App Router', 'Vercel', 'Upstash Redis', 'Vercel Bl
 
 const highlights = [
   { num: '4', label: { da: 'Pakker', en: 'Packages' } },
-  { num: '∞', label: { da: 'Biltyper', en: 'Car Types' } },
+  { num: 'Online', label: { da: 'Booking', en: 'Booking' } },
   { num: 'Live', label: { da: 'Status', en: 'Status' } },
   { num: 'DK', label: { da: 'Marked', en: 'Market' } },
 ]
