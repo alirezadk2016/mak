@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { MotionConfig } from 'framer-motion'
 import { LanguageProvider } from './contexts/LanguageContext'
@@ -11,17 +12,17 @@ import AboutTeaser from './components/AboutTeaser'
 import ServicesSection from './components/ServicesSection'
 import ProjectsSection from './components/ProjectsSection'
 import ExperienceSection from './components/ExperienceSection'
-import RecommendationsPage from './pages/RecommendationsPage'
-import AboutPage from './pages/AboutPage'
-import ExperienceDetail from './pages/ExperienceDetail'
-import SvendeproevePage from './pages/SvendeproevePage'
-import EliteVaskPage from './pages/EliteVaskPage'
-import GamingPCPage from './pages/GamingPCPage'
-import MakPaintingPage from './pages/MakPaintingPage'
-import GlossaryIndexPage from './pages/GlossaryIndexPage'
-import ColophonPage from './pages/ColophonPage'
-import GlossaryTermPage from './pages/GlossaryTermPage'
-import NotFound from './pages/NotFound'
+const RecommendationsPage = lazy(() => import('./pages/RecommendationsPage'))
+const AboutPage = lazy(() => import('./pages/AboutPage'))
+const ExperienceDetail = lazy(() => import('./pages/ExperienceDetail'))
+const SvendeproevePage = lazy(() => import('./pages/SvendeproevePage'))
+const EliteVaskPage = lazy(() => import('./pages/EliteVaskPage'))
+const GamingPCPage = lazy(() => import('./pages/GamingPCPage'))
+const MakPaintingPage = lazy(() => import('./pages/MakPaintingPage'))
+const GlossaryIndexPage = lazy(() => import('./pages/GlossaryIndexPage'))
+const ColophonPage = lazy(() => import('./pages/ColophonPage'))
+const GlossaryTermPage = lazy(() => import('./pages/GlossaryTermPage'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 import FooterSection from './components/FooterSection'
 function Home() {
   return (
@@ -47,6 +48,7 @@ export default function App() {
       <TitleSync />
       <CustomCursor />
       <div id="indhold" tabIndex={-1} style={{ outline: 'none' }}>
+      <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/experience/:slug" element={<ExperienceDetail />} />
@@ -61,6 +63,7 @@ export default function App() {
         <Route path="/viden/:slug" element={<GlossaryTermPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
       </div>
     </LanguageProvider>
     </MotionConfig>
