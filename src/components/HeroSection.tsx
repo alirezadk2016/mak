@@ -100,10 +100,15 @@ export default function HeroSection() {
   const tx = t[lang]
   const [menuOpen, setMenuOpen] = useState(false)
 
-  // Lock body scroll while the mobile menu is open
+  // Lock body scroll while the mobile menu is open; close on Escape
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setMenuOpen(false) }
+    if (menuOpen) document.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = ''
+      document.removeEventListener('keydown', onKey)
+    }
   }, [menuOpen])
 
   const navItems = [

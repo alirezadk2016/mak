@@ -1,8 +1,7 @@
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Lightbulb, Wrench, HelpCircle, ArrowUpRight } from 'lucide-react'
+import { ArrowLeft, Lightbulb, Wrench, HelpCircle, ArrowUpRight, Globe } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
-import { Globe } from 'lucide-react'
 import { glossaryBySlug } from '../data/glossary'
 
 export default function GlossaryTermPage() {
