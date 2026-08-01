@@ -5,6 +5,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 import TitleSync from './components/TitleSync'
 import CustomCursor from './components/CustomCursor'
 import ScrollToTop from './components/ScrollToTop'
+import ScrollProgress from './components/ScrollProgress'
 import HeroSection from './components/HeroSection'
 import AboutTeaser from './components/AboutTeaser'
 import ServicesSection from './components/ServicesSection'
@@ -42,6 +43,7 @@ export default function App() {
     <LanguageProvider>
       <a href="#indhold" className="skip-link">Spring til indhold</a>
       <ScrollToTop />
+      <ScrollProgress />
       <TitleSync />
       <CustomCursor />
       <div id="indhold" tabIndex={-1} style={{ outline: 'none' }}>

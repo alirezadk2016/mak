@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Linkedin, Instagram, Phone } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
@@ -209,9 +209,20 @@ function MobileFlipCard({ item, lang }: { item: ContactItem; lang: 'da' | 'en' }
   )
 }
 
+function useAarhusTime() {
+  const fmt = () => new Intl.DateTimeFormat('da-DK', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Copenhagen' }).format(new Date())
+  const [time, setTime] = useState(fmt)
+  useEffect(() => {
+    const id = setInterval(() => setTime(fmt()), 30_000)
+    return () => clearInterval(id)
+  }, [])
+  return time
+}
+
 export default function FooterSection() {
   const { lang } = useLang()
   const tx = t[lang].footer
+  const aarhusTime = useAarhusTime()
 
   return (
     <section id="contact" style={{ background: '#0A0908', position: 'relative', zIndex: 20 }}>
@@ -269,12 +280,26 @@ export default function FooterSection() {
       {/* Bottom, personal colophon */}
       <div className="mt-16 border-t border-[#E8DDD0]/8">
         <div className="px-5 sm:px-10 md:px-16 py-10 flex flex-col items-center gap-3 text-center">
-          <span
-            className="serif-accent select-none"
-            style={{ color: '#C9A96E', fontSize: '34px', opacity: 0.9, transform: 'rotate(-3deg)', lineHeight: 1 }}
-            aria-hidden="true"
-          >
-            Alireza
+          <span className="inline-flex flex-col items-center select-none" aria-hidden="true">
+            <span
+              className="serif-accent"
+              style={{ color: '#C9A96E', fontSize: '34px', opacity: 0.9, transform: 'rotate(-3deg)', lineHeight: 1 }}
+            >
+              Alireza
+            </span>
+            <motion.svg
+              width="120" height="14" viewBox="0 0 120 14" fill="none"
+              style={{ marginTop: '2px', transform: 'rotate(-3deg)' }}
+            >
+              <motion.path
+                d="M4 9 C 30 2, 52 13, 74 7 S 108 4, 116 8"
+                stroke="#C9A96E" strokeWidth="1.4" strokeLinecap="round"
+                initial={{ pathLength: 0, opacity: 0 }}
+                whileInView={{ pathLength: 1, opacity: 0.7 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              />
+            </motion.svg>
           </span>
           <p style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em', maxWidth: '420px', lineHeight: 1.7 }}>
             {lang === 'da'
@@ -283,7 +308,7 @@ export default function FooterSection() {
           </p>
           <div className="flex items-center gap-4">
             <span style={{ color: '#E8DDD0', opacity: 0.18, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
-              © {new Date().getFullYear()} Alireza Makvandi · Aarhus
+              © {new Date().getFullYear()} Alireza Makvandi · Aarhus, kl. {aarhusTime}
             </span>
             <Link to="/kolofon" className="transition-opacity hover:opacity-60" style={{ color: '#C9A96E', opacity: 0.55, fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase', textDecoration: 'none' }}>
               {lang === 'da' ? 'Om dette website' : 'About this site'} →
