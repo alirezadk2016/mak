@@ -127,7 +127,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
     </div>
 
     <div class="job">
-      <div class="j-y">2024 <span class="j-org">· Fourcom ApS</span></div>
+      <div class="j-y">Aug – Okt 2024 <span class="j-org">· Fourcom ApS</span></div>
       <div class="j-t">IT-support · Praktik</div>
       <ul>
         <li>Opsætning og installation af Windows samt klargøring af arbejdsstationer.</li>
