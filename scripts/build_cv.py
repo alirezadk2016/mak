@@ -150,6 +150,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-y">Sideløbende med studiet <span class="j-org">· Fritidsjob</span></div>
       <div class="j-t">Fritidsjob &amp; frivilligt arbejde</div>
       <ul>
+        <li>Servicemedarbejder hos Palmgren Erhvervsrengøring i Risskov (2025 – 2026).</li>
         <li>Lagermedarbejder via vikarbureauet Moment (Salling Group, Søstrene Grene).</li>
         <li>Hjælpetræner i bokseklubben Champs Camp og frisørassistent hos Frisør Katalina.</li>
       </ul>
