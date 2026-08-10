@@ -74,7 +74,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="c-item"><span class="c-ic">{IC_PHONE}</span><div><div class="c-k">Telefon</div><a class="c-v" href="tel:+4591488843">+45 91 48 88 43</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_MAIL}</span><div><div class="c-k">Email</div><a class="c-v" href="mailto:alirezadk2016@gmail.com">alirezadk2016@gmail.com</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_WEB}</span><div><div class="c-k">Web</div><a class="c-v" href="https://www.makvandi.dk">www.makvandi.dk</a></div></div>
-      <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" href="https://dk.linkedin.com/in/alireza-makvandi-446704301">linkedin.com/in/alireza-<br>makvandi-446704301</a></div></div>
+      <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" style="word-break:break-all;font-size:7.5pt" href="https://dk.linkedin.com/in/alireza-makvandi-446704301">linkedin.com/in/alireza-makvandi-446704301</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_PIN}</span><div><div class="c-k">Adresse</div><div class="c-v">Aarhus N, 8200</div></div></div>
 
       <div class="s-h">Uddannelse</div><div class="s-rule"></div>
@@ -110,7 +110,8 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
 
   <main class="main">
     <div class="name">Alireza Makvandi</div>
-    <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">KAN TILTRÆDE STRAKS</span></div>
+    <div class="role">IT-Supporter · Aarhus</div>
+    <div style="margin:1.5mm 0 0"><span class="avail">Kan tiltræde straks</span></div>
     <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe folk, også når der er travlt. Jeg søger en stilling som IT-supporter eller servicedesk-medarbejder.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
@@ -172,7 +173,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
 
     <div class="m-h">Referencer</div><div class="m-rule"></div>
     <ul>
-      <li>Skriftlige anbefalinger fra <b>Aarhus Tech</b>, <b>Fourcom ApS</b> og <b>YouSee</b> vedlægges gerne.</li>
+      <li>Referencer og skriftlige anbefalinger fra <b>Aarhus Tech</b>, <b>Fourcom ApS</b> og <b>YouSee</b> kan fremvises på forespørgsel.</li>
     </ul>
   </main>
 </div>
