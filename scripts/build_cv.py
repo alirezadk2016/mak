@@ -46,15 +46,15 @@ a.c-v {{ color:#b9c4cd; }}
 .qr {{ width:17mm; height:17mm; background:#fff; padding:1mm; border-radius:2mm; }}
 .qr-txt {{ font-size:8pt; color:#c9a96e; font-weight:600; line-height:1.4; }}
 /* Main */
-.main {{ flex:1; padding:11mm 11mm 10mm; }}
+.main {{ flex:1; padding:10mm 11mm 8mm; }}
 .name {{ font-size:26pt; font-weight:800; letter-spacing:-.5px; color:#12212e; line-height:1; }}
 .role {{ font-size:10.5pt; color:#c9a96e; font-weight:600; margin-top:1.5mm; letter-spacing:.3px; }}
 .avail {{ font-size:7.5pt; color:#2f7d4f; font-weight:700; white-space:nowrap; background:#e8f3ec; border:1px solid #bfe0cc; border-radius:20px; padding:1mm 2.5mm; letter-spacing:.2px; }}
 .profile {{ font-size:9pt; line-height:1.55; color:#3a3a3a; margin-top:3mm; }}
-.m-h {{ font-size:13.5pt; font-weight:800; color:#12212e; margin:3.5mm 0 1mm; }}
-.m-rule {{ height:2px; width:100%; background:#e4e0d8; margin-bottom:3mm; position:relative; }}
+.m-h {{ font-size:13.5pt; font-weight:800; color:#12212e; margin:2.8mm 0 1mm; }}
+.m-rule {{ height:2px; width:100%; background:#e4e0d8; margin-bottom:2.4mm; position:relative; }}
 .m-rule:after {{ content:''; position:absolute; left:0; top:0; width:20mm; height:2px; background:#c9a96e; }}
-.job {{ position:relative; padding-left:6mm; margin-bottom:3.3mm; }}
+.job {{ position:relative; padding-left:6mm; margin-bottom:2.8mm; }}
 .job:before {{ content:''; position:absolute; left:0; top:1.5mm; width:2.5mm; height:2.5mm; border-radius:50%; background:#c9a96e; }}
 .job:after {{ content:''; position:absolute; left:1.1mm; top:4mm; bottom:-3mm; width:1px; background:#e0dcd3; }}
 .job:last-child:after {{ display:none; }}
