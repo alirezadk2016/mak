@@ -89,7 +89,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="edu-s">Nuuday A/S (YouSee)</div>
       <div class="edu-y">2016</div>
       <div class="edu-t">Sprogskole</div>
-      <div class="edu-s">Dansk som nyt sprog</div>
+      <div class="edu-s">Dansk som andetsprog</div>
 
       <div class="s-h">Sprog</div><div class="s-rule"></div>
       <div class="lang-row"><b>Persisk</b><span>Modersmål</span></div>
@@ -112,22 +112,22 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-Supporter · Aarhus</div>
     <div style="margin:1.5mm 0 0"><span class="avail">Kan tiltræde straks</span></div>
-    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe folk, også når der er travlt. Jeg søger en stilling som IT-supporter eller servicedesk-medarbejder.</p>
+    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe mennesker, også når der er travlt. Jeg søger en stilling som IT-supporter eller servicedesk-medarbejder.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
 
     <div class="job">
       <div class="j-y">2024 – 2026 <span class="j-org">· Aarhus Tech (del af uddannelsen)</span></div>
-      <div class="j-t">Skolepraktik · IT Support</div>
+      <div class="j-t">Skoleoplæring · IT-support</div>
       <ul>
-        <li>Førstelinjesupport ved skolens Tech Desk, typisk 5-20 henvendelser om dagen: wi-fi, login, printere og Windows.</li>
+        <li>Førstelinjesupport ved skolens Tech Desk, typisk 5-20 henvendelser om dagen: Wi-Fi, login, printere og Windows.</li>
         <li>Reparation af skolens computere og klargøring af netværksudstyr til elevprojekter.</li>
         <li>Ydede IT-support på plejehjem én dag om ugen i flere måneder samt teknisk support under eksamener.</li>
       </ul>
     </div>
 
     <div class="job">
-      <div class="j-y">Aug – Okt 2024 <span class="j-org">· Fourcom ApS</span></div>
+      <div class="j-y">aug. – okt. 2024 <span class="j-org">· Fourcom ApS</span></div>
       <div class="j-t">IT-support · Praktik</div>
       <ul>
         <li>Klargjorde arbejdsstationer med Windows-installation, ofte over 40 maskiner om dagen.</li>
@@ -138,19 +138,19 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
 
     <div class="job">
       <div class="j-y">2017 – 2021 <span class="j-org">· YouSee / TDC</span></div>
-      <div class="j-t">Kundeservice &amp; Administration · IGU og deltid</div>
+      <div class="j-t">Kundeservice &amp; Administration · IGU-forløb og deltidsjob</div>
       <ul>
         <li>Kundeservice, drift og administration i næsten fire år.</li>
         <li>Bogføring og praktiske IT-opgaver i butikken.</li>
-        <li>Modtog officiel anbefaling fra butikschefen.</li>
+        <li>Modtog skriftlig anbefaling fra butikschefen.</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="j-y">Sideløbende med studiet <span class="j-org">· Fritidsjob</span></div>
-      <div class="j-t">Fritidsjob &amp; frivilligt arbejde</div>
+      <div class="j-t">Servicejob &amp; lagerarbejde</div>
       <ul>
-        <li>Servicejob og lagerarbejde sideløbende med studiet, bl.a. hos Palmgren Erhvervsrengøring og via vikarbureauet Moment.</li>
+        <li>Bl.a. hos Palmgren Erhvervsrengøring og vikarbureauet Moment (Salling Group, Søstrene Grene).</li>
       </ul>
     </div>
 
