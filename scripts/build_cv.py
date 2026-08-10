@@ -120,9 +120,9 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-y">2024 – 2026 <span class="j-org">· Aarhus Tech (del af uddannelsen)</span></div>
       <div class="j-t">Skolepraktik · IT Support</div>
       <ul>
-        <li>Førstelinjesupport ved skolens Tech Desk: fejlfinding af wi-fi, login, printere og Windows.</li>
+        <li>Førstelinjesupport ved skolens Tech Desk, typisk 5-20 henvendelser om dagen: wi-fi, login, printere og Windows.</li>
         <li>Reparation af skolens computere og klargøring af netværksudstyr til elevprojekter.</li>
-        <li>IT-support på plejehjem én dag om ugen og teknisk support under eksamener.</li>
+        <li>IT-support på plejehjem hver onsdag gennem flere måneder samt teknisk support under eksamener, også på andre skoler.</li>
       </ul>
     </div>
 
@@ -130,8 +130,8 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-y">Aug – Okt 2024 <span class="j-org">· Fourcom ApS</span></div>
       <div class="j-t">IT-support · Praktik</div>
       <ul>
-        <li>Opsætning og installation af Windows samt klargøring af arbejdsstationer.</li>
-        <li>Fejlfinding og reparation af hardware og komponenter.</li>
+        <li>Klargjorde arbejdsstationer med Windows-installation, op til ca. 100 maskiner om dagen.</li>
+        <li>Fejlfinding og reparation af hardware, typisk 3-10 maskiner om dagen.</li>
         <li>Brugersupport og teknisk dokumentation.</li>
       </ul>
     </div>
