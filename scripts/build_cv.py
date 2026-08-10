@@ -74,7 +74,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="c-item"><span class="c-ic">{IC_PHONE}</span><div><div class="c-k">Telefon</div><a class="c-v" href="tel:+4591488843">+45 91 48 88 43</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_MAIL}</span><div><div class="c-k">Email</div><a class="c-v" href="mailto:alirezadk2016@gmail.com">alirezadk2016@gmail.com</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_WEB}</span><div><div class="c-k">Web</div><a class="c-v" href="https://www.makvandi.dk">www.makvandi.dk</a></div></div>
-      <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" href="https://dk.linkedin.com/in/alireza-makvandi-446704301">Alireza Makvandi</a></div></div>
+      <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" href="https://dk.linkedin.com/in/alireza-makvandi-446704301">linkedin.com/in/alireza-<br>makvandi-446704301</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_PIN}</span><div><div class="c-k">Adresse</div><div class="c-v">Aarhus N, 8200</div></div></div>
 
       <div class="s-h">Uddannelse</div><div class="s-rule"></div>
@@ -97,22 +97,21 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="lang-row"><b>Engelsk</b><span>Flydende</span></div>
 
       <div class="s-h">Kompetencer</div><div class="s-rule"></div>
+      <div class="sk-g">Support</div>
+      <span class="chip">Førstelinjesupport</span><span class="chip">Fejlfinding</span>
+      <span class="chip">Windows 10/11</span><span class="chip">Microsoft 365</span>
+      <span class="chip">Hardware</span>
       <div class="sk-g">Systemer &amp; Netværk</div>
       <span class="chip">Windows Server</span><span class="chip">Active Directory</span>
-      <span class="chip">DNS / DHCP</span><span class="chip">Netværk</span>
-      <div class="sk-g">Support &amp; Hardware</div>
-      <span class="chip">Brugersupport</span><span class="chip">Fejlfinding</span>
-      <span class="chip">Hardware</span><span class="chip">Windows</span>
-      <span class="chip">Microsoft 365</span>
-      <div class="sk-g">Web</div>
-      <span class="chip">Web Design</span><span class="chip">SEO</span>
+      <span class="chip">DNS / DHCP</span><span class="chip">TCP/IP</span>
+      <span class="chip">LAN / Wi-Fi</span>
     </div>
   </aside>
 
   <main class="main">
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">KAN TILTRÆDE STRAKS</span></div>
-    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe folk, også når der er travlt.</p>
+    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe folk, også når der er travlt. Jeg søger en stilling som IT-supporter eller servicedesk-medarbejder.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
 
@@ -150,9 +149,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-y">Sideløbende med studiet <span class="j-org">· Fritidsjob</span></div>
       <div class="j-t">Fritidsjob &amp; frivilligt arbejde</div>
       <ul>
-        <li>Servicemedarbejder hos Palmgren Erhvervsrengøring i Risskov (2025 – 2026).</li>
-        <li>Lagermedarbejder via vikarbureauet Moment (Salling Group, Søstrene Grene).</li>
-        <li>Hjælpetræner i bokseklubben Champs Camp og frisørassistent hos Frisør Katalina.</li>
+        <li>Servicejob og lagerarbejde sideløbende med studiet, bl.a. hos Palmgren Erhvervsrengøring og via vikarbureauet Moment.</li>
       </ul>
     </div>
 
@@ -175,8 +172,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
 
     <div class="m-h">Referencer</div><div class="m-rule"></div>
     <ul>
-      <li>Jeg har skriftlige anbefalinger fra <b>Aarhus Tech</b>, <b>Fourcom ApS</b> og min butikschef hos <b>YouSee</b>.</li>
-      <li>De kan fremvises på forespørgsel.</li>
+      <li>Skriftlige anbefalinger fra <b>Aarhus Tech</b>, <b>Fourcom ApS</b> og <b>YouSee</b> vedlægges gerne.</li>
     </ul>
   </main>
 </div>
