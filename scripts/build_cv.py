@@ -74,7 +74,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="c-item"><span class="c-ic">{IC_PHONE}</span><div><div class="c-k">Telefon</div><a class="c-v" href="tel:+4591488843">+45 91 48 88 43</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_MAIL}</span><div><div class="c-k">Email</div><a class="c-v" href="mailto:alirezadk2016@gmail.com">alirezadk2016@gmail.com</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_WEB}</span><div><div class="c-k">Web</div><a class="c-v" href="https://www.makvandi.dk">www.makvandi.dk</a></div></div>
-      <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" style="word-break:break-all;font-size:7.5pt" href="https://dk.linkedin.com/in/alireza-makvandi-446704301">linkedin.com/in/alireza-makvandi-446704301</a></div></div>
+      <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" style="word-break:normal;overflow-wrap:break-word;font-size:7.5pt" href="https://dk.linkedin.com/in/alireza-makvandi-446704301">linkedin.com/in/<wbr>alireza-makvandi-<wbr>446704301</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_PIN}</span><div><div class="c-k">Adresse</div><div class="c-v">Aarhus N, 8200</div></div></div>
 
       <div class="s-h">Uddannelse</div><div class="s-rule"></div>
@@ -122,7 +122,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <ul>
         <li>Førstelinjesupport ved skolens Tech Desk, typisk 5-20 henvendelser om dagen: wi-fi, login, printere og Windows.</li>
         <li>Reparation af skolens computere og klargøring af netværksudstyr til elevprojekter.</li>
-        <li>IT-support på plejehjem hver onsdag i flere måneder og teknisk support under eksamener.</li>
+        <li>Ydede IT-support på plejehjem én dag om ugen i flere måneder samt teknisk support under eksamener.</li>
       </ul>
     </div>
 
@@ -168,7 +168,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
     <ul>
       <li>Rolig og struktureret, også når der er travlt og mange henvendelser.</li>
       <li>Vant til at forklare teknik i et forståeligt sprog for alle brugere.</li>
-      <li>Jeg kan godt lide at finde ud af, hvorfor noget ikke virker.</li>
+      <li>Analytisk tilgang: jeg kan godt lide at finde ud af, hvorfor noget ikke virker.</li>
     </ul>
 
     <div class="m-h">Referencer</div><div class="m-rule"></div>
