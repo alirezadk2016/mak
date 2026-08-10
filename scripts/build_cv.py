@@ -122,7 +122,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <ul>
         <li>Førstelinjesupport ved skolens Tech Desk, typisk 5-20 henvendelser om dagen: wi-fi, login, printere og Windows.</li>
         <li>Reparation af skolens computere og klargøring af netværksudstyr til elevprojekter.</li>
-        <li>IT-support på plejehjem hver onsdag gennem flere måneder samt teknisk support under eksamener, også på andre skoler.</li>
+        <li>IT-support på plejehjem hver onsdag i flere måneder og teknisk support under eksamener.</li>
       </ul>
     </div>
 
@@ -173,7 +173,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
 
     <div class="m-h">Referencer</div><div class="m-rule"></div>
     <ul>
-      <li>Referencer og skriftlige anbefalinger fra <b>Aarhus Tech</b>, <b>Fourcom ApS</b> og <b>YouSee</b> kan fremvises på forespørgsel.</li>
+      <li>Skriftlige anbefalinger fra <b>Aarhus Tech</b>, <b>Fourcom ApS</b> og <b>YouSee</b> kan fremvises på forespørgsel.</li>
     </ul>
   </main>
 </div>
