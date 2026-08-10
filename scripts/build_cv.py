@@ -86,7 +86,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="edu-s">Aarhus HF &amp; VUC</div>
       <div class="edu-y">2018 – 2020</div>
       <div class="edu-t">IGU</div>
-      <div class="edu-s">Nuuday A/S</div>
+      <div class="edu-s">Nuuday A/S (YouSee)</div>
       <div class="edu-y">2016</div>
       <div class="edu-t">Sprogskole</div>
       <div class="edu-s">Dansk som nyt sprog</div>
@@ -111,7 +111,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
 
   <main class="main">
     <div class="name">Alireza Makvandi</div>
-    <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">LEDIG · KAN TILTRÆDE STRAKS</span></div>
+    <div class="role">IT-supporter · Aarhus &nbsp;<span class="avail">KAN TILTRÆDE STRAKS</span></div>
     <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe folk, også når der er travlt.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
@@ -138,7 +138,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
 
     <div class="job">
       <div class="j-y">2017 – 2021 <span class="j-org">· YouSee / TDC</span></div>
-      <div class="j-t">Studentermedhjælper · Kundeservice</div>
+      <div class="j-t">Kundeservice &amp; Administration · IGU og deltid</div>
       <ul>
         <li>Kundeservice, drift og administration i næsten fire år.</li>
         <li>Bogføring og praktiske IT-opgaver i butikken.</li>
