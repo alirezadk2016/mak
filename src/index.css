@@ -11,6 +11,33 @@ html {
 html, body, #root {
   background: #0A0908;
   font-family: 'Inter', 'Kanit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  accent-color: #C9A96E;
+}
+
+/* Cinematic film grain — barely-there texture that kills the "flat digital" look */
+body::after {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 90;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion: no-preference) {
+  body::after { animation: grainShift 9s steps(6) infinite; }
+}
+@keyframes grainShift {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-2%, 1%); }
+  40% { transform: translate(1%, -2%); }
+  60% { transform: translate(-1%, 2%); }
+  80% { transform: translate(2%, -1%); }
 }
 
 section[id] {
@@ -59,10 +86,39 @@ section[id] {
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  background: rgba(10, 9, 8, 0.82);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  background: rgba(10, 9, 8, 0.78);
   border-bottom: 1px solid rgba(232, 224, 213, 0.07);
+}
+/* Gold hairline under the nav — catches the eye without shouting */
+.site-nav::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(to right, transparent 5%, rgba(201, 169, 110, 0.35) 50%, transparent 95%);
+  pointer-events: none;
+}
+/* Nav links: gold underline grows from center on hover */
+.site-nav a {
+  position: relative;
+}
+.site-nav a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #C9A96E;
+  transition: width 0.28s cubic-bezier(0.22, 0.8, 0.3, 1), left 0.28s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+.site-nav a:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 @media (min-width: 640px) {
@@ -89,6 +145,14 @@ section[id] {
   box-shadow:
     0 24px 48px -16px rgba(0, 0, 0, 0.65),
     0 2px 6px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  transition: box-shadow 0.45s ease;
+}
+.polaroid:hover {
+  box-shadow:
+    0 32px 64px -16px rgba(0, 0, 0, 0.75),
+    0 4px 10px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(201, 169, 110, 0.25),
     inset 0 0 0 1px rgba(255, 255, 255, 0.25);
 }
 .polaroid-caption {
