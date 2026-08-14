@@ -43,7 +43,7 @@ export default function BrandCover({ name, sub, accent, className = '', compact 
           color: accent,
           opacity: 0.07,
           fontSize: compact ? '130px' : '260px',
-          fontFamily: 'Kanit, sans-serif',
+          fontFamily: "'Space Grotesk', sans-serif",
           right: compact ? '-16px' : '-30px',
           bottom: compact ? '-36px' : '-70px',
         }}
@@ -57,7 +57,7 @@ export default function BrandCover({ name, sub, accent, className = '', compact 
           className={`rounded-full flex items-center justify-center ${compact ? 'w-10 h-10' : 'w-14 h-14'}`}
           style={{ border: `1px solid ${accent}66`, background: `${accent}14` }}
         >
-          <span style={{ color: accent, fontSize: compact ? '16px' : '22px', fontWeight: 600, fontFamily: 'Kanit, sans-serif' }}>
+          <span style={{ color: accent, fontSize: compact ? '16px' : '22px', fontWeight: 600, fontFamily: "'Space Grotesk', sans-serif" }}>
             {initial}
           </span>
         </div>

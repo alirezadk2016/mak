@@ -82,7 +82,7 @@ export default function AboutTeaser() {
               <div className="flex gap-8 sm:gap-12 mb-10 pb-10 border-b" style={{ borderColor: 'rgba(232,224,213,0.08)' }}>
                 {c.stats.map((s) => (
                   <div key={s.label} className="flex flex-col gap-1">
-                    <span className="font-black leading-none" style={{ color: '#E8DDD0', fontSize: 'clamp(1.6rem, 4vw, 2.6rem)', fontFamily: 'Kanit, sans-serif' }}>
+                    <span className="font-black leading-none" style={{ color: '#E8DDD0', fontSize: 'clamp(1.6rem, 4vw, 2.6rem)', fontFamily: "'Space Grotesk', sans-serif" }}>
                       {s.num}
                     </span>
                     <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '9px', letterSpacing: '0.22em', textTransform: 'uppercase' }}>

@@ -10,7 +10,7 @@ html {
 
 html, body, #root {
   background: #0A0908;
-  font-family: 'Inter', 'Kanit', sans-serif;
+  font-family: 'Manrope', 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -69,7 +69,8 @@ section[id] {
 
 /* Display heading: warm metallic gradient with a slow gold sheen drifting across */
 .hero-heading {
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
   background: linear-gradient(105deg, #EDE8DF 0%, #B8AD9C 32%, #E8DCC4 46%, #C9A96E 50%, #E8DCC4 54%, #9A8F80 70%, #7A7168 100%);
   background-size: 250% 100%;
   -webkit-background-clip: text;

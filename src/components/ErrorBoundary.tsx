@@ -22,7 +22,7 @@ export default class ErrorBoundary extends Component<Props, State> {
             fontFamily: 'Inter, sans-serif',
           }}
         >
-          <span style={{ fontSize: '44px', fontWeight: 900, fontFamily: 'Kanit, sans-serif' }}>Ups.</span>
+          <span style={{ fontSize: '44px', fontWeight: 700, fontFamily: "'Space Grotesk', sans-serif" }}>Ups.</span>
           <p style={{ opacity: 0.55, maxWidth: '380px', lineHeight: 1.7, fontWeight: 300 }}>
             Noget gik galt. Prøv at genindlæse siden.
           </p>

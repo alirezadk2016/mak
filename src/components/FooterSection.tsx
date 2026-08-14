@@ -253,7 +253,7 @@ export default function FooterSection() {
         >
           {tx.heading.split('\n').map((line, i) => (
             i === 0 ? (
-              <span key={i} className="block" style={{ fontWeight: 800, fontFamily: 'Kanit, sans-serif' }}>{line}</span>
+              <span key={i} className="block" style={{ fontWeight: 700, fontFamily: "'Space Grotesk', sans-serif" }}>{line}</span>
             ) : (
               <span key={i} className="serif-accent block" style={{ color: '#C9A96E', fontSize: '1.08em' }}>{line}</span>
             )
