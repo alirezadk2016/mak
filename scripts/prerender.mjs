@@ -246,15 +246,31 @@ async function run() {
       if (!link) { link = document.createElement('link'); link.setAttribute('rel', 'canonical'); document.head.appendChild(link) }
       link.setAttribute('href', url)
 
-      // Structured data for glossary articles: TechArticle + BreadcrumbList
+      // Structured data
+      const addLd = (obj) => {
+        const s = document.createElement('script')
+        s.type = 'application/ld+json'
+        s.textContent = JSON.stringify(obj)
+        document.head.appendChild(s)
+      }
+
+      // BreadcrumbList on every inner page (3 levels for glossary terms)
+      if (route.path !== '/') {
+        const crumbs = [{ '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.makvandi.dk/' }]
+        if (route.path.startsWith('/viden/')) {
+          const termName = route.title.replace(/^Hvad er /, '').replace(/\?.*$/, '')
+          crumbs.push({ '@type': 'ListItem', position: 2, name: 'IT-ordbog', item: 'https://www.makvandi.dk/viden' })
+          crumbs.push({ '@type': 'ListItem', position: 3, name: termName, item: url })
+        } else {
+          const pageName = route.title.split(/\s+[–|]\s+/)[0]
+          crumbs.push({ '@type': 'ListItem', position: 2, name: pageName, item: url })
+        }
+        addLd({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs })
+      }
+
+      // Glossary articles: TechArticle + FAQPage (built from the rendered Q&A sections)
       if (route.path.startsWith('/viden/')) {
         const termName = route.title.replace(/^Hvad er /, '').replace(/\?.*$/, '')
-        const addLd = (obj) => {
-          const s = document.createElement('script')
-          s.type = 'application/ld+json'
-          s.textContent = JSON.stringify(obj)
-          document.head.appendChild(s)
-        }
         addLd({
           '@context': 'https://schema.org',
           '@type': 'TechArticle',
@@ -264,15 +280,22 @@ async function run() {
           url,
           author: { '@type': 'Person', name: 'Alireza Makvandi', url: 'https://www.makvandi.dk', jobTitle: 'IT-supporter' },
         })
-        addLd({
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Hjem', item: 'https://www.makvandi.dk/' },
-            { '@type': 'ListItem', position: 2, name: 'IT-ordbog', item: 'https://www.makvandi.dk/viden' },
-            { '@type': 'ListItem', position: 3, name: termName, item: url },
-          ],
+        const qa = []
+        document.querySelectorAll('section').forEach((sec) => {
+          const h = sec.querySelector('h2')
+          const p = sec.querySelector('p')
+          if (h && p && p.textContent.trim().length > 40) {
+            const q = h.textContent.trim().replace(/det\??$/i, `${termName}?`).replace(/\?\?$/, '?')
+            qa.push({
+              '@type': 'Question',
+              name: q,
+              acceptedAnswer: { '@type': 'Answer', text: p.textContent.trim() },
+            })
+          }
         })
+        if (qa.length >= 2) {
+          addLd({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: qa })
+        }
       }
       void SITE
     }, { route, url, SITE })
