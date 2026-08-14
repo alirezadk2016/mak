@@ -216,11 +216,8 @@ export default function HeroSection() {
 
       <section className="min-h-screen flex flex-col overflow-x-clip relative" style={{ background: '#0A0908', paddingTop: '56px' }}>
 
-        {/* Subtle warm vignette, no orbs */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse 70% 60% at 65% 10%, rgba(160,130,80,0.05) 0%, transparent 60%)' }}
-        />
+        {/* Breathing gold aurora */}
+        <div className="hero-aurora" aria-hidden="true" />
         {/* Dot grid texture */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -288,8 +285,8 @@ export default function HeroSection() {
                 href="/cv-alireza-makvandi.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full"
-                style={{ color: '#E8DDD0', padding: '11px 18px', fontSize: '10px', letterSpacing: '0.16em', textTransform: 'uppercase', fontWeight: 500, border: '1px solid rgba(201,169,110,0.45)' }}
+                className="btn-outline-gold inline-flex items-center gap-1.5 rounded-full"
+                style={{ padding: '11px 18px', fontSize: '10px', letterSpacing: '0.16em', textTransform: 'uppercase', fontWeight: 500 }}
               >
                 <Download size={12} strokeWidth={1.8} style={{ color: '#C9A96E' }} />
                 CV
@@ -394,10 +391,7 @@ export default function HeroSection() {
                     'Aarhus Tech',
                     'YouSee · Fourcom',
                   ].map((chip) => (
-                    <span
-                      key={chip}
-                      style={{ color: '#E8DDD0', opacity: 0.5, fontSize: '10px', letterSpacing: '0.16em', textTransform: 'uppercase', padding: '6px 14px', border: '1px solid rgba(232,224,213,0.12)', borderRadius: '100px' }}
-                    >
+                    <span key={chip} className="hero-chip">
                       {chip}
                     </span>
                   ))}
@@ -411,8 +405,8 @@ export default function HeroSection() {
                     href="/cv-alireza-makvandi.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full transition-colors duration-300 hover:opacity-70"
-                    style={{ color: '#E8DDD0', padding: '12px 22px', fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 500, border: '1px solid rgba(201,169,110,0.45)' }}
+                    className="btn-outline-gold inline-flex items-center gap-2 rounded-full"
+                    style={{ padding: '12px 22px', fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 500 }}
                   >
                     <Download size={13} strokeWidth={1.8} style={{ color: '#C9A96E' }} />
                     {tx.hero.downloadCv}
