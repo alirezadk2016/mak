@@ -264,7 +264,7 @@ export default function HeroSection() {
             >
               <AnimatedHeading key={lang} text="Alireza" />
             </div>
-            <div aria-hidden="true" className="serif-accent leading-none" style={{ color: '#E8DDD0', fontSize: '14.5vw', marginTop: '-0.02em' }}>
+            <div aria-hidden="true" className="hero-heading uppercase tracking-tight leading-none" style={{ fontSize: '11.5vw', fontWeight: 500, marginTop: '0.04em', letterSpacing: '0.01em' }}>
               Makvandi
             </div>
           </div>
@@ -364,8 +364,8 @@ export default function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.32, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
                   aria-hidden="true"
-                  className="serif-accent leading-[1.05]"
-                  style={{ color: '#E8DDD0', fontSize: 'clamp(2.9rem, 6.6vw, 6.4rem)', marginTop: '-0.06em' }}
+                  className="hero-heading uppercase leading-[1.02]"
+                  style={{ fontSize: 'clamp(2.3rem, 5.2vw, 5.1rem)', fontWeight: 500, letterSpacing: '0.015em', marginTop: '0.06em' }}
                 >
                   Makvandi
                 </motion.div>

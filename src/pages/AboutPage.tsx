@@ -191,7 +191,7 @@ export default function AboutPage() {
               style={{ fontSize: 'clamp(2.6rem, 8vw, 5.5rem)', letterSpacing: '-0.03em' }}
             >
               Alireza
-              <span className="serif-accent block" style={{ color: '#E8DDD0', fontSize: '1.08em', marginTop: '-0.04em', letterSpacing: 0 }}>
+              <span className="block" style={{ fontWeight: 500, fontSize: '0.86em', marginTop: '0.08em', letterSpacing: '0.015em' }}>
                 Makvandi
               </span>
             </h1>
