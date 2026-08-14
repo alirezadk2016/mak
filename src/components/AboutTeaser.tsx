@@ -9,7 +9,7 @@ const IMG = '/6F4611AC-9D3C-47F1-8BA0-49E69A35BCDE.jpeg'
 const content = {
   da: {
     label: 'Om mig',
-    summary: 'Nyuddannet IT-supporter fra Aarhus Tech (2026), med 10 år i Danmark bag mig. IT-erfaring fra praktik hos Fourcom og skolepraktik, samt kundeservice og drift hos YouSee. Erfaring med Windows, hardware, fejlfinding og brugersupport. Mødestabil, ansvarlig og hurtig til at lære, klar til at bidrage fra dag ét.',
+    summary: 'Nyuddannet IT-supporter fra Aarhus Tech (2026), med 10 år i Danmark bag mig. IT-erfaring fra praktik hos Fourcom og skoleoplæring, samt kundeservice og drift hos YouSee. Erfaring med Windows, hardware, fejlfinding og brugersupport. Mødestabil, ansvarlig og hurtig til at lære, klar til at bidrage fra dag ét.',
     cta: 'Læs hele min historie',
     stats: [
       { num: '10', label: 'År i Danmark' },

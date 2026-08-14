@@ -69,7 +69,7 @@ export const t = {
       subheading: 'En oversigt over de steder, jeg har arbejdet og bidraget, fra teknisk support og kundeservice til frivilligt IT-arbejde i uddannelsesmiljøer.',
       viewDetails: 'Se detaljer →',
       items: [
-        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support · Skolepraktik', period: 'Skolepraktik' },
+        { slug: 'aarhustech', company: 'Aarhus Tech', role: 'IT Support · Skoleoplæring', period: 'Skoleoplæring' },
         { slug: 'fourcom', company: 'Fourcom', role: 'IT Support Praktikant', period: 'Praktik' },
         { slug: 'folkehuse', company: 'Folkehuse Aarhus', role: 'IT Support · Frivillig', period: 'Frivillig' },
         { slug: 'yousee', company: 'YouSee', role: 'Kundeservice & Administration', period: 'IGU · Arbejde' },

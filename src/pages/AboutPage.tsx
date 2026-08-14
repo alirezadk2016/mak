@@ -35,7 +35,7 @@ const content = {
       { year: '2018 – 2020', title: 'IGU, Nuuday A/S', desc: 'Integrationsgrunduddannelse med fokus på dansk som nyt sprog og faglige kompetencer.' },
       { year: '2020 – 2023', title: 'Aarhus HF & VUC', desc: 'Afsluttede C-niveau og styrkede mit sprog, de nødvendige skridt mod en erhvervsuddannelse.' },
       { year: '2024', title: 'Praktik hos Fourcom ApS', desc: 'Opsætning af Windows, fejlfinding og reparation af hardware, samt brugersupport og dokumentation.' },
-      { year: '2024 – 2026', title: 'Aarhus Tech, IT Support', desc: 'IT-supporteruddannelsen med skolepraktik, bl.a. én dag om ugen på et plejehjem med brugersupport. Færdiguddannet den 19. maj 2026.' },
+      { year: '2024 – 2026', title: 'Aarhus Tech, IT Support', desc: 'IT-supporteruddannelsen med skoleoplæring, bl.a. én dag om ugen på et plejehjem med brugersupport. Færdiguddannet den 19. maj 2026.' },
       { year: 'I dag', title: 'Søger fast job', desc: 'Færdiguddannet og klar til at bidrage fra dag ét med energi og engagement.' },
     ],
     expertiseLabel: 'Mine kompetencer',

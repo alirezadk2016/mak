@@ -79,8 +79,8 @@ const experiences: Record<string, ExpData> = {
   },
   aarhustech: {
     company: 'Aarhus Tech',
-    role: { da: 'IT Support, Skolepraktik', en: 'IT Support, School Placement' },
-    period: { da: 'Skolepraktik', en: 'School Placement' },
+    role: { da: 'IT Support, Skoleoplæring', en: 'IT Support, School Placement' },
+    period: { da: 'Skoleoplæring', en: 'School Placement' },
     url: 'https://www.aarhustech.dk/',
     priceUrl: 'https://www.aarhustech.dk/',
     color: '#FF6B00',
@@ -116,8 +116,8 @@ const experiences: Record<string, ExpData> = {
   },
   folkehuse: {
     company: 'Folkehuse Aarhus',
-    role: { da: 'IT Support, Skolepraktik', en: 'IT Support, School Placement' },
-    period: { da: 'Skolepraktik, Aarhus Tech', en: 'School Placement, Aarhus Tech' },
+    role: { da: 'IT Support, Skoleoplæring', en: 'IT Support, School Placement' },
+    period: { da: 'Skoleoplæring, Aarhus Tech', en: 'School Placement, Aarhus Tech' },
     url: 'https://folkehuse.aarhus.dk/',
     priceUrl: 'https://folkehuse.aarhus.dk/',
     color: '#2E7D32',
