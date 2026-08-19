@@ -112,7 +112,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-Supporter · Aarhus</div>
     <div style="margin:1.5mm 0 0"><span class="avail">Kan tiltræde straks</span></div>
-    <p class="profile">Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe mennesker, også når der er travlt. Jeg søger en stilling som IT-supporter eller servicedesk-medarbejder.</p>
+    <p class="profile"><b>Fra kundeservice hos YouSee til at bygge netværk fra bunden — jeg løser det, uanset om problemet sidder hos en bruger eller i en switch.</b> Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe mennesker, også når der er travlt. Jeg søger en stilling som IT-supporter eller servicedesk-medarbejder.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
 
@@ -140,9 +140,9 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-y">2017 – 2021 <span class="j-org">· YouSee / TDC</span></div>
       <div class="j-t">Kundeservice &amp; Administration · IGU-forløb og deltidsjob</div>
       <ul>
-        <li>Kundeservice, drift og administration i næsten fire år.</li>
+        <li>Kundeservice, drift og administration i butikken i næsten fire år (2017-2021).</li>
         <li>Bogføring og praktiske IT-opgaver i butikken.</li>
-        <li>Modtog skriftlig anbefaling fra butikschefen.</li>
+        <li>Resultat: fastholdt gennem hele perioden og modtog en skriftlig anbefaling fra butikschefen for min indsats.</li>
       </ul>
     </div>
 
