@@ -147,7 +147,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
     </div>
 
     <div class="job">
-      <div class="j-y">Sideløbende med studiet <span class="j-org">· Fritidsjob</span></div>
+      <div class="j-y">2022 – 2026 <span class="j-org">· Fritidsjob</span></div>
       <div class="j-t">Servicejob &amp; lagerarbejde</div>
       <ul>
         <li>Bl.a. hos Palmgren Erhvervsrengøring og vikarbureauet Moment (Salling Group, Søstrene Grene).</li>
