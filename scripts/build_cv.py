@@ -76,6 +76,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="c-item"><span class="c-ic">{IC_WEB}</span><div><div class="c-k">Web</div><a class="c-v" href="https://www.makvandi.dk">www.makvandi.dk</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" style="word-break:normal;overflow-wrap:break-word;font-size:7.5pt" href="https://dk.linkedin.com/in/alireza-makvandi-446704301">linkedin.com/in/<wbr>alireza-makvandi-<wbr>446704301</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_PIN}</span><div><div class="c-k">Adresse</div><div class="c-v">Aarhus N, 8200</div></div></div>
+      <div class="c-item"><span class="c-ic">{IC_CAR}</span><div><div class="c-k">Kørekort</div><div class="c-v">B (personbil)</div></div></div>
 
       <div class="s-h">Uddannelse</div><div class="s-rule"></div>
       <div class="edu-y">2024 – 2026</div>
@@ -100,7 +101,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="sk-g">Support</div>
       <span class="chip">Førstelinjesupport</span><span class="chip">Fejlfinding</span>
       <span class="chip">Windows 10/11</span><span class="chip">Microsoft 365</span>
-      <span class="chip">Hardware</span>
+      <span class="chip">Hardware</span><span class="chip">Printere</span>
       <div class="sk-g">Systemer &amp; Netværk</div>
       <span class="chip">Windows Server</span><span class="chip">Active Directory</span>
       <span class="chip">DNS / DHCP</span><span class="chip">TCP/IP</span>
