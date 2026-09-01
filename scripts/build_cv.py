@@ -101,18 +101,18 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="sk-g">Support</div>
       <span class="chip">Førstelinjesupport</span><span class="chip">Fejlfinding</span>
       <span class="chip">Klargøring/deployment</span><span class="chip">Windows 10/11</span>
-      <span class="chip">Microsoft 365</span><span class="chip">Hardware</span>
+      <span class="chip">Microsoft 365 (Outlook/Teams/OneDrive)</span><span class="chip">Hardware</span>
       <span class="chip">Printere</span><span class="chip">Mobile enheder (Android/iOS)</span>
       <div class="sk-g">Systemer &amp; Netværk</div>
       <span class="chip">Windows Server</span><span class="chip">Active Directory</span>
       <span class="chip">DNS / DHCP</span><span class="chip">TCP/IP</span>
-      <span class="chip">LAN / Wi-Fi</span><span class="chip">VLAN</span>
+      <span class="chip">LAN / Wi-Fi</span><span class="chip">VLAN</span><span class="chip">Grundlæggende routing</span>
     </div>
   </aside>
 
   <main class="main">
     <div class="name">Alireza Makvandi</div>
-    <div class="role">IT-Supporter · Aarhus</div>
+    <div class="role">IT-Supporter · Desktop Support · Aarhus</div>
     <div style="margin:1.5mm 0 0"><span class="avail">Kan tiltræde straks</span></div>
     <p class="profile"><b>Jeg er den, folk spørger, når computeren driller — nu er jeg uddannet til at bruge det professionelt.</b> Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe mennesker, også når der er travlt. Jeg søger en stilling som IT-supporter med on-site eller servicedesk-support tæt på brugerne.</p>
 
@@ -161,7 +161,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-y">2026 <span class="j-org">· Svendeprøve</span></div>
       <div class="j-t">Netværksinfrastruktur og Windows Server</div>
       <ul>
-        <li>Opsætning af komplet netværksmiljø med Windows Server, Active Directory, DNS/DHCP, VLAN, brugere og afdelinger.</li>
+        <li>Opsætning af komplet netværksmiljø med Windows Server, Active Directory, DNS/DHCP, VLAN og grundlæggende routing mellem netværk, samt brugere og afdelinger.</li>
         <li>Dokumentation og fejlfinding af hele opsætningen.</li>
       </ul>
     </div>
