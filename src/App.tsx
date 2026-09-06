@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { MotionConfig } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react'
 import { LanguageProvider } from './contexts/LanguageContext'
 import ErrorBoundary from './components/ErrorBoundary'
 import TitleSync from './components/TitleSync'
@@ -65,6 +66,7 @@ export default function App() {
       </Routes>
       </Suspense>
       </div>
+      <Analytics />
     </LanguageProvider>
     </MotionConfig>
     </ErrorBoundary>
