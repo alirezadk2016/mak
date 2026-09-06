@@ -18,52 +18,52 @@ html = f'''<!doctype html>
 html,body {{ font-family:'Helvetica Neue',Arial,sans-serif; color:#1c1c1c; -webkit-print-color-adjust:exact; print-color-adjust:exact; }}
 .page {{ width:210mm; min-height:297mm; display:flex; }}
 /* Sidebar */
-.side {{ width:70mm; background:#12212e; color:#e8e2d8; padding:0 0 5mm; }}
-.photo-wrap {{ background:#0d1922; padding:6mm 0 5mm; text-align:center; }}
-.photo {{ width:33mm; height:33mm; border-radius:50%; object-fit:cover; border:2px solid #c9a96e; }}
+.side {{ width:70mm; background:#12212e; color:#e8e2d8; padding:0 0 3.5mm; }}
+.photo-wrap {{ background:#0d1922; padding:5mm 0 3.5mm; text-align:center; }}
+.photo {{ width:30mm; height:30mm; border-radius:50%; object-fit:cover; border:2px solid #c9a96e; }}
 .side-inner {{ padding:0 8mm; }}
-.s-h {{ font-size:12pt; font-weight:700; letter-spacing:.5px; margin:4mm 0 1.5mm; color:#fff; }}
-.s-h:first-of-type {{ margin-top:4mm; }}
-.s-rule {{ height:2px; width:14mm; background:#c9a96e; margin-bottom:3.5mm; }}
+.s-h {{ font-size:11pt; font-weight:700; letter-spacing:.5px; margin:2.6mm 0 1mm; color:#fff; }}
+.s-h:first-of-type {{ margin-top:2.6mm; }}
+.s-rule {{ height:2px; width:14mm; background:#c9a96e; margin-bottom:2.2mm; }}
 .k {{ font-size:9.5pt; font-weight:700; color:#fff; margin-top:2mm; }}
 .v {{ font-size:8.5pt; color:#b9c4cd; line-height:1.5; word-break:break-word; }}
-.c-item {{ display:flex; align-items:flex-start; gap:2.5mm; margin-top:2.6mm; }}
+.c-item {{ display:flex; align-items:flex-start; gap:2.5mm; margin-top:1.8mm; }}
 .c-ic {{ flex-shrink:0; width:3.6mm; height:3.6mm; margin-top:.4mm; color:#c9a96e; }}
 .c-ic svg {{ width:100%; height:100%; display:block; }}
-.c-k {{ font-size:8pt; font-weight:700; color:#fff; letter-spacing:.2px; }}
-.c-v {{ font-size:8pt; color:#b9c4cd; line-height:1.4; word-break:break-word; display:block; text-decoration:none; }}
+.c-k {{ font-size:7.5pt; font-weight:700; color:#fff; letter-spacing:.2px; }}
+.c-v {{ font-size:7.5pt; color:#b9c4cd; line-height:1.3; word-break:break-word; display:block; text-decoration:none; }}
 a.c-v {{ color:#b9c4cd; }}
-.sk-g {{ font-size:7.5pt; font-weight:700; color:#c9a96e; letter-spacing:.4px; text-transform:uppercase; margin:3mm 0 1.5mm; }}
+.sk-g {{ font-size:7.2pt; font-weight:700; color:#c9a96e; letter-spacing:.4px; text-transform:uppercase; margin:2mm 0 1mm; }}
 .sk-g:first-of-type {{ margin-top:0; }}
-.edu-y {{ font-size:8pt; color:#c9a96e; font-weight:600; margin-top:2.3mm; }}
-.edu-t {{ font-size:9pt; font-weight:700; color:#fff; line-height:1.35; }}
-.edu-s {{ font-size:8pt; color:#b9c4cd; }}
-.lang-row {{ display:flex; justify-content:space-between; font-size:8.5pt; margin-top:2.5mm; }}
+.edu-y {{ font-size:7.6pt; color:#c9a96e; font-weight:600; margin-top:1.6mm; }}
+.edu-t {{ font-size:8.5pt; font-weight:700; color:#fff; line-height:1.25; }}
+.edu-s {{ font-size:7.5pt; color:#b9c4cd; }}
+.lang-row {{ display:flex; justify-content:space-between; font-size:8pt; margin-top:1.6mm; }}
 .lang-row b {{ color:#fff; font-weight:600; }}
 .lang-row span {{ color:#b9c4cd; }}
-.chip {{ display:inline-block; font-size:7.5pt; color:#d8cfc0; border:1px solid #3a4b58; border-radius:20px; padding:1.5mm 3mm; margin:0 1.5mm 1.5mm 0; }}
+.chip {{ display:inline-block; font-size:7pt; color:#d8cfc0; border:1px solid #3a4b58; border-radius:20px; padding:1mm 2.4mm; margin:0 1.2mm 1.2mm 0; }}
 .qr-box {{ display:flex; align-items:center; gap:3mm; margin-top:3.5mm; padding-top:3mm; border-top:1px solid #2a3a47; }}
 .qr {{ width:17mm; height:17mm; background:#fff; padding:1mm; border-radius:2mm; }}
 .qr-txt {{ font-size:8pt; color:#c9a96e; font-weight:600; line-height:1.4; }}
 /* Main */
-.main {{ flex:1; padding:10mm 11mm 8mm; }}
-.name {{ font-size:26pt; font-weight:800; letter-spacing:-.5px; color:#12212e; line-height:1; }}
+.main {{ flex:1; padding:9mm 11mm 6mm; }}
+.name {{ font-size:25pt; font-weight:800; letter-spacing:-.5px; color:#12212e; line-height:1; }}
 .role {{ font-size:10.5pt; color:#c9a96e; font-weight:600; margin-top:1.5mm; letter-spacing:.3px; }}
 .avail {{ font-size:7.5pt; color:#2f7d4f; font-weight:700; white-space:nowrap; background:#e8f3ec; border:1px solid #bfe0cc; border-radius:20px; padding:1mm 2.5mm; letter-spacing:.2px; }}
-.profile {{ font-size:9pt; line-height:1.55; color:#3a3a3a; margin-top:3mm; }}
-.m-h {{ font-size:13.5pt; font-weight:800; color:#12212e; margin:2.8mm 0 1mm; }}
-.m-rule {{ height:2px; width:100%; background:#e4e0d8; margin-bottom:2.4mm; position:relative; }}
+.profile {{ font-size:8.7pt; line-height:1.48; color:#3a3a3a; margin-top:2.4mm; }}
+.m-h {{ font-size:12.5pt; font-weight:800; color:#12212e; margin:2mm 0 0.8mm; }}
+.m-rule {{ height:2px; width:100%; background:#e4e0d8; margin-bottom:1.8mm; position:relative; }}
 .m-rule:after {{ content:''; position:absolute; left:0; top:0; width:20mm; height:2px; background:#c9a96e; }}
-.job {{ position:relative; padding-left:6mm; margin-bottom:2.8mm; }}
+.job {{ position:relative; padding-left:6mm; margin-bottom:2mm; }}
 .job:before {{ content:''; position:absolute; left:0; top:1.5mm; width:2.5mm; height:2.5mm; border-radius:50%; background:#c9a96e; }}
-.job:after {{ content:''; position:absolute; left:1.1mm; top:4mm; bottom:-3mm; width:1px; background:#e0dcd3; }}
+.job:after {{ content:''; position:absolute; left:1.1mm; top:4mm; bottom:-2.2mm; width:1px; background:#e0dcd3; }}
 .job:last-child:after {{ display:none; }}
-.j-y {{ font-size:8pt; font-weight:700; color:#12212e; }}
-.j-org {{ font-size:8.5pt; color:#8a8a8a; }}
-.j-t {{ font-size:10.5pt; font-weight:700; color:#1c1c1c; margin:.5mm 0 1.5mm; }}
+.j-y {{ font-size:7.8pt; font-weight:700; color:#12212e; }}
+.j-org {{ font-size:8.3pt; color:#8a8a8a; }}
+.j-t {{ font-size:10pt; font-weight:700; color:#1c1c1c; margin:.4mm 0 1mm; }}
 .j-t span {{ font-weight:400; color:#c9a96e; font-size:9pt; }}
 ul {{ margin-left:4mm; }}
-li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
+li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
 </style></head>
 <body>
 <div class="page">
@@ -132,7 +132,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-y">aug. – okt. 2024 <span class="j-org">· Fourcom ApS</span></div>
       <div class="j-t">IT-support · Praktik</div>
       <ul>
-        <li>Klargjorde og testede arbejdsstationer med Windows-installation, konfiguration og fejlfinding, ofte over 40 maskiner om dagen.</li>
+        <li>Klargjorde og testede arbejdsstationer med Windows-installation og konfiguration, ofte over 40 maskiner om dagen.</li>
         <li>Fejlfinding og reparation af hardware, typisk 3-10 maskiner om dagen.</li>
         <li>Brugersupport og teknisk dokumentation.</li>
       </ul>
@@ -161,7 +161,7 @@ li {{ font-size:8.5pt; line-height:1.5; color:#3a3a3a; margin-bottom:.8mm; }}
       <div class="j-y">2026 <span class="j-org">· Svendeprøve</span></div>
       <div class="j-t">Netværksinfrastruktur og Windows Server</div>
       <ul>
-        <li>Opsætning af komplet netværksmiljø med Windows Server, Active Directory, DNS/DHCP, VLAN og grundlæggende routing mellem netværk, samt brugere og afdelinger.</li>
+        <li>Opsætning af komplet netværksmiljø: Windows Server, Active Directory, DNS/DHCP, VLAN og grundlæggende routing.</li>
         <li>Dokumentation og fejlfinding af hele opsætningen.</li>
       </ul>
     </div>
