@@ -39,33 +39,36 @@ function FlipAvatar({ className }: { className?: string }) {
           fetchPriority="high"
           decoding="async"
           className="w-full h-full object-cover"
-          style={{ borderRadius: '3px', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+          style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
         />
         <img
           src={IMG_BACK}
           alt="Alireza Makvandi"
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ borderRadius: '3px', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+          style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         />
       </motion.div>
     </div>
   )
 }
 
-/** Polaroid-framed portrait with a handwritten-style caption. */
+/** Clean, modern portrait frame: gold hairline ring, soft glow and a glass name tag. */
 function PolaroidPortrait({ caption, className = '' }: { caption: string; className?: string }) {
   return (
     <motion.div
-      initial={{ rotate: -2.5 }}
-      whileHover={{ rotate: 0, scale: 1.015 }}
-      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-      className={`polaroid ${className}`}
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+      className={`portrait-frame ${className}`}
     >
-      <div className="aspect-[4/5] overflow-hidden" style={{ borderRadius: '3px' }}>
+      <div className="portrait-inner aspect-[4/5]">
         <FlipAvatar className="w-full h-full" />
+        <div className="portrait-shade" aria-hidden="true" />
+        <div className="portrait-tag">
+          <span className="portrait-tag-dot" aria-hidden="true" />
+          <span>{caption}</span>
+        </div>
       </div>
-      <div className="polaroid-caption">{caption}</div>
     </motion.div>
   )
 }
@@ -105,7 +108,7 @@ export default function HeroSection() {
 
   // Scroll-spy: highlight the nav link of the section currently in view
   useEffect(() => {
-    const ids = ['about', 'experience', 'projects', 'contact']
+    const ids = ['about', 'latest', 'services', 'experience', 'projects', 'contact']
     const els = ids.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[]
     if (!els.length) return
     const io = new IntersectionObserver(
@@ -264,8 +267,8 @@ export default function HeroSection() {
 
           <FadeIn delay={0.15} y={20}>
             <PolaroidPortrait
-              caption={lang === 'da' ? 'Det er mig, Aarhus N' : "That's me, Aarhus N"}
-              className="w-44"
+              caption={lang === 'da' ? 'Alireza · Aarhus' : 'Alireza · Aarhus'}
+              className="w-52"
             />
           </FadeIn>
 
@@ -458,7 +461,7 @@ export default function HeroSection() {
                 className="w-[260px] md:w-[300px] lg:w-[330px]"
               >
                 <FadeIn delay={0.45} y={30}>
-                  <PolaroidPortrait caption={lang === 'da' ? 'Det er mig, Aarhus N, 2026' : "That's me, Aarhus N, 2026"} />
+                  <PolaroidPortrait caption={lang === 'da' ? 'Alireza · IT-supporter · Aarhus' : 'Alireza · IT supporter · Aarhus'} />
                 </FadeIn>
               </Magnet>
             </div>
