@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Linkedin, Instagram, Phone } from 'lucide-react'
+import { Mail, Linkedin, Instagram, Phone, Download } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
 
@@ -259,6 +259,29 @@ export default function FooterSection() {
             )
           ))}
         </motion.h2>
+
+        {/* CV: the one thing a recruiter wants */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="-mt-6 sm:-mt-8 mb-10 sm:mb-12 flex flex-wrap items-center gap-4"
+        >
+          <a
+            href="/cv-alireza-makvandi.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline-gold inline-flex items-center gap-2 rounded-full"
+            style={{ padding: '13px 26px', fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 500 }}
+          >
+            <Download size={14} strokeWidth={1.8} style={{ color: '#C9A96E' }} />
+            {lang === 'da' ? 'Download CV (PDF)' : 'Download CV (PDF)'}
+          </a>
+          <span style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '13px', fontWeight: 300 }}>
+            {lang === 'da' ? 'Én side. Opdateret oktober 2026.' : 'One page. Updated October 2026.'}
+          </span>
+        </motion.div>
 
         {/* Contact cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-0">
