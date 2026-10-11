@@ -46,7 +46,7 @@ export default function AboutTeaser() {
         <FadeIn delay={0} y={20}>
           <div className="flex items-center gap-3 mb-3">
             <div className="w-6 h-px" style={{ background: 'rgba(232,224,213,0.25)' }} />
-            <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.38em', textTransform: 'uppercase', fontWeight: 500 }}>
+            <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.38em', textTransform: 'uppercase', fontWeight: 500 }}>
               {c.label}
             </span>
           </div>
@@ -85,7 +85,7 @@ export default function AboutTeaser() {
                     <span className="font-black leading-none" style={{ color: '#E8DDD0', fontSize: 'clamp(1.6rem, 4vw, 2.6rem)', fontFamily: "'Space Grotesk', sans-serif" }}>
                       {s.num}
                     </span>
-                    <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '9px', letterSpacing: '0.22em', textTransform: 'uppercase' }}>
+                    <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase' }}>
                       {s.label}
                     </span>
                   </div>
