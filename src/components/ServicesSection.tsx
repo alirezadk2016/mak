@@ -64,8 +64,8 @@ export default function ServicesSection() {
               />
 
               <motion.span
-                className="font-black leading-none flex-shrink-0"
-                style={{ color: '#0A0908', fontSize: 'clamp(1.8rem, 6vw, 110px)' }}
+                className="font-black leading-none flex-shrink-0 tabular-nums"
+                style={{ color: '#0A0908', fontSize: 'clamp(1.8rem, 6vw, 110px)', width: 'clamp(3.2rem, 9.5vw, 170px)' }}
                 animate={{ x: hoveredIdx === i ? 8 : 0 }}
                 transition={{ duration: 0.25, ease: 'easeOut' }}
               >
@@ -76,7 +76,7 @@ export default function ServicesSection() {
                 <span className="font-medium uppercase" style={{ color: '#0A0908', fontSize: 'clamp(0.9rem, 2vw, 2.1rem)' }}>
                   {s.name}
                 </span>
-                <span className="font-light leading-relaxed max-w-2xl" style={{ color: '#0A0908', opacity: 0.6, fontSize: 'clamp(0.8rem, 1.4vw, 1.1rem)' }}>
+                <span className="font-light leading-relaxed max-w-2xl" style={{ color: '#0A0908', opacity: 0.72, fontSize: 'clamp(0.85rem, 1.4vw, 1.1rem)' }}>
                   {s.desc}
                 </span>
                 <div className="flex flex-wrap gap-2 mt-1">
