@@ -8,7 +8,7 @@ import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
 import ContactButton from '../components/ContactButton'
 
-const IMG = '/6F4611AC-9D3C-47F1-8BA0-49E69A35BCDE.jpeg'
+const IMG = '/portrait-alireza.jpg'
 
 // Journey steps that have a dedicated page (index-aligned with `journey`)
 const journeyLinks: Record<number, string | null> = {
