@@ -9,6 +9,7 @@ import ScrollToTop from './components/ScrollToTop'
 import ScrollProgress from './components/ScrollProgress'
 import StickyContactBar from './components/StickyContactBar'
 import HeroSection from './components/HeroSection'
+import LatestSection from './components/LatestSection'
 import AboutTeaser from './components/AboutTeaser'
 import ServicesSection from './components/ServicesSection'
 import ProjectsSection from './components/ProjectsSection'
@@ -31,6 +32,7 @@ function Home() {
       <HeroSection />
       <StickyContactBar />
       <AboutTeaser />
+      <LatestSection />
       <ServicesSection />
       <ExperienceSection />
       <ProjectsSection />

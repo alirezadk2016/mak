@@ -108,7 +108,7 @@ export default function HeroSection() {
 
   // Scroll-spy: highlight the nav link of the section currently in view
   useEffect(() => {
-    const ids = ['about', 'experience', 'projects', 'contact']
+    const ids = ['about', 'latest', 'services', 'experience', 'projects', 'contact']
     const els = ids.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[]
     if (!els.length) return
     const io = new IntersectionObserver(
