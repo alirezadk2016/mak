@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Car, Cloud, Rocket, Check } from 'lucide-react'
+import { Car, Cloud, Rocket, Check, ArrowUpRight } from 'lucide-react'
 import FadeIn from './FadeIn'
 import { useLang } from '../contexts/LanguageContext'
 
@@ -28,7 +28,19 @@ const copy = {
       kestro: {
         tag: 'Eget projekt',
         title: 'Kestro: mit langsigtede projekt',
-        text: 'Jeg bygger Kestro, hvor jeg lærer grafisk design og marketing og bruger det i praksis. Med min erfaring med SEO arbejder jeg på at få sitet frem på Google, så det på sigt kan blive en ekstra indtægtskilde ved siden af mit job.',
+        text: 'Kestro er min egen tosprogede B2B-hjemmeside om istandsat erhvervs-IT til Danmark og Norge. Her lærer jeg grafisk design, marketing og SEO ved at bygge det hele i praksis. Målet er at få sitet frem på Google, så det på sigt kan blive en ekstra indtægtskilde ved siden af mit job.',
+        built: 'Det har jeg bygget indtil nu',
+        bullets: [
+          'Hjemmeside på dansk og engelsk i Next.js, TypeScript og Tailwind, hostet på Vercel',
+          'Eget design: logo, ikonsæt, farver, typografi og kort til produkter og vejledninger',
+          'Interaktiv 3D-bærbar i toppen, som kun indlæses på enheder, der kan klare den',
+          'SEO fra bunden: hreflang, sitemap, struktureret data, FAQ og en llms.txt til AI-søgning',
+          '8 vejledninger om blandt andet Windows 10, RAM og køb af brugt computer, med RSS-feed',
+          'Kun verificerede kilder: ingen opdigtede tal, priser eller kundehistorier',
+          'Automatisk kvalitetstjek i en rigtig browser: kontrast, overflow og overskrifter',
+          'Kontaktformular, admin-indbakke med tre adgangslag og samtykkebanner',
+        ],
+        visit: 'Besøg kestro.dk',
         chips: ['Grafisk design', 'Marketing', 'SEO', 'Synlighed på Google'],
       },
     },
@@ -55,7 +67,19 @@ const copy = {
       kestro: {
         tag: 'Own project',
         title: 'Kestro: my long-term project',
-        text: 'I am building Kestro, where I learn graphic design and marketing and put them into practice. Using my SEO experience, I am working to get the site ranking on Google so that, over time, it can become an extra source of income alongside my job.',
+        text: 'Kestro is my own bilingual B2B website about refurbished business IT for Denmark and Norway. It is where I learn graphic design, marketing and SEO by building everything in practice. The goal is to get the site ranking on Google so that, over time, it can become an extra source of income alongside my job.',
+        built: 'What I have built so far',
+        bullets: [
+          'Danish and English website in Next.js, TypeScript and Tailwind, hosted on Vercel',
+          'Own design: logo, icon set, colours, typography and cards for products and guides',
+          'Interactive 3D laptop in the hero that only loads on devices that can handle it',
+          'SEO from scratch: hreflang, sitemap, structured data, FAQ and an llms.txt for AI search',
+          '8 guides on Windows 10, RAM upgrades and buying a used laptop, with an RSS feed',
+          'Verified sources only: no made-up numbers, prices or customer stories',
+          'Automated quality gate in a real browser: contrast, overflow and heading structure',
+          'Contact form, admin inbox with three access layers and a consent banner',
+        ],
+        visit: 'Visit kestro.dk',
         chips: ['Graphic design', 'Marketing', 'SEO', 'Google visibility'],
       },
     },
@@ -191,7 +215,30 @@ export default function LatestSection() {
 
         {/* Kestro, full width */}
         <Card index={2} icon={<Rocket size={18} strokeWidth={1.7} />} tag={c.cards.kestro.tag} title={c.cards.kestro.title} text={c.cards.kestro.text} status="longterm" statusLabel={c.status.longterm} accent="#A58BE0" className="md:col-span-2">
-          <div className="flex flex-wrap gap-2 mt-1">
+          <div className="mt-1">
+            <p style={{ color: '#C9A96E', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
+              {c.cards.kestro.built}
+            </p>
+            <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+              {c.cards.kestro.bullets.map((b) => (
+                <li key={b} className="flex gap-3" style={{ color: '#E8DDD0', opacity: 0.8, fontSize: '14px', fontWeight: 300, lineHeight: 1.6 }}>
+                  <Check size={15} strokeWidth={2.2} className="flex-shrink-0 mt-[3px]" style={{ color: '#A58BE0' }} aria-hidden="true" />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 mt-2">
+            <a
+              href="https://kestro.dk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline-gold inline-flex items-center gap-2 rounded-full"
+              style={{ padding: '11px 22px', fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 500 }}
+            >
+              {c.cards.kestro.visit}
+              <ArrowUpRight size={13} strokeWidth={1.8} style={{ color: '#C9A96E' }} />
+            </a>
             {c.cards.kestro.chips.map((chip) => (
               <span key={chip} className="hero-chip" style={{ opacity: 0.85 }}>{chip}</span>
             ))}
