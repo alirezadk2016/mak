@@ -337,8 +337,10 @@ export default function HeroSection() {
                     {lang === 'da' ? 'Klar til nye muligheder' : 'Open to opportunities'}
                   </span>
                 </div>
-                <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em' }}>
-                  {lang === 'da' ? 'IT Support · Aarhus, DK' : 'IT Support · Aarhus, DK'}
+                <p style={{ color: '#E8DDD0', opacity: 0.78, fontSize: '13px', fontWeight: 300, lineHeight: 1.6 }}>
+                  {lang === 'da'
+                    ? 'Nyuddannet IT-supporter med hands-on erfaring. Klar til at starte hurtigt.'
+                    : 'Newly qualified IT supporter with hands-on experience. Ready to start quickly.'}
                 </p>
               </div>
             </div>
