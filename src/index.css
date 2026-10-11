@@ -305,3 +305,65 @@ h1, h2, h3 {
   0%, 100% { transform: translateX(-50%) scaleY(0.4); opacity: 0.4; }
   50% { transform: translateX(-50%) scaleY(1); opacity: 1; }
 }
+
+/* Modern portrait frame (replaces the polaroid) */
+.portrait-frame {
+  position: relative;
+  padding: 7px;
+  border-radius: 26px;
+  background: linear-gradient(160deg, rgba(201,169,110,0.55) 0%, rgba(201,169,110,0.08) 38%, rgba(201,169,110,0.35) 100%);
+  box-shadow: 0 30px 60px -24px rgba(0,0,0,0.8), 0 0 80px -30px rgba(201,169,110,0.35);
+}
+.portrait-frame::before {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border-radius: 36px;
+  border: 1px solid rgba(201,169,110,0.14);
+  pointer-events: none;
+}
+.portrait-inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #121110;
+}
+.portrait-shade {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 38%;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(10,9,8,0.82), transparent);
+}
+.portrait-tag {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 100px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #F1EADD;
+  background: rgba(18,17,16,0.55);
+  border: 1px solid rgba(232,224,213,0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.portrait-tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6ee7b7;
+  flex-shrink: 0;
+}
+.portrait-tag { white-space: nowrap; }
+@media (max-width: 639px) {
+  .portrait-tag { font-size: 9.5px; letter-spacing: 0.1em; padding: 6px 10px; left: 8px; right: 8px; bottom: 8px; }
+}
