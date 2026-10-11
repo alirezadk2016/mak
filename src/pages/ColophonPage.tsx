@@ -49,7 +49,7 @@ export default function ColophonPage() {
         <Link
           to="/"
           className="inline-flex items-center gap-2 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {da ? 'Tilbage' : 'Back'}
@@ -57,7 +57,7 @@ export default function ColophonPage() {
         <button
           onClick={toggle}
           className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
           aria-label={da ? 'Switch to English' : 'Skift til dansk'}
         >
           <Globe size={12} strokeWidth={1.5} />
@@ -111,7 +111,7 @@ export default function ColophonPage() {
               >
                 <Icon size={20} strokeWidth={1.5} style={{ color: '#C9A96E', opacity: 0.85, marginBottom: '12px' }} />
                 <h2 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: '14px', fontWeight: 700, marginBottom: '6px' }}>{f.title}</h2>
-                <p style={{ color: '#E8DDD0', opacity: 0.5, fontSize: '13px', lineHeight: 1.7, fontWeight: 300 }}>{f.text}</p>
+                <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '13px', lineHeight: 1.7, fontWeight: 300 }}>{f.text}</p>
               </motion.div>
             )
           })}

@@ -28,7 +28,7 @@ export default function GlossaryTermPage() {
         <Link
           to="/viden"
           className="inline-flex items-center gap-2 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {lang === 'da' ? 'IT-ordbog' : 'IT Glossary'}
@@ -36,7 +36,7 @@ export default function GlossaryTermPage() {
         <button
           onClick={toggle}
           className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
           aria-label={lang === 'da' ? 'Switch to English' : 'Skift til dansk'}
         >
           <Globe size={12} strokeWidth={1.5} />
@@ -102,7 +102,7 @@ export default function GlossaryTermPage() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-10"
           >
-            <p style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '12px' }}>
+            <p style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '12px' }}>
               {lang === 'da' ? 'Relaterede begreber' : 'Related terms'}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -130,7 +130,7 @@ export default function GlossaryTermPage() {
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
           className="serif-accent mt-12"
-          style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '15px' }}
+          style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '15px' }}
         >
           {lang === 'da' ? '— Alireza Makvandi, IT-supporter i Aarhus' : '— Alireza Makvandi, IT supporter in Aarhus'}
         </motion.p>

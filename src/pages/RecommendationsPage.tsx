@@ -24,7 +24,7 @@ export default function RecommendationsPage() {
         <Link
           to="/"
           className="inline-flex items-center gap-2 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {lang === 'da' ? 'Tilbage' : 'Back'}
@@ -32,7 +32,7 @@ export default function RecommendationsPage() {
         <button
           onClick={toggle}
           className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
           aria-label={lang === 'da' ? 'Switch to English' : 'Skift til dansk'}
         >
           <Globe size={12} strokeWidth={1.5} />
@@ -57,7 +57,7 @@ export default function RecommendationsPage() {
           </h1>
           <p
             className="font-light leading-relaxed max-w-xl mb-12 sm:mb-16"
-            style={{ color: '#E8DDD0', opacity: 0.42, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8 }}
+            style={{ color: '#E8DDD0', opacity: 0.6, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8 }}
           >
             {tx.subheading}
           </p>
@@ -213,7 +213,7 @@ export default function RecommendationsPage() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-300 opacity-50" />
             <span className="relative inline-flex rounded-full h-1.5 w-1.5" style={{ background: '#C9A96E' }} />
           </span>
-          <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '11px', letterSpacing: '0.05em', fontWeight: 300 }}>
+          <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '11px', letterSpacing: '0.05em', fontWeight: 300 }}>
             {tx.note}
           </span>
         </motion.div>

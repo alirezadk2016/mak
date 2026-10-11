@@ -1,4 +1,4 @@
-import { Globe, Menu, X, Download } from 'lucide-react'
+import { Globe, Menu, X, Download, Mail, Phone, MapPin } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -36,6 +36,8 @@ function FlipAvatar({ className }: { className?: string }) {
         <img
           src={IMG_FRONT}
           alt="Alireza Makvandi"
+          fetchPriority="high"
+          decoding="async"
           className="w-full h-full object-cover"
           style={{ borderRadius: '3px', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
         />
@@ -99,6 +101,22 @@ export default function HeroSection() {
   const navigate = useNavigate()
   const tx = t[lang]
   const [menuOpen, setMenuOpen] = useState(false)
+  const [active, setActive] = useState('')
+
+  // Scroll-spy: highlight the nav link of the section currently in view
+  useEffect(() => {
+    const ids = ['about', 'experience', 'projects', 'contact']
+    const els = ids.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[]
+    if (!els.length) return
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id) })
+      },
+      { rootMargin: '-45% 0px -50% 0px' }
+    )
+    els.forEach(el => io.observe(el))
+    return () => io.disconnect()
+  }, [])
 
   // Lock body scroll while the mobile menu is open; close on Escape
   useEffect(() => {
@@ -146,6 +164,7 @@ export default function HeroSection() {
               key={key}
               href={route || `#${key}`}
               onClick={(e) => { e.preventDefault(); handleNav(key, route) }}
+              aria-current={active === key ? 'true' : undefined}
               className="transition-opacity duration-200 hover:opacity-50"
               style={{ color: '#E8DDD0', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 500 }}
             >
@@ -272,7 +291,7 @@ export default function HeroSection() {
           <FadeIn delay={0.5} y={20}>
             <p
               className="text-center font-light uppercase text-center"
-              style={{ color: '#E8DDD0', opacity: 0.38, fontSize: '10px', letterSpacing: '0.32em', lineHeight: 1.8 }}
+              style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.32em', lineHeight: 1.8 }}
             >
               {tx.hero.role}
             </p>
@@ -315,7 +334,7 @@ export default function HeroSection() {
                     {lang === 'da' ? 'Klar til nye muligheder' : 'Open to opportunities'}
                   </span>
                 </div>
-                <p style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em' }}>
+                <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em' }}>
                   {lang === 'da' ? 'IT Support · Aarhus, DK' : 'IT Support · Aarhus, DK'}
                 </p>
               </div>
@@ -376,7 +395,7 @@ export default function HeroSection() {
                   <div className="w-10 h-px" style={{ background: 'rgba(201,169,110,0.5)' }} />
                   <p
                     className="font-light uppercase"
-                    style={{ color: '#E8DDD0', opacity: 0.5, fontSize: 'clamp(0.7rem, 1vw, 0.9rem)', letterSpacing: '0.26em' }}
+                    style={{ color: '#E8DDD0', opacity: 0.6, fontSize: 'clamp(0.7rem, 1vw, 0.9rem)', letterSpacing: '0.26em' }}
                   >
                     {tx.hero.role}
                   </p>
@@ -413,6 +432,20 @@ export default function HeroSection() {
                   </a>
                 </div>
               </FadeIn>
+
+              <FadeIn delay={0.95} y={12}>
+                <div className="hero-contact flex flex-wrap items-center gap-x-6 gap-y-2 mt-8">
+                  <a href="mailto:alirezadk2016@gmail.com" className="inline-flex items-center gap-2">
+                    <Mail size={13} strokeWidth={1.6} /> alirezadk2016@gmail.com
+                  </a>
+                  <a href="tel:+4591488843" className="inline-flex items-center gap-2">
+                    <Phone size={13} strokeWidth={1.6} /> 91 48 88 43
+                  </a>
+                  <span className="inline-flex items-center gap-2" style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px' }}>
+                    <MapPin size={13} strokeWidth={1.6} /> Aarhus N
+                  </span>
+                </div>
+              </FadeIn>
             </div>
 
             {/* Right, polaroid portrait */}
@@ -433,6 +466,7 @@ export default function HeroSection() {
           </div>
         </div>
 
+        <div className="scroll-cue hidden sm:block" aria-hidden="true" />
       </section>
     </>
   )

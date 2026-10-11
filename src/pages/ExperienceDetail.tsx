@@ -273,7 +273,7 @@ export default function ExperienceDetail() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-10"
           >
-            <p className="uppercase tracking-widest text-[10px] mb-3" style={{ color: '#E8DDD0', opacity: 0.35, letterSpacing: '0.3em' }}>
+            <p className="uppercase tracking-widest text-[10px] mb-3" style={{ color: '#E8DDD0', opacity: 0.55, letterSpacing: '0.3em' }}>
               {lang === 'da' ? 'Relateret viden' : 'Related knowledge'}
             </p>
             <div className="flex flex-wrap gap-2">

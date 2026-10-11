@@ -49,7 +49,7 @@ export default function NotFound() {
         <h1 className="serif-accent" style={{ color: '#E8DDD0', fontSize: 'clamp(1.5rem, 3.4vw, 2.3rem)' }}>
           {c.heading}
         </h1>
-        <p style={{ color: '#E8DDD0', opacity: 0.45, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', fontWeight: 300, maxWidth: '380px', lineHeight: 1.7 }}>
+        <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', fontWeight: 300, maxWidth: '380px', lineHeight: 1.7 }}>
           {c.body}
         </p>
 

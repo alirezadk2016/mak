@@ -87,7 +87,7 @@ export default function SvendeproevePage() {
           {highlights.map((h) => (
             <div key={h.num} className="rounded-[16px] border border-[#E8DDD0]/10 p-5 text-center">
               <span className="block font-black text-3xl sm:text-4xl" style={{ color: '#E8DDD0' }}>{h.num}</span>
-              <span className="block text-[10px] uppercase tracking-widest mt-1" style={{ color: '#E8DDD0', opacity: 0.35 }}>{h.label[lang]}</span>
+              <span className="block text-[10px] uppercase tracking-widest mt-1" style={{ color: '#E8DDD0', opacity: 0.55 }}>{h.label[lang]}</span>
             </div>
           ))}
         </motion.div>
@@ -115,7 +115,7 @@ export default function SvendeproevePage() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="rounded-[20px] border border-[#E8DDD0]/10 p-6"
           >
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.5 }}>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.6 }}>
               {lang === 'da' ? 'Tekniske krav' : 'Technical Requirements'}
             </h3>
             <ul className="space-y-3">
@@ -136,7 +136,7 @@ export default function SvendeproevePage() {
             className="flex flex-col gap-6"
           >
             <div className="rounded-[20px] border border-[#E8DDD0]/10 p-6">
-              <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.5 }}>
+              <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.6 }}>
                 {lang === 'da' ? 'Dokumentation' : 'Documentation'}
               </h3>
               <ul className="space-y-3">
@@ -150,7 +150,7 @@ export default function SvendeproevePage() {
             </div>
 
             <div className="rounded-[20px] border border-[#E8DDD0]/10 p-6">
-              <h3 className="font-bold uppercase tracking-widest text-xs mb-4" style={{ color: '#E8DDD0', opacity: 0.5 }}>
+              <h3 className="font-bold uppercase tracking-widest text-xs mb-4" style={{ color: '#E8DDD0', opacity: 0.6 }}>
                 {lang === 'da' ? 'Teknologier brugt' : 'Technologies Used'}
               </h3>
               <div className="flex flex-wrap gap-2">

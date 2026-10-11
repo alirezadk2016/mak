@@ -70,7 +70,7 @@ export default function MakPaintingPage() {
         <Link
           to="/"
           className="inline-flex items-center gap-2 mb-10 sm:mb-14 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {tx.back}
@@ -100,7 +100,7 @@ export default function MakPaintingPage() {
             <ExternalLink size={12} strokeWidth={1.8} />
           </a>
         </div>
-        <p style={{ color: '#E8DDD0', opacity: 0.5, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8, fontWeight: 300, maxWidth: '680px' }}>
+        <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8, fontWeight: 300, maxWidth: '680px' }}>
           {tx.desc}
         </p>
       </motion.div>
@@ -119,7 +119,7 @@ export default function MakPaintingPage() {
       </motion.div>
 
       {/* Features grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-5xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
         {features.map((block, i) => (
           <motion.div
             key={i}
@@ -129,13 +129,13 @@ export default function MakPaintingPage() {
             className="rounded-[20px] p-5 sm:p-7 border border-[#E8DDD0]/07"
             style={{ background: 'rgba(232,224,213,0.03)' }}
           >
-            <p style={{ color: '#E8DDD0', opacity: 0.28, fontSize: '10px', letterSpacing: '0.32em', textTransform: 'uppercase', marginBottom: '14px' }}>
+            <p style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.32em', textTransform: 'uppercase', marginBottom: '14px' }}>
               {block.title[lang]}
             </p>
             <ul className="flex flex-col gap-2.5">
               {block.items.map((item, j) => (
                 <li key={j} className="flex items-start gap-2.5">
-                  <span style={{ color: '#E8DDD0', opacity: 0.2, marginTop: '5px', flexShrink: 0, fontSize: '8px' }}>◆</span>
+                  <span style={{ color: '#E8DDD0', opacity: 0.55, marginTop: '5px', flexShrink: 0, fontSize: '8px' }}>◆</span>
                   <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '13px', lineHeight: 1.6 }}>{item[lang]}</span>
                 </li>
               ))}

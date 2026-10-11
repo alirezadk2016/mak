@@ -51,10 +51,10 @@ function CardBack({ type }: { type: ContactItem['backType'] }) {
   }
 
   const icons: Record<ContactItem['backType'], React.ReactNode> = {
-    instagram: <Instagram size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
-    linkedin: <Linkedin size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
-    email: <Mail size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
-    phone: <Phone size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
+    instagram: <Instagram size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.6 }} />,
+    linkedin: <Linkedin size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.6 }} />,
+    email: <Mail size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.6 }} />,
+    phone: <Phone size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.6 }} />,
   }
 
   const labels: Record<ContactItem['backType'], string> = {
@@ -86,7 +86,7 @@ function CardBack({ type }: { type: ContactItem['backType'] }) {
         <span style={{ color: '#E8DDD0', opacity: 0.7, fontSize: '12px', fontWeight: 500, letterSpacing: '0.01em' }}>
           {labels[type]}
         </span>
-        <span style={{ color: '#E8DDD0', opacity: 0.22, fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
+        <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
           {hints[type]}
         </span>
       </div>
@@ -121,11 +121,11 @@ function FlipCard({ item, lang }: { item: ContactItem; lang: 'da' | 'en' }) {
           style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
         >
           <div className="flex items-center justify-between">
-            <span style={{ color: '#E8DDD0', opacity: 0.25, fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
+            <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
               {typeof item.label === 'object' ? item.label[lang] : item.label}
             </span>
             <div className="w-8 h-8 rounded-full border border-[#E8DDD0]/15 flex items-center justify-center">
-              <Icon size={14} style={{ color: '#E8DDD0', opacity: 0.5 }} strokeWidth={1.5} />
+              <Icon size={14} style={{ color: '#E8DDD0', opacity: 0.6 }} strokeWidth={1.5} />
             </div>
           </div>
           <span style={{ color: '#E8DDD0', fontSize: '0.85rem', fontWeight: 500, opacity: 0.85 }} className="leading-snug mt-auto">
@@ -178,17 +178,17 @@ function MobileFlipCard({ item, lang }: { item: ContactItem; lang: 'da' | 'en' }
         style={{ pointerEvents: flipped ? 'none' : 'auto' }}
       >
         <div className="flex items-center justify-between">
-          <span style={{ color: '#E8DDD0', opacity: 0.25, fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
+          <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
             {typeof item.label === 'object' ? item.label[lang] : item.label}
           </span>
           <div className="w-8 h-8 rounded-full border border-[#E8DDD0]/15 flex items-center justify-center">
-            <Icon size={14} style={{ color: '#E8DDD0', opacity: 0.5 }} strokeWidth={1.5} />
+            <Icon size={14} style={{ color: '#E8DDD0', opacity: 0.6 }} strokeWidth={1.5} />
           </div>
         </div>
         <span style={{ color: '#E8DDD0', fontSize: '0.85rem', fontWeight: 500, opacity: 0.85 }} className="leading-snug mt-auto">
           {item.value}
         </span>
-        <span style={{ color: '#E8DDD0', opacity: 0.15, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+        <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
           ← swipe →
         </span>
       </motion.div>
@@ -237,7 +237,7 @@ export default function FooterSection() {
           className="flex items-center gap-3 mb-8 sm:mb-10"
         >
           <div className="w-6 h-px" style={{ background: 'rgba(232,224,213,0.25)' }} />
-          <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.38em', textTransform: 'uppercase', fontWeight: 500 }}>
+          <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.38em', textTransform: 'uppercase', fontWeight: 500 }}>
             {tx.label}
           </span>
         </motion.div>
@@ -301,13 +301,13 @@ export default function FooterSection() {
               />
             </motion.svg>
           </span>
-          <p style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em', maxWidth: '420px', lineHeight: 1.7 }}>
+          <p style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em', maxWidth: '420px', lineHeight: 1.7 }}>
             {lang === 'da'
               ? 'Bygget med React, TypeScript & Vite, og en del kaffe.'
               : 'Built with React, TypeScript & Vite, and a fair amount of coffee.'}
           </p>
           <div className="flex items-center gap-4">
-            <span style={{ color: '#E8DDD0', opacity: 0.18, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+            <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
               © {new Date().getFullYear()} Alireza Makvandi · Aarhus, kl. {aarhusTime}
             </span>
             <Link to="/kolofon" className="transition-opacity hover:opacity-60" style={{ color: '#C9A96E', opacity: 0.55, fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase', textDecoration: 'none' }}>

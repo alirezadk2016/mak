@@ -13,12 +13,21 @@ const accentColors: Record<string, string> = {
   aarhustech: '#FF6B00',
 }
 
+// Lighter tints for small text on the dark background (WCAG-friendly contrast)
+const accentText: Record<string, string> = {
+  yousee: '#FF6B83',
+  fourcom: '#6FA8F5',
+  folkehuse: '#6CC777',
+  aarhustech: '#FF9248',
+}
+
 function ExperienceCard({ exp, viewDetails, index }: {
   exp: { slug: string; company: string; role: string; period: string }
   viewDetails: string
   index: number
 }) {
   const accent = accentColors[exp.slug]
+  const accentFg = accentText[exp.slug] ?? accent
 
   return (
     <>
@@ -32,7 +41,7 @@ function ExperienceCard({ exp, viewDetails, index }: {
       >
         <Link to={'/experience/' + exp.slug} className="block">
           <motion.div
-            whileHover={{ y: -8 }}
+            whileHover={{ y: -8, boxShadow: `0 24px 48px -20px ${accent}55` }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="relative rounded-[22px] overflow-hidden"
             style={{
@@ -57,7 +66,7 @@ function ExperienceCard({ exp, viewDetails, index }: {
             {/* Text */}
             <div className="p-5 sm:p-6">
               <div className="flex items-center justify-between mb-2.5">
-                <span style={{ color: accent, fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.9 }}>
+                <span style={{ color: accentFg, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
                   {exp.period}
                 </span>
                 <span
@@ -65,13 +74,13 @@ function ExperienceCard({ exp, viewDetails, index }: {
                   style={{ color: '#E8DDD0', fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase' }}
                 >
                   {viewDetails.replace(' →', '')}
-                  <ArrowUpRight size={12} strokeWidth={1.8} style={{ color: accent }} />
+                  <ArrowUpRight size={12} strokeWidth={1.8} style={{ color: accentFg }} />
                 </span>
               </div>
               <h3 className="font-bold uppercase mb-1" style={{ color: '#E8DDD0', fontSize: '17px', letterSpacing: '0.01em' }}>
                 {exp.company}
               </h3>
-              <p style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '13px', fontWeight: 300 }}>{exp.role}</p>
+              <p style={{ color: '#E8DDD0', opacity: 0.68, fontSize: '13.5px', fontWeight: 300 }}>{exp.role}</p>
             </div>
           </motion.div>
         </Link>
@@ -90,11 +99,11 @@ function ExperienceCard({ exp, viewDetails, index }: {
             <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to right, transparent 60%, #121110 100%)' }} />
           </div>
           <div className="flex flex-col justify-center px-4 py-4 flex-1 min-w-0">
-            <span className="text-[10px] uppercase tracking-widest mb-1" style={{ color: accent, opacity: 0.85 }}>{exp.period}</span>
+            <span className="text-[10px] uppercase tracking-widest mb-1" style={{ color: accentFg }}>{exp.period}</span>
             <h3 className="font-bold text-sm uppercase leading-tight mb-1" style={{ color: '#E8DDD0' }}>{exp.company}</h3>
-            <p className="text-xs leading-snug truncate" style={{ color: '#E8DDD0', opacity: 0.45 }}>{exp.role}</p>
+            <p className="text-xs leading-snug truncate" style={{ color: '#E8DDD0', opacity: 0.68 }}>{exp.role}</p>
             <div className="flex items-center gap-1 mt-3">
-              <span className="text-[9px] uppercase tracking-widest" style={{ color: accent, opacity: 0.7 }}>{viewDetails}</span>
+              <span className="text-[10px] uppercase tracking-widest" style={{ color: accentFg }}>{viewDetails}</span>
             </div>
           </div>
         </motion.div>
@@ -129,7 +138,7 @@ export default function ExperienceSection() {
       <FadeIn delay={0.15} y={20}>
         <p
           className="text-center max-w-xl mx-auto mb-10 sm:mb-12 md:mb-14 font-light leading-relaxed"
-          style={{ color: '#E8DDD0', opacity: 0.4, fontSize: 'clamp(0.85rem, 1.4vw, 1.05rem)' }}
+          style={{ color: '#E8DDD0', opacity: 0.62, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)' }}
         >
           {tx.subheading}
         </p>

@@ -125,7 +125,7 @@ function Section({ label, children }: { label: string; children: React.ReactNode
         className="flex items-center gap-3 mb-8"
       >
         <div className="w-6 h-px" style={{ background: 'rgba(232,224,213,0.25)' }} />
-        <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.38em', textTransform: 'uppercase', fontWeight: 500 }}>
+        <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.38em', textTransform: 'uppercase', fontWeight: 500 }}>
           {label}
         </span>
       </motion.div>
@@ -150,7 +150,7 @@ export default function AboutPage() {
         <Link
           to="/"
           className="inline-flex items-center gap-2 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {c.back}
@@ -158,7 +158,7 @@ export default function AboutPage() {
         <button
           onClick={toggle}
           className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
           aria-label={lang === 'da' ? 'Switch to English' : 'Skift til dansk'}
         >
           <Globe size={12} strokeWidth={1.5} />
@@ -183,7 +183,7 @@ export default function AboutPage() {
             />
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-            <p style={{ color: '#E8DDD0', opacity: 0.22, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <p style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '10px' }}>
               {c.label}
             </p>
             <h1
@@ -195,7 +195,7 @@ export default function AboutPage() {
                 Makvandi
               </span>
             </h1>
-            <p className="mt-2" style={{ color: '#E8DDD0', opacity: 0.4, fontSize: '13px', letterSpacing: '0.06em' }}>
+            <p className="mt-2" style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '13px', letterSpacing: '0.06em' }}>
               {lang === 'da' ? 'IT-supporter · Aarhus, DK' : 'IT Supporter · Aarhus, DK'}
             </p>
           </motion.div>
@@ -224,7 +224,7 @@ export default function AboutPage() {
                 style={{ background: 'rgba(232,224,213,0.04)', border: '1px solid rgba(232,224,213,0.08)' }}
               >
                 <Icon size={16} strokeWidth={1.5} style={{ color: '#C9A96E', opacity: 0.8, marginBottom: '10px' }} />
-                <p style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '3px' }}>{f.k}</p>
+                <p style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '3px' }}>{f.k}</p>
                 <p style={{ color: '#E8DDD0', opacity: 0.85, fontSize: '14px', fontWeight: 600 }}>{f.v}</p>
               </motion.div>
             )
@@ -255,7 +255,7 @@ export default function AboutPage() {
                       </Link>
                     ) : step.title}
                   </h3>
-                  <p style={{ color: '#E8DDD0', opacity: 0.5, fontSize: '14px', lineHeight: 1.7, fontWeight: 300 }}>{step.desc}</p>
+                  <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '14px', lineHeight: 1.7, fontWeight: 300 }}>{step.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -277,7 +277,7 @@ export default function AboutPage() {
                 >
                   <Icon size={22} strokeWidth={1.4} style={{ color: '#C9A96E', opacity: 0.85, marginBottom: '14px' }} />
                   <h3 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: '15px', fontWeight: 600, marginBottom: '6px' }}>{e.title}</h3>
-                  <p style={{ color: '#E8DDD0', opacity: 0.5, fontSize: '13px', lineHeight: 1.65, fontWeight: 300 }}>{e.desc}</p>
+                  <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '13px', lineHeight: 1.65, fontWeight: 300 }}>{e.desc}</p>
                 </motion.div>
               )
             })}
@@ -285,14 +285,14 @@ export default function AboutPage() {
 
           {/* Other qualifications */}
           <div className="mt-6">
-            <p style={{ color: '#E8DDD0', opacity: 0.28, fontSize: '9px', letterSpacing: '0.28em', textTransform: 'uppercase', marginBottom: '12px' }}>
+            <p style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '9px', letterSpacing: '0.28em', textTransform: 'uppercase', marginBottom: '12px' }}>
               {c.extraLabel}
             </p>
             <div className="flex flex-wrap gap-2">
               {c.extra.map((x) => (
                 <span
                   key={x}
-                  style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '10px', letterSpacing: '0.16em', textTransform: 'uppercase', padding: '5px 12px', border: '1px solid rgba(232,224,213,0.1)', borderRadius: '100px' }}
+                  style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '10px', letterSpacing: '0.16em', textTransform: 'uppercase', padding: '5px 12px', border: '1px solid rgba(232,224,213,0.1)', borderRadius: '100px' }}
                 >
                   {x}
                 </span>
@@ -328,7 +328,7 @@ export default function AboutPage() {
                 >
                   <Icon size={22} strokeWidth={1.4} style={{ color: '#C9A96E', opacity: 0.85, marginBottom: '14px' }} />
                   <h3 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: '15px', fontWeight: 600, marginBottom: '6px' }}>{it.title}</h3>
-                  <p style={{ color: '#E8DDD0', opacity: 0.5, fontSize: '13px', lineHeight: 1.65, fontWeight: 300 }}>{it.desc}</p>
+                  <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '13px', lineHeight: 1.65, fontWeight: 300 }}>{it.desc}</p>
                 </motion.div>
               )
             })}
@@ -349,7 +349,7 @@ export default function AboutPage() {
                     <Languages size={14} strokeWidth={1.5} style={{ color: '#C9A96E', opacity: 0.7 }} />
                     <span style={{ color: '#E8DDD0', opacity: 0.85, fontSize: '14px', fontWeight: 600 }}>{l.name}</span>
                   </div>
-                  <span style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '11px' }}>{l.level}</span>
+                  <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '11px' }}>{l.level}</span>
                 </div>
                 <div className="h-1.5 rounded-full overflow-hidden" style={{ background: 'rgba(232,224,213,0.08)' }}>
                   <motion.div

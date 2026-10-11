@@ -57,7 +57,7 @@ export default function GamingPCPage() {
         <Link
           to="/"
           className="inline-flex items-center gap-2 mb-10 sm:mb-14 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {tx.back}
@@ -89,7 +89,7 @@ export default function GamingPCPage() {
         <img src="/gaming-pc.jpeg" alt="Gaming PC Build" className="w-full h-full object-cover" style={{ maxHeight: '520px' }} />
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 max-w-5xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16">
 
         {/* Description */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
@@ -100,7 +100,7 @@ export default function GamingPCPage() {
 
         {/* Specs */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
-          <p style={{ color: '#E8DDD0', opacity: 0.25, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '16px' }}>
+          <p style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '16px' }}>
             {tx.specsLabel}
           </p>
           <div className="flex flex-col gap-0">
@@ -113,7 +113,7 @@ export default function GamingPCPage() {
                 className="flex items-baseline justify-between py-3"
                 style={{ borderBottom: '1px solid rgba(232,224,213,0.07)' }}
               >
-                <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', flexShrink: 0, marginRight: '16px' }}>
+                <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', flexShrink: 0, marginRight: '16px' }}>
                   {s.label}
                 </span>
                 <span style={{ color: '#E8DDD0', opacity: 0.75, fontSize: '12px', textAlign: 'right', lineHeight: 1.4 }}>
