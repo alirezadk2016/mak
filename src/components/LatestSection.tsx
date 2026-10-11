@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
-import { Car, Cloud, Rocket, Check, ArrowUpRight } from 'lucide-react'
+import { Car, Cloud, Rocket, Check, ArrowUpRight, Palette, Code2, Search, ShieldCheck } from 'lucide-react'
 import FadeIn from './FadeIn'
 import { useLang } from '../contexts/LanguageContext'
 
 type Status = 'done' | 'active' | 'longterm'
+
+const groupIcons = { design: Palette, code: Code2, seo: Search, quality: ShieldCheck } as const
 
 const copy = {
   da: {
@@ -30,15 +32,11 @@ const copy = {
         title: 'Kestro: mit langsigtede projekt',
         text: 'Kestro er min egen tosprogede B2B-hjemmeside om istandsat erhvervs-IT til Danmark og Norge. Det er min træningsplads: her øver jeg mig i at finde kunder, designe, skrive kode og få et site frem på Google, ved at gøre det i praksis. Visionen er, at det på sigt kan blive en ekstra indtægtskilde ved siden af mit job.',
         built: 'Det har jeg bygget og lært indtil nu',
-        bullets: [
-          'Hjemmeside på dansk og engelsk i Next.js, TypeScript og Tailwind, hostet på Vercel',
-          'Eget design: logo, ikonsæt, farver, typografi og kort til produkter og vejledninger',
-          'Interaktiv 3D-bærbar i toppen, som kun indlæses på enheder, der kan klare den',
-          'SEO fra bunden: hreflang, sitemap, struktureret data, FAQ og en llms.txt til AI-søgning',
-          '8 vejledninger om blandt andet Windows 10, RAM og køb af brugt computer, med RSS-feed',
-          'Kun verificerede kilder: ingen opdigtede tal, priser eller kundehistorier',
-          'Automatisk kvalitetstjek i en rigtig browser: kontrast, overflow og overskrifter',
-          'Kontaktformular, admin-indbakke med tre adgangslag og samtykkebanner',
+        groups: [
+          { icon: 'design', title: 'Design', items: ['Eget logo, ikonsæt, farver og typografi', 'Kort og illustrationer til produkter og vejledninger'] },
+          { icon: 'code', title: 'Udvikling', items: ['Tosproget site i Next.js, TypeScript og Tailwind på Vercel', 'Interaktiv 3D-bærbar, der kun indlæses på kapable enheder', 'Kontaktformular og admin-indbakke'] },
+          { icon: 'seo', title: 'SEO og indhold', items: ['hreflang, sitemap, struktureret data, FAQ og llms.txt', '8 vejledninger med RSS-feed', 'Kun verificerede kilder, ingen opdigtede tal'] },
+          { icon: 'quality', title: 'Kvalitet og sikkerhed', items: ['Automatisk browsertest af kontrast, overflow og overskrifter', 'Adgangskontrol i tre lag på admin', 'Samtykkebanner til statistik'] },
         ],
         visit: 'Besøg kestro.dk',
         chips: ['Kundeopsøgning', 'Grafisk design', 'Webudvikling', 'SEO'],
@@ -69,15 +67,11 @@ const copy = {
         title: 'Kestro: my long-term project',
         text: 'Kestro is my own bilingual B2B website about refurbished business IT for Denmark and Norway. It is my training ground: here I practise finding customers, designing, writing code and getting a site to rank on Google, by doing it for real. The vision is that, over time, it can become an extra source of income alongside my job.',
         built: 'What I have built and learned so far',
-        bullets: [
-          'Danish and English website in Next.js, TypeScript and Tailwind, hosted on Vercel',
-          'Own design: logo, icon set, colours, typography and cards for products and guides',
-          'Interactive 3D laptop in the hero that only loads on devices that can handle it',
-          'SEO from scratch: hreflang, sitemap, structured data, FAQ and an llms.txt for AI search',
-          '8 guides on Windows 10, RAM upgrades and buying a used laptop, with an RSS feed',
-          'Verified sources only: no made-up numbers, prices or customer stories',
-          'Automated quality gate in a real browser: contrast, overflow and heading structure',
-          'Contact form, admin inbox with three access layers and a consent banner',
+        groups: [
+          { icon: 'design', title: 'Design', items: ['Own logo, icon set, colours and typography', 'Cards and illustrations for products and guides'] },
+          { icon: 'code', title: 'Development', items: ['Bilingual site in Next.js, TypeScript and Tailwind on Vercel', 'Interactive 3D laptop that only loads on capable devices', 'Contact form and admin inbox'] },
+          { icon: 'seo', title: 'SEO and content', items: ['hreflang, sitemap, structured data, FAQ and llms.txt', '8 guides with an RSS feed', 'Verified sources only, no made-up numbers'] },
+          { icon: 'quality', title: 'Quality and security', items: ['Automated browser tests for contrast, overflow and headings', 'Three-layer access control on the admin', 'Consent banner for analytics'] },
         ],
         visit: 'Visit kestro.dk',
         chips: ['Finding customers', 'Graphic design', 'Web development', 'SEO'],
@@ -219,14 +213,28 @@ export default function LatestSection() {
             <p style={{ color: '#C9A96E', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
               {c.cards.kestro.built}
             </p>
-            <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-              {c.cards.kestro.bullets.map((b) => (
-                <li key={b} className="flex gap-3" style={{ color: '#E8DDD0', opacity: 0.8, fontSize: '14px', fontWeight: 300, lineHeight: 1.6 }}>
-                  <Check size={15} strokeWidth={2.2} className="flex-shrink-0 mt-[3px]" style={{ color: '#A58BE0' }} aria-hidden="true" />
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {c.cards.kestro.groups.map((g) => {
+                const Icon = groupIcons[g.icon as keyof typeof groupIcons]
+                return (
+                  <div
+                    key={g.title}
+                    className="rounded-[16px] p-4"
+                    style={{ background: 'rgba(232,224,213,0.03)', border: '1px solid rgba(232,224,213,0.08)' }}
+                  >
+                    <div className="flex items-center gap-2 mb-3" style={{ color: '#A58BE0' }}>
+                      <Icon size={16} strokeWidth={1.7} aria-hidden="true" />
+                      <h4 style={{ color: '#EFE8DB', fontSize: '13px', fontWeight: 600, letterSpacing: '0.04em' }}>{g.title}</h4>
+                    </div>
+                    <ul className="flex flex-col gap-2">
+                      {g.items.map((it) => (
+                        <li key={it} style={{ color: '#E8DDD0', opacity: 0.74, fontSize: '13px', fontWeight: 300, lineHeight: 1.55 }}>{it}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )
+              })}
+            </div>
           </div>
           <div className="flex flex-wrap items-center gap-3 mt-2">
             <a
