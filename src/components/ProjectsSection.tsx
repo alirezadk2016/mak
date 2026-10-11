@@ -15,6 +15,7 @@ const projects = [
     name: 'Svendeprøve',
     href: '/projects/svendeproeve',
     accent: '#FF6B00',
+    fg: '#FF9248',
     img: '/photo_2026-05-08_09-04-19.jpg',
   },
   {
@@ -24,6 +25,7 @@ const projects = [
     name: 'Gaming PC Build',
     href: '/projects/gaming-pc',
     accent: '#7C5CBF',
+    fg: '#A58BE0',
     img: '/gaming-pc.jpeg',
   },
   {
@@ -33,6 +35,7 @@ const projects = [
     name: 'Elite Vask',
     href: '/projects/elite-vask',
     accent: '#3E9BD6',
+    fg: '#6DB8EA',
     img: null,
   },
   {
@@ -42,6 +45,7 @@ const projects = [
     name: 'MAK Painting',
     href: '/projects/mak-painting',
     accent: '#C9A96E',
+    fg: '#C9A96E',
     img: null,
   },
 ]
@@ -65,7 +69,7 @@ function ProjectCard({ project, index, lang, btnLabel }: {
       onClick={() => navigate(project.href)}
     >
       <motion.div
-        whileHover={{ y: -8 }}
+        whileHover={{ y: -8, boxShadow: `0 24px 48px -20px ${accent}55` }}
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         className="relative rounded-[22px] overflow-hidden h-full"
         style={{
@@ -107,7 +111,7 @@ function ProjectCard({ project, index, lang, btnLabel }: {
           {/* Number badge */}
           <span
             className="absolute top-4 left-5 font-black leading-none pointer-events-none"
-            style={{ color: '#E8DDD0', opacity: 0.18, fontSize: '44px', fontFamily: "'Space Grotesk', sans-serif" }}
+            style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '44px', fontFamily: "'Space Grotesk', sans-serif" }}
           >
             {project.num}
           </span>
@@ -116,7 +120,7 @@ function ProjectCard({ project, index, lang, btnLabel }: {
         {/* Text */}
         <div className="p-5 sm:p-6">
           <div className="flex items-center justify-between mb-2.5">
-            <span style={{ color: accent, fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.9 }}>
+            <span style={{ color: project.fg, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
               {project.category[lang]}
             </span>
             <span
@@ -124,7 +128,7 @@ function ProjectCard({ project, index, lang, btnLabel }: {
               style={{ color: '#E8DDD0', fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase' }}
             >
               {btnLabel}
-              <ArrowUpRight size={12} strokeWidth={1.8} style={{ color: accent }} />
+              <ArrowUpRight size={12} strokeWidth={1.8} style={{ color: project.fg }} />
             </span>
           </div>
           <h3 className="font-bold uppercase" style={{ color: '#E8DDD0', fontSize: '17px', letterSpacing: '0.01em' }}>
@@ -162,7 +166,7 @@ export default function ProjectsSection() {
       <FadeIn delay={0.15} y={20}>
         <p
           className="text-center max-w-xl mx-auto mb-10 sm:mb-12 md:mb-14 font-light leading-relaxed"
-          style={{ color: '#E8DDD0', opacity: 0.4, fontSize: 'clamp(0.85rem, 1.4vw, 1.05rem)' }}
+          style={{ color: '#E8DDD0', opacity: 0.62, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)' }}
         >
           {tx.subheading}
         </p>

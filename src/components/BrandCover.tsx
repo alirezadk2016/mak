@@ -41,7 +41,7 @@ export default function BrandCover({ name, sub, accent, className = '', compact 
         className="absolute font-black leading-none select-none pointer-events-none"
         style={{
           color: accent,
-          opacity: 0.07,
+          opacity: 0.1,
           fontSize: compact ? '130px' : '260px',
           fontFamily: "'Space Grotesk', sans-serif",
           right: compact ? '-16px' : '-30px',
@@ -57,7 +57,7 @@ export default function BrandCover({ name, sub, accent, className = '', compact 
           className={`rounded-full flex items-center justify-center ${compact ? 'w-10 h-10' : 'w-14 h-14'}`}
           style={{ border: `1px solid ${accent}66`, background: `${accent}14` }}
         >
-          <span style={{ color: accent, fontSize: compact ? '16px' : '22px', fontWeight: 600, fontFamily: "'Space Grotesk', sans-serif" }}>
+          <span style={{ color: `color-mix(in srgb, ${accent} 62%, white)`, fontSize: compact ? '16px' : '22px', fontWeight: 600, fontFamily: "'Space Grotesk', sans-serif" }}>
             {initial}
           </span>
         </div>
@@ -70,7 +70,7 @@ export default function BrandCover({ name, sub, accent, className = '', compact 
         {sub && !compact && (
           <span
             className="text-center"
-            style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '9px', letterSpacing: '0.28em', textTransform: 'uppercase' }}
+            style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '10px', letterSpacing: '0.26em', textTransform: 'uppercase' }}
           >
             {sub}
           </span>
