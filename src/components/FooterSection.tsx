@@ -51,10 +51,10 @@ function CardBack({ type }: { type: ContactItem['backType'] }) {
   }
 
   const icons: Record<ContactItem['backType'], React.ReactNode> = {
-    instagram: <Instagram size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
-    linkedin: <Linkedin size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
-    email: <Mail size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
-    phone: <Phone size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.5 }} />,
+    instagram: <Instagram size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.6 }} />,
+    linkedin: <Linkedin size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.6 }} />,
+    email: <Mail size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.6 }} />,
+    phone: <Phone size={22} strokeWidth={1.2} style={{ color: '#E8DDD0', opacity: 0.6 }} />,
   }
 
   const labels: Record<ContactItem['backType'], string> = {
@@ -125,7 +125,7 @@ function FlipCard({ item, lang }: { item: ContactItem; lang: 'da' | 'en' }) {
               {typeof item.label === 'object' ? item.label[lang] : item.label}
             </span>
             <div className="w-8 h-8 rounded-full border border-[#E8DDD0]/15 flex items-center justify-center">
-              <Icon size={14} style={{ color: '#E8DDD0', opacity: 0.5 }} strokeWidth={1.5} />
+              <Icon size={14} style={{ color: '#E8DDD0', opacity: 0.6 }} strokeWidth={1.5} />
             </div>
           </div>
           <span style={{ color: '#E8DDD0', fontSize: '0.85rem', fontWeight: 500, opacity: 0.85 }} className="leading-snug mt-auto">
@@ -182,7 +182,7 @@ function MobileFlipCard({ item, lang }: { item: ContactItem; lang: 'da' | 'en' }
             {typeof item.label === 'object' ? item.label[lang] : item.label}
           </span>
           <div className="w-8 h-8 rounded-full border border-[#E8DDD0]/15 flex items-center justify-center">
-            <Icon size={14} style={{ color: '#E8DDD0', opacity: 0.5 }} strokeWidth={1.5} />
+            <Icon size={14} style={{ color: '#E8DDD0', opacity: 0.6 }} strokeWidth={1.5} />
           </div>
         </div>
         <span style={{ color: '#E8DDD0', fontSize: '0.85rem', fontWeight: 500, opacity: 0.85 }} className="leading-snug mt-auto">

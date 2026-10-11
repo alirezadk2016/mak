@@ -111,7 +111,7 @@ function ProjectCard({ project, index, lang, btnLabel }: {
           {/* Number badge */}
           <span
             className="absolute top-4 left-5 font-black leading-none pointer-events-none"
-            style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '44px', fontFamily: "'Space Grotesk', sans-serif" }}
+            style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '44px', fontFamily: "'Space Grotesk', sans-serif" }}
           >
             {project.num}
           </span>

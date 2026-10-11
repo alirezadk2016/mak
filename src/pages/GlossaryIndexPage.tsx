@@ -18,7 +18,7 @@ export default function GlossaryIndexPage() {
         <Link
           to="/"
           className="inline-flex items-center gap-2 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase' }}
         >
           <ArrowLeft size={13} strokeWidth={1.8} />
           {lang === 'da' ? 'Tilbage' : 'Back'}
@@ -26,7 +26,7 @@ export default function GlossaryIndexPage() {
         <button
           onClick={toggle}
           className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-60"
-          style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
+          style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}
           aria-label={lang === 'da' ? 'Switch to English' : 'Skift til dansk'}
         >
           <Globe size={12} strokeWidth={1.5} />
@@ -48,7 +48,7 @@ export default function GlossaryIndexPage() {
           </h1>
           <p
             className="font-light leading-relaxed max-w-xl mb-12 sm:mb-16"
-            style={{ color: '#E8DDD0', opacity: 0.45, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8 }}
+            style={{ color: '#E8DDD0', opacity: 0.6, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)', lineHeight: 1.8 }}
           >
             {lang === 'da'
               ? 'De vigtigste begreber fra min hverdag som IT-supporter, forklaret uden teknisk jargon, og med eksempler på, hvordan jeg selv har brugt dem i praksis.'
@@ -85,9 +85,9 @@ export default function GlossaryIndexPage() {
                     {t.name}
                   </h2>
                   {t.full && (
-                    <p style={{ color: '#E8DDD0', opacity: 0.35, fontSize: '11px', marginBottom: '10px' }}>{t.full}</p>
+                    <p style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '11px', marginBottom: '10px' }}>{t.full}</p>
                   )}
-                  <p style={{ color: '#E8DDD0', opacity: 0.5, fontSize: '13px', lineHeight: 1.65, fontWeight: 300 }}>
+                  <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '13px', lineHeight: 1.65, fontWeight: 300 }}>
                     {t.what[lang].split('. ')[0]}.
                   </p>
                 </div>
@@ -103,7 +103,7 @@ export default function GlossaryIndexPage() {
           className="flex items-center gap-3 mt-10"
         >
           <BookOpen size={14} strokeWidth={1.5} style={{ color: '#C9A96E', opacity: 0.7 }} />
-          <span style={{ color: '#E8DDD0', opacity: 0.3, fontSize: '11px', fontWeight: 300 }}>
+          <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '11px', fontWeight: 300 }}>
             {lang === 'da' ? 'Baseret på min uddannelse og praktiske erfaring.' : 'Based on my education and hands-on experience.'}
           </span>
         </motion.div>

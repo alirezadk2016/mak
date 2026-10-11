@@ -110,7 +110,7 @@ export default function EliteVaskPage() {
           {highlights.map((h) => (
             <div key={h.num} className="rounded-[16px] border border-[#E8DDD0]/10 p-4 sm:p-5 text-center">
               <span className="block font-black text-2xl sm:text-4xl" style={{ color: '#E8DDD0' }}>{h.num}</span>
-              <span className="block text-[10px] uppercase tracking-widest mt-1" style={{ color: '#E8DDD0', opacity: 0.35 }}>{h.label[lang]}</span>
+              <span className="block text-[10px] uppercase tracking-widest mt-1" style={{ color: '#E8DDD0', opacity: 0.55 }}>{h.label[lang]}</span>
             </div>
           ))}
         </motion.div>
@@ -148,7 +148,7 @@ export default function EliteVaskPage() {
               transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
               className="rounded-[20px] border border-[#E8DDD0]/10 p-6"
             >
-              <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.45 }}>
+              <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.6 }}>
                 {f.title[lang]}
               </h3>
               <ul className="space-y-3">
@@ -170,7 +170,7 @@ export default function EliteVaskPage() {
           transition={{ duration: 0.5, delay: 0.45 }}
           className="rounded-[20px] border border-[#E8DDD0]/10 p-6 mb-5"
         >
-          <h3 className="font-bold uppercase tracking-widest text-xs mb-6" style={{ color: '#E8DDD0', opacity: 0.45 }}>
+          <h3 className="font-bold uppercase tracking-widest text-xs mb-6" style={{ color: '#E8DDD0', opacity: 0.6 }}>
             {lang === 'da' ? 'Servicepakker' : 'Service Packages'}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -179,7 +179,7 @@ export default function EliteVaskPage() {
                 <div className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style={{ background: '#E8DDD0', opacity: 0.3 }} />
                 <div>
                   <p className="font-semibold text-sm uppercase tracking-wider mb-1" style={{ color: '#E8DDD0', opacity: 0.8 }}>{pkg.name[lang]}</p>
-                  <p className="text-xs leading-relaxed" style={{ color: '#E8DDD0', opacity: 0.45 }}>{pkg.desc[lang]}</p>
+                  <p className="text-xs leading-relaxed" style={{ color: '#E8DDD0', opacity: 0.6 }}>{pkg.desc[lang]}</p>
                 </div>
               </div>
             ))}
@@ -193,7 +193,7 @@ export default function EliteVaskPage() {
           transition={{ duration: 0.5, delay: 0.55 }}
           className="rounded-[20px] border border-[#E8DDD0]/10 p-6"
         >
-          <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.45 }}>
+          <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.6 }}>
             {lang === 'da' ? 'Teknologier' : 'Technologies'}
           </h3>
           <div className="flex flex-wrap gap-2">

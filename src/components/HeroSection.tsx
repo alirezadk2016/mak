@@ -36,6 +36,8 @@ function FlipAvatar({ className }: { className?: string }) {
         <img
           src={IMG_FRONT}
           alt="Alireza Makvandi"
+          fetchPriority="high"
+          decoding="async"
           className="w-full h-full object-cover"
           style={{ borderRadius: '3px', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
         />
@@ -289,7 +291,7 @@ export default function HeroSection() {
           <FadeIn delay={0.5} y={20}>
             <p
               className="text-center font-light uppercase text-center"
-              style={{ color: '#E8DDD0', opacity: 0.38, fontSize: '10px', letterSpacing: '0.32em', lineHeight: 1.8 }}
+              style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.32em', lineHeight: 1.8 }}
             >
               {tx.hero.role}
             </p>
@@ -332,7 +334,7 @@ export default function HeroSection() {
                     {lang === 'da' ? 'Klar til nye muligheder' : 'Open to opportunities'}
                   </span>
                 </div>
-                <p style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em' }}>
+                <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px', fontWeight: 300, letterSpacing: '0.02em' }}>
                   {lang === 'da' ? 'IT Support · Aarhus, DK' : 'IT Support · Aarhus, DK'}
                 </p>
               </div>
@@ -393,7 +395,7 @@ export default function HeroSection() {
                   <div className="w-10 h-px" style={{ background: 'rgba(201,169,110,0.5)' }} />
                   <p
                     className="font-light uppercase"
-                    style={{ color: '#E8DDD0', opacity: 0.5, fontSize: 'clamp(0.7rem, 1vw, 0.9rem)', letterSpacing: '0.26em' }}
+                    style={{ color: '#E8DDD0', opacity: 0.6, fontSize: 'clamp(0.7rem, 1vw, 0.9rem)', letterSpacing: '0.26em' }}
                   >
                     {tx.hero.role}
                   </p>
@@ -439,7 +441,7 @@ export default function HeroSection() {
                   <a href="tel:+4591488843" className="inline-flex items-center gap-2">
                     <Phone size={13} strokeWidth={1.6} /> 91 48 88 43
                   </a>
-                  <span className="inline-flex items-center gap-2" style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '12px' }}>
+                  <span className="inline-flex items-center gap-2" style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '12px' }}>
                     <MapPin size={13} strokeWidth={1.6} /> Aarhus N
                   </span>
                 </div>
