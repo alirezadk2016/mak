@@ -9,6 +9,7 @@ import ScrollToTop from './components/ScrollToTop'
 import ScrollProgress from './components/ScrollProgress'
 import StickyContactBar from './components/StickyContactBar'
 import HeroSection from './components/HeroSection'
+import QuoteBand from './components/QuoteBand'
 import LatestSection from './components/LatestSection'
 import AboutTeaser from './components/AboutTeaser'
 import ServicesSection from './components/ServicesSection'
@@ -35,6 +36,7 @@ function Home() {
       <LatestSection />
       <ServicesSection />
       <ExperienceSection />
+      <QuoteBand />
       <ProjectsSection />
       <FooterSection />
     </main>

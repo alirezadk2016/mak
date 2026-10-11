@@ -405,6 +405,14 @@ export default function HeroSection() {
                 </div>
               </FadeIn>
 
+              <FadeIn delay={0.6} y={12}>
+                <p className="mt-4 max-w-md font-light" style={{ color: '#E8DDD0', opacity: 0.72, fontSize: '15px', lineHeight: 1.7 }}>
+                  {lang === 'da'
+                    ? 'Nyuddannet IT-supporter med hands-on erfaring fra skole, praktik og kundeservice. Klar til at starte hurtigt.'
+                    : 'Newly qualified IT supporter with hands-on experience from school, internship and customer service. Ready to start quickly.'}
+                </p>
+              </FadeIn>
+
               {/* Credibility row */}
               <FadeIn delay={0.65} y={16}>
                 <div className="flex flex-wrap gap-2.5 mt-8">

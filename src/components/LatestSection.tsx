@@ -23,11 +23,12 @@ const copy = {
         tag: 'Faglig udvikling',
         title: 'Dykker ned i Microsoft 365',
         text: 'Jeg bygger videre på min uddannelse og studerer Microsoft 365 for at blive endnu stærkere i brugeradministration og daglig support.',
+        chips: ['Microsoft 365', 'Brugeradministration', 'Daglig support'],
       },
       kestro: {
         tag: 'Eget projekt',
         title: 'Kestro: mit langsigtede projekt',
-        text: 'Jeg bygger Kestro, hvor jeg lærer grafisk design og marketing og bruger det i praksis. Med min erfaring med SEO arbejder jeg på at få sitet frem på Google, så det på sigt kan blive en ekstra indtægtskilde.',
+        text: 'Jeg bygger Kestro, hvor jeg lærer grafisk design og marketing og bruger det i praksis. Med min erfaring med SEO arbejder jeg på at få sitet frem på Google, så det på sigt kan blive en ekstra indtægtskilde ved siden af mit job.',
         chips: ['Grafisk design', 'Marketing', 'SEO', 'Synlighed på Google'],
       },
     },
@@ -49,11 +50,12 @@ const copy = {
         tag: 'Professional development',
         title: 'Diving into Microsoft 365',
         text: 'Building on my education, I am studying Microsoft 365 to get even stronger at user administration and day-to-day support.',
+        chips: ['Microsoft 365', 'User administration', 'Day-to-day support'],
       },
       kestro: {
         tag: 'Own project',
         title: 'Kestro: my long-term project',
-        text: 'I am building Kestro, where I learn graphic design and marketing and put them into practice. Using my SEO experience, I am working to get the site ranking on Google so that, over time, it can become an extra source of income.',
+        text: 'I am building Kestro, where I learn graphic design and marketing and put them into practice. Using my SEO experience, I am working to get the site ranking on Google so that, over time, it can become an extra source of income alongside my job.',
         chips: ['Graphic design', 'Marketing', 'SEO', 'Google visibility'],
       },
     },
@@ -179,7 +181,13 @@ export default function LatestSection() {
         </Card>
 
         {/* Microsoft 365 */}
-        <Card index={1} icon={<Cloud size={18} strokeWidth={1.7} />} tag={c.cards.m365.tag} title={c.cards.m365.title} text={c.cards.m365.text} status="active" statusLabel={c.status.active} accent="#3E9BD6" />
+        <Card index={1} icon={<Cloud size={18} strokeWidth={1.7} />} tag={c.cards.m365.tag} title={c.cards.m365.title} text={c.cards.m365.text} status="active" statusLabel={c.status.active} accent="#3E9BD6">
+          <div className="flex flex-wrap gap-2 mt-auto pt-1">
+            {c.cards.m365.chips.map((chip) => (
+              <span key={chip} className="hero-chip" style={{ opacity: 0.85 }}>{chip}</span>
+            ))}
+          </div>
+        </Card>
 
         {/* Kestro, full width */}
         <Card index={2} icon={<Rocket size={18} strokeWidth={1.7} />} tag={c.cards.kestro.tag} title={c.cards.kestro.title} text={c.cards.kestro.text} status="longterm" statusLabel={c.status.longterm} accent="#A58BE0" className="md:col-span-2">
