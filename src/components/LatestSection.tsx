@@ -11,7 +11,7 @@ const copy = {
     heading: 'Seneste',
     sub: 'Hvad jeg arbejder på og lærer, lige nu.',
     updated: 'Opdateret oktober 2026',
-    status: { done: 'Bestået', active: 'I gang', longterm: 'Langsigtet' },
+    status: { done: 'Bestået', active: 'I gang', longterm: 'Vision' },
     cards: {
       license: {
         tag: 'Kørekort',
@@ -28,8 +28,8 @@ const copy = {
       kestro: {
         tag: 'Eget projekt',
         title: 'Kestro: mit langsigtede projekt',
-        text: 'Kestro er min egen tosprogede B2B-hjemmeside om istandsat erhvervs-IT til Danmark og Norge. Her lærer jeg grafisk design, marketing og SEO ved at bygge det hele i praksis. Målet er at få sitet frem på Google, så det på sigt kan blive en ekstra indtægtskilde ved siden af mit job.',
-        built: 'Det har jeg bygget indtil nu',
+        text: 'Kestro er min egen tosprogede B2B-hjemmeside om istandsat erhvervs-IT til Danmark og Norge. Det er min træningsplads: her øver jeg mig i at finde kunder, designe, skrive kode og få et site frem på Google, ved at gøre det i praksis. Visionen er, at det på sigt kan blive en ekstra indtægtskilde ved siden af mit job.',
+        built: 'Det har jeg bygget og lært indtil nu',
         bullets: [
           'Hjemmeside på dansk og engelsk i Next.js, TypeScript og Tailwind, hostet på Vercel',
           'Eget design: logo, ikonsæt, farver, typografi og kort til produkter og vejledninger',
@@ -41,7 +41,7 @@ const copy = {
           'Kontaktformular, admin-indbakke med tre adgangslag og samtykkebanner',
         ],
         visit: 'Besøg kestro.dk',
-        chips: ['Grafisk design', 'Marketing', 'SEO', 'Synlighed på Google'],
+        chips: ['Kundeopsøgning', 'Grafisk design', 'Webudvikling', 'SEO'],
       },
     },
   },
@@ -50,7 +50,7 @@ const copy = {
     heading: 'Latest',
     sub: 'What I am working on and learning at the moment.',
     updated: 'Updated October 2026',
-    status: { done: 'Passed', active: 'In progress', longterm: 'Long-term' },
+    status: { done: 'Passed', active: 'In progress', longterm: 'Vision' },
     cards: {
       license: {
         tag: "Driver's licence",
@@ -67,8 +67,8 @@ const copy = {
       kestro: {
         tag: 'Own project',
         title: 'Kestro: my long-term project',
-        text: 'Kestro is my own bilingual B2B website about refurbished business IT for Denmark and Norway. It is where I learn graphic design, marketing and SEO by building everything in practice. The goal is to get the site ranking on Google so that, over time, it can become an extra source of income alongside my job.',
-        built: 'What I have built so far',
+        text: 'Kestro is my own bilingual B2B website about refurbished business IT for Denmark and Norway. It is my training ground: here I practise finding customers, designing, writing code and getting a site to rank on Google, by doing it for real. The vision is that, over time, it can become an extra source of income alongside my job.',
+        built: 'What I have built and learned so far',
         bullets: [
           'Danish and English website in Next.js, TypeScript and Tailwind, hosted on Vercel',
           'Own design: logo, icon set, colours, typography and cards for products and guides',
@@ -80,7 +80,7 @@ const copy = {
           'Contact form, admin inbox with three access layers and a consent banner',
         ],
         visit: 'Visit kestro.dk',
-        chips: ['Graphic design', 'Marketing', 'SEO', 'Google visibility'],
+        chips: ['Finding customers', 'Graphic design', 'Web development', 'SEO'],
       },
     },
   },
