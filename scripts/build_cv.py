@@ -1,5 +1,5 @@
 import base64
-photo = base64.b64encode(open('public/6F4611AC-9D3C-47F1-8BA0-49E69A35BCDE.jpeg','rb').read()).decode()
+photo = base64.b64encode(open('public/portrait-alireza.jpg','rb').read()).decode()
 img = f"data:image/jpeg;base64,{photo}"
 # Inline stroke icons (currentColor = gold via .c-ic)
 _s = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'
@@ -76,7 +76,7 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
       <div class="c-item"><span class="c-ic">{IC_WEB}</span><div><div class="c-k">Web</div><a class="c-v" href="https://www.makvandi.dk">www.makvandi.dk</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" style="word-break:normal;overflow-wrap:break-word;font-size:7.5pt" href="https://dk.linkedin.com/in/alireza-makvandi-446704301">linkedin.com/in/<wbr>alireza-makvandi-<wbr>446704301</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_PIN}</span><div><div class="c-k">Adresse</div><div class="c-v">Aarhus N, 8200</div></div></div>
-      <div class="c-item"><span class="c-ic">{IC_CAR}</span><div><div class="c-k">Kørekort</div><div class="c-v">B (personbil)</div></div></div>
+      <div class="c-item"><span class="c-ic">{IC_CAR}</span><div><div class="c-k">Kørekort</div><div class="c-v">B, under ombytning til dansk (teoriprøve bestået)</div></div></div>
 
       <div class="s-h">Uddannelse</div><div class="s-rule"></div>
       <div class="edu-y">2024 – 2026</div>
@@ -166,12 +166,21 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
       </ul>
     </div>
 
-    <div class="m-h">Personlige kvaliteter</div><div class="m-rule"></div>
-    <ul>
-      <li>Rolig og struktureret, også når der er travlt og mange henvendelser.</li>
-      <li>Vant til at forklare teknik i et forståeligt sprog for alle brugere.</li>
-      <li>Analytisk tilgang: jeg kan godt lide at finde ud af, hvorfor noget ikke virker.</li>
-    </ul>
+    <div class="job">
+      <div class="j-y">2026 <span class="j-org">· Eget projekt</span></div>
+      <div class="j-t">Kestro.dk <span>· tosproget B2B-hjemmeside</span></div>
+      <ul>
+        <li>Træningsplads, hvor jeg øver webudvikling (Next.js, TypeScript), design, SEO og kundeopsøgning i praksis.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="j-y">I gang <span class="j-org">· Selvstudium</span></div>
+      <div class="j-t">Microsoft 365-administration</div>
+      <ul>
+        <li>Bygger videre på uddannelsen med fokus på brugeradministration og daglig support.</li>
+      </ul>
+    </div>
 
     <div class="m-h">Referencer</div><div class="m-rule"></div>
     <ul>
