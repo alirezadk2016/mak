@@ -89,7 +89,7 @@ export default function GamingPCPage() {
         <img src="/gaming-pc.jpeg" alt="Gaming PC Build" className="w-full h-full object-cover" style={{ maxHeight: '520px' }} />
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 max-w-5xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16">
 
         {/* Description */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>

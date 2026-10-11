@@ -119,7 +119,7 @@ export default function MakPaintingPage() {
       </motion.div>
 
       {/* Features grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-5xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
         {features.map((block, i) => (
           <motion.div
             key={i}
