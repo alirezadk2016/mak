@@ -75,7 +75,7 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
       <div class="c-item"><span class="c-ic">{IC_MAIL}</span><div><div class="c-k">Email</div><a class="c-v" href="mailto:alirezadk2016@gmail.com">alirezadk2016@gmail.com</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_WEB}</span><div><div class="c-k">Web</div><a class="c-v" href="https://www.makvandi.dk">www.makvandi.dk</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" style="word-break:normal;overflow-wrap:break-word;font-size:7.5pt" href="https://dk.linkedin.com/in/alireza-makvandi-446704301">linkedin.com/in/<wbr>alireza-makvandi-<wbr>446704301</a></div></div>
-      <div class="c-item"><span class="c-ic">{IC_PIN}</span><div><div class="c-k">Adresse</div><div class="c-v">Aarhus N, 8200</div></div></div>
+      <div class="c-item"><span class="c-ic">{IC_PIN}</span><div><div class="c-k">Adresse</div><div class="c-v">Aarhus N, 8200</div><div class="c-v" style="color:#c9a96e;font-weight:600">Klar til at flytte</div></div></div>
       <div class="c-item"><span class="c-ic">{IC_CAR}</span><div><div class="c-k">Kørekort</div><div class="c-v">B, under ombytning til dansk (teoriprøve bestået)</div></div></div>
 
       <div class="s-h">Uddannelse</div><div class="s-rule"></div>
@@ -113,7 +113,7 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
   <main class="main">
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-Supporter · Desktop Support · Aarhus</div>
-    <div style="margin:1.5mm 0 0"><span class="avail">Kan tiltræde straks</span></div>
+    <div style="margin:1.5mm 0 0"><span class="avail">Kan tiltræde straks</span> <span class="avail" style="color:#8a6d2f;background:#f6efe0;border-color:#e3d3ae">Klar til at flytte</span></div>
     <p class="profile"><b>Jeg er den, folk spørger, når computeren driller — nu er jeg uddannet til at bruge det professionelt.</b> Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe mennesker, også når der er travlt. Jeg søger en stilling som IT-supporter med on-site eller servicedesk-support tæt på brugerne.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
