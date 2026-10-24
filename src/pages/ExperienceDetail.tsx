@@ -28,7 +28,7 @@ const experiences: Record<string, ExpData> = {
   yousee: {
     company: 'YouSee',
     role: { da: 'Kundeservice & Administration', en: 'Customer Service & Administration' },
-    period: { da: 'IGU-forløb', en: 'IGU-forløb' },
+    period: { da: 'IGU-forløb', en: 'IGU programme' },
     url: 'https://yousee.dk/',
     priceUrl: 'https://yousee.dk/tv/pakker',
     color: '#E4002B',
@@ -54,7 +54,7 @@ const experiences: Record<string, ExpData> = {
   fourcom: {
     company: 'Fourcom',
     role: { da: 'IT Support Praktikant', en: 'IT Support Intern' },
-    period: { da: '2 måneders praktik', en: '2 month internship' },
+    period: { da: '2 måneders praktik', en: '2-month internship' },
     url: 'https://en.fourcom.dk/',
     priceUrl: 'https://en.fourcom.dk/services',
     color: '#0057B8',
@@ -89,7 +89,7 @@ const experiences: Record<string, ExpData> = {
         title: { da: 'Tech Desk', en: 'Tech Desk' },
         items: [
           { da: 'Bemandede skolens Tech Desk, hvor elever kom forbi med deres IT-problemer', en: 'Staffed the school\'s Tech Desk, where students dropped by with their IT problems' },
-          { da: 'Hjalp med adgangskoder, Wi-Fi, Windows-installation, opdateringer og printeropsætning', en: 'Helped with passwords, wi-fi, Windows installation, updates and printer setup' },
+          { da: 'Hjalp med adgangskoder, Wi-Fi, Windows-installation, opdateringer og printeropsætning', en: 'Helped with passwords, Wi-Fi, Windows installation, updates and printer setup' },
           { da: 'Support af Microsoft 365, bl.a. Outlook og Teams', en: 'Microsoft 365 support, including Outlook and Teams' },
           { da: 'Skiftede defekte dele i skolens computere', en: 'Replaced faulty parts in school computers' },
           { da: 'Udleverede udstyr til elevprojekter, fx netværkskabler, switches og routere', en: 'Handed out equipment for student projects, e.g. network cables, switches and routers' },

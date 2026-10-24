@@ -96,7 +96,7 @@ export default function EliteVaskPage() {
           <p className="text-[#E8DDD0]/60 text-lg mb-2 max-w-2xl leading-relaxed">
             {lang === 'da'
               ? 'Komplet hjemmeside med online bookingsystem til mobil dampvask. Kunden booker, og systemet håndterer resten: bekræftelse, kalender og admin.'
-              : 'Complete website with online booking system for mobile steam car wash. Customer books, system handles the rest, confirmation, calendar and admin.'}
+              : 'Complete website with online booking system for mobile steam car wash. The customer books and the system handles the rest: confirmation, calendar and admin.'}
           </p>
         </motion.div>
 
