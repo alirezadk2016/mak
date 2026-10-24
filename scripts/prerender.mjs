@@ -70,6 +70,11 @@ const routes = [
     description: 'Tosproget hjemmeside og admin-panel til malervirksomheden MAK Painting i Melbourne: booking, galleri, priser og indhold.',
   },
   {
+    path: '/projects/kestro',
+    title: 'Kestro – Alireza Makvandi | IT-supporter',
+    description: 'Kestro er mit eget tosprogede B2B-projekt om istandsat erhvervs-IT: design, udvikling, SEO og kvalitetstjek. En træningsplads, hvor jeg lærer ved at bygge.',
+  },
+  {
     path: '/projects/gaming-pc',
     title: 'Gaming PC Build – Alireza Makvandi | IT-supporter',
     description: 'Selvbygget gaming-PC fra bunden, research, kompatibilitet, samling og konfiguration. Et bevis på indgående hardwareforståelse.',

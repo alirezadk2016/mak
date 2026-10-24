@@ -53,7 +53,7 @@ const projects = [
     category: { da: 'Eget projekt', en: 'Own project' },
     sub: { da: 'B2B · Tosproget · SEO', en: 'B2B · Bilingual · SEO' },
     name: 'Kestro',
-    href: 'https://kestro.dk',
+    href: '/projects/kestro',
     accent: '#7C5CBF',
     fg: '#A58BE0',
     img: null,
