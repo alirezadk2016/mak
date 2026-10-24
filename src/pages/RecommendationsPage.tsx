@@ -98,7 +98,7 @@ export default function RecommendationsPage() {
                       style={{ padding: '5px 11px', background: `${accent}14`, border: `1px solid ${accent}40` }}
                     >
                       <BadgeCheck size={13} style={{ color: accent }} />
-                      <span style={{ color: accent, fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700 }}>
+                      <span style={{ color: `color-mix(in srgb, ${accent} 78%, black)`, fontSize: '10px', letterSpacing: '0.16em', textTransform: 'uppercase', fontWeight: 700 }}>
                         {lang === 'da' ? 'Verificeret' : 'Verified'}
                       </span>
                     </div>
@@ -189,7 +189,7 @@ export default function RecommendationsPage() {
                 {tx.referenceText}
               </p>
               <p style={{ color: '#E8DDD0', opacity: 0.9, fontSize: '14px', fontWeight: 600 }}>
-                {tx.referenceName} <span style={{ opacity: 0.4, fontWeight: 400 }}>· {tx.referenceRole}</span>
+                {tx.referenceName} <span style={{ opacity: 0.7, fontWeight: 400 }}>· {tx.referenceRole}</span>
               </p>
             </div>
           </div>

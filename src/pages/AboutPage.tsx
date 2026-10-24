@@ -53,7 +53,7 @@ const content = {
     interests: [
       { icon: Cpu, title: 'Teknologi & IT', desc: 'Jeg kan blive helt opslugt af computere. Alt inden for IT og internettets fremtid fascinerer mig.' },
       { icon: Gamepad2, title: 'Gaming', desc: 'Spiller FIFA og Apex i fritiden.' },
-      { icon: Dumbbell, title: 'Sport', desc: 'Fodbold og boksning er mine passioner, jeg træner i fitness og spiller fodbold flere gange om ugen.' },
+      { icon: Dumbbell, title: 'Sport', desc: 'Fodbold og boksning er mine passioner. Jeg træner i fitness og spiller fodbold flere gange om ugen.' },
     ],
     langLabel: 'Sprog',
     languages: [
@@ -248,13 +248,13 @@ export default function AboutPage() {
                 </div>
                 <div className="pb-2">
                   <span style={{ color: '#C9A96E', opacity: 0.8, fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>{step.year}</span>
-                  <h3 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: 'clamp(1rem, 2vw, 1.3rem)', fontWeight: 600, margin: '4px 0 8px' }}>
+                  <h2 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: 'clamp(1rem, 2vw, 1.3rem)', fontWeight: 600, margin: '4px 0 8px' }}>
                     {journeyLinks[i] ? (
                       <Link to={journeyLinks[i]!} className="transition-opacity hover:opacity-70" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px dotted rgba(201,169,110,0.6)' }}>
                         {step.title} <span aria-hidden="true" style={{ color: '#C9A96E', fontSize: '0.75em' }}>↗</span>
                       </Link>
                     ) : step.title}
-                  </h3>
+                  </h2>
                   <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '14px', lineHeight: 1.7, fontWeight: 300 }}>{step.desc}</p>
                 </div>
               </motion.div>
@@ -276,7 +276,7 @@ export default function AboutPage() {
                   style={{ background: 'rgba(232,224,213,0.035)', border: '1px solid rgba(232,224,213,0.08)' }}
                 >
                   <Icon size={22} strokeWidth={1.4} style={{ color: '#C9A96E', opacity: 0.85, marginBottom: '14px' }} />
-                  <h3 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: '15px', fontWeight: 600, marginBottom: '6px' }}>{e.title}</h3>
+                  <h2 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: '15px', fontWeight: 600, marginBottom: '6px' }}>{e.title}</h2>
                   <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '13px', lineHeight: 1.65, fontWeight: 300 }}>{e.desc}</p>
                 </motion.div>
               )
@@ -327,7 +327,7 @@ export default function AboutPage() {
                   style={{ background: 'rgba(232,224,213,0.035)', border: '1px solid rgba(232,224,213,0.08)' }}
                 >
                   <Icon size={22} strokeWidth={1.4} style={{ color: '#C9A96E', opacity: 0.85, marginBottom: '14px' }} />
-                  <h3 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: '15px', fontWeight: 600, marginBottom: '6px' }}>{it.title}</h3>
+                  <h2 style={{ color: '#E8DDD0', opacity: 0.9, fontSize: '15px', fontWeight: 600, marginBottom: '6px' }}>{it.title}</h2>
                   <p style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '13px', lineHeight: 1.65, fontWeight: 300 }}>{it.desc}</p>
                 </motion.div>
               )

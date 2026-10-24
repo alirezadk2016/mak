@@ -67,7 +67,7 @@ const routes = [
   {
     path: '/projects/mak-painting',
     title: 'MAK Painting – Alireza Makvandi | IT-supporter',
-    description: 'To-sproget hjemmeside og admin-panel til malervirksomheden MAK Painting i Melbourne: booking, galleri, priser og indhold.',
+    description: 'Tosproget hjemmeside og admin-panel til malervirksomheden MAK Painting i Melbourne: booking, galleri, priser og indhold.',
   },
   {
     path: '/projects/gaming-pc',

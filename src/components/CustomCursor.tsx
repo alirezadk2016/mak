@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 
 export default function CustomCursor() {
@@ -6,7 +6,6 @@ export default function CustomCursor() {
   const cursorY = useMotionValue(-100)
   const [hovered, setHovered] = useState(false)
   const [visible, setVisible] = useState(false)
-  const rafRef = useRef<number | null>(null)
 
   const springConfig = { damping: 28, stiffness: 300, mass: 0.5 }
   const x = useSpring(cursorX, springConfig)
@@ -16,7 +15,7 @@ export default function CustomCursor() {
     const move = (e: MouseEvent) => {
       cursorX.set(e.clientX)
       cursorY.set(e.clientY)
-      if (!visible) setVisible(true)
+      setVisible(true)
     }
     // Event delegation — works for any element, including ones added later.
     const isInteractive = (t: EventTarget | null) =>
@@ -35,9 +34,8 @@ export default function CustomCursor() {
       document.removeEventListener('mouseover', over)
       document.removeEventListener('mouseout', out)
       document.removeEventListener('mouseleave', leaveWindow)
-      if (rafRef.current) cancelAnimationFrame(rafRef.current)
     }
-  }, [visible, cursorX, cursorY])
+  }, [cursorX, cursorY])
 
   // Only render on non-touch devices
   if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) return null

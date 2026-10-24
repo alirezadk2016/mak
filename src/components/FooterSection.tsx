@@ -253,7 +253,7 @@ export default function FooterSection() {
         >
           {tx.heading.split('\n').map((line, i) => (
             i === 0 ? (
-              <span key={i} className="block" style={{ fontWeight: 700, fontFamily: "'Space Grotesk', sans-serif" }}>{line}</span>
+              <span key={i} className="block" style={{ fontWeight: 700, fontFamily: "'Space Grotesk', sans-serif" }}>{line} </span>
             ) : (
               <span key={i} className="serif-accent block" style={{ color: '#C9A96E', fontSize: '1.08em' }}>{line}</span>
             )
@@ -333,7 +333,7 @@ export default function FooterSection() {
             <span style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
               © {new Date().getFullYear()} Alireza Makvandi · Aarhus, kl. {aarhusTime}
             </span>
-            <Link to="/kolofon" className="transition-opacity hover:opacity-60" style={{ color: '#C9A96E', opacity: 0.55, fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase', textDecoration: 'none' }}>
+            <Link to="/kolofon" className="transition-opacity hover:opacity-60" style={{ color: '#C9A96E', opacity: 0.85, fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase', textDecoration: 'none' }}>
               {lang === 'da' ? 'Om dette website' : 'About this site'} →
             </Link>
           </div>

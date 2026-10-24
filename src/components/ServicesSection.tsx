@@ -34,7 +34,7 @@ export default function ServicesSection() {
       className="bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 pt-14 sm:pt-20 md:pt-24 pb-12 sm:pb-16 md:pb-20"
     >
       <FadeIn delay={0} y={40}>
-        <p className="text-center uppercase tracking-widest text-xs sm:text-sm mb-3 font-medium" style={{ color: '#0A0908', opacity: 0.4 }}>
+        <p className="text-center uppercase tracking-widest text-xs sm:text-sm mb-3 font-medium" style={{ color: '#0A0908', opacity: 0.62 }}>
           {tx.sectionLabel}
         </p>
         <h2 className="font-black uppercase text-center mb-10 sm:mb-14 md:mb-16" style={{ color: '#0A0908', fontSize: 'clamp(2.6rem, 10vw, 120px)', letterSpacing: '-0.02em' }}>

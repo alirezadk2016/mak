@@ -49,7 +49,7 @@ export default function SvendeproevePage() {
           href="/svendeproeve-projekt.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#E8DDD0]/40 hover:text-[#E8DDD0]/70 transition-colors text-xs uppercase tracking-widest"
+          className="text-[#E8DDD0]/70 hover:text-[#E8DDD0] transition-colors text-xs uppercase tracking-widest"
         >
           {lang === 'da' ? 'Se PDF' : 'View PDF'} ↗
         </a>
@@ -115,9 +115,9 @@ export default function SvendeproevePage() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="rounded-[20px] border border-[#E8DDD0]/10 p-6"
           >
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.6 }}>
+            <h2 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.6 }}>
               {lang === 'da' ? 'Tekniske krav' : 'Technical Requirements'}
-            </h3>
+            </h2>
             <ul className="space-y-3">
               {requirements.map((r, i) => (
                 <li key={i} className="flex items-start gap-3 text-[#E8DDD0]/65 text-sm leading-relaxed">
@@ -136,9 +136,9 @@ export default function SvendeproevePage() {
             className="flex flex-col gap-6"
           >
             <div className="rounded-[20px] border border-[#E8DDD0]/10 p-6">
-              <h3 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.6 }}>
+              <h2 className="font-bold uppercase tracking-widest text-xs mb-5" style={{ color: '#E8DDD0', opacity: 0.6 }}>
                 {lang === 'da' ? 'Dokumentation' : 'Documentation'}
-              </h3>
+              </h2>
               <ul className="space-y-3">
                 {deliverables.map((d, i) => (
                   <li key={i} className="flex items-start gap-3 text-[#E8DDD0]/65 text-sm leading-relaxed">
@@ -150,9 +150,9 @@ export default function SvendeproevePage() {
             </div>
 
             <div className="rounded-[20px] border border-[#E8DDD0]/10 p-6">
-              <h3 className="font-bold uppercase tracking-widest text-xs mb-4" style={{ color: '#E8DDD0', opacity: 0.6 }}>
+              <h2 className="font-bold uppercase tracking-widest text-xs mb-4" style={{ color: '#E8DDD0', opacity: 0.6 }}>
                 {lang === 'da' ? 'Teknologier brugt' : 'Technologies Used'}
-              </h3>
+              </h2>
               <div className="flex flex-wrap gap-2">
                 {([
                   ['Windows Server', 'windows-server'],
