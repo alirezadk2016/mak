@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import FadeIn from './FadeIn'
 import SmartImage from './SmartImage'
@@ -48,15 +48,35 @@ const projects = [
     fg: '#C9A96E',
     img: null,
   },
+  {
+    num: '05',
+    category: { da: 'Eget projekt', en: 'Own project' },
+    sub: { da: 'B2B · Tosproget · SEO', en: 'B2B · Bilingual · SEO' },
+    name: 'Kestro',
+    href: 'https://kestro.dk',
+    accent: '#7C5CBF',
+    fg: '#A58BE0',
+    img: null,
+  },
 ]
 
-function ProjectCard({ project, index, lang, btnLabel }: {
+/** Internal routes use the router; external addresses open in a new tab. */
+function CardLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const className = 'block h-full'
+  return href.startsWith('http') ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>{children}</a>
+  ) : (
+    <Link to={href} className={className}>{children}</Link>
+  )
+}
+
+function ProjectCard({ project, index, lang, btnLabel, wide = false }: {
   project: typeof projects[0]
   index: number
   lang: 'da' | 'en'
   btnLabel: string
+  wide?: boolean
 }) {
-  const navigate = useNavigate()
   const accent = project.accent
 
   return (
@@ -65,9 +85,9 @@ function ProjectCard({ project, index, lang, btnLabel }: {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.55, delay: (index % 2) * 0.08, ease: [0.22, 1, 0.36, 1] }}
-      className="group cursor-pointer"
-      onClick={() => navigate(project.href)}
+      className="group h-full"
     >
+      <CardLink href={project.href}>
       <motion.div
         whileHover={{ y: -8, boxShadow: `0 24px 48px -20px ${accent}55` }}
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -84,7 +104,7 @@ function ProjectCard({ project, index, lang, btnLabel }: {
         />
 
         {/* Cover */}
-        <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
+        <div className="relative overflow-hidden" style={{ aspectRatio: wide ? '24/7' : '16/9' }}>
           <div className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.04]">
             {project.img ? (
               <SmartImage
@@ -136,6 +156,7 @@ function ProjectCard({ project, index, lang, btnLabel }: {
           </h3>
         </div>
       </motion.div>
+      </CardLink>
     </motion.div>
   )
 }
@@ -174,7 +195,9 @@ export default function ProjectsSection() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 max-w-5xl mx-auto">
         {projects.map((p, i) => (
-          <ProjectCard key={p.num} project={p} index={i} lang={lang} btnLabel={tx.viewProject} />
+          <div key={p.num} className={i === projects.length - 1 && projects.length % 2 === 1 ? 'sm:col-span-2' : ''}>
+            <ProjectCard project={p} index={i} lang={lang} btnLabel={tx.viewProject} wide={i === projects.length - 1 && projects.length % 2 === 1} />
+          </div>
         ))}
       </div>
     </section>
