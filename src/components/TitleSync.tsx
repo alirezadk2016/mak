@@ -13,6 +13,7 @@ const titles: Record<string, string> = {
   '/projects/elite-vask': `Elite Vask – ${SUFFIX} | IT-supporter`,
   '/projects/svendeproeve': `Svendeprøve – ${SUFFIX} | IT-supporter`,
   '/projects/mak-painting': `MAK Painting – ${SUFFIX} | IT-supporter`,
+  '/projects/kestro': `Kestro – ${SUFFIX} | IT-supporter`,
   '/projects/gaming-pc': `Gaming PC Build – ${SUFFIX} | IT-supporter`,
   '/experience/yousee': `YouSee – ${SUFFIX} | IT-supporter`,
   '/experience/fourcom': `Fourcom – ${SUFFIX} | IT-supporter`,

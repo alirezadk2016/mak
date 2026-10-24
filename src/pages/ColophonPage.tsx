@@ -19,8 +19,8 @@ export default function ColophonPage() {
       icon: Search,
       title: 'SEO',
       text: da
-        ? '25 sider pre-renderes til statisk HTML, så søgemaskiner ser alt indhold. Hver side har sin egen titel, beskrivelse og plads i sitemap.xml.'
-        : '25 pages are pre-rendered to static HTML so search engines see all content. Every page has its own title, description and place in sitemap.xml.',
+        ? '26 sider pre-renderes til statisk HTML, så søgemaskiner ser alt indhold. Hver side har sin egen titel, beskrivelse og plads i sitemap.xml.'
+        : '26 pages are pre-rendered to static HTML so search engines see all content. Every page has its own title, description and place in sitemap.xml.',
     },
     {
       icon: ShieldCheck,

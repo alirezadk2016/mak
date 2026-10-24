@@ -22,6 +22,7 @@ const SvendeproevePage = lazy(() => import('./pages/SvendeproevePage'))
 const EliteVaskPage = lazy(() => import('./pages/EliteVaskPage'))
 const GamingPCPage = lazy(() => import('./pages/GamingPCPage'))
 const MakPaintingPage = lazy(() => import('./pages/MakPaintingPage'))
+const KestroPage = lazy(() => import('./pages/KestroPage'))
 const GlossaryIndexPage = lazy(() => import('./pages/GlossaryIndexPage'))
 const ColophonPage = lazy(() => import('./pages/ColophonPage'))
 const GlossaryTermPage = lazy(() => import('./pages/GlossaryTermPage'))
@@ -62,6 +63,7 @@ export default function App() {
         <Route path="/projects/elite-vask" element={<EliteVaskPage />} />
         <Route path="/projects/gaming-pc" element={<GamingPCPage />} />
         <Route path="/projects/mak-painting" element={<MakPaintingPage />} />
+        <Route path="/projects/kestro" element={<KestroPage />} />
         <Route path="/recommendations" element={<RecommendationsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/viden" element={<GlossaryIndexPage />} />
