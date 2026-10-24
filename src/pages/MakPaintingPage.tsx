@@ -10,7 +10,7 @@ const features = [
     items: [
       { da: 'Kunder sender forespørgsel direkte fra hjemmesiden', en: 'Customers submit quote requests directly from the website' },
       { da: 'Admin godkender, afviser eller annullerer bookinger', en: 'Admin approves, rejects or cancels bookings' },
-      { da: 'Kalendervisning med overblik over pending og godkendte jobs', en: 'Calendar view showing pending and approved jobs at a glance' },
+      { da: 'Kalendervisning med overblik over afventende og godkendte jobs', en: 'Calendar view showing pending and approved jobs at a glance' },
       { da: 'Listevisning med filtrering og statusoverblik', en: 'List view with filtering and status overview' },
     ],
   },
@@ -33,10 +33,10 @@ const features = [
   {
     title: { da: 'Hjemmeside', en: 'Website' },
     items: [
-      { da: 'To-sproget: Engelsk og Persisk (Farsi)', en: 'Bilingual: English and Persian (Farsi)' },
+      { da: 'Tosproget: engelsk og persisk (farsi)', en: 'Bilingual: English and Persian (Farsi)' },
       { da: '"Get a free quote", direkte bookingformular', en: '"Get a free quote", direct booking form' },
       { da: '5.0 ★ Google-rating integreret og synlig', en: '5.0 ★ Google rating integrated and visible' },
-      { da: 'Services, Galleri, Løfte og Kontakt-sektioner', en: 'Services, Gallery, Our Promise and Contact sections' },
+      { da: 'Sektionerne Services, Galleri, Løfte og Kontakt', en: 'Services, Gallery, Our Promise and Contact sections' },
     ],
   },
 ]
@@ -46,7 +46,7 @@ const content = {
     back: 'Tilbage',
     category: 'Kunde · Australien',
     live: 'Se live site',
-    desc: 'MAK Painting er en professionel malervirksomhed baseret i Melbourne, Australien. Jeg designede og udviklede deres komplette digitale løsning, en moderne, to-sproget hjemmeside kombineret med et kraftfuldt admin-panel, så ejeren selv kan styre alt fra ét sted uden teknisk viden.',
+    desc: 'MAK Painting er en professionel malervirksomhed baseret i Melbourne, Australien. Jeg designede og udviklede deres komplette digitale løsning, en moderne, tosproget hjemmeside kombineret med et kraftfuldt admin-panel, så ejeren selv kan styre alt fra ét sted uden teknisk viden.',
     featuresLabel: 'Funktioner',
   },
   en: {

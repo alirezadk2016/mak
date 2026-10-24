@@ -36,7 +36,7 @@ function FlipAvatar({ className }: { className?: string }) {
         <img
           src={IMG_FRONT}
           alt="Alireza Makvandi"
-          fetchPriority="high"
+          {...{ fetchpriority: 'high' }}
           decoding="async"
           className="w-full h-full object-cover"
           style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}

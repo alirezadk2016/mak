@@ -28,7 +28,7 @@ const experiences: Record<string, ExpData> = {
   yousee: {
     company: 'YouSee',
     role: { da: 'Kundeservice & Administration', en: 'Customer Service & Administration' },
-    period: { da: 'IGU Program', en: 'IGU Program' },
+    period: { da: 'IGU-forløb', en: 'IGU-forløb' },
     url: 'https://yousee.dk/',
     priceUrl: 'https://yousee.dk/tv/pakker',
     color: '#E4002B',
@@ -89,7 +89,7 @@ const experiences: Record<string, ExpData> = {
         title: { da: 'Tech Desk', en: 'Tech Desk' },
         items: [
           { da: 'Bemandede skolens Tech Desk, hvor elever kom forbi med deres IT-problemer', en: 'Staffed the school\'s Tech Desk, where students dropped by with their IT problems' },
-          { da: 'Hjalp med adgangskoder, wi-fi, Windows-installation, opdateringer og printeropsætning', en: 'Helped with passwords, wi-fi, Windows installation, updates and printer setup' },
+          { da: 'Hjalp med adgangskoder, Wi-Fi, Windows-installation, opdateringer og printeropsætning', en: 'Helped with passwords, wi-fi, Windows installation, updates and printer setup' },
           { da: 'Support af Microsoft 365, bl.a. Outlook og Teams', en: 'Microsoft 365 support, including Outlook and Teams' },
           { da: 'Skiftede defekte dele i skolens computere', en: 'Replaced faulty parts in school computers' },
           { da: 'Udleverede udstyr til elevprojekter, fx netværkskabler, switches og routere', en: 'Handed out equipment for student projects, e.g. network cables, switches and routers' },
@@ -134,7 +134,7 @@ const experiences: Record<string, ExpData> = {
         title: { da: 'Daglige Opgaver', en: 'Daily Tasks' },
         items: [
           { da: 'Loginproblemer og adgangsstyring', en: 'Login issues and access management' },
-          { da: 'E-mail opsætning og fejlfinding', en: 'Email setup and troubleshooting' },
+          { da: 'Opsætning af e-mail og fejlfinding', en: 'Email setup and troubleshooting' },
           { da: 'Printeropsætning og vedligeholdelse', en: 'Printer setup and maintenance' },
           { da: 'Softwareinstallation og opdateringer', en: 'Software installation and updates' },
         ],
@@ -250,9 +250,9 @@ export default function ExperienceDetail() {
               transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
               className="rounded-[20px] border border-[#E8DDD0]/15 p-6"
             >
-              <h3 className="font-bold uppercase tracking-widest text-sm mb-4" style={{ color: exp.color }}>
+              <h2 className="font-bold uppercase tracking-widest text-sm mb-4" style={{ color: exp.color }}>
                 {section.title[lang]}
-              </h3>
+              </h2>
               <ul className="space-y-3">
                 {section.items.map((item, j) => (
                   <li key={j} className="flex items-start gap-3 text-[#E8DDD0]/70 text-sm leading-relaxed">

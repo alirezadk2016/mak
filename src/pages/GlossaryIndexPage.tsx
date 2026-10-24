@@ -74,7 +74,7 @@ export default function GlossaryIndexPage() {
                   <div className="absolute top-0 left-0 right-0 h-[2px] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
                     style={{ background: `linear-gradient(to right, ${t.accent}, transparent 80%)` }} />
                   <div className="flex items-center justify-between mb-3">
-                    <span style={{ color: t.accent, fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', fontWeight: 700, opacity: 0.9 }}>
+                    <span style={{ color: `color-mix(in srgb, ${t.accent} 55%, white)`, fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase', fontWeight: 700 }}>
                       {t.category[lang]}
                     </span>
                     <ArrowUpRight size={14} strokeWidth={1.8}

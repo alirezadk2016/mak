@@ -146,7 +146,7 @@ export const t = {
     },
     services: {
       sectionLabel: 'IT Support Education, Aarhus Tech · Completed 2026',
-      heading: 'Services',
+      heading: 'Skills',
       items: [
         {
           num: '01',

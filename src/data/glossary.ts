@@ -38,7 +38,7 @@ export const glossary: GlossaryTerm[] = [
     category: { da: 'Netværk', en: 'Networking' },
     accent: '#3E9BD6',
     what: {
-      da: 'DNS oversætter navne, mennesker kan huske (som yousee.dk), til IP-adresser, computere bruger. Hver gang du åbner en hjemmeside, slår din computer først navnet op via DNS.',
+      da: 'DNS oversætter navne, som mennesker kan huske (fx yousee.dk), til de IP-adresser, som computere bruger. Hver gang du åbner en hjemmeside, slår din computer først navnet op via DNS.',
       en: 'DNS translates names humans can remember (like yousee.dk) into IP addresses computers use. Every time you open a website, your computer first looks up the name via DNS.',
     },
     why: {
@@ -77,7 +77,7 @@ export const glossary: GlossaryTerm[] = [
     category: { da: 'Server', en: 'Server' },
     accent: '#C9A96E',
     what: {
-      da: 'Windows Server er Microsofts styresystem til servere, de maskiner, der leverer services som login, filer, print og netværksstyring til alle virksomhedens computere.',
+      da: 'Windows Server er Microsofts styresystem til servere, altså de maskiner, der leverer services som login, filer, print og netværksstyring til alle virksomhedens computere.',
       en: 'Windows Server is Microsoft\'s operating system for servers, the machines that deliver services like login, files, print and network management to all company computers.',
     },
     why: {
@@ -183,7 +183,7 @@ export const glossary: GlossaryTerm[] = [
       en: 'A good rule of thumb is 3-2-1: three copies of data, on two different types of storage, one of them off-site. Backup is the difference between a small mishap and a disaster, and one of the first things a serious IT department gets right.',
     },
     how: {
-      da: 'I mit svendeprøve-miljø fungerede DC02 som backup-domænecontroller, så login og rettigheder stadig virkede, selv hvis den primære server gik ned, et princip om redundans, der gælder al drift.',
+      da: 'I mit svendeprøve-miljø fungerede DC02 som backup-domænecontroller, så login og rettigheder stadig virkede, selv hvis den primære server gik ned. Det er et princip om redundans, der gælder al drift.',
       en: 'In my final exam environment DC02 acted as a backup domain controller, so login and permissions kept working even if the primary server went down, a redundancy principle that applies to all operations.',
     },
     related: ['windows-server', 'firewall'],
@@ -199,7 +199,7 @@ export const glossary: GlossaryTerm[] = [
       en: 'Virtualization lets one physical server run many "virtual" machines at the same time. Each virtual machine behaves like an independent computer with its own operating system.',
     },
     why: {
-      da: 'I stedet for at købe fem fysiske servere kører man fem virtuelle på én maskine, billigere, nemmere at administrere og hurtigt at genskabe fra snapshots, hvis noget går galt. Stort set alle moderne serverrum er virtualiserede.',
+      da: 'I stedet for at købe fem fysiske servere kører man fem virtuelle på én maskine. Det er billigere, nemmere at administrere og hurtigt at genskabe fra snapshots, hvis noget går galt. Stort set alle moderne serverrum er virtualiserede.',
       en: 'Instead of buying five physical servers you run five virtual ones on a single machine, cheaper, easier to manage and quick to restore from snapshots if something goes wrong. Practically all modern server rooms are virtualized.',
     },
     how: {
@@ -215,7 +215,7 @@ export const glossary: GlossaryTerm[] = [
     category: { da: 'Netværk', en: 'Networking' },
     accent: '#3E9BD6',
     what: {
-      da: 'LAN er det kablede netværk i en bygning, computere forbundet via netværkskabler og switches. WLAN er det samme netværk, bare trådløst via Wi-Fi-accesspunkter.',
+      da: 'LAN er det kablede netværk i en bygning, hvor computere er forbundet via netværkskabler og switches. WLAN er det samme netværk, bare trådløst via Wi-Fi-accesspunkter.',
       en: 'LAN is the wired network in a building, computers connected via network cables and switches. WLAN is the same network, just wireless via Wi-Fi access points.',
     },
     why: {
@@ -223,7 +223,7 @@ export const glossary: GlossaryTerm[] = [
       en: 'Cable gives stability and speed (important for fixed workstations and servers), while Wi-Fi gives freedom (meeting rooms, laptops, guests). A good IT supporter knows when to choose which, and how to troubleshoot both.',
     },
     how: {
-      da: 'Fra kabling og switch-opsætning i svendeprøven til hjælp med Wi-Fi-problemer for ældre borgere i Folkehuse Aarhus, jeg har arbejdet med netværk i både serverrummet og ude hos brugerne.',
+      da: 'Fra kabling og switch-opsætning i svendeprøven til hjælp med Wi-Fi-problemer for ældre borgere i Folkehuse Aarhus: Jeg har arbejdet med netværk i både serverrummet og ude hos brugerne.',
       en: 'From cabling and switch setup in my final exam to helping elderly citizens with Wi-Fi problems at Folkehuse Aarhus, I have worked with networks both in the server room and out with users.',
     },
     related: ['vlan', 'dhcp', 'pc-hardware'],
@@ -243,7 +243,7 @@ export const glossary: GlossaryTerm[] = [
       en: 'An IT supporter who knows hardware can quickly decide whether a slow PC needs more RAM, a new SSD, or just a cleanup. That saves the company money and the user frustration.',
     },
     how: {
-      da: 'Hos Fourcom arbejdede jeg med reparation og klargøring af arbejdsstationer, og privat har jeg bygget min egen gaming-pc fra bunden, komponentvalg, kompatibilitet, samling og konfiguration.',
+      da: 'Hos Fourcom arbejdede jeg med reparation og klargøring af arbejdsstationer, og privat har jeg bygget min egen gaming-pc fra bunden: komponentvalg, kompatibilitet, samling og konfiguration.',
       en: 'At Fourcom I repaired and prepared workstations, and privately I built my own gaming PC from scratch, component selection, compatibility, assembly and configuration.',
     },
     related: ['lan-wlan', 'windows-server'],

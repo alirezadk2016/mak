@@ -66,7 +66,7 @@ export default function GamingPCPage() {
 
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-10 sm:mb-14">
-        <p style={{ color: '#7C5CBF', opacity: 0.9, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px', fontWeight: 600 }}>
+        <p style={{ color: '#A58BE0', fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', marginBottom: '12px', fontWeight: 600 }}>
           {tx.category}
         </p>
         <h1

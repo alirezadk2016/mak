@@ -176,7 +176,7 @@ export default function LatestSection() {
         <p className="text-center max-w-xl mx-auto mb-3 font-light leading-relaxed" style={{ color: '#E8DDD0', opacity: 0.62, fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)' }}>
           {c.sub}
         </p>
-        <p className="text-center mb-10 sm:mb-12 md:mb-14" style={{ color: '#E8DDD0', opacity: 0.45, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+        <p className="text-center mb-10 sm:mb-12 md:mb-14" style={{ color: '#E8DDD0', opacity: 0.65, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
           {c.updated}
         </p>
       </FadeIn>
