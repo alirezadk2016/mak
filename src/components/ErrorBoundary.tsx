@@ -19,7 +19,7 @@ export default class ErrorBoundary extends Component<Props, State> {
             minHeight: '100vh', background: '#0A0908', color: '#E8DDD0',
             display: 'flex', flexDirection: 'column', alignItems: 'center',
             justifyContent: 'center', gap: '18px', padding: '24px', textAlign: 'center',
-            fontFamily: 'Inter, sans-serif',
+            fontFamily: "'Manrope', sans-serif",
           }}
         >
           <span style={{ fontSize: '44px', fontWeight: 700, fontFamily: "'Space Grotesk', sans-serif" }}>Ups.</span>
