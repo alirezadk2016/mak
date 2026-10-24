@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
-import BrandCover from '../components/BrandCover'
+import BrowserShot from '../components/BrowserShot'
 
 const features = [
   {
@@ -108,13 +108,10 @@ export default function MakPaintingPage() {
       {/* Screenshots */}
       <motion.div
         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-        className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-12 sm:mb-16"
+        className="mb-12 sm:mb-16"
       >
-        <div className="rounded-[20px] sm:rounded-[28px] overflow-hidden border border-[#E8DDD0]/06" style={{ aspectRatio: '16/10' }}>
-          <BrandCover name="MAK Painting" sub="makvandi.info" accent="#C9A96E" className="w-full h-full" />
-        </div>
-        <div className="rounded-[20px] sm:rounded-[28px] overflow-hidden border border-[#E8DDD0]/06" style={{ aspectRatio: '16/10' }}>
-          <BrandCover name="Galleri & Admin" sub="Booking · Priser · Indhold" accent="#C9A96E" className="w-full h-full" />
+        <div className="rounded-[20px] sm:rounded-[28px] overflow-hidden border border-[#E8DDD0]/10" style={{ aspectRatio: '16/9' }}>
+          <BrowserShot src="/projects/mak-painting.webp" url="makvandi.info" alt="Forsiden på MAK Painting, malere i Melbourne" className="w-full h-full" />
         </div>
       </motion.div>
 

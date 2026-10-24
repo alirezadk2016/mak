@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowUpRight, Palette, Code2, Search, ShieldCheck } from 'lucide-react'
-import BrandCover from '../components/BrandCover'
+import BrowserShot from '../components/BrowserShot'
 import { useLang } from '../contexts/LanguageContext'
 
 type L = { da: string; en: string }
@@ -144,9 +144,9 @@ export default function KestroPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="rounded-[24px] overflow-hidden border border-[#E8DDD0]/15 mb-16"
-          style={{ aspectRatio: '16/6' }}
+          style={{ aspectRatio: '16/9' }}
         >
-          <BrandCover name="Kestro" sub={lang === 'da' ? 'B2B · Tosproget · SEO' : 'B2B · Bilingual · SEO'} accent="#7C5CBF" className="w-full h-full" />
+          <BrowserShot src="/projects/kestro.webp" url="kestro.dk" alt={lang === 'da' ? 'Forsiden på Kestro: refurbished erhvervscomputere' : 'Front page of Kestro: refurbished business computers'} className="w-full h-full" />
         </motion.div>
 
         {/* What I built */}
