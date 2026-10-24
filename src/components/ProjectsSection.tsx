@@ -4,10 +4,24 @@ import { ArrowUpRight } from 'lucide-react'
 import FadeIn from './FadeIn'
 import SmartImage from './SmartImage'
 import BrandCover from './BrandCover'
+import BrowserShot from './BrowserShot'
 import { useLang } from '../contexts/LanguageContext'
 import { t } from '../translations'
 
-const projects = [
+type Shot = { src: string; url: string; alt: { da: string; en: string } }
+type Project = {
+  num: string
+  category: { da: string; en: string }
+  sub: { da: string; en: string } | null
+  name: string
+  href: string
+  accent: string
+  fg: string
+  img: string | null
+  shot?: Shot
+}
+
+const projects: Project[] = [
   {
     num: '01',
     category: { da: 'Skole, Aarhus Tech', en: 'School, Aarhus Tech' },
@@ -37,6 +51,7 @@ const projects = [
     accent: '#3E9BD6',
     fg: '#6DB8EA',
     img: null,
+    shot: { src: '/projects/elite-vask.webp', url: 'elite-vask.dk', alt: { da: 'Forsiden på Elite Vask: mobil bilvask på Sjælland', en: 'Front page of Elite Vask: mobile car wash in Zealand' } },
   },
   {
     num: '04',
@@ -47,6 +62,7 @@ const projects = [
     accent: '#C9A96E',
     fg: '#C9A96E',
     img: null,
+    shot: { src: '/projects/mak-painting.webp', url: 'makvandi.info', alt: { da: 'Forsiden på MAK Painting, malere i Melbourne', en: 'Front page of MAK Painting, painters in Melbourne' } },
   },
   {
     num: '05',
@@ -57,6 +73,7 @@ const projects = [
     accent: '#7C5CBF',
     fg: '#A58BE0',
     img: null,
+    shot: { src: '/projects/kestro.webp', url: 'kestro.dk', alt: { da: 'Forsiden på Kestro: refurbished erhvervscomputere', en: 'Front page of Kestro: refurbished business computers' } },
   },
 ]
 
@@ -71,7 +88,7 @@ function CardLink({ href, children }: { href: string; children: React.ReactNode 
 }
 
 function ProjectCard({ project, index, lang, btnLabel, wide = false }: {
-  project: typeof projects[0]
+  project: Project
   index: number
   lang: 'da' | 'en'
   btnLabel: string
@@ -104,9 +121,11 @@ function ProjectCard({ project, index, lang, btnLabel, wide = false }: {
         />
 
         {/* Cover */}
-        <div className="relative overflow-hidden" style={{ aspectRatio: wide ? '24/7' : '16/9' }}>
+        <div className="relative overflow-hidden" style={{ aspectRatio: wide && !project.shot ? '24/7' : '16/9' }}>
           <div className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.04]">
-            {project.img ? (
+            {project.shot ? (
+              <BrowserShot src={project.shot.src} alt={project.shot.alt[lang]} url={project.shot.url} className="w-full h-full" />
+            ) : project.img ? (
               <SmartImage
                 src={project.img}
                 alt={project.name}
@@ -128,13 +147,13 @@ function ProjectCard({ project, index, lang, btnLabel, wide = false }: {
             <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none"
               style={{ background: 'linear-gradient(to top, rgba(13,12,10,0.85), transparent)' }} />
           )}
-          {/* Number badge */}
+          {!project.shot && (<>{/* Number badge */}
           <span
             className="absolute top-4 left-5 font-black leading-none pointer-events-none"
             style={{ color: '#E8DDD0', opacity: 0.55, fontSize: '44px', fontFamily: "'Space Grotesk', sans-serif" }}
           >
             {project.num}
-          </span>
+          </span></>)}
         </div>
 
         {/* Text */}
@@ -195,7 +214,7 @@ export default function ProjectsSection() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 max-w-5xl mx-auto">
         {projects.map((p, i) => (
-          <div key={p.num} className={i === projects.length - 1 && projects.length % 2 === 1 ? 'sm:col-span-2' : ''}>
+          <div key={p.num} className={i === projects.length - 1 && projects.length % 2 === 1 ? 'sm:col-span-2 sm:max-w-[calc(50%-0.625rem)] sm:mx-auto w-full' : ''}>
             <ProjectCard project={p} index={i} lang={lang} btnLabel={tx.viewProject} wide={i === projects.length - 1 && projects.length % 2 === 1} />
           </div>
         ))}
