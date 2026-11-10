@@ -76,7 +76,7 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
       <div class="c-item"><span class="c-ic">{IC_WEB}</span><div><div class="c-k">Web</div><a class="c-v" href="https://www.makvandi.dk">www.makvandi.dk</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_IN}</span><div><div class="c-k">LinkedIn</div><a class="c-v" style="word-break:normal;overflow-wrap:break-word;font-size:7.5pt" href="https://dk.linkedin.com/in/alireza-makvandi-446704301">linkedin.com/in/<wbr>alireza-makvandi-<wbr>446704301</a></div></div>
       <div class="c-item"><span class="c-ic">{IC_PIN}</span><div><div class="c-k">Adresse</div><div class="c-v">Aarhus N, 8200</div><div class="c-v" style="color:#c9a96e;font-weight:600">Klar til at flytte</div></div></div>
-      <div class="c-item"><span class="c-ic">{IC_CAR}</span><div><div class="c-k">Kørekort</div><div class="c-v">B, under ombytning til dansk (teoriprøve bestået)</div></div></div>
+      <div class="c-item"><span class="c-ic">{IC_CAR}</span><div><div class="c-k">Kørekort</div><div class="c-v">B (personbil)</div></div></div>
 
       <div class="s-h">Uddannelse</div><div class="s-rule"></div>
       <div class="edu-y">2024 – 2026</div>
