@@ -12,13 +12,13 @@ const copy = {
     kicker: 'lige nu',
     heading: 'Seneste',
     sub: 'Hvad jeg arbejder på og lærer, lige nu.',
-    updated: 'Opdateret oktober 2026',
+    updated: 'Opdateret november 2026',
     status: { done: 'Bestået', active: 'I gang', longterm: 'Vision' },
     cards: {
       license: {
         tag: 'Kørekort',
-        title: 'Kørekort: teoriprøven er bestået',
-        text: 'Mit iranske kørekort er ombyttet til et dansk, og jeg har bestået teoriprøven. Nu tager jeg køretimer, så jeg er klar til køreprøven.',
+        title: 'Kørekort: bestået og udstedt',
+        text: 'Jeg har ombyttet mit iranske kørekort til et dansk og har bestået både teori- og køreprøven. Jeg har nu dansk kørekort til personbil (kategori B).',
         steps: ['Ombytning af kørekort', 'Teoriprøve', 'Køretimer', 'Køreprøve'],
       },
       m365: {
@@ -47,13 +47,13 @@ const copy = {
     kicker: 'right now',
     heading: 'Latest',
     sub: 'What I am working on and learning at the moment.',
-    updated: 'Updated October 2026',
+    updated: 'Updated November 2026',
     status: { done: 'Passed', active: 'In progress', longterm: 'Vision' },
     cards: {
       license: {
         tag: "Driver's licence",
-        title: "Driving licence: theory test passed",
-        text: 'My Iranian licence has been exchanged for a Danish one and I have passed the theory test. I am now taking driving lessons to get ready for the driving test.',
+        title: "Driving licence: passed and issued",
+        text: 'I exchanged my Iranian licence for a Danish one and passed both the theory test and the driving test. I now hold a Danish car licence (category B).',
         steps: ['Licence exchange', 'Theory test', 'Driving lessons', 'Driving test'],
       },
       m365: {
@@ -158,7 +158,7 @@ export default function LatestSection() {
   const c = copy[lang]
   const steps = c.cards.license.steps
   // theory test is passed, driving lessons are in progress
-  const stepState = (i: number) => (i < 2 ? 'done' : i === 2 ? 'active' : 'todo')
+  const stepState = () => 'done'
 
   return (
     <section id="latest" className="px-5 sm:px-8 md:px-10 py-14 sm:py-20 md:py-24 relative z-10" style={{ background: '#0A0908' }}>
@@ -185,8 +185,8 @@ export default function LatestSection() {
         {/* Driving licence */}
         <Card index={0} icon={<Car size={18} strokeWidth={1.7} />} tag={c.cards.license.tag} title={c.cards.license.title} text={c.cards.license.text} status="done" statusLabel={c.status.done} accent="#6ee7b7">
           <ol className="grid grid-cols-4 gap-2 mt-1" aria-label={c.cards.license.tag}>
-            {steps.map((label, i) => {
-              const st = stepState(i)
+            {steps.map((label) => {
+              const st = stepState()
               const col = st === 'done' ? '#6ee7b7' : st === 'active' ? '#C9A96E' : 'rgba(232,224,213,0.2)'
               return (
                 <li key={label} className="flex flex-col gap-2">

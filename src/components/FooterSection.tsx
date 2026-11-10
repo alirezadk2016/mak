@@ -279,7 +279,7 @@ export default function FooterSection() {
             {lang === 'da' ? 'Download CV (PDF)' : 'Download CV (PDF)'}
           </a>
           <span style={{ color: '#E8DDD0', opacity: 0.6, fontSize: '13px', fontWeight: 300 }}>
-            {lang === 'da' ? 'Én side. Opdateret oktober 2026.' : 'One page. Updated October 2026.'}
+            {lang === 'da' ? 'Én side. Opdateret november 2026.' : 'One page. Updated November 2026.'}
           </span>
         </motion.div>
 
