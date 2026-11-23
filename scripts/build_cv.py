@@ -133,7 +133,7 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
       <div class="j-t">IT-support · Praktik</div>
       <ul>
         <li>Klargjorde og testede arbejdsstationer med Windows-installation og konfiguration, ofte over 40 maskiner om dagen.</li>
-        <li>Fejlfinding og reparation af hardware, typisk 3-10 maskiner om dagen.</li>
+        <li>Fejlfinding og reparation af hardware, fx udskiftning af 20+ harddiske eller 30 RAM-moduler på en travl dag.</li>
         <li>Brugersupport og teknisk dokumentation.</li>
       </ul>
     </div>
