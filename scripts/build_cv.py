@@ -106,7 +106,7 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
       <div class="sk-g">Systemer &amp; Netværk</div>
       <span class="chip">Windows Server</span><span class="chip">Active Directory</span>
       <span class="chip">DNS / DHCP</span><span class="chip">TCP/IP</span>
-      <span class="chip">LAN / Wi-Fi</span><span class="chip">VLAN</span><span class="chip">Grundlæggende routing</span>
+      <span class="chip">LAN / Wi-Fi</span><span class="chip">VLAN</span><span class="chip">Routing</span><span class="chip">pfSense (firewall)</span><span class="chip">VMware ESXi</span><span class="chip">Group Policy (GPO)</span>
     </div>
   </aside>
 
@@ -114,7 +114,7 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
     <div class="name">Alireza Makvandi</div>
     <div class="role">IT-Supporter · Desktop Support · Aarhus</div>
     <div style="margin:1.5mm 0 0"><span class="avail">Kan tiltræde straks</span> <span class="avail" style="color:#8a6d2f;background:#f6efe0;border-color:#e3d3ae">Klar til at flytte</span></div>
-    <p class="profile"><b>Jeg er den, folk spørger, når computeren driller — nu er jeg uddannet til at bruge det professionelt.</b> Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server og Active Directory. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe mennesker, også når der er travlt. Jeg søger en stilling som IT-supporter med on-site eller servicedesk-support tæt på brugerne.</p>
+    <p class="profile"><b>Jeg er den, folk spørger, når computeren driller — nu er jeg uddannet til at bruge det professionelt.</b> Jeg er nyuddannet IT-supporter fra Aarhus Tech. Under uddannelsen har jeg ydet support til brugere på bl.a. plejehjem og skoler, og til min svendeprøve byggede jeg et komplet netværk med Windows Server, Active Directory, VLAN og firewall. Jeg har desuden næsten fire års erfaring med kundeservice fra YouSee, så jeg er vant til at hjælpe mennesker, også når der er travlt. Jeg søger en stilling som IT-supporter med on-site eller servicedesk-support tæt på brugerne.</p>
 
     <div class="m-h">Erhvervserfaring</div><div class="m-rule"></div>
 
@@ -122,7 +122,7 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
       <div class="j-y">2024 – 2026 <span class="j-org">· Aarhus Tech (del af uddannelsen)</span></div>
       <div class="j-t">Skoleoplæring · IT-support</div>
       <ul>
-        <li>Førstelinjesupport ved skolens Tech Desk, typisk 5-20 henvendelser om dagen: Wi-Fi, login, printere og Windows.</li>
+        <li>Modtog, prioriterede og fulgte typisk 5-20 henvendelser om dagen til dørs på skolens Tech Desk: login og låste konti, Wi-Fi, printere, Windows, Outlook og Teams.</li>
         <li>On-site IT-support på andre skoler: klargøring af computere, opsætning af Wi-Fi og printere samt brugersupport.</li>
         <li>Ydede IT-support på plejehjem én dag om ugen i flere måneder samt teknisk support under eksamener.</li>
       </ul>
@@ -161,8 +161,9 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
       <div class="j-y">2026 <span class="j-org">· Svendeprøve</span></div>
       <div class="j-t">Netværksinfrastruktur og Windows Server</div>
       <ul>
-        <li>Opsætning af komplet netværksmiljø: Windows Server, Active Directory, DNS/DHCP, VLAN og grundlæggende routing.</li>
-        <li>Dokumentation og fejlfinding af hele opsætningen.</li>
+        <li>Byggede et komplet netværksmiljø på VMware ESXi: to domænecontrollere (Active Directory med OU'er, grupper og GPO'er), filserver samt DNS (forward/reverse) og DHCP med scopes pr. VLAN.</li>
+        <li>Konfigurerede VLAN'er pr. afdeling på switchen med routing og firewall-regler i pfSense.</li>
+        <li>Fejlfindede et VLAN-mismatch og manglende VLAN-adgang til management; testede med nslookup, gpupdate og gpresult og dokumenterede hele opsætningen.</li>
       </ul>
     </div>
 
@@ -171,14 +172,6 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
       <div class="j-t">Kestro.dk <span>· tosproget B2B-hjemmeside</span></div>
       <ul>
         <li>Træningsplads, hvor jeg øver webudvikling (Next.js, TypeScript), design, SEO og kundeopsøgning i praksis.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="j-y">I gang <span class="j-org">· Selvstudium</span></div>
-      <div class="j-t">Microsoft 365-administration</div>
-      <ul>
-        <li>Bygger videre på uddannelsen med fokus på brugeradministration og daglig support.</li>
       </ul>
     </div>
 
