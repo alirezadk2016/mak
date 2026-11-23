@@ -132,7 +132,7 @@ li {{ font-size:8.2pt; line-height:1.4; color:#3a3a3a; margin-bottom:.5mm; }}
       <div class="j-y">aug. – okt. 2024 <span class="j-org">· Fourcom ApS</span></div>
       <div class="j-t">IT-support · Praktik</div>
       <ul>
-        <li>Klargjorde og testede arbejdsstationer med Windows-installation og konfiguration, ofte over 40 maskiner om dagen.</li>
+        <li>Klargjorde og testede arbejdsstationer med Windows-installation og konfiguration, ofte over 40 maskiner om dagen og op til 100 ved opdatering og installation af Windows på de travleste dage.</li>
         <li>Fejlfinding og reparation af hardware, fx udskiftning af 20+ harddiske eller 30 RAM-moduler på en travl dag.</li>
         <li>Brugersupport og teknisk dokumentation.</li>
       </ul>
